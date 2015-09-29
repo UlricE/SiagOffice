@@ -1,0 +1,73 @@
+# Creator: Pathetic Writer 3.1.0. No Warranty.
+.sh 15
+.sf 0
+.sheet 0 Sheet 1
+# /home/ulric/siag/pw/examples/morefonts.pw
+# 13 lines
+#
+.rh 1 20
+.rh 3 24
+.rh 5 24
+.rh 7 23
+.rh 9 27
+.rh 11 23
+.rh 13 20
+# Line 1
+.style 0
+name Default
+next 0
+family Times
+size 120
+bold 0
+italic 0
+uline 0
+fg Black
+end
+.ft 14
+font Avant Garde
+size 200
+bg Alice Blue
+end
+1 1 14	"Avant Garde
+# Line 3
+.ft 15
+font Bookman
+size 200
+bg Alice Blue
+end
+3 1 15	"Bookman
+# Line 5
+.ft 20
+size 200
+bg Alice Blue
+end
+5 1 20	"Helvetica
+# Line 7
+.ft 16
+font Palatino
+size 200
+bg Alice Blue
+end
+7 1 16	"Palatino
+# Line 9
+.ft 17
+font Symbol
+size 200
+bg Alice Blue
+end
+9 1 17	"Symbol
+# Line 11
+.ft 18
+font Zapf Chancery
+size 200
+bg Alice Blue
+end
+11 1 18	"Zapf Chancery
+# Line 13
+.ft 19
+font Zapf Dingbats
+size 200
+bg Alice Blue
+end
+13 1 19	"Zapf Dingbats
+# End of file /home/ulric/siag/pw/examples/morefonts.pw

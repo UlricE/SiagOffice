@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# A script to use Netscape as help browser
+# Netscape can't be used directly, as it behaves differently depending
+# on whether an instance of Netscape is already running.
+# Put this script in a directory in your PATH. Then do:
+# SIAGHELP=siaghelp; export SIAGHELP
+
+if [ "$SIAGHELP" = "siaghelp" ]; then
+	unset SIAGHELP
+fi
+
+WS=`which "$SIAGHELP" 2> /dev/null`
+
+if [ "$SIAGHELP" = "" -o ! -x "$WS" ]; then
+	if which netscape > /dev/null; then
+		SIAGHELP=netscape
+	elif which lynx > /dev/null; then
+		SIAGHELP="xterm -e lynx"
+	else
+		SIAGHELP=pw
+	fi
+fi
+
+if [ "$SIAGHELP" = "kdehelp" ]; then
+	case "$1" in
+	*.htm* | *.HTM* )
+		kdehelp "$1"
+		;;
+	* )
+		kedit "$1"
+		;;
+	esac
+elif [ "$SIAGHELP" = "netscape" ]; then
+	(netscape -remote openURL\($@\) || netscape $@) 2> /dev/null
+else
+	$SIAGHELP "$1"
+fi 2>&1
+
+

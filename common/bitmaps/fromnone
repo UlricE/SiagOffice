@@ -1,0 +1,5 @@
+#!/bin/sh
+for f in *.xpm; do
+	mv $f $f.BAK
+	sed -e 's/None/#FFFFC30BCB2B/g' < $f.BAK > $f;
+done

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ ! -f $HOME/.siag/applications.sh ]; then
+	cat > $HOME/.siag/applications.sh << EOF
+viewer=gvu
+lpr=lpr
+editor=xedplus
+help=siaghelp
+filer=xfiler
+terminal=xterm
+calculator=xcalc
+EOF
+
+fi
+
+. $HOME/.siag/applications.sh
+
+CMD=$1
+shift
+#echo "eval \$$CMD $@ || exit 1"
+eval \$$CMD $@ 2> /dev/null || exit 1
+

@@ -1,0 +1,107 @@
+# Creator: Siag (Scheme In A Grid) 3.3.12. No Warranty.
+.sw 80
+.sh 20
+.margins 72 72 72 72 36 36
+.paper A4 595 842 0
+.header &n
+.footer &p
+.header_on_first 1
+.first_page 1
+.a1_refs 1
+.style 0
+name Default
+fmt %d
+type 0
+end
+.ft 0
+size 100
+end
+.nsf 0
+.sheet 0 Ark 1
+# complex.siag
+# 19 lines
+#
+.cw 1 128
+.cw 2 108
+.cw 3 114
+# Line 1
+.ft 2
+size 100
+bold 1
+end
+1 1 2	"Formula
+1 2 2	"Result
+1 3 2	"Expected
+# Line 2
+2 1 0	"imabs("2-1j")
+2 2 0	==imabs("2-1j")
+2 3 0	==2.236068
+# Line 3
+3 1 0	"imaginary("132-1j")
+3 2 0	==imaginary("132-1j")
+3 3 0	==-1
+# Line 4
+4 1 0	"imargument("2-1j")
+4 2 0	==imargument("2-1j")
+4 3 0	==-0.4636476
+# Line 5
+5 1 0	"imconjugate("1-1j")
+5 2 0	==imconjugate("1-1j")
+5 3 0	"1+1j
+# Line 6
+6 1 0	"imcos("1+1j")
+6 2 0	==imcos("1+1j")
+6 3 0	"0.83373-0.988898j
+# Line 7
+7 1 0	"imdiv("2-1j", "2+1j")
+7 2 0	==imdiv("2-1j", "2+1j")
+7 3 0	"0.6-0.8j
+# Line 8
+8 1 0	"imexp("2-1j")
+8 2 0	==imexp("2-1j")
+8 3 0	"3.992324-6.217676j
+# Line 9
+9 1 0	"imln("3-1j")
+9 2 0	==imln("3-1j")
+9 3 0	"1.15129-0.32175j
+# Line 10
+10 1 0	"imlog_10("3-1j")
+10 2 0	==imlog_10("3-1j")
+10 3 0	"0.5-0.139734j
+# Line 11
+11 1 0	"imlog_2("3-1j")
+11 2 0	==imlog_2("3-1j")
+11 3 0	"1.66096-0.464188j
+# Line 12
+12 1 0	"impower("4-1j", 2)
+12 2 0	==impower("4-1j", 2)
+12 3 0	"15-8j
+# Line 13
+13 1 0	"improduct("2-1j", "4-2j")
+13 2 0	==improduct("2-1j", "4-2j")
+13 3 0	"6-8j
+# Line 14
+14 1 0	"imreal("132-1j")
+14 2 0	==imreal("132-1j")
+14 3 0	==132
+# Line 15
+15 1 0	"imsin("1+1j")
+15 2 0	==imsin("1+1j")
+15 3 0	"1.29846+0.63496j
+# Line 16
+16 1 0	"imsqrt("1+1j")
+16 2 0	==imsqrt("1+1j")
+16 3 0	"1.09868+0.45509j
+# Line 17
+17 1 0	"imsub("3-1j", "2+1j")
+17 2 0	==imsub("3-1j", "2+1j")
+17 3 0	"1-2j
+# Line 18
+18 1 0	"imsum("2-4j", "9-1j")
+18 2 0	==imsum("2-4j", "9-1j")
+18 3 0	"11-5j
+# Line 19
+19 1 0	"imtan("1+1j")
+19 2 0	==imtan("1+1j")
+19 3 0	"0.271754+1.08392j
+# End of file complex.siag

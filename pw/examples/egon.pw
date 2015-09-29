@@ -1,0 +1,170 @@
+# Creator: Pathetic Writer 3.1.0-alpha. No Warranty.
+.sh 20
+.sf 98
+.sty0 Default,98,20,0
+.sty1 Header 1,53,30,0
+.sty2 Header 2,52,20,0
+.sty3 Header 3,51,20,0
+.sty4 Header 4,50,20,0
+.sty5 Header 5,49,20,0
+.sty6 Header 6,48,20,0
+.sty7 Address,106,20,7
+.sty8 Ordered List,114,20,8
+.sty9 Unordered List,114,20,9
+.sty10 Preformatted,2,20,10
+.sty11 User 1,98,20,11
+.sty12 User 2,98,20,12
+.sty13 User 3,98,20,13
+.sty14 User 4,98,20,14
+.sty15 Embed,98,20,0
+# /home/ulric/siag/pw/examples/egon.pw
+# 70 lines
+#
+.rh 1 30
+.st 1 1
+.st 6 9
+.st 7 9
+.st 8 9
+.st 9 9
+.st 17 2
+.st 25 2
+.st 42 10
+.st 43 10
+.st 44 10
+.st 45 10
+.st 46 10
+.st 47 10
+.st 48 10
+.st 49 10
+.st 50 10
+.st 51 10
+.st 52 10
+.st 53 10
+.st 63 10
+# Line 1
+.ft 1
+size 240
+bold 1
+end
+1 1 1	"Egon Animator
+# Line 3
+.ft 0
+font Times
+end
+3 1 0	"The latest addition to the Siag family is a program to create animated sequences.
+# Line 4
+4 1 0	"Examples of where such a program can be useful is:
+# Line 6
+.ft 13
+font Times
+bold 1
+end
+6 1 13	"Presentation graphics
+# Line 7
+7 1 13	"Computerized toons
+# Line 8
+8 1 13	"Demonstrations
+# Line 9
+9 1 13	"Animated GIF creation
+# Line 11
+11 1 0	"The name of this program is Egon Animator. The look and feel of the program is very
+# Line 12
+12 1 0	"similar to that of Siag and Pathetic Writer; however not all of their powerful features like
+# Line 13
+13 1 0	"embedding are yet implemented. But the core of the program is the same, in fact the three
+# Line 14
+14 1 0	"programs share much of the same source. The multiple interpreter support is present
+# Line 15
+15 1 0	"(with only SIOD implemented properly, but the hooks are there for Guile and Tcl).
+# Line 17
+.ft 2
+size 180
+bold 1
+end
+17 1 2	"Why an animation program?
+# Line 19
+19 1 0	"Well, why not? When I first started working on my spreadsheet Siag, the long term goal
+# Line 20
+20 1 0	"was to create a full, free office package. Now that Siag and the word processor Pathetic
+# Line 21
+21 1 0	"Writer are operational, if not finished, it seemed like a small but natural step to add a
+# Line 22
+22 1 0	"simple program to create presentation graphics. As usual, I had an old program lying
+# Line 23
+23 1 0	"around which could be botched into a new role.
+# Line 25
+25 1 2	"So, what is it like?
+# Line 27
+27 1 0	"Egon has an editing interface with three lists for the objects, the ticks and the properties.
+# Line 28
+28 1 0	"Objects include rectangles, lines, pixmaps and so on. Every object has a list of one or
+# Line 29
+29 1 0	"more ticks, which are "milestones" telling where the object should be at a particular time,
+# Line 30
+30 1 0	"what shape, colour and so on. When the animation is played, Egon automatically
+# Line 31
+31 1 0	"interpolates intermediate positions between the ticks so that a smooth linear movement
+# Line 32
+32 1 0	"can be specified with only the endpoints.
+# Line 34
+34 1 0	"There will also be a Visual Basic-style interface where objects can be chosen from a
+# Line 35
+35 1 0	"palette and placed on the animation window using drag-and-drop, but that is not yet
+# Line 36
+36 1 0	"implemented.
+# Line 38
+38 1 0	"The animations are stored as Scheme scripts in human-readable form so that they can be
+# Line 39
+39 1 0	"edited manually. It is also easy to write scripts without using the editing interface at all.
+# Line 40
+40 1 0	"For example, here is a script to create a ticker-tape:
+# Line 42
+.ft 10
+font Courier
+end
+42 1 10	"(define (ticker-tape width height duration text)
+# Line 43
+43 1 10	"  (ani-object ANI_LINE)
+# Line 44
+44 1 10	"  (ani-properties ANI_X 0 ANI_Y (- height 21) ANI_WIDTH width)
+# Line 45
+45 1 10	"  (ani-object ANI_FILLRECT)
+# Line 46
+46 1 10	"  (ani-properties ANI_X 0 ANI_Y (- height 20))
+# Line 47
+47 1 10	"  (ani-properties ANI_WIDTH width ANI_HEIGHT 20)
+# Line 48
+48 1 10	"  (ani-properties ANI_COLOR WHITE)
+# Line 49
+49 1 10	"  (ani-object ANI_STRING)
+# Line 50
+50 1 10	"  (ani-properties ANI_X width ANI_Y (- height 5))
+# Line 51
+51 1 10	"  (ani-properties ANI_TEXT text)
+# Line 52
+52 1 10	"  (ani-time duration)
+# Line 53
+53 1 10	"  (ani-properties ANI_X 0))
+# Line 55
+55 1 0	"Interpretation: At the bottom of the window, create a horizontal black line and a white
+# Line 56
+56 1 0	"rectangle. Using the rectangle as background, make the message move from left to right
+# Line 57
+57 1 0	"throughout the presentation.
+# Line 59
+59 1 0	"Once defined, this function can be called from any number of animations with different
+# Line 60
+60 1 0	"parameters. For example, assuming we have a demo with a window size of 600x500 and a
+# Line 61
+61 1 0	"playing time of 2 seconds:
+# Line 63
+63 1 10	"(ticker-tape 600 500 2000 "Egon Animation 2.23. No Warranty")
+# Line 65
+65 1 0	"Simple, eh?
+# Line 67
+67 1 0	"Simple scripts can also be merged into more complex animations, so the above definition
+# Line 68
+68 1 0	"can be stored in a separate file ticker.scm and used in other animations. This makes it
+# Line 69
+69 1 0	"possible to create a library of reusable animation snippets.
+# End of file /home/ulric/siag/pw/examples/egon.pw

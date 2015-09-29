@@ -1,0 +1,244 @@
+<html>
+<head>
+<title>Siag - Menu Commands</title>
+</head>
+<body>
+<h1>Menu Commands</h1>
+<h2>File</h2>
+<table>
+<tr><td><b>File - New</b></td><td><i><a href="siag-commands.html#siag-new_buffer">(new_buffer)</a></i></td></tr>
+<tr><td><b>File - Open</b></td><td><i><a href="siag-commands.html#siag-load_buffer">(load_buffer)</a></i></td></tr>
+<tr><td><b>File - Save</b></td><td><i><a href="siag-commands.html#siag-save_buffer">(save_buffer)</a></i></td></tr>
+<tr><td><b>File - Save As</b></td><td><i><a href="siag-commands.html#siag-save_buffer_as">(save_buffer_as)</a></i></td></tr>
+<tr><td><b>File - Preview</b></td><td><i><a href="siag-commands.html#siag-preview">(preview)</a></i></td></tr>
+<tr><td><b>File - Close</b></td><td><i><a href="siag-commands.html#siag-kill_buffer">(kill_buffer 1)</a></i></td></tr>
+<tr><td><b>File - Backup Copies - Yes</b></td><td><i><a href="scheme.html#siag-make_backups">(make_backups 1)</a></i></td></tr>
+<tr><td><b>File - Backup Copies - No</b></td><td><i><a href="scheme.html#siag-make_backups">(make_backups 0)</a></i></td></tr>
+<tr><td><b>File - Settings - Margins</b></td><td><i><a href="scheme.html#siag-change_margins">(change_margins nil)</a></i></td></tr>
+<tr><td><b>File - Settings - Paper Size</b></td><td><i><a href="scheme.html#siag-change_paper_size">(change_paper_size nil)</a></i></td></tr>
+<tr><td><b>File - Settings - Header and Footer</b></td><td><i><a href="scheme.html#siag-change_headfoot">(change_headfoot nil)</a></i></td></tr>
+<tr><td><b>File - Print</b></td><td><i><a href="siag-commands.html#siag-print">(print)</a></i></td></tr>
+<tr><td><b>File - Print Format</b></td><td><i><a href="siag-commands.html#siag-print_format">(print_format)</a></i></td></tr>
+<tr><td><b>File - Load External</b></td><td><i><a href="siag-commands.html#siag-load_external">(load_external)</a></i></td></tr>
+<tr><td><b>File - Save External</b></td><td><i><a href="siag-commands.html#siag-save_external">(save_external)</a></i></td></tr>
+<tr><td><b>File - Exit</b></td><td><i><a href="siag-commands.html#siag-quit_program">(quit_program)</a></i></td></tr>
+</table>
+<p>
+<h2>Edit</h2>
+<table>
+<tr><td><b>Edit - Undo</b></td><td><i><a href="siag-commands.html#siag-undo_restore">(undo_restore)</a></i></td></tr>
+<tr><td><b>Edit - Delete</b></td><td><i><a href="siag-commands.html#siag-delete_cell">(delete_cell)</a></i></td></tr>
+<tr><td><b>Edit - Insert Line</b></td><td><i><a href="siag-commands.html#siag-insert_line">(insert_line)</a></i></td></tr>
+<tr><td><b>Edit - Remove Line</b></td><td><i><a href="siag-commands.html#siag-remove_line">(remove_line)</a></i></td></tr>
+<tr><td><b>Edit - Insert Column</b></td><td><i><a href="siag-commands.html#siag-insert_col">(insert_col)</a></i></td></tr>
+<tr><td><b>Edit - Remove Column</b></td><td><i><a href="siag-commands.html#siag-remove_col">(remove_col)</a></i></td></tr>
+<tr><td><b>Edit - Select All</b></td><td><i><a href="siag-commands.html#siag-select_all">(select_all)</a></i></td></tr>
+<tr><td><b>Edit - Cut</b></td><td><i><a href="siag-commands.html#siag-cut_block_to_string">(cut_block_to_string)</a></i></td></tr>
+<tr><td><b>Edit - Copy</b></td><td><i><a href="siag-commands.html#siag-copy_block_to_string">(copy_block_to_string)</a></i></td></tr>
+<tr><td><b>Edit - Paste</b></td><td><i><a href="siag-commands.html#siag-paste_block_from_string">(paste_block_from_string)</a></i></td></tr>
+<tr><td><b>Edit - Find</b></td><td><i><a href="siag-commands.html#siag-search_forward">(search_forward)</a></i></td></tr>
+<tr><td><b>Edit - Find Backward</b></td><td><i><a href="siag-commands.html#siag-search_backward">(search_backward)</a></i></td></tr>
+<tr><td><b>Edit - Label</b></td><td><i><a href="siag-commands.html#siag-edit_label">(edit_label)</a></i></td></tr>
+<tr><td><b>Edit - Expression - C</b></td><td><i><a href="scheme.html#siag-edit_c">(edit_c)</a></i></td></tr>
+<tr><td><b>Edit - Expression - SIOD</b></td><td><i><a href="scheme.html#siag-edit_siod">(edit_siod)</a></i></td></tr>
+<tr><td><b>Edit - Expression - Tcl</b></td><td><i><a href="scheme.html#siag-edit_tcl">(edit_tcl)</a></i></td></tr>
+<tr><td><b>Edit - Expression - Guile</b></td><td><i><a href="scheme.html#siag-edit_guile">(edit_guile)</a></i></td></tr>
+<tr><td><b>Edit - Expression - Python</b></td><td><i><a href="scheme.html#siag-edit_python">(edit_python)</a></i></td></tr>
+<tr><td><b>Edit - Change Default Interpreter - C</b></td><td><i><a href="scheme.html#siag-define">(define *standard-interpreter* 'C)</a></i></td></tr>
+<tr><td><b>Edit - Change Default Interpreter - SIOD</b></td><td><i><a href="scheme.html#siag-define">(define *standard-interpreter* 'SIOD)</a></i></td></tr>
+<tr><td><b>Edit - Change Default Interpreter - Tcl</b></td><td><i><a href="scheme.html#siag-define">(define *standard-interpreter* 'Tcl)</a></i></td></tr>
+<tr><td><b>Edit - Change Default Interpreter - Guile</b></td><td><i><a href="scheme.html#siag-define">(define *standard-interpreter* 'Guile)</a></i></td></tr>
+<tr><td><b>Edit - Change Default Interpreter - Python</b></td><td><i><a href="scheme.html#siag-define">(define *standard-interpreter* 'Python)</a></i></td></tr>
+<tr><td><b>Edit - Change Default Interpreter - Other</b></td><td><i><a href="scheme.html#siag-change_interpreter">(change_interpreter)</a></i></td></tr>
+<tr><td><b>Edit - Add Property</b></td><td><i><a href="siag-commands.html#siag-add_property">(add_property)</a></i></td></tr>
+</table>
+<p>
+<h2>Block</h2>
+<table>
+<tr><td><b>Block - Set Mark</b></td><td><i><a href="siag-commands.html#siag-set_mark_command">(set_mark_command)</a></i></td></tr>
+<tr><td><b>Block - Set Block</b></td><td><i><a href="siag-commands.html#siag-set_block">(set_block)</a></i></td></tr>
+<tr><td><b>Block - Unset Block</b></td><td><i><a href="siag-commands.html#siag-unset_block">(unset_block)</a></i></td></tr>
+<tr><td><b>Block - Copy Block</b></td><td><i><a href="siag-commands.html#siag-copy_block">(copy_block)</a></i></td></tr>
+<tr><td><b>Block - Delete Block</b></td><td><i><a href="siag-commands.html#siag-delete_block">(delete_block)</a></i></td></tr>
+<tr><td><b>Block - Fill Block</b></td><td><i><a href="siag-commands.html#siag-fill_block">(fill_block)</a></i></td></tr>
+<tr><td><b>Block - Smart Fill Block</b></td><td><i><a href="siag-commands.html#siag-smart_fill_block">(smart_fill_block)</a></i></td></tr>
+<tr><td><b>Block - Sort - Rows Ascending as Text</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 nil nil nil)</a></i></td></tr>
+<tr><td><b>Block - Sort - Rows Ascending as Numbers</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 nil nil t)</a></i></td></tr>
+<tr><td><b>Block - Sort - Rows Descending as Text</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 nil t nil)</a></i></td></tr>
+<tr><td><b>Block - Sort - Rows Descending as Numbers</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 nil t t)</a></i></td></tr>
+<tr><td><b>Block - Sort - Columns Ascending as Text</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 t nil nil)</a></i></td></tr>
+<tr><td><b>Block - Sort - Columns Ascending as Numbers</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 t nil t)</a></i></td></tr>
+<tr><td><b>Block - Sort - Columns Descending as Text</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 t t nil)</a></i></td></tr>
+<tr><td><b>Block - Sort - Columns Descending as Numbers</b></td><td><i><a href="scheme.html#siag-sort_block">(sort_block 0 t t t)</a></i></td></tr>
+<tr><td><b>Block - Block Sum</b></td><td><i><a href="siag-commands.html#siag-block_sum">(block_sum)</a></i></td></tr>
+<tr><td><b>Block - Block Minimum</b></td><td><i><a href="siag-commands.html#siag-block_min">(block_min)</a></i></td></tr>
+<tr><td><b>Block - Block Maximum</b></td><td><i><a href="siag-commands.html#siag-block_max">(block_max)</a></i></td></tr>
+<tr><td><b>Block - Block Average</b></td><td><i><a href="siag-commands.html#siag-block_avg">(block_avg)</a></i></td></tr>
+<tr><td><b>Block - Borders - Borders</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 1)</a></i></td></tr>
+<tr><td><b>Block - Borders - Grid</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 2)</a></i></td></tr>
+<tr><td><b>Block - Borders - Underline</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 3)</a></i></td></tr>
+<tr><td><b>Block - Borders - Top</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 4)</a></i></td></tr>
+<tr><td><b>Block - Borders - Left</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 5)</a></i></td></tr>
+<tr><td><b>Block - Borders - Right</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 6)</a></i></td></tr>
+<tr><td><b>Block - Borders - None</b></td><td><i><a href="scheme.html#siag-block_borders">(block_borders 0)</a></i></td></tr>
+</table>
+<p>
+<h2>Format</h2>
+<table>
+<tr><td><b>Format - Margins</b></td><td><i><a href="siag-commands.html#siag-change_margins">(change_margins "")</a></i></td></tr>
+<tr><td><b>Format - Paper Size</b></td><td><i><a href="siag-commands.html#siag-change_paper_size">(change_paper_size "")</a></i></td></tr>
+<tr><td><b>Format - Header and Footer</b></td><td><i><a href="siag-commands.html#siag-change_headfoot">(change_headfoot "")</a></i></td></tr>
+<tr><td><b>Format - First Page Number</b></td><td><i><a href="siag-commands.html#siag-change_first_page">(change_first_page "")</a></i></td></tr>
+<tr><td><b>Format - Column Width - Set</b></td><td><i><a href="scheme.html#siag-set_cell_width">(set_cell_width)</a></i></td></tr>
+<tr><td><b>Format - Column Width - Fit Block</b></td><td><i><a href="scheme.html#siag-fit_block_width">(fit_block_width)</a></i></td></tr>
+<tr><td><b>Format - Column Width - Set Default</b></td><td><i><a href="scheme.html#siag-set_standard_width">(set_standard_width)</a></i></td></tr>
+<tr><td><b>Format - Row Height - Set</b></td><td><i><a href="scheme.html#siag-set_cell_height">(set_cell_height)</a></i></td></tr>
+<tr><td><b>Format - Row Height - Fit Block</b></td><td><i><a href="scheme.html#siag-fit_block_height">(fit_block_height)</a></i></td></tr>
+<tr><td><b>Format - Row Height - Set Default</b></td><td><i><a href="scheme.html#siag-set_standard_height">(set_standard_height)</a></i></td></tr>
+<tr><td><b>Format - Set Default Format</b></td><td><i><a href="siag-commands.html#siag-set_standard_format">(set_standard_format)</a></i></td></tr>
+<tr><td><b>Format - Font</b></td><td><i><a href="siag-commands.html#siag-new_attribute">(new_attribute "family")</a></i></td></tr>
+<tr><td><b>Format - Style</b></td><td><i><a href="siag-commands.html#siag-new_attribute">(new_attribute "style")</a></i></td></tr>
+<tr><td><b>Format - Define Style</b></td><td><i><a href="siag-commands.html#siag-define_style">(define_style)</a></i></td></tr>
+<tr><td><b>Format - Foreground Color</b></td><td><i><a href="siag-commands.html#siag-new_attribute">(new_attribute "fg")</a></i></td></tr>
+<tr><td><b>Format - Background Color</b></td><td><i><a href="siag-commands.html#siag-new_attribute">(new_attribute "bg")</a></i></td></tr>
+</table>
+<p>
+<h2>Data</h2>
+<table>
+<tr><td><b>Data - Edit Record</b></td><td><i><a href="siag-commands.html#siag-data_record_edit">(data_record_edit (position_row (get_point)))</a></i></td></tr>
+<tr><td><b>Data - Data Entry</b></td><td><i><a href="siag-commands.html#siag-data_entry">(data_entry)</a></i></td></tr>
+<tr><td><b>Data - Siag-net</b></td><td><i><a href="siag-commands.html#siag-siag_net">(siag_net 8080)</a></i></td></tr>
+<tr><td><b>Data - Enter Date</b></td><td><i><a href="siag-commands.html#siag-enter_date">(enter_date)</a></i></td></tr>
+<tr><td><b>Data - Enter Time</b></td><td><i><a href="siag-commands.html#siag-enter_time">(enter_time)</a></i></td></tr>
+<tr><td><b>Data - Identify Cell</b></td><td><i><a href="siag-commands.html#siag-what_cursor_position">(what_cursor_position)</a></i></td></tr>
+<tr><td><b>Data - Recalculate</b></td><td><i><a href="siag-commands.html#siag-recalc_matrix">(recalc_matrix)</a></i></td></tr>
+</table>
+<p>
+<h2>Window</h2>
+<table>
+<tr><td><b>Window - Zoom</b></td><td><i><a href="siag-commands.html#siag-zoom_adjust">(zoom_adjust)</a></i></td></tr>
+<tr><td><b>Window - Change Buffer</b></td><td><i><a href="siag-commands.html#siag-switch_to_buffer">(switch_to_buffer)</a></i></td></tr>
+<tr><td><b>Window - Delete Buffer</b></td><td><i><a href="siag-commands.html#siag-kill_buffer">(kill_buffer 1)</a></i></td></tr>
+<tr><td><b>Window - Split Window</b></td><td><i><a href="siag-commands.html#siag-split_window_vertically">(split_window_vertically)</a></i></td></tr>
+<tr><td><b>Window - Remove Window</b></td><td><i><a href="siag-commands.html#siag-delete_window">(delete_window)</a></i></td></tr>
+<tr><td><b>Window - One Window</b></td><td><i><a href="siag-commands.html#siag-delete_other_windows">(delete_other_windows)</a></i></td></tr>
+<tr><td><b>Window - Change Window</b></td><td><i><a href="siag-commands.html#siag-other_window">(other_window)</a></i></td></tr>
+<tr><td><b>Window - Add Sheet</b></td><td><i><a href="siag-commands.html#siag-add_sheet">(add_sheet)</a></i></td></tr>
+<tr><td><b>Window - Remove Sheet</b></td><td><i><a href="siag-commands.html#siag-remove_sheet">(remove_sheet)</a></i></td></tr>
+<tr><td><b>Window - Rename Sheet</b></td><td><i><a href="siag-commands.html#siag-rename_sheet">(rename_sheet)</a></i></td></tr>
+<tr><td><b>Window - Move Sheet - Up</b></td><td><i><a href="scheme.html#siag-move_sheet_up">(move_sheet_up)</a></i></td></tr>
+<tr><td><b>Window - Move Sheet - Down</b></td><td><i><a href="scheme.html#siag-move_sheet_down">(move_sheet_down)</a></i></td></tr>
+<tr><td><b>Window - Move Sheet - Top</b></td><td><i><a href="scheme.html#siag-move_sheet_top">(move_sheet_top)</a></i></td></tr>
+<tr><td><b>Window - Move Sheet - Bottom</b></td><td><i><a href="scheme.html#siag-move_sheet_bottom">(move_sheet_bottom)</a></i></td></tr>
+<tr><td><b>Window - Protect Cells</b></td><td><i><a href="siag-commands.html#siag-protect_cells">(protect_cells)</a></i></td></tr>
+<tr><td><b>Window - Remove Protection</b></td><td><i><a href="siag-commands.html#siag-remove_protection">(remove_protection)</a></i></td></tr>
+<tr><td><b>Window - Go To - Beginning of buffer</b></td><td><i><a href="scheme.html#siag-beginning_of_buffer">(beginning_of_buffer)</a></i></td></tr>
+<tr><td><b>Window - Go To - End of buffer</b></td><td><i><a href="scheme.html#siag-end_of_buffer">(end_of_buffer)</a></i></td></tr>
+<tr><td><b>Window - Go To - Top of buffer</b></td><td><i><a href="scheme.html#siag-top_of_buffer">(top_of_buffer)</a></i></td></tr>
+<tr><td><b>Window - Go To - Bottom of buffer</b></td><td><i><a href="scheme.html#siag-bottom_of_buffer">(bottom_of_buffer)</a></i></td></tr>
+<tr><td><b>Window - Go To - Cell</b></td><td><i><a href="scheme.html#siag-go_to">(go_to)</a></i></td></tr>
+<tr><td><b>Window - Grid Lines - Show</b></td><td><i><a href="scheme.html#siag-grid_lines">(grid_lines 1)</a></i></td></tr>
+<tr><td><b>Window - Grid Lines - Hide</b></td><td><i><a href="scheme.html#siag-grid_lines">(grid_lines 0)</a></i></td></tr>
+<tr><td><b>Window - Reference Style - R1C1</b></td><td><i><a href="scheme.html#siag-a1_refs_set">(a1_refs_set 0)</a></i></td></tr>
+<tr><td><b>Window - Reference Style - A1</b></td><td><i><a href="scheme.html#siag-a1_refs_set">(a1_refs_set 1)</a></i></td></tr>
+<tr><td><b>Window - Helptexts - Disable</b></td><td><i><a href="scheme.html#siag-tooltip_set">(tooltip_set 0)</a></i></td></tr>
+<tr><td><b>Window - Helptexts - Label</b></td><td><i><a href="scheme.html#siag-tooltip_set">(tooltip_set 1)</a></i></td></tr>
+<tr><td><b>Window - Helptexts - Popup</b></td><td><i><a href="scheme.html#siag-tooltip_set">(tooltip_set 2)</a></i></td></tr>
+<tr><td><b>Window - Helptexts - Both</b></td><td><i><a href="scheme.html#siag-tooltip_set">(tooltip_set 3)</a></i></td></tr>
+<tr><td><b>Window - Save Preferences</b></td><td><i><a href="siag-commands.html#siag-save_preferences">(save_preferences)</a></i></td></tr>
+</table>
+<p>
+<h2>Plot</h2>
+<table>
+<tr><td><b>Plot - Plugin</b></td><td><i><a href="siag-commands.html#siag-plot_plugin">(plot_plugin "lines")</a></i></td></tr>
+<tr><td><b>Plot - Surface</b></td><td><i><a href="siag-commands.html#siag-splot">(splot "lines")</a></i></td></tr>
+<tr><td><b>Plot - Wizard</b></td><td><i><a href="siag-commands.html#siag-plot_wizard">(plot_wizard)</a></i></td></tr>
+</table>
+<p>
+<h2>Tools</h2>
+<table>
+<tr><td><b>Tools - Command - SIOD</b></td><td><i><a href="scheme.html#siag-exec-siod">(exec-siod)</a></i></td></tr>
+<tr><td><b>Tools - Command - C</b></td><td><i><a href="scheme.html#siag-exec-c">(exec-c)</a></i></td></tr>
+<tr><td><b>Tools - Command - Tcl</b></td><td><i><a href="scheme.html#siag-exec-tcl">(exec-tcl)</a></i></td></tr>
+<tr><td><b>Tools - Command - Guile</b></td><td><i><a href="scheme.html#siag-exec-guile">(exec-guile)</a></i></td></tr>
+<tr><td><b>Tools - Command - Python</b></td><td><i><a href="scheme.html#siag-exec-python">(exec-python)</a></i></td></tr>
+<tr><td><b>Tools - Pathetic Writer</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn "pw")</a></i></td></tr>
+<tr><td><b>Tools - Scheme In A Grid</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn "siag")</a></i></td></tr>
+<tr><td><b>Tools - Egon Animator</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn "egon")</a></i></td></tr>
+<tr><td><b>Tools - Terminal</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn terminal-command)</a></i></td></tr>
+<tr><td><b>Tools - Editor</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn editor-command)</a></i></td></tr>
+<tr><td><b>Tools - File Manager</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn filer-command)</a></i></td></tr>
+<tr><td><b>Tools - Calculator</b></td><td><i><a href="siag-commands.html#siag-spawn">(spawn calculator-command)</a></i></td></tr>
+<tr><td><b>Tools - Environment - Defaults</b></td><td><i><a href="scheme.html#siag-set-environment">(set-environment "Defaults")</a></i></td></tr>
+<tr><td><b>Tools - Environment - KDE</b></td><td><i><a href="scheme.html#siag-set-environment">(set-environment "KDE")</a></i></td></tr>
+<tr><td><b>Tools - Environment - CDE</b></td><td><i><a href="scheme.html#siag-set-environment">(set-environment "CDE")</a></i></td></tr>
+<tr><td><b>Tools - Environment - Gnome</b></td><td><i><a href="scheme.html#siag-set-environment">(set-environment "Gnome")</a></i></td></tr>
+<tr><td><b>Tools - Environment - Custom</b></td><td><i><a href="scheme.html#siag-edit-applications">(edit-applications)</a></i></td></tr>
+<tr><td><b>Tools - Applets - Webserver</b></td><td><i><a href="scheme.html#siag-webserver">(webserver)</a></i></td></tr>
+<tr><td><b>Tools - Applets - Mail</b></td><td><i><a href="scheme.html#siag-mailto">(mailto)</a></i></td></tr>
+<tr><td><b>Tools - Applets - File Manager</b></td><td><i><a href="scheme.html#siag-filemgr">(filemgr)</a></i></td></tr>
+<tr><td><b>Tools - Form Test - Test 1</b></td><td><i><a href="scheme.html#siag-form_test">(form_test)</a></i></td></tr>
+<tr><td><b>Tools - Form Test - Test 2</b></td><td><i><a href="scheme.html#siag-form_test2">(form_test2)</a></i></td></tr>
+<tr><td><b>Tools - Form Test - Test 3</b></td><td><i><a href="scheme.html#siag-form_test3">(form_test3)</a></i></td></tr>
+</table>
+<p>
+<h2>Plugin</h2>
+<table>
+<tr><td><b>Plugin - Import</b></td><td><i><a href="siag-commands.html#siag-plugin_import">(plugin_import nil)</a></i></td></tr>
+<tr><td><b>Plugin - Export</b></td><td><i><a href="siag-commands.html#siag-plugin_export">(plugin_export)</a></i></td></tr>
+<tr><td><b>Plugin - Link</b></td><td><i><a href="siag-commands.html#siag-plugin_link">(plugin_link nil)</a></i></td></tr>
+<tr><td><b>Plugin - Delete</b></td><td><i><a href="siag-commands.html#siag-plugin_delete">(plugin_delete)</a></i></td></tr>
+<tr><td><b>Plugin - Move</b></td><td><i><a href="siag-commands.html#siag-plugin_move">(plugin_move)</a></i></td></tr>
+<tr><td><b>Plugin - Resize</b></td><td><i><a href="siag-commands.html#siag-plugin_resize">(plugin_resize)</a></i></td></tr>
+<tr><td><b>Plugin - App - Xclock</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import "xclock.run")</a></i></td></tr>
+<tr><td><b>Plugin - App - Xterm</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import "xterm.run")</a></i></td></tr>
+<tr><td><b>Plugin - App - Xload</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import "xload.run")</a></i></td></tr>
+<tr><td><b>Plugin - App - Siag</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import "PLuGiN.siag")</a></i></td></tr>
+<tr><td><b>Plugin - App - PW</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import "PLuGiN.pw")</a></i></td></tr>
+<tr><td><b>Plugin - App - Hello World</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import "x.hello")</a></i></td></tr>
+</table>
+<p>
+<h2>Help</h2>
+<table>
+<tr><td><b>Help - Contents</b></td><td><i><a href="siag-commands.html#siag-help_contents">(help_contents)</a></i></td></tr>
+<tr><td><b>Help - Copying</b></td><td><i><a href="siag-commands.html#siag-help_copyright">(help_copyright)</a></i></td></tr>
+<tr><td><b>Help - Help for Help</b></td><td><i><a href="siag-commands.html#siag-help_for_help">(help_for_help)</a></i></td></tr>
+<tr><td><b>Help - Links - Siag Home</b></td><td><i><a href="scheme.html#siag-do_link">(do_link "http://siag.nu/")</a></i></td></tr>
+<tr><td><b>Help - Links - FTP Directory</b></td><td><i><a href="scheme.html#siag-do_link">(do_link "ftp://siag.nu/pub/siag/")</a></i></td></tr>
+<tr><td><b>Help - About Siag...</b></td><td><i><a href="siag-commands.html#siag-aboutbox">(aboutbox)</a></i></td></tr>
+<tr><td><b>Help - About Siag Office...</b></td><td><i><a href="siag-commands.html#siag-aboutsiag">(aboutsiag)</a></i></td></tr>
+</table>
+<p>
+<h2>Shortcuts</h2>
+<table>
+<tr><td><b>Shortcuts - Open</b></td><td><i><a href="siag-commands.html#siag-load_buffer">(load_buffer)</a></i></td></tr>
+<tr><td><b>Shortcuts - Save</b></td><td><i><a href="siag-commands.html#siag-save_buffer_as">(save_buffer_as)</a></i></td></tr>
+<tr><td><b>Shortcuts - Undo</b></td><td><i><a href="siag-commands.html#siag-undo_restore">(undo_restore)</a></i></td></tr>
+<tr><td><b>Shortcuts - Delete</b></td><td><i><a href="siag-commands.html#siag-delete_cell">(delete_cell)</a></i></td></tr>
+<tr><td><b>Shortcuts - Label</b></td><td><i><a href="siag-commands.html#siag-edit_label">(edit_label)</a></i></td></tr>
+<tr><td><b>Shortcuts - Expression - C</b></td><td><i><a href="scheme.html#siag-edit_c">(edit_c)</a></i></td></tr>
+<tr><td><b>Shortcuts - Expression - SIOD</b></td><td><i><a href="scheme.html#siag-edit_siod">(edit_siod)</a></i></td></tr>
+<tr><td><b>Shortcuts - Expression - Guile</b></td><td><i><a href="scheme.html#siag-edit_guile">(edit_guile)</a></i></td></tr>
+<tr><td><b>Shortcuts - Expression - Tcl</b></td><td><i><a href="scheme.html#siag-edit_tcl">(edit_tcl)</a></i></td></tr>
+<tr><td><b>Shortcuts - Expression - Python</b></td><td><i><a href="scheme.html#siag-edit_python">(edit_python)</a></i></td></tr>
+<tr><td><b>Shortcuts - Command</b></td><td><i><a href="siag-commands.html#siag-exec_siod">(exec_siod)</a></i></td></tr>
+<tr><td><b>Shortcuts - Sum</b></td><td><i><a href="siag-commands.html#siag-block_sum">(block_sum)</a></i></td></tr>
+<tr><td><b>Shortcuts - Plugin - Import</b></td><td><i><a href="scheme.html#siag-plugin_import">(plugin_import)</a></i></td></tr>
+<tr><td><b>Shortcuts - Plugin - Export</b></td><td><i><a href="scheme.html#siag-plugin_export">(plugin_export)</a></i></td></tr>
+<tr><td><b>Shortcuts - Plugin - Link</b></td><td><i><a href="scheme.html#siag-plugin_link">(plugin_link)</a></i></td></tr>
+<tr><td><b>Shortcuts - Plugin - Delete</b></td><td><i><a href="scheme.html#siag-plugin_delete">(plugin_delete)</a></i></td></tr>
+<tr><td><b>Shortcuts - Plugin - Move</b></td><td><i><a href="scheme.html#siag-plugin_move">(plugin_move)</a></i></td></tr>
+<tr><td><b>Shortcuts - Help</b></td><td><i><a href="siag-commands.html#siag-help_contents">(help_contents)</a></i></td></tr>
+<tr><td><b>Shortcuts - Quit</b></td><td><i><a href="siag-commands.html#siag-quit_program">(quit_program)</a></i></td></tr>
+</table>
+<p>
+This listing was generated automatically from the file
+/usr/local/share/siag/siag/menu.scm,
+where the menus are defined.
+<p>
+<a href="scheme.html">Description of the Scheme interface.</a>
+<p>
+<hr>
+<address>Ulric Eriksson - November 2000 - ulric@siag.nu</address>
+</body>
+</html>

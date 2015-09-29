@@ -1,0 +1,8 @@
+# KDE Config File
+[KDE Desktop Entry]
+MimeType=application/x-siag
+Comment=Siag Spreadsheet
+DefaultApp=siag
+Icon=siag.xpm
+Type=MimeType
+Patterns=*.siag;*.csv;*.wk1;

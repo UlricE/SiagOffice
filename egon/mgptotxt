@@ -1,0 +1,3 @@
+#!/bin/sh
+# Print formfeed for %page. Ignore all other directives.
+awk '/^%page/ {print "\f"}; !/^%/' $1

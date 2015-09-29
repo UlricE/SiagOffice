@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Plugins</title>
+</head>
+
+<body>
+<h1>Plugins</h1>
+
+An application that can handle many types of data is very complex. As
+a result, it is difficult to use, time-consuming to write and
+impossible to extend.
+<p>
+What if one could write applications that do a single thing well,
+and invoke external applications for everything else? Want to display
+an image? Sure! Just tell the main application what plugin can handle
+that image type and off you go. Want to display a table in your
+word processor? Plug in a spreadsheet!
+<p>
+In order to integrate the two applications well, they need to know about
+each other. There must be a protocol that allows them to communicate.
+The protocol used by Siag Office is very simple and uses standard
+Unix pipes for the communication. The plugin reads commands from
+stdin and prints replies on stdout. All of this is of course completely
+transparent to the user. Plugins can even be nested, so that a
+plugin can itself have plugins.
+<p>
+All of the main applications in Siag Office can load and display
+plugins, and are also able to themselves function as a plugin.
+This is the way to put a table into a PW document: plug in Siag.
+<p>
+There are also a few additional plugins.
+
+<h2>Configuration</h2>
+
+Before Siag can use a plugin, it must know that the plugin exists.
+To do this, there is a file called
+<a href="../plugins/plugin.scm">$SIAGHOME/plugins/plugin.scm</a>
+which contains the necessary Scheme code. Additional plugins can
+be registered by adding them to plugin.scm. A user can add his own
+plugins by registering them in the personal configuration files
+for the respective applications ($HOME/.siag/siag.scm,
+$HOME/.siag/pw.scm and $HOME/.siag/egon.scm),
+
+<h2>The Image Plugin</h2>
+
+One of the plugins that are supplied with Siag Office is the image
+plugin. It displays most common image formats if the NETPBM
+collection of graphics converters is installed. Otherwise it will
+be able to display XPM images.
+<p>
+The plugin has no facilities for editing or otherwise manipulating
+the images; for that you have to use another application.
+
+<h2>The Clipart Plugin</h2>
+
+The Clipart plugin displays vector graphics. It was originally
+developed for images in Postscript (ps) or Encapsulated Postscript
+(eps) format, but can also display LaTeX and DVI documents.
+
+<h2>The Dummy Plugin</h2>
+
+Of course, most existing applications have no understanding of the
+communication protocol. The dummy application works as a "shim"
+between Siag and another application. It speaks the plugin
+protocol with Siag and does its best to manage the external
+application.
+<p>
+Due to the fact that the "kidnapped" applications do not speak
+the communications protocol for plugins used by the Siag Office
+suite, there may be no way to do things that would be expected
+from normal plugins, such as loading or saving files, printing
+or even terminating gracefully. Still most applications work
+fine, including xterm, Emacs and Netscape, as well as simple
+ones like xclock or xeyes.
+
+<h3>Configuring the Dummy Plugin</h3>
+
+The dummy plugin has its own configuration files. There is a
+system-wide configuration file in
+<a href="../plugins/dummy.scm">$SIAGHOME/plugins/dummy.scm</a>
+and a personal configuration file in $HOME/.siag/dummy.scm.
+
+<h2>The Hello Plugin</h2>
+
+This one is for demonstrational purposes only: it displays the
+message "Hello, World" in its window. It is suitable as an
+example of a simple plugin, in that it contains all the necessary
+code to make a plugin of a normal X program.
+
+<h2>Loading and Saving</h2>
+
+There are two way to include a plugin in a document: linking
+or importing. A plugin that is imported is saved as part of the
+main document. A linked plugin stays in a separate file and can
+be shared between several applications. As long as the document
+stays on the same machine, it doesn't matter much which way it
+is plugged in, but importing is better for documents that will
+be copied to other locations.
+<p>
+The file format is based on tar, so it can easily be dissected
+and contents inspected. Secret file formats are <i>bad</i>.
+<p>
+A plugin can be exported to a separate document. This requires that the
+plugin has saving capabilities; that is not necessarily the case for
+the dummy plugin.
+
+<hr>
+
+<address>Ulric Eriksson - January 2002 - ulric@siag.nu</address>
+</body>
+</html>
+

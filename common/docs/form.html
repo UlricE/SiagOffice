@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Form Input</title>
+</head>
+<body>
+<h1>Form Input</h1>
+The Form interface is a convenient way to create dialogs. It is done by
+adding different widgets to a form, using a collection of Scheme
+functions. Each input widget has a name and a value, and the results
+are returned as an associative list.
+<p>
+Example: <a href="../xcommon/form.scm">form.scm</a>
+<p>
+<dl>
+<dt><b>(form-begin)</b>
+<dd>Start a new form
+<dt><b>(form-label <i>label</i>)</b>
+<dd>Add a label to the form
+<dt><b>(form-text <i>name</i>)</b>
+<dd>Add a text entry field to the form
+<dt><b>(form-withprompt <i>prompt value width</i>)</b>
+<dd>Create a label followed by a text field of a specified width
+<dt><b>(form-record <i>name name ...</i>)</b>
+<dd>Create a form with one label and one text field per line
+<dt><b>(form-menu <i>name</i>)</b>
+<dd>Add a pull-down menu
+<dt><b>(form-menuentry <i>text</i>)</b>
+<dd>Add one entry to the menu
+<dt><b>(form-okbutton <i>label</i>)</b>
+<dd>Add a button which pops down the form, collects
+	the values and returns them
+<dt><b>(form-cancelbutton <i>label</i>)</b>
+<dd>Add a button which pops down the form, discards the values
+	and returns the empty list
+<dt><b>(form-property <i>name value</i>)</b>
+<dd>Changes an X property of the most recently added widget
+<dt><b>(form-properties <i>name value name value ...</i>)</b>
+<dd>Changes several properties in a single call
+<dt><b>(form-newline)</b>
+<dd>Add the next widget below the last one, rather than to the right
+<dt><b>(form-end)</b>
+<dd>Pop up the form, wait for the user to do something,
+	return the results
+</dl>
+
+<hr>
+<address>Ulric Eriksson - July 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

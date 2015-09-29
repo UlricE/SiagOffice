@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# Attempt to convert any image file to XPM format. Requires the netpbm
+# package for all formats except XPM itself. JPEG also requires the
+# djpeg program.
+
+# Compressed files are automatically decompressed before converting.
+# Requires gzip and uncompress.
+
+# For unknown extensions, the script falls back to anytopnm which is
+# part of netpbm.
+
+# echo "Converting $1" 1>&2
+
+#CONVERT=`which convert` 2> /dev/null
+#
+#if test -x "$CONVERT" 2> /dev/null; then
+#	# echo CONVERT=\"$CONVERT\"
+#	$CONVERT "$1" xpm:-
+#	exit
+#fi
+
+convert_image()
+{
+	case "$1" in
+	*.gz )
+		name=`basename "$1" .gz`
+		tmpfile=/tmp/DeCoDe_${name}
+		cp "$1" "${tmpfile}.gz"
+		gzip -df "${tmpfile}.gz"
+		convert_image "$tmpfile"
+		rm "${tmpfile}"
+		;;
+	*.Z )
+		name=`basename "$1" .Z`
+		tmpfile=/tmp/DeCoDe_${name}
+		cp "$1" "${tmpfile}.Z"
+		uncompress -f "${tmpfile}.Z"
+		convert_image "${tmpfile}"
+		rm "${tmpfile}"
+		;;
+	*.gif | *.GIF )
+		giftopnm "$1" | ppmtoxpm 2> /dev/null
+		;;
+	*.jpg | *.jpeg | *.JPG | *.JPEG )
+		djpeg -colors 128 "$1" | ppmtoxpm 2> /dev/null
+		;;
+	*.tif | *.tiff | *.TIF | *.TIFF )
+		tifftopnm "$1" | ppmtoxpm 2> /dev/null
+		;;
+	*.png | *.PNG )
+		pngtopnm "$1" | ppmtoxpm 2> /dev/null
+		;;
+	*.bmp | *.BMP )
+		bmptoppm "$1" | ppmtoxpm 2> /dev/null
+		;;
+	*.xpm | *.XPM )
+		cat "$1"
+		;;
+	* )
+		anytopnm "$1" | ppmtoxpm 2> /dev/null
+		;;
+	esac
+}
+
+convert_image "$1"
+

@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Siag - The Mouse</title>
+</head>
+
+<body>
+<center>
+<h1>The Mouse</h1>
+</center>
+The mouse is used to set point, mark and the block.
+
+<ul>
+<li>Button 1 in the cell area moves point
+<li>Button 1 on vertical grid line adjusts column width
+<li>Button 1 on horizontal grid line adjusts row height
+<li>Button 1 on grid line crossing does autofill
+<li>Button 2 in the grid inserts the current selection
+<li>Button 3 (or Shift - Button 1) in the grid extends the selection
+<li>Button 1 in column header sets block to the clicked column
+<li>Button 1 between column headers adjusts column width
+<li>Double-click button 1 in column header automatically adjusts column width
+<li>Button 3 in column header extends the selection
+<li>Button 1 in row header sets block to the clicked row
+<li>Double-click button 1 in row header automatically adjusts row height
+<li>Button 3 in row header extends the selection
+</ul>
+Moving the mouse in the grid with button 1 pressed defines the
+selection.
+<p>
+Mice with fewer than 3 buttons can be used by changing the app-defaults.
+<p>
+This behaviour is consistent with most other X applications.
+<p>
+The selection can be cleared directly by calling the function
+(unset-block) (Block - Unset Block on the menu) or indirectly by selecting
+something else in another part of the grid, in another instance
+of Siag or in another X application.
+<p>
+<h3>Autofill</h3>
+Autofilling works by placing the pointer over a grid line crossing,
+pressing down, dragging to the lower right corner of the area you want
+to fill and releasing. The neat thing about this is that you can
+automatically get series of values by following this example:
+<ol>
+<li>Enter 2 into cell A1
+<li>Enter 5 into cell B1
+<li>Position the pointer over the lower right corner of A1, so that
+	the pointer changes shape
+<li>Click down and hold
+<li>Move the pointer to F1
+<li>Release
+</ol>
+The area is filled with 8 in C1, 11 in D1, 14 in E1 and 17 in F1.
+
+<hr>
+<address>Ulric Eriksson - June 1999 - ulric@siag.nu</address>
+</body>
+</html>
+

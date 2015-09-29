@@ -1,0 +1,31 @@
+# Creator: Siag (Scheme In A Grid) 3.0.5. No Warranty.
+.sw 80
+.sh 20
+.sf 33
+.fmt131072 %d
+.fmt196608 %g
+.fmt262144 %.2f
+.fmt327680 %m/%d/%y
+.fmt393216 %H:%M:%S
+.fmt458752 %.2f
+.fmt524288 %.2f %%
+.fmt589824 %lX
+.fmt655360 $%.2f
+.fmt720896 %.2f
+.fmt786432 %.2f
+.fmt851968 %.2f
+.fmt917504 %.2f
+.fmt983040 %.2f
+# /usr/local/siag/siag/examples/foo.siag
+# 3 lines
+#
+# Line 1
+1 1 33	"123
+1 2 33	==123
+# Line 2
+2 1 33	"qwe
+2 2 33	==r1c2
+# Line 3
+3 1 33	"asd
+3 2 33	=(r_sum R1C2..R2C2)
+# End of file /usr/local/siag/siag/examples/foo.siag

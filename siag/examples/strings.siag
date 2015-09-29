@@ -1,0 +1,44 @@
+# Creator: Siag (Scheme In A Grid) 2.50. No Warranty.
+.sw 80
+.sh 20
+.sf 33
+.fmt131072 %d
+.fmt196608 %g
+.fmt262144 %.2f
+.fmt327680 %d/%d/%d
+.fmt393216 %d:%d:%d
+.fmt458752 %.2f
+.fmt524288 %.2f %%
+.fmt589824 %lX
+.fmt655360 $%.2f
+.fmt720896 %.2f
+.fmt786432 %.2f
+.fmt851968 %.2f
+.fmt917504 %.2f
+.fmt983040 %.2f
+# /usr/local/siag/siag/examples/strings.siag
+# 7 lines
+#
+# Line 1
+1 1 33	="A string"
+1 2 33	"A label
+# Line 2
+2 1 33	=(string-append (get-cell 1 1) (get-cell 1 2))
+2 2 33	"<- This error is because (1,2) is not a string
+# Line 3
+3 1 33	=(string-append (get-string 1 1) (get-string 1 2))
+3 2 33	"<- get-string always returns a string
+# Line 4
+4 1 33	="Padded on the right    "
+4 3 33	=(string-trim r4c1)
+4 5 33	=(string-upcase r4c3)
+# Line 5
+5 1 33	="    Padded on the left"
+5 3 33	=(string-trim r5c1)
+5 5 33	=(string-downcase r5c3)
+# Line 6
+6 1 33	=(string-append r4c1 r5c1)
+# Line 7
+7 1 33	=(substring r5c1 4 9)
+7 2 33	=(string-search "de" r7c1)
+# End of file /usr/local/siag/siag/examples/strings.siag

@@ -1,0 +1,4 @@
+#!/bin/sh
+GIFNAME=`basename $1 .xpm`.gif
+echo "xpm2gif $1 ==> $GIFNAME"
+cat $1 | sed -e 's/None/pink/g' | xpmtoppm | ppmtogif -transparent pink > $GIFNAME

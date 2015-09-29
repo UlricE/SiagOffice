@@ -1,0 +1,200 @@
+
+! Global resources
+
+! Double click time in milliseconds
+Xfiler*doubleClickTime:		300
+
+! Time interval in milliseconds for automatic folder updates (set to zero to
+! disable this feature)
+Xfiler*updateInterval:		10000
+
+! Geometry for application and initial file manager windows
+Xfiler.initGeometry:			500x400
+! Geometry for subsequent file windows
+Xfiler.file window.Geometry:	500x400
+
+Xfiler*Command*cursor:			hand2
+
+Xfiler*SimpleMenu*cursor:		hand2
+
+! Settings for individual widgets
+
+Xfiler*topbox.xLayout:		100%
+Xfiler*topbox.yLayout:		30 30 30 100% 30
+
+Xfiler*menubar.shadowWidth:		1
+Xfiler*menubar.gridy:			0
+Xfiler*menubox.orientation:		horizontal
+Xfiler*menubox.borderWidth:		0
+Xfiler*menubox.NwsMenuButton.shadowWidth:	0
+Xfiler*menubox.NwsMenuButton.internalHeight:	6
+Xfiler*menubox.vSpace:			0
+Xfiler*menubox.hSpace:			0
+
+Xfiler*toolbar.shadowWidth:		1
+Xfiler*toolbar.gridy:			1
+Xfiler*toolbox.orientation:		horizontal
+Xfiler*toolbox.borderWidth:		0
+Xfiler*toolbox.Toggle.shadowWidth:	0
+Xfiler*toolbox.Command.shadowWidth:	0
+Xfiler*toolbox.vSpace:			0
+Xfiler*toolbox.hSpace:			0
+
+Xfiler*cmdform.gridy:			2
+Xfiler*cmdform.defaultDistance:		2
+Xfiler*cmdframe.top:			ChainTop
+Xfiler*cmdframe.left:			ChainLeft
+Xfiler*cmdframe.right:			ChainRight
+Xfiler*cmdframe.bottom:			ChainBottom
+Xfiler*cmdframe.shadowType:		Lowered
+Xfiler*cmdtext.borderWidth:		0
+Xfiler*cmdtext.width:			390
+Xfiler*cmdtext.translations:		#override\n\
+	<Key>Return:			cmdline-run()\n\
+	<Key>Escape:			cmdline-cancel()\n\
+	<Key>Up:			cmdline-previous()\n\
+	Ctrl<Key>p:			cmdline-previous()\n\
+	<Key>Down:			cmdline-next()\n\
+	Ctrl<Key>n:			cmdline-next()
+
+Xfiler*Box.handle.height:		28
+Xfiler*Box.handle.label:
+
+Xfiler*viewport.gridy:			3
+Xfiler*viewport*font:			fixed
+Xfiler*viewport.allowVert:		True
+
+Xfiler*status.gridy:			4
+Xfiler*status.shadowWidth:		2
+Xfiler*status.label:
+Xfiler*status.resize:			False
+
+Xfiler*buttons*orientation:		horizontal
+Xfiler*buttons*showGrip:		False
+Xfiler*input:                           TRUE
+
+Xfiler*toolbar_command.translations:	#override	\n\
+	<Enter>:	siag-highlight(1)\n\
+	<Leave>:	siag-unhighlight(0)
+
+Xfiler*left arrow.shadowWidth:		0
+Xfiler*left arrow.translations:	#override			\n\
+	<Enter>:		siag-highlight(1)		\n\
+	<Leave>:		siag-unhighlight(0)
+
+Xfiler*right arrow.shadowWidth:		0
+Xfiler*right arrow.translations:	#override			\n\
+	<Enter>:		siag-highlight(1)		\n\
+	<Leave>:		siag-unhighlight(0)
+
+!=============================================================================
+! COLORS
+! NOTE: The background color of icons is determined from the Xfiler.background
+! resource. Make sure that this resource is always given an approp value
+!=============================================================================
+
+! The foreground color for icon toggles; this is also used when an icon toggle
+! is highlighted or marked
+Xfiler*viewport.icon box*Toggle.foreground:	red
+Xfiler*viewport.icon box*Toggle.shadowWidth: 	0
+Xfiler*viewport.icon box*Command.shadowWidth: 	0
+Xfiler*viewport.icon box*Label.justify:		Center
+Xfiler*chmod.form.Form.Command.highlightThickness:0
+
+! Use these only if you  have the 75dpi fonts. (recommended)
+Xfiler*boldFont:			-*-helvetica-bold-r-*-*-14-*-*-*-*-*-iso8859-*
+Xfiler*iconFont:			-*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-*
+Xfiler*labelFont:		-*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-*
+! This must be a fixed width font
+Xfiler*cellFont:		fixed
+
+! Specify the sizes of the different icon toggles. The following values
+! are appropriate for the icons supplied with Xfiler.
+Xfiler*appIconWidth: 72
+Xfiler*appIconHeight: 60
+Xfiler*fileIconWidth: 48
+Xfiler*fileIconHeight: 40
+Xfiler*treeIconWidth: 48
+Xfiler*treeIconHeight: 32
+
+! Confirmation for various operations
+Xfiler*confirmDeletes: 		true
+Xfiler*confirmDeleteFolder: 	true
+Xfiler*confirmCopies: 		true
+Xfiler*confirmMoves: 		true
+Xfiler*confirmOverwrite:		false
+Xfiler*confirmQuit:		false
+
+! Echo actions on stderr (useful for debugging purposes)
+Xfiler*echoActions:			false
+
+! Directory display in Text type
+Xfiler*showOwner: 		true
+Xfiler*showDate: 		false
+Xfiler*showPermissions: 		false
+Xfiler*showLength: 		true
+
+! The type of the first and subsequent file windows
+! valid values are Tree, Icons and Text
+Xfiler*initialDisplayType:	 	Icons
+Xfiler*defaultDisplayType: 		Icons
+
+! The type of sorting used by default
+! valid values are SortBy{Name,Size,Date}
+Xfiler*defaultSortType: 		SortByName
+
+! The default editor to use
+Xfiler*defaultEditor: 		xedplus
+Xfiler*defaultViewer: 		xedplus
+
+! The default terminal program to use
+Xfiler*defaultTerm: 		xterm
+
+! The default filemanager to use with root dropped folders when tycoon is running;
+! by default it is "files" but the options or FM can be changed as:
+
+!***********************************************************************
+! Miscellaneous settings (see also Main.c)
+! Normally you won't have to change these.
+!***********************************************************************
+
+Xfiler*Command.cursor: hand2
+Xfiler*NwsMenuButton.cursor: hand2
+Xfiler*viewport.allowHoriz: false
+Xfiler*viewport.forceBars: true
+
+Xfiler*popup form*bitmap.borderWidth : 0
+Xfiler*popup form.bitmap.top:		ChainTop
+Xfiler*popup form.bitmap.left:		ChainLeft
+Xfiler*popup form.bitmap.right:		ChainLeft
+Xfiler*popup form.bitmap.bottom:	ChainTop
+
+Xfiler*popup form*label.borderWidth : 0
+Xfiler*popup form.label.top:		ChainTop
+Xfiler*popup form.label.left:		ChainLeft
+Xfiler*popup form.label.right:		ChainLeft
+Xfiler*popup form.label.bottom:		ChainTop
+
+Xfiler*button box.orientation: horizontal
+Xfiler*button box.borderWidth: 0
+Xfiler*button box.top:			ChainTop
+Xfiler*button box.left:			ChainLeft
+Xfiler*button box.right:		ChainLeft
+Xfiler*button box.bottom:		ChainTop
+
+Xfiler*viewport.borderWidth: 0
+Xfiler*viewport.icon box*Label.borderWidth : 0
+Xfiler*viewport.icon box.Command.borderWidth : 0
+Xfiler*viewport.icon box.Form.borderWidth : 0
+Xfiler*viewport.icon box*Toggle.borderWidth : 1
+
+Xfiler*chmod*Label.borderWidth : 0
+
+Xfiler*info*Label.borderWidth : 0
+
+Xfiler*error*Label.borderWidth : 0
+
+Xfiler*confirm*Label.borderWidth : 0
+
+Xfiler*Text*translations : #override \n <Key>Return: no-op() \n <Key>Linefeed : no-op() \n Ctrl<Key>J : no-op() \n
+

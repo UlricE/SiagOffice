@@ -1,0 +1,76 @@
+#!/bin/sh
+
+# For all images in $here, place an icon in $siag_basedir/.xfiler/$here
+siag_basedir="$HOME/.siag"
+here="`cd . && pwd`"
+icondir="$siag_basedir/.xfiler$here"
+
+CONVERT=`which convert` 2> /dev/null
+
+convert=no
+
+# Read ppm image on stdin, spit out scaled, color-reduced ppm image on stdout
+makeicon()
+{
+	pnmscale -xysize 48 32 | ppmquant 16
+#	pnmscale -xysize 48 32 | ppmdither -dim 4 -red 2 -green 3 -blue 2
+}
+
+makeone()
+{
+	makeicon | ppmtoxpm > "$icon"
+	convert=yes
+}
+
+# Create a subdirectory called .xfiler, if it doesn't already exist.
+# If we can't create the directory, fail.
+test -d $icondir || mkdir -p $icondir || exit 1
+chmod 0700 $icondir
+
+# If we don't have netpbm, we can't do anything, can we
+#echo looking for netpbm
+test -x "`which pnmscale`" || exit 1
+
+for f in *; do
+	icon="$icondir/$f.xpm"
+	if [ -f "$icon" -a "$icon" -nt "$f" ]; then
+		continue
+	fi
+
+	if test -x "$CONVERT"; then
+		$CONVERT -geometry 48x32 "$f" "$icon"
+		echo $CONVERT -geometry 48x32 "$f" "$icon"
+		continue
+	fi
+
+#	echo Processing $f...
+	case $f in
+	*.jpg | *.jpeg | *.JPG | *.JPEG )
+		djpeg "$f" | makeone
+		;;
+	*.gif | *.GIF )
+		giftopnm "$f" | makeone
+		;;
+	*.tif | *.tiff | *.TIF | *.TIFF )
+		tifftopnm "$f" | makeone
+		;;
+	*.png | *.PNG )
+		pngtopnm "$f" | makeone
+		;;
+	*.bmp | *.BMP )
+		bmptoppm "$f" | makeone
+		;;
+	*.xpm | *.XPM )
+		sed -e s/none/grey/g -e s/None/grey/g "$f" | xpmtoppm | makeone $f
+		;;
+	*.ppm | *.PPM | *.pnm | *.PNM )
+		cat "$f" | makeone
+		;;
+	# Don't try to do anything with unknown extensions
+	esac
+done 2> /dev/null
+
+if [ $convert = no ]; then
+	exit 1
+fi
+

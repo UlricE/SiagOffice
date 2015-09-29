@@ -1,0 +1,233 @@
+# Creator: Siag (Scheme In A Grid) 3.2.0pre5. No Warranty.
+.sw 80
+.sh 20
+.margins 72 72 72 72 36 36
+.paper A4 595 842 1
+.header &n
+.footer &p
+.header_on_first 1
+.first_page 1
+.a1_refs 1
+.style 0
+name Default
+fmt %d
+type 0
+end
+.ft 0
+size 100
+end
+.nsf 0
+.sheet 0 Sheet 1
+# /home/ulric/siag/siag/examples/cheeses.siag
+# 17 lines
+#
+.cw 1 96
+.cw 2 126
+# Line 1
+.ft 2
+size 140
+bold 1
+fg Brown
+bg Yellow
+borders 1280
+end
+1 1 2	"Takeover bid
+.style 10
+name Currency
+fmt $%.2f
+type 2
+end
+.ft 4
+size 140
+fg Brown
+bg Yellow
+borders 1536
+hadj 12288
+style 10
+end
+1 2 4	==11000000000
+# Line 2
+.ft 6
+size 100
+bg Yellow
+borders 256
+end
+2 1 6	" 
+.ft 8
+size 100
+bg Yellow
+borders 512
+end
+2 2 8	" 
+# Line 3
+.ft 9
+size 140
+bold 1
+fg Brown
+bg Yellow
+borders 256
+end
+3 1 9	"Per share
+.ft 10
+size 140
+fg Brown
+bg Yellow
+borders 512
+hadj 12288
+style 10
+end
+3 2 10	==90
+# Line 4
+.ft 11
+size 140
+bold 1
+italic 1
+fg Brown
+bg Yellow
+borders 2304
+end
+4 1 11	"# of shares
+.style 2
+name Integer
+fmt %d
+type 1
+end
+.ft 13
+size 140
+italic 1
+fg Brown
+bg Yellow
+borders 2560
+hadj 12288
+style 2
+end
+4 2 13	==B1/B3
+# Line 5
+# Line 6
+.ft 15
+font New Century Schoolbook
+fg Blue Violet
+bg Tan
+borders 1280
+end
+6 1 15	"        NEW YORK-- Kraft Foods, Inc. announced today that its board of
+.ft 17
+size 100
+bg Tan
+borders 1024
+end
+6 2 17	" 
+6 3 17	" 
+6 4 17	" 
+.style 1
+name Invisible
+fmt %d
+type 4
+end
+.ft 19
+size 100
+bg Tan
+borders 1536
+style 1
+end
+6 5 19	"q
+# Line 7
+.ft 21
+font New Century Schoolbook
+fg Blue Violet
+bg Tan
+borders 256
+end
+7 1 21	"directors unanimously rejected the $11 billion takeover bid by Philip
+.ft 18
+size 100
+bg Tan
+end
+7 2 18	" 
+7 3 18	" 
+7 4 18	" 
+.ft 22
+size 100
+bg Tan
+borders 512
+style 1
+end
+7 5 22	"q
+# Line 8
+8 1 21	"Morris and Co. A Kraft spokesman stated in a press conference that the
+8 2 18	" 
+8 3 18	" 
+8 4 18	" 
+8 5 22	"q
+# Line 9
+9 1 21	"offer was rejected because the $90-per-share bid did not reflect the
+9 2 18	" 
+9 3 18	" 
+9 4 18	" 
+9 5 22	"q
+# Line 10
+10 1 21	"true value of the company.
+10 2 18	" 
+10 3 18	" 
+10 4 18	" 
+10 5 22	"q
+# Line 11
+11 1 21	"        Wall Street insiders, however, tell quite a different story.
+11 2 18	" 
+11 3 18	" 
+11 4 18	" 
+11 5 22	"q
+# Line 12
+12 1 21	"Apparently, the Kraft board of directors had all but signed the takeover
+12 2 18	" 
+12 3 18	" 
+12 4 18	" 
+12 5 22	"q
+# Line 13
+13 1 21	"agreement when they learned of Philip Morris' marketing plans for one of
+13 2 18	" 
+13 3 18	" 
+13 4 18	" 
+13 5 22	"q
+# Line 14
+14 1 21	"their major Middle East subsidiaries.  To a person, the board voted to
+14 2 18	" 
+14 3 18	" 
+14 4 18	" 
+14 5 22	"q
+# Line 15
+15 1 21	"reject the bid when they discovered that the tobacco giant intended to
+15 2 18	" 
+15 3 18	" 
+15 4 18	" 
+15 5 22	"q
+# Line 16
+16 1 21	"reorganize Israeli Cheddar, Ltd., and name the new company Cheeses of
+16 2 18	" 
+16 3 18	" 
+16 4 18	" 
+16 5 22	"q
+# Line 17
+.ft 23
+font New Century Schoolbook
+fg Blue Violet
+bg Tan
+borders 2304
+end
+17 1 23	"Nazareth.
+.ft 24
+size 100
+bg Tan
+borders 2048
+end
+17 2 24	" 
+17 3 24	" 
+17 4 24	" 
+.ft 25
+size 100
+bg Tan
+borders 2560
+style 1
+end
+17 5 25	"q
+# End of file /home/ulric/siag/siag/examples/cheeses.siag

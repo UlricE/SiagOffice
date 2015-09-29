@@ -1,0 +1,5 @@
+! This file is theme.classic, which looks like old versions of Siag
+
+! Use the old toolbar icons
+PIXPATH:		.../common/bitmaps
+

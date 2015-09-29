@@ -1,0 +1,661 @@
+	
+Siag (Scheme In A Grid) %s. No Warranty.	Siag (Scheme In A Grid) %s. Nenhuma Garantia.
+File	Arquivo
+Edit	Editar
+Block	Bloco
+Format	Formato
+Data	Dado
+Plugin	Plugin
+Window	Janela
+Plot	Pedaço
+Tools	Ferramentas
+Help	Ajuda
+Start another instance of Siag	Iniciar outra instância do Siag
+Open a Siag document		Abrir um documento do Siag
+Save the contents of the current buffer	Salvar o conteúdo no buffer atual
+Preview the contents of the current buffer	Visualizar o conteúdo do buffer atual
+Print the contents of the current buffer	Imprimir o conteúdo do buffer atual
+Spelling checker		Corretor ortográfico
+Cut				Cortar
+Copy				Copiar
+Paste				Colar
+Undo				Desfazer
+Sort ascending			Classificar em ascendente
+Sort descending			Classificar em descendente
+Plot the contents of the block using lines	Plotar o conteúdo do bloco usando linhas
+Add the contents of the block	Adicionar o conteúdo do bloco
+Display the Siag online documentation	Mostrar a documentação online do Siag
+Display the Gnu general public license	Mostrar a licença pública geral GNU
+Change the font family	Mudar o tipo de fonte
+Change the font size	Mudar o tamanho da fonte
+Change the display style	Mudar o estilo da tela
+Change the color	Mudar a cor
+Bold text	Texto em negrito
+Italic text	Texto em itálico
+Left adjusted text		Texto alinhado à esquerda
+Centered text			Texto centralizado
+Right adjusted text		Texto alinhado à direita
+Draw grid lines in the block	Desenhar linhas de grade no bloco
+Draw borders around the block	Desenhar bordas em volta do bloco
+Underline the block		Sublinhar o bloco
+Remove grid lines from the block	Remover as grades do bloco
+Select everything		Selecionar tudo
+OK				OK
+Cancel				Cancelar
+File Name:			Nome do arquivo:
+Directory:			Diretório:
+Select File			Selecionar arquivo
+Find				Procurar
+Extra				Extra
+Home				Ínicio
+Examples			Exemplos
+Family Name			Nome da família
+Size				Tamanho
+Attributes			Atributos
+Borders				Bordas
+Adjustment			Ajuste
+Misc				Miscelânia
+List Selection			Listar Seleção
+New				Novo
+Open				Abrir
+Save				Salvar
+Save As				Salvar como
+Preview				Visualizar
+Close				Fechar
+Backup Copies			Cópias de backup
+Settings			Configurações
+Margins				Margens
+Paper Size			Tamanho do papel
+Header and Footer		Cabeçário e rodapé
+First Page Number		Primeiro número da página
+Style				Estilo
+Foreground Color		Cor do primeiro plano
+Background Color		Cor de fundo
+Enter Date			Entre com a data
+Enter Time			Entre com o tempo
+Move Sheet			Mover planilha
+Up				Para cima
+Down				Para baixo
+Edit Applications		Editar aplicações
+Save Applications		Salvar aplicações
+Applets				Applets
+Resize				Alterar tamanho
+Print				Imprimir
+Print Format			Configurar impressão
+Orientation			Orientação
+Portrait			Retrato
+Landscape			Paisagem
+Cell Protection			Proteção de célula
+Respect				Respeito
+Ignore				Ignorar
+Load External			Carregar externo
+Save External			Salvar externo
+Exit				Sair
+Undo				Desfazer
+Delete				Apagar
+Insert Line			Inserir linha
+Remove Line			Remover linha
+Insert Column			Inserir coluna
+Remove Column			Remover coluna
+Select All			Selecionar Tudo
+Select everything		Selecionar tudo
+Find				Procurar
+Find Backward			Procurar anterior
+Label				Etiqueta
+SIOD Expression			Expressão SIOD
+C Expression			Expressão em C
+Guile Expression		Expressão em Guile
+Tcl Expression			Expressão em Tcl
+Change default interpreter	Alterar interpretador padrão
+Change Default Interpreter	Alterar Interpretador Padrão
+Other				Outro
+Add Property			Adicionar objeto
+Embed Object			Encaixar objeto
+Remove Object			Remover objeto
+Open Object			Abrir objeto
+Save Object			Salvar objeto
+Set Mark			Configurar marca
+Set Block			Configurar bloco
+Unset Block			Desconfigurar bloco
+Copy Block			Copiar bloco
+Delete Block			Apagar bloco
+Fill Block			Preencher bloco
+Smart Fill Block		Preenchimento de bloco inteligente
+Sort				Colocar em ordem
+Rows Ascending as Text		Linhas em ascendente como texto
+Rows Ascending as Numbers	Linhas em ascendente como número
+Rows Descending as Text		Linhas em descendente como texto
+Rows Descending as Numbers	Linhas em descendente como números
+Columns Ascending as Text	Colunas em ascendente como texto
+Columns Ascending as Numbers	Colunas em ascendente como número
+Columns Descending as Text	Colunas em descendente como texto
+Columns Descending as Numbers	Colunas em descendente como números
+Block Sum			Somar bloco
+Block Minimum			Somar mínimo
+Block Maximum			Somar máximo
+Block Average			Média de bloco
+Borders				Bordas
+Grid				Grades
+Underline			Sublinhado
+None				Nenhum
+Column Width			Largura da coluna
+Set				Configurar
+Fit Block			Ajustar bloco
+Set Default			Configurar como padrão
+Fit Block Width			Ajustar largura do bloco
+Row Height			Altura da linha
+Fit Block Height		Ajustar altura do bloco
+Set Default Format		Configurar como padrão
+Cell Format			Formatar célula
+Block Format			Formatar bloco
+Cell Style			Estilo da célula
+Block Style			Estilo do bloco
+Define Style			Definir estilo
+Cell Color			Cor da célula
+Block Color			Cor do bloco
+Edit Record			Editar registro
+Data Entry			Entrada de dados
+Siag-net			Rede Siag
+Identify Cell			Identificador de célula
+Recalculate			Recalcular
+Change Buffer			Mudar buffer
+Delete Buffer			Apagar buffer
+Split Window			Dividir janela
+Remove Window			Remover janela
+One Window			Janela um
+Change Window			Mudar janela
+Add Sheet			Adicionar planilha
+Remove Sheet			Remover planilha
+Rename Sheet			Renomear planilha
+Protect Cells			Proteger células
+Remove Protection		Remover proteção
+Go To				Vá para
+Beginning of buffer		Começo do buffer
+End of buffer			Final do buffer
+Top of buffer			Topo do buffer
+Bottom of buffer		Base do buffer
+Grid Lines			Linhas grades
+Show				Mostrar
+Hide				Esconder
+Reference Style			Referenciar estilo
+Disable Helptexts		Disabilitar textos de ajuda
+Helptexts			Textos de ajuda
+Disable				Desabilitar
+Both				Ambos
+Save Preferences		Salvar preferências
+Lines				Linhas
+Points				Pontos
+Linespoints			Pontos de linha
+Impulses			Impulsos
+Dots				Pontos
+Steps				Passos
+Boxes				Caixas
+Surface				Superfície
+Advanced			Avançado
+Contents			Conteúdo
+Search				Procurar
+Copying				Copiar
+About Siag			Sobre Siag
+About Siag...			Sobre Siag...
+About Siag Office...		Sobre Siag Office...
+About Pathetic Writer...	Sobre Pathetic Writer...
+About Egon Animator...		Sobre Egon Animator...
+About Xfiler...			Sobre Xfiler...
+About XedPlus...		Sobre XedPlus...
+About Gvu...			Sobre Gvu...
+Help for Help			Ajuda para ajuda
+Links				Links
+Siag Home			Sítio do Siag
+FTP Directory			Diretório do FTP
+SIOD Command			Comando SIOD
+C Command			Comando C
+Guile Command			Comando Guile
+Tcl Command			Comando Tcl
+Web Server			Servidor Web
+Mail				Correio
+File Manager			Gerenciador de arquivos
+Form Test			Formulário de teste
+Another Form Test		Outro formulário de teste
+Yet Another Form Test		Ainda outro formulário de teste
+Another Form Test Still		Ainda mais um formulário de teste
+Import				Importar
+Export				Exportar
+Link				Ligar
+Move				Mover
+Expression			Expressão
+Command				Comando
+Sum				Somar
+Import Plugin			Importar plugin
+Move Plugin			Mover plugin
+Quit				Sair
+External Program:		Programa externo:
+Local File			Arquivo local
+Compressed File			Arquivo comprimido
+Archive				Arquivo
+Compressed Archive		Arquivo compresso
+Generic				Genérico
+Search:				Procurar:
+Label:				Etiqueta:
+SIOD expression:		Expressão SIOD:
+C expression:			Expressão C:
+Guile expression:		Expressão Guile:
+Tcl expression:			Expressão Tcl:
+New expression interpreter:	Novo interpretador de expressão:
+Key				Chave
+Value				Valor
+Object file:			Arquivo de objeto:
+Width:				Largura:
+Height:				Altura:
+Bold				Negrito
+Italic				Itálico
+Top				Topo
+Bottom				Botão
+Left				Esquerda
+Right				Direita
+Center				Centro
+Expression style:		Estilo de expressão:
+Color:				Cor:
+color				cor
+Black				Preto
+Red				Vermelho
+Green				Verde
+Blue				Azul
+Yellow				Amarelo
+Magenta				Magenta
+Cyan				Cyan
+White				Branco
+Select Plugin:			Selecionar plugin:
+Change Buffer:			Mudar buffer:
+Kill Buffer:			Matar buffer:
+SIOD command:			Comando SIOD:
+C command:			Comando C:
+Guile command:			Comando Guile:
+Tcl command:			Comando Tcl:
+To:				Para:
+Enter user data			Entre com os dados do usuário
+First name			Primeiro nome
+Last name			Último nome
+Address				Endereço
+Find pattern:			Encontrar padrão:
+Go to:				Vá para:
+Pick one:			Pegar um:
+Yes				Sim
+No				Não
+Replace				Repor
+Spell				Ortografia
+Tab Distance			Distância de um TAB
+Beginning of paragraph		Começando do parágrafo
+End of paragraph		Fim do parágrafo
+Line Height			Altura da linha
+Segment Format			Formato do segmento
+Line Format			Formato da linha
+Copy				Copiar
+Use				Usar
+Cleanup				Limpar
+Segment Style			Estilo do segmento
+Line Style			Estilo da linha
+Segment Color			Cor do segmento
+Line Color			Cor da linha 
+About Pathetic Writer		Sobre o Pathetic Writer
+Spell Test			Teste de ortografia
+Dump Words			Coletar palavras
+Default				Padrão
+Invisible			Invisível
+Integer				Inteiro
+Scientific			Científico
+Fixed				Fixo
+Date				Data
+Time				Hora
+Comma				Vírgula
+Percent				Porcento
+Hex				Hex
+Currency			Moeda
+User 1				Usuário 1
+User 2				Usuário 2
+User 3				Usuário 3
+User 4				Usuário 4
+User 5				Usuário 5
+Header 1			Cabeçário 1
+Header 2			Cabeçário 2
+Header 3			Cabeçário 3
+Header 4			Cabeçário 4
+Header 5			Cabeçário 5
+Header 6			Cabeçário 6
+Title				Título
+Abstract			Abstrato
+Preformatted			Pré-formatado
+Embed				Encaixar
+Start another instance of Pathetic Writer	Iniciar outra instância do Pathetic Writer
+Open a Pathetic Writer document		Abrir um documento do Pathetic Writer
+Display the PW online documentation	Exibir a documentação online do Pathetic Writer
+Underlined text		        Texto sublinhado
+Superscript			Script superior
+Subscript			Script inferior
+Show Editor			Mostrar Editor
+Hide Editor			Esconder Editor
+Show editor			Mostrar editor
+Hide editor			Esconder editor
+Begin Empty Animation	        Iniciar animação vazia
+Add Object			Adicionar objeto
+Line				Linha
+Image				Imagem
+Delete Object			Apagar objeto
+Change Object Type		Mudar tipo de objeto
+Add tick			Adicionar sinal
+Delete Tick			Remover sinal
+Edit Properties			Editar propriedades
+Set Background			Configurar Plano de fundo
+Timing				Cronometrar
+Set Geometry			Configurar Geometria
+Play Animation			Rodar Animação
+Box Animation Demo		Caixa demo de animação
+Circle Animation Demo		Círculo demo de animação
+Line Animation Demo		Linha demo de animação
+Combo Animation Demo		Seqüência demo de animação
+Box				Caixa
+Circle				Círculo
+Combo				Seqüência
+About Egon Animator		Sobre Egon Animator
+Start another instance of Egon Animator	Iniciar outra instância do Egon Animator
+Open an Egon Animator document		Abrir um documento do Egon Animator
+Pop down animation			Minimizar animação
+Pause the animation			Parar animação
+Previous animation frame		Voltar para o quadro de animação anterior
+Play the animation			Rodar a animação
+Next animation frame			Próximo quadro de animação
+Display the Egon online documentation	Mostrar documentação online do Egon
+Rectangle				Retângulo
+Arc					Arco
+Ellipse					Elipse
+Pixmap					Pixmap
+String					Seqüência de caracteres
+Point					Ponto
+Filled Rectangle			Retângulo preenchido
+Filled Arc				Arco preenchido
+Filled Ellipse				Elipse preenchida
+Open file				Abrir arquivo
+Save file				Salvar arquivo
+Quit animation				Sair da animação
+Stop animation				Parar animação
+Previous frame				Quadro anterior
+Next frame				Próximo quadro
+Play animation				Executar animação
+Quit Egon				Sair do Egon
+No files found				Nenhum arquivo encontrado
+File saved				Arquivo salvo
+This window is too small to split	Esta janela é muito pequena para dividir
+Couldn't save				Não foi possível salvar
+Save %s?				Salvar %s
+Saved %s				Salvo %s
+Saved as %s				Salvar como %s
+Loading					Carregando
+New file				Novo arquivo
+Load auto startup code?			Carregar código de iniciação automático?
+Can't open loader file			Não posso abrir arquivo carregador
+Parameters:				Parâmetros:
+External program failed			Programa externo falhou
+Attempt to delete sole ordinary window	Tentar apagar janela sozinha?
+No such buffer				Nenhum buffer encontrado
+Overwrite existing %s?			Sobrescrever existente %s?
+Can't open saver file			Não foi possível abrir arquivo salvador
+Couldn't kill last buffer		Não poderia matar o último buffer
+%s command:				%s comando:
+%s expression:				%s expressão:
+Already defining kbd macro!		Já definindo macro de teclado!
+Defining kbd macro...			Definindo macro de teclado...
+Not defining kbd macro			Não definindo macro de teclado
+Keyboard macro defined			Macro de teclado definida
+Can't execute anonymous macro while defining one	Não posso executar macro anônima enquanto definindo uma
+Input buffer overflow; macro execution terminated	Buffer de entrada sobrecarregado; execução da macro finalizada
+Add Tick				Adicionar marca
+Add Line				Adicionar linha
+Add Rectangle			    Adicionar retângulo
+Add Arc					Adicionar arco
+Add Ellipse				Adicionar elipse
+Add Image				Adicionar imagem
+Add String				Adicionar seqüência de caracteres
+Add Point				Adicionar ponto
+Add Filled Rectangle			Adicionar retângulo preenchido
+Add Filled Ellipse			Adicionar elipse preenchida
+Add Filled Arc				Adicionar arco preenchido
+Sheet %d				Arco %d
+Alert					Alerta
+All files (*)				Todos arquivos (*)
+Change %s:				Mudar %s:
+Duration				Duração
+ERROR					ERRO
+Font					Fonte
+LABEL					ETIQUETA
+EMPTY					VAZIO
+No object selected			Nenhum objeto selecionado
+No warranty				Nenhuma garantia
+Object type:				Tipo de objeto:
+Previewer				Visualizador
+Print Command				Imprimir comando
+Save %s ?				Salvar %s ?
+Saving					Salvando
+Style %s changed			Estilo %s alterado
+This command does nothing		Este comando não faz nada
+Time Difference				Diferença de tempo
+Time:					Tempo:
+black					preto
+blue					azul
+cyan					cyan
+done.					pronto.
+green					verde
+magenta					magenta
+white					branco
+yellow					amarelo
+yes					sim
+Directories				Diretórios
+Files					Arquivos
+Top:					Topo:
+Bottom:					Base:
+Left:					Esquerda:
+Right:					Direita:
+Header:					Cabeçário:
+Footer:					Rodapé:
+Size:					Tamanho:
+Respect protection			Respeite a proteção
+Date:					Data:
+Type:					Tipo:
+Orientation:				Orientação:
+Logarithmic X axis			Eixo Logarítmico X
+Logarithmic Y axis			Eixo Logarítmico Y
+Has ticks				Tem marcas 
+Has titles				Tem títulos
+Parametric				Paramétrico
+Integration				Integração
+Printer					Impressora
+Editor					Editor
+Help browser				Navegador de ajuda
+File manager				Gerenciador de arquivo
+Header on first page			Cabeçário na primeira página
+Name:					Nome:
+Special Char				Caracter especial
+Code:					Código:
+Word:					Palavra:
+Tab distance:				Espaço de uma tabulação:
+First page number:			Número da primeira página:
+Height:					Altura:
+Can't make postscript			Não pude criar o postscript
+Objects					Objetos
+Ticks					Marcas
+Properties				Propriedades
+None selected				Nenhum selecionado
+Width					Largua
+Height					Altura
+Visible					Visível
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s em %d] [tamanho = %dx%d] [duração=%d delta=%d]
+Line in buffer				Alinhar buffer
+Line:					Linha:
+Insert					Inserir
+Save Selection				Salvar seleção
+Print Selection				Imprimir seleção
+Shift Selection Right			Seleção com shift à direita
+Shift Selection Left			Seleção com shift à esquerda
+Jump					Pular
+Begin					Iniciar
+End					Fim
+Selection Start				Selecionar Começo
+Selection End				Selecionar Fim
+Search Selection			Procurar seleção
+Replace Selection			Substituir seleção
+Find Bracket				Achar parênteses
+Check Brackets				Checar parênteses
+Special					Especial
+Options					Opções
+Call Sed				Chamar Sed
+About					Sobre
+Commands				Comandos
+New Xedplus				Novo Xedplus
+Pipes					Redirecionamentos
+Pipe					Redirecionar
+-Insert-				-Inserir-
+-Overwrite-				-Sobreescrever-
+Start another editor			Iniciar outro editor
+Open a text file			Abrir arquivo de texto
+Save the file				Salvar o arquivo
+Print the file				Imprimir o arquivo
+Display the online documentation	Exibir documentação online
+no file yet				nenhum arquivo ainda
+Line number?				Número da linha?
+Start at:				Iniciar em:
+Cursor position				Posição do cursor
+Textbeginning				Início do texto
+Textending				Final do texto
+Direction:				Direção:
+Forward					Para frente
+Backward				Para trás
+Search for:				Procurar por:
+Replace with:				Substituir com:
+Replace veto				Substituir veto
+Replace all				Substituir tudo
+Wrap mode:				Modo envolto:
+Never					Nunca
+Word					Palavra
+Tab size:				Tamanho
+Autoindent:				Auto identar:
+Autofill:				Auto preencher:
+Perform a stream editor command (sed)	Realizar um comando de editor de fluxo (sed)
+Command:				Comando:
+Do it					Faça
+Do it Selection				Faça Seleção
+Undo it					Desfazer
+Perform a User command			Efetuar um comando de usuário
+Perform a User pipe			Efetuar um redirecionamento de usuário
+New...					Novo...
+Move...					Mover...
+Copy...					Copiar...
+Link...					Ligar...
+Select...				Selecionar...
+Select all				Selecionar tudo
+Deselect all				Deselecionar tudo
+Folder					Pasta
+Go to...				Vá para...
+Empty					Vazio
+View					Ver
+Tree					Árvore
+Icons					Ícones
+Text					Texto
+Sort by name				Ordenar pelo nome
+Sort by size				Ordenar pelo tamanho
+Sort by date				Ordenar pela data
+Hide folders				Esconder pastas
+Mix folders/files			Misturar pastas/arquivos
+Show hidden files			Mostrar arquivos escondidos
+Close window				Fechar janela
+Go to home directory			Vá para o diretório home
+Go up one directory			Vá para um diretório acima
+Create folder				Crir nova pasta
+Open command window			Abrir janela de comando
+Change view mode			Mudar modo de visualização
+Change sort mode			Mudar modo de ordenação
+Text editor				Editor de texto
+Find file				Procurar arquivo
+Create file:				Criar arquivo:
+Filename pattern:			Padrão de nome de arquivo:
+Add					Adcionar
+Remove					Remover
+Create folder:				Criar pasta:
+Go to folder:				Vá para pasta:
+Clear					Limpar
+Copy to:				Copiar para:
+Move to:				Mover para:
+Link to:				Ligar para:
+Command Window				Janela de comando
+Information...				Informação...
+Name					Nome
+Length					Largura
+Owner					Dono
+Group					Grupo
+Access Permissions			Pemissões de acesso
+Type					Tipo
+Symbolic Link To			Link simbólico para
+Last Modification			Última modificação
+Last Status Change			Último status de mudança
+Permissions...				Permissões...
+Changing access permissions for %s	Mudar permissões de acesso para %s
+Others					Outros
+Restore					Restaurar
+Open With...				Abrir Com...
+Open with:				Abrir com:
+Redo					Refazer
+Stop					Parar
+Open...					Abrir...
+Reopen					Reabrir
+Print...				Imprimir...
+Print marked pages...			Imprimir páginas marcadas...
+Save marked pages...			Salvar páginas marcadas...
+Page					Página
+Next					Próximo
+Redisplay				Mostrar novamente
+Previous				Anterior
+Mark					Marcar
+Unmark				    Desmarcar
+Magstep					Ajustar a página
+Upside-down				De cima para baixo
+Seascape				Paisagem (ponta cabeça)
+Swap Landscape				Trocar Paisagem
+Media					Mídia
+Help...					Ajuda...
+Copyright...				Direitos autorais...
+Open a PostScript file			Abrir um arquivo Postscript
+Save the marked pages			Salvar páginas marcadas
+Print the marked pages			Imprimir páginas marcadas
+Previous page				Página anterior
+Next page				Próxima página
+Center page				Centralizar página
+Increase magstep			Aumentar ajuste de pábina
+Decrease magstep			Diminuir ajuste de página
+Display online help			Mostrar ajuda online
+Display copyright information		Mostrar informações sobre direitos autorais
+Printer Name:				Imprimir Nome:
+Okay					OK
+Unsaved Changes!			Mudanças não-salvas!
+File has been modified by someone else!	O arquivo foi modificado por outra pessoa!
+Cannot create backup file!		Não consegui criar cópia de backup!
+Cannot open file for reading!		Não consegui abrir o arquivo para leitura!
+File does not exist and directory is write protected!	O arquivo não existe e o diretório está protegido contra escrita
+File opened READ ONLY			Arquivo aberto APENAS PARA LEITURA
+Cannot open file!			Não pude abrir arquivo!
+Cannot save file!			Não pude salvar arquivo!
+Cannot create file!			Não pude criar o arquivo!
+Error in Print Command String		Erro na seqüência de comando de impressão
+Don't know how to handle this drop!	Não sei como fazer para colocar isto!
+Update icons				Atualizar ícones
+Which format?				Qual formato?
+Warning!				Cuidado!
+Toggle overwrite/insert			
+This program is part of Siag Office,\nan effort to create a full-featured, free\noffice package for Unix and X.		Este programa é parte do Siag Office, um esforço para \ncriar um pacote office cheio de facilidades e de \nuso livre para Unix e X-Window.
+The interactive text editor for X	Este é um editor de texto interativo para X
+Authors:				Autores:
+Part of Siag Office			Parte do Siag Office
+A spreadsheet for X			Uma planilha eletrônica para X
+A word processor for X			Um processador de texto para X
+An animation program for X		Um programa de animação para X
+A file manager for X			Um gerenciador de arquivos para X
+A postscript viewer for X		Um visualizador de postscript para X
+Environment				Ambiente
+Custom					Customizar
+Defaults				Padrões

@@ -1,0 +1,42 @@
+.sw 80
+.sh 20
+.sf 33
+# prognos/strfib.siag
+# 12 lines
+#
+# Line 1
+1 1 50	"Press '!'
+# Line 2
+2 1 33	=(string-length (href 1))
+2 2 33	$"A"
+# Line 3
+3 1 33	=(string-length (href 1))
+3 2 33	$"B"
+# Line 4
+4 1 33	=(string-length (href 1))
+4 2 33	$(+$ (vref -2) (vref -1))
+# Line 5
+5 1 33	=(string-length (href 1))
+5 2 33	$(+$ (vref -2) (vref -1))
+# Line 6
+6 1 33	=(string-length (href 1))
+6 2 33	$(+$ (vref -2) (vref -1))
+# Line 7
+7 1 33	=(string-length (href 1))
+7 2 33	$(+$ (vref -2) (vref -1))
+# Line 8
+8 1 33	=(string-length (href 1))
+8 2 33	$(+$ (vref -2) (vref -1))
+# Line 9
+9 1 33	=(string-length (href 1))
+9 2 33	$(+$ (vref -2) (vref -1))
+# Line 10
+10 1 33	=(string-length (href 1))
+10 2 33	$(+$ (vref -2) (vref -1))
+# Line 11
+11 1 33	=(string-length (href 1))
+11 2 33	$(+$ (vref -2) (vref -1))
+# Line 12
+12 1 33	=(string-length (href 1))
+12 2 33	$(+$ (vref -2) (vref -1))
+# End of file prognos/strfib.siag

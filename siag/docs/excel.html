@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Siag - Notes for Excel Users</title>
+</head>
+
+<body>
+<h1>Notes for Excel Users</h1>
+
+If you have previously used legacy applications such as Microsoft's
+Excel spreadsheet, you already know most of what you need to get
+started with Siag. However, <i>Siag is not an Excel emulator</i>,
+and it is good to be aware of some of the differences.
+
+<h2>Operators</h2>
+
+In formulas, Excel uses ^ for exponentiation. Siag
+has a syntax that is modeled after the C programming language. This
+means among other things that ^ is used for bitwise xor. To get
+exponentiation, use ** instead (this does not come from C).
+<p>
+<h3>Example</h3>
+In Excel, 2^3 evaluates to 8. In Siag, you must use 2**3 to get the same
+result, as 2^3 yields 1.
+<p>
+Another difference is that Siag has
+<a href="c-expr.html">many more operators</a>.
+
+<h2>Functions</h2>
+
+Siag has hundreds of predefined functions. Many of those have Excel
+equivalents, but not all. In the
+<a href="siag-functions.html">function reference</a>, those functions
+which are Excel compatible are marked as such.
+
+<h2>Extension Language</h2>
+
+Excel has Visual Basic. The primary extension language in Siag
+is <a href="scheme.html">Scheme</a>, which allows you to define
+new functions in a straightforward way - functions which can then
+be used directly in your documents.
+<p>
+Siag can also use <a href="../common/interpreters.html">other
+extension languages</a>.
+
+<h2>File Formats</h2>
+
+The best way to move files from Excel to Siag is this:
+<ol>
+<li>Load the file in Excel
+<li>Save the file using Lotus 1-2-3 format (.wk1)
+<li>Load the file in Siag
+</ol>
+
+If the procedure above is not possible (say, you have a file in .xls
+format but no access to Excel), it is possible to load the file anyway
+using <a href="fileformats.html">Siag's .xls support</a>. Be aware,
+though, that doing this will preserve less information.
+
+
+<hr>
+<address>Ulric Eriksson - July 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

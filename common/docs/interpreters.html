@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Interpreters</title>
+</head>
+
+<body>
+<h1>Interpreters</h1>
+
+It is pretty common for applications to offer extension capabilities
+by means of a simple "extension language". Usually this language is
+invented for the particular application, rather than simply picking
+one of the many available interpreters. This forces users to learn
+a new language just to be able to use the program.
+<p>
+In contrast, early versions of Siag used Scheme as its interpreter.
+The implementation chosen was SIOD by George Carrette. This concept
+has now been taken even further by adding support for multiple
+interpreters.
+<p>
+The supporting code for each language resides in its own module.
+As an example, Siag can currently be linked with support for these
+interpreters:
+<dl>
+<dt><b>C</b>
+<dd>The default syntax for expressions in Siag is a simple C-like
+syntax, familiar to anyone who has used a spreadsheet before.
+<dt><b>SIOD</b>
+<dd>An extremely small Scheme interpreter which cooperates
+exceptionally well with C.
+<dt><b>Guile</b>
+<dd>Optional; another Scheme interpreter. This one follows the R4RS more closely
+than SIOD, which can be important if external Scheme programs are to
+be used in Siag.
+<dt><b>Python</b>
+<dd>Optional.
+<dt><b>Ruby</b>
+<dd>Optional.
+<dt><b>Tcl</b>
+<dd>Optional. Tcl is another popular embeddable scripting language.
+</dl>
+
+Pathetic Writer and Egon Animator can be linked with SIOD, Guile, Ruby
+and Tcl.
+
+<h2>Cross-calling</h2>
+
+One interpreter can call another using a string-based interface.
+In SIOD, a call to make Tcl beep can look like this:
+<pre>
+(exec-expr 'Tcl "puts \\a")
+</pre>
+And Tcl can tell Guile to collect garbage in the following fashion:
+<pre>
+exec-expr Guile "(gc)"
+</pre>
+
+<h2>Installation</h2>
+
+Getting the optional interpreters to work can be a bit tricky. The
+INSTALL document includes several hints that are likely to be of
+assistance.
+
+<hr>
+<address>Ulric Eriksson - January 2002 - ulric@siag.nu</address>
+</body>
+</html>
+

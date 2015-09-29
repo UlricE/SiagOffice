@@ -1,0 +1,4 @@
+
+If the last sheet of a buffer is closed, close buffer.
+
+If the last buffer is closed, close application.

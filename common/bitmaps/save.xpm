@@ -1,0 +1,37 @@
+/* XPM */
+static char * floppy3_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"24 24 7 1 4 4",
+/* colors */
+" 	s None	m None	c None",
+".	c #000080",
+"X	s iconColor1	m black	c black",
+"o	s iconColor6	m white	c yellow",
+"O	s iconGray1	m white	c #e0e0e0",
+"+	s iconColor2	m white	c white",
+"@	c #C0C0C0",
+/* pixels */
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"    ..XXXXXXXXXXX..     ",
+"    ..ooooooooooo..X    ",
+"    ..OOOOOOOOOOO..X    ",
+"    ..+++++++++++..X    ",
+"    ..OOOOOOOOOOO..X    ",
+"    ..+++++++++++..X    ",
+"    ..OOOOOOOOOOO..X    ",
+"    ..+++++++++++..X    ",
+"    ...............X    ",
+"    ....@@@@@@@....X    ",
+"    ....@..@@@@....X    ",
+"    ....@..@@@@....X    ",
+"    ....@..@@@@....X    ",
+"    ....@..@@@@....X    ",
+"     ...@@@@@@@....X    ",
+"      XXXXXXXXXXXXXX    ",
+"                        ",
+"                        ",
+"                        ",
+"                        "};

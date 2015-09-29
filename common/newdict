@@ -1,0 +1,16 @@
+#!/bin/sh
+
+LC_COLLATE=C
+export LC_COLLATE
+
+# Compare a dictionary.*.in file with all others, looking for missing keys
+
+# Find all keys from all dictionaries
+grep -h -v '^#' dictionary.*.in | cut -f 1 -s | sort | uniq > alldict
+
+# Find all keys from the named dictionary
+grep -v '^#' $1.in | cut -f 1 -s | sort | uniq > olddict
+
+# Find all keys that are missing from the named dictionary
+diff olddict alldict | grep "^> "| cut -c 3-
+

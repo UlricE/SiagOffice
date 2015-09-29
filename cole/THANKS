@@ -1,0 +1,21 @@
+
+Thank you all of you that have contributed with this project!
+Thank you for help!
+
+(If you can't find your name here, please email to the current maintainer).
+
+Thanks to:
+**********
+
+The LAOLA guy: Martin Schwartz. Without his pretty hack
+  into Structure Storage and Compound Files this work could never be
+  possible.
+The Engineering Computer Laboratory of La Salle University
+  Mexico, Campus Mexico City, for supporting Arturo Tena
+  in cole development.
+Bernhard Reiter <bernhard@uwm.edu>. OSF fixes.
+Shaw Terwilliger <sterwill@postman.abisource.com>. C++ fix.
+Caolan McNamara <Caolan.McNamara@ul.ie>. Debug and more.
+Martin Scharpf <martin.scharpf@bbraun.com>. Debug.
+David Rysdam. The memory dump function cole used in pre 1.x and 1.x releases.
+

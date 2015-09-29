@@ -1,0 +1,105 @@
+These are the files in the common bitmap directory. They should be given
+better names that can be used for the Gnome and KDE versions as well.
+
+The first step is to scale all the 16x16 icons to 24x24:
+ - load in pixmap
+ - resize to 24x24
+ - shift 4 pixels to the right and 4 down
+ - flood fill the empty space with None
+ - save
+
+Renamed or removed pixmaps:
+
+ - rm siag_fg.xpm
+ - mv ksiag.xpm siag.xpm
+ - mv egon_fg.xpm egon.xpm
+ - mv pw_fg.xpm pw.xpm
+ - mv floppy3.xpm save.xpm
+ - create saveas.xpm (save.xpm with pencil)
+ - mv info.xpm help.xpm
+ - mv center.xpm page_center.xpm
+ - mv landscape.xpm page_landscape.xpm
+ - mv portrait.xpm page_portrait.xpm
+ - mv grid.xpm brd_grid.xpm
+ - mv uline.xpm brd_under.xpm
+ - mv borders.xpm brd_around.xpm
+ - mv none.xpm brd_none.xpm
+ - mv play.xpm ani_play.xpm
+ - mv stop.xpm ani_stop.xpm
+ - mv next.xpm ani_next.xpm
+ - mv previous.xpm ani_prev.xpm
+ - mv vbottom.xpm subscript.xpm
+ - mv vtop.xpm superscript.xpm
+ - mv spell.xpm spellcheck.xpm
+ - mv bold.xpm text_bold.xpm
+ - mv italic.xpm text_italic.xpm
+ - mv uchar.xpm text_underline.xpm
+
+
+new.xpm			16x16	new file
+center.xpm		16x16	center page (gvu)
+larger.xpm		16x16	increase magstep (gvu)
+smaller.xpm		16x16	decrease magstep (gvu)
+landscape.xpm		16x16	landscape paper orientation (gvu)
+portrait.xpm		16x16	portrait paper orientation
+back.xpm		16x16	previous page (chimera)
+blank.xpm		16x16	blank pixmap
+bold.xpm		16x16	bold font
+borders.xpm		16x16	borders around block (siag)
+cancel.xpm		16x16	stop sign
+compress.xpm		32x32	compressed archive (xfiler)
+copy.xpm		16x16	copy to clipboard
+copyright.xpm		16x16	copyright sign
+cut.xpm			16x16	cut to clipboard
+data.xpm		32x32	binary data (xfiler)
+egon_fg.xpm		32x32	egon icon
+fld_closed.xpm		16x16	closed folder
+fld_new.xpm		16x16	new folder
+fld_open.xpm		16x16	open folder
+fld_up.xpm		16x16	parent directory (xfiler)
+floppy3.xpm		16x16	save
+fonts.xpm		32x32	font file (xfiler)
+ghost.xpm		32x32	postscript file (xfiler)
+grid.xpm		16x16	grid in block (siag)
+hcenter.xpm		16x16	center text horizontally
+hleft.xpm		16x16	left adjust text
+home.xpm		16x16	home
+hright.xpm		16x16	right adjust text
+image.xpm		32x32	image file (xfiler)
+info.xpm		16x16	help
+italic.xpm		16x16	italic font
+ksiag.xpm		32x32	siag icon
+netscape.xpm		32x32	netscape icon (xfiler)
+next.xpm		16x16	next frame (egon)
+none.xpm		16x16	remove all borders in block
+paste.xpm		16x16	insert from clipboard
+play.xpm		16x16	start animation (egon)
+plotter.xpm		16x16	graph (siag)
+preview.xpm		16x16	magnifying glass
+previous.xpm		16x16	previous frame (egon)
+printer.xpm		16x16	printer
+pw_fg.xpm		32x32	PW icon
+quit.xpm		16x16	X window X
+redo.xpm		16x16	undo undo
+reload.xpm		16x16	reload (chimera)
+search.xpm		16x16	binoculars
+siag_fg.xpm		32x32	siag icon, old
+sigma.xpm		16x16	sum block
+sortaz.xpm		16x16	sort ascending
+sortmode.xpm		16x16	sort criteria (xfiler)
+sortza.xpm		16x16	sort descending
+spell.xpm		16x16	spell checking
+stop.xpm		16x16	stop animation
+uchar.xpm		16x16	underline font
+uline.xpm		16x16	underline block
+undo.xpm		16x16	undo
+unknown.xpm		48x48	many question marks
+vbottom.xpm		16x16	subscript
+viewmode.xpm		16x16	eye
+vtop.xpm		16x16	superscript
+xedplus.xpm		32x32	xedplus icon
+xterm16.xpm		16x16	xterm
+editor.xpm		16x16	text editor
+SO3.xpm			600x317	splash screen
+book-closed.xpm		16x16	closed book
+book-open.xpm		16x16	open book

@@ -1,0 +1,13 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowExec=
+SwallowTitle=
+BinaryPattern=
+Name[C]=Egon Animator
+MimeType=application/x-egon;
+Exec=egon %f
+Icon=egon.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

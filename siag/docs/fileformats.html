@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Siag - File Formats</title>
+</head>
+
+<body>
+<center>
+<h1>File Formats</h1>
+</center>
+Siag has support for these file formats:
+
+<dl>
+<dt><b>Siag</b>
+	<dd>Native Siag format, with support for Scheme and C-style
+		expressions as well as formatting attributes (fonts,
+		widths and so on). Very nice for Siag documents, but
+		totally incompatible with anything else.
+<dt><b>Comma Separated Values</b>
+	<dd>Almost every spreadsheet can
+		load and save this format, but all expressions are
+		lost. Despite its name, any character can be used
+		as field separator.
+<dt><b>Plain Text</b>
+	<dd>Every line is loaded as a label and placed in column 1
+		of successive rows.
+<dt><b>Lotus 1-2-3</b>
+	<dd>Siag imports documents in Lotus Worksheet format and
+		can save values in the same format.
+<dt><b>Postscript</b>
+	<dd>Siag can output pretty decent Postscript code, with
+		DSC comments and all to make the resulting files
+		post-processable. Normally, this code goes straight
+		to the printer or to Ghostview for previewing, but
+		it can also be saved in a file. Siag cannot load
+		Postscript files.
+<dt><b>HTML Tables</b>
+	<dd>Hypertext Markup Language as featured on the World Wide Web.
+		A spreadsheet maps nicely to the HTML table format,
+		and Siag can save and load (well-behaved) documents
+		in this format.
+<dt><b>Scheme Code</b>
+	<dd>Files containing Scheme code can be loaded and evaluated.
+<dt><b>Troff Tables</b>
+	<dd>Tables which can be processed by tbl to produce input
+		to the troff document formatting system.
+<dt><b>LaTeX Tables</b>
+	<dd>Tables which can be included in documents using the
+		LaTeX typesetting package.
+<dt><b>Excel</b>
+	<dd><i>Very</i> incomplete support for MS Excel (loading only).
+		This requires the <i>xls2csv</i> utility which is not
+		part of Siag.
+		A better way to convert Excel files to Siag is to save them
+		as Lotus worksheets (see below) in Excel and then load
+		them in Siag.
+<dt><b>PDF</b>
+	<dd>Siag can save in Adobe's "Portable Document Format".
+	Requires the program ps2pdf.
+</dl>
+
+<h2>Adding Format Handlers</h2>
+Siag can use external converters to convert files from formats it
+can't handle directly to ones it does handle. The converters are registered
+by the function register-converters; see siag.scm for the default
+implementation of that function.
+
+<hr>
+<address>Ulric Eriksson - June 1999 - ulric@siag.nu</address>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+
+This directory contains most of the plugins for Siag Office, small
+applets that run inside a main application which also controls what
+it does.
+
+The plugins are:
+
+clipart		Displays Postscript images
+dummy		Runs "normal" (non-plugin) X applications, allowing them
+		to be used almost as if they were plugins.
+form		Displays a form and allows interaction with the user
+hello		Displays a command button. Sends commands to main app.
+image		Displays raster images
+plot		Uses Gnuplot to produce graphs and displays them
+text		Reads text files or runs shell commands
+

@@ -1,0 +1,1203 @@
+# dictionary.gl.in
+# Translated by: Ramon Flores <fa2ramon@usc.es>, 2000
+
+Siag (Scheme In A Grid) %s. No Warranty.	Siag (Scheme In A Grid) %s. Sen garantias.
+Pathetic Writer %s. No Warranty.	Pathetic Writer %s. Sen garantias.
+Egon Animator %s. No Warranty.		Egon Animator %s. Sen garantias.
+
+
+
+################################################################################
+############################                      ##############################
+############################   Scheme In A Grid   ##############################
+############################                      ##############################
+################################################################################
+
+######################### SIAG: Menu principal #################################
+
+File					Arquivo
+Edit					Editar
+Block					Bloco
+Format					Formato
+Data					Dados
+Plugin					Miniaplicativo
+Window					Xanela
+Plot					Gráfica
+Tools					Ferramentas
+Help					Axuda
+
+
+
+######################### SIAG: Barra de ferramentas ############################
+
+Start another instance of Siag			Iniciar unha nova sesión do Siag
+Open a Siag document				Abrir un documento Siag
+Save the contents of the current buffer		Gardar o contido do documento actual
+Preview the contents of the current buffer	PreVer o contido do documento actual 
+Print the contents of the current buffer	Imprimir o documento actual 
+Cut						Cortar
+Copy						Copiar 
+Paste						Pegar
+Undo						Desfacer
+Sort ascending					Orde ascendente
+Sort descending					Orde descendente
+Plot the contents of the block using lines	Trazar o contido do bloco usando liñas
+Add the contents of the block			Calcular a soma do bloco
+Display the Siag online documentation		Mostrar a documentación en liña do Siag
+Display the Gnu general public license		Mostrar a Licenza Pública Xeral da GNU
+Draw borders around the block			Debuxar bordas ao redor do bloco
+Draw grid lines in the block			Debuxar unha grade no bloco
+Underline the block				Suliñar o bloco
+Remove grid lines from the block		Eliminar a grade do bloco
+
+
+
+######################### SIAG: Barra de atributos ############################
+
+Change the font family			Trocar a fonte
+Change the font size			Trocar o tamaño da fonte
+Change the display style		Trocar o estilo de visualización
+Change the color			Trocar a cor
+Bold text				Texto en negrito
+Italic text				Texto en enfatizado
+Left adjusted text			Aliñar a esquerda
+Centered text				Centrar
+Right adjusted text			Aliñar á direita
+
+
+
+######################### SIAG: Estilos de visualización #########################
+
+Currency				Moeda
+Date					Data
+Default					Padróm
+Fixed					Vírgula fixa
+Hex					Hexadécimal
+Integer					Inteiro
+Invisible				Invisíbel
+Percent					Porcentaxe
+Scientific				Cientifico
+Time					Hora
+Time Difference				Diferenza temporal
+Ulric Testar				Test de Ulric
+User 1					Usuário 1
+User 2					Usuário 2
+User 3					Usuário 3
+User 4					Usuário 4
+User 5					Usuário 5
+
+
+
+############################ SIAG: Cores ####################################
+
+Black					Preto
+Red					Vermello
+Green					Verde
+Blue					Azul
+Yellow					Amarelo
+Magenta					Maxenta
+Cyan					Ciano
+White					Branco
+
+
+
+######################### SIAG: Modificación dunha cela ########################
+
+Label:					Etiqueta:
+SIOD expression:			Expresión SIOD:
+C expression:				Expresión C:
+Guile expression:			Expresión Guile:
+Tcl expression:				Expresión Tcl:
+
+
+
+######################### SIAG: Tela principal ################################
+
+Sheet %d				Folla %d
+done.					feito.
+EMPTY					VALEIRA
+LABEL					ETIQUETA
+ERROR					ERRO
+
+
+
+######################### SIAG: Menu Arquivos ##################################
+
+New					Novo
+Open					Abrir
+Save					Gardar
+Save As					Gardar como
+Preview					PreVer
+Close					Fechar
+Backup Copies				Cópias de seguridade
+Settings				Opcións
+Margins					Marxes
+Paper Size				Tamaño do papel
+Header and Footer			Cabezallo e Rodapé
+Print					Imprimir
+Print Format				Formato de impresión
+Load External				Importar
+Save External				Exportar
+Exit					Sair
+
+
+
+######################### SIAG: Menu Editar #####################################
+
+(Undo)					
+Delete					Eliminar
+Insert Line				Inserir liña
+Remove Line				Eliminar liña
+Insert Column				Inserir columna
+Remove Column				Eliminar columna
+Select All				Seleccionar todo
+(Cut)
+(Copy)
+(Paste)
+Find					Procurar
+Find Backward				Procurar cara atrás
+Label					Etiqueta
+Expression				Expresión  
+Change Default Interpreter		Trocar interprete padrón  
+Other					Outro
+Function A-F				Funcións A-F
+Function G-L				Funcións G-L
+Function M-S				Funcións M-S
+Function T-Z				Funcións T-Z
+Add Property				Engadir propriedade
+
+
+
+########################### SIAG: Menu Bloco ###################################
+
+Set Mark				Início do  bloco
+Set Block				Fin do bloco
+Unset Block				Deseleccionar bloco
+Copy Block				Copiar bloco
+Delete Block				Eliminar bloco
+Fill Block				Encher bloco
+Smart Fill Block			Enchido intelixente de bloco 
+Sort					Ordenar
+Rows Ascending as Text			Filas por orde alfabética
+Rows Ascending as Numbers		Filas por orde numérica
+Rows Descending as Text			Filas por orde alfabética inversa
+Rows Descending as Numbers		Filas por orde numérica inversa
+Columns Ascending as Text		Columnas por orde alfabética
+Columns Ascending as Numbers		Columnas por orde numérica
+Columns Descending as Text		Columnas por orde alfabética
+Columns Descending as Numbers		Columnas por orde numérica inversa
+Block Sum				Soma do bloco
+Block Minimum				Mínimo do bloco
+Block Maximum				Máximo do bloco
+Block Average				Média do bloco
+Borders					Bordas
+Grid					Grade
+Underline				Suliñado
+None					Nada
+
+
+
+######################### SIAG: Menu Formato ###################################
+
+(Margins)
+(Paper Size)
+(Header and Footer)
+First Page Number			Número da primeira páxina
+Column Width				Largura da columna  
+Set					Definir
+Fit Block				Axustar bloco
+Set Default				Definir padrón
+Row Height				Altura da fila
+Set Default Format			Definir formato padrón
+Font					Fonte
+Style					Estilo
+Define Style				Definir estilo
+Foreground Color			Cor do texto
+Background Color			Cor do fundo
+
+
+
+######################### SIAG: Menu Dados #####################################
+
+Edit Record				Editar rexistro
+Data Entry				Entrada de dados
+Siag-net				Rede-Siag
+Enter Date				Data
+Enter Time				Hora
+Identify Cell				Identificar cela
+Recalculate				Recalcular
+
+
+
+######################### SIAG: Menu Miniaplicativo ############################
+
+Import					Importar
+Export					Exportar
+Link					Ligar
+(Delete)
+Move					Mover
+Resize					Redimensionar
+App					Apl.
+
+
+
+######################### SIAG: Menu Xanela ###################################
+
+Change Buffer				Trocar documento
+Delete Buffer				Eliminar documento
+Split Window				Dividir xanela
+Remove Window				Fechar xanela
+One Window				Unha xanela
+Change Window				Trocar xanela
+Add Sheet				Engadir folla
+Remove Sheet				Eliminar folla
+Rename Sheet				Renomear folla
+Move Sheet				Mover folla
+Up					Subir
+Down					Baixar
+Top					Primeiro plano
+Bottom					Último plano
+Protect Cells				Protéxer celas
+Remove Protection			Eliminar proteción
+Go To					Ir a
+Beginning of buffer			Início do documento
+End of buffer				Fin do documento
+Top of buffer				Primeira liña
+Bottom of buffer			ültima liña
+Cell					Cela...
+Grid Lines				Liña guia
+Show					Mostrar
+Hide					Ocultar
+Reference Style				Estilo de referéncia
+Helptexts				Texto da axuda
+Disable					Desactivar
+(Label)
+Popup					Popup
+Both					Ambos
+Save Preferences			Gardar preferéncias
+
+
+
+######################### SIAG: Menu Gráfica #################################
+
+Lines					Liñas
+Points					Pontos
+Linespoints				Liñas e pontos
+Impulses				Impulsos
+Dots					Dots
+Steps					En escada
+Boxes					Barras
+Surface					Surperfície
+Advanced				Avanzado
+
+
+
+######################### SIAG: Menu Ferramentas ################################
+
+Command					Comando
+Terminal				Terminal
+Editor					Editor
+Edit Applications			Editar aplicacións
+Save Applications			Gardar aplicacións
+Webserver				Servidor web
+Mail					Correo
+File Manager				Xestor de arquivos
+Form Test				Prova de formulário
+Test 1					Test 1
+Test 2					Test 2
+Test 3					Test 3
+
+
+
+########################### SIAG: Menu Axuda ##################################
+
+Contents				Contido
+Search					Procurar
+Copying					Licenza
+Help for Help				Uso da axuda
+Links					Ligazóns
+About Siag				Sobre o Siag
+
+
+
+############################## SIAG: Pop-up ####################################
+
+(Open)
+(Save)
+(Undo)
+(Delete)
+(Label)
+(Expression)
+(Command)
+Sum					Soma
+(Plugin)
+(Help)
+Quit					Sair
+
+
+
+
+
+
+################################################################################
+############################                     ###############################
+############################   Pathetic Writer   ###############################
+############################                     ###############################
+################################################################################
+
+######################### PW: Menu principal ###################################
+
+(File)
+(Edit)
+(Block)
+(Format)
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+
+
+######################### PW: Barra de ferramentas ###############################
+
+Start another instance of Pathetic Writer	Iniciar outra sesión do Pathetic Writer
+Open a Pathetic Writer document		Abrir un documento do Pathetic Writer
+(Save the contents of the current buffer)
+(Preview the contents of the current buffer)
+(Print the contents of the current buffer)
+(Cut)
+(Copy)
+(Paste)
+Spelling checker			Verificar a ortografia
+Display the PW online documentation	Mostrar a documentación en liña do PW
+(Display the Gnu general public license)
+(Left adjusted text)
+(Centered text)
+(Right adjusted text)
+
+
+
+######################### PW: Barra de atributos ##############################
+
+(Change the font family)
+(Change the font size)
+(Change the display style)
+(Change the color)
+(Bold text)
+(Italic text)
+Underlined text				Texto subliñado
+Superscript				Superíndice
+Subscript				Subíndice
+
+
+
+###################### PW: Estilos de visualización #############################
+
+(Default)
+Header 1				Cabezallo 1
+Header 2				Cabezallo 2
+Header 3				Cabezallo 3
+Header 4				Cabezallo 4
+Header 5				Cabezallo 5
+Header 6				Cabezallo 6
+(Address)
+Title					Título
+Abstract				Resumo
+Preformatted				Preformateado
+(User 1)
+(User 2)
+(User 3)
+(User 4)
+(User 5)
+
+
+
+######################### PW: Menu Arquivo ####################################
+
+(New)
+(Open)
+(Save)
+(Save As)
+(Preview)
+(Backup Copies)
+(Settings)
+(Print)
+(Print Format)
+(Load External)
+(Save External)
+(Exit)
+
+
+
+######################### PW: Menu Editar #####################################
+
+(Delete)
+(Insert Line)
+(Remove Line)
+(Select All)
+(Find)
+(Find Backward)
+Replace					Sustituir 
+Spell					Ortografia
+Special Char				Caract. especiais
+
+
+
+######################### PW: Menu Bloco ######################################
+
+(Set Mark)
+(Set Block)
+(Copy Block)
+(Delete Block)
+(Fill Block)
+
+
+
+######################### PW: Menu Format ######################################
+
+(Margins)
+(Paper Size)
+(Header and Footer)
+(First Page Number)
+Tab Distance				Tabulador
+Line Height				Altura da liña
+(Copy)
+Use					Usar
+(Define Style)
+Cleanup					Limpar
+
+
+
+######################### PW: Menu Miniaplitivo ################################
+
+(Import)
+(Export)
+(Link)
+(Delete)
+(Move)
+(Resize)
+(App)
+
+
+
+######################### PW: Menu Xanela  #####################################
+
+(Change Buffer)
+(Delete Buffer)
+(Split Window)
+(Remove Window)
+(One Window)
+(Change Window)
+(Add Sheet)
+(Remove Sheet)
+(Rename Sheet)
+(Move Sheet)
+(Go To)
+Line in buffer				Liña do documento
+(Beginning of buffer)
+(End of buffer)
+Beginning of paragraph			Início do parágrafo
+End of paragraph			Fin do parágrafo
+(Helptexts)
+(Disable)
+(Label)
+(Popup)
+(Both)
+(Save Preferences)
+
+
+
+######################### PW: Menu Ferramentas ##################################
+
+(Command)
+(Terminal)
+(Editor)
+(File Manager)
+(Edit aplications)
+(Save aplications)
+Spell Test				Comprovar ortografia
+Dump Words				Descarregar palabras
+(Form Test)
+(Test 1)
+(Test 2)
+(Test 3)
+
+
+
+######################## PW: Menu Axuda ########################################
+
+(Contents)
+(Search)
+(Copying)
+(Help for Help)
+(Links)
+About Pathetic Writer			Sobre o Pathetic Writer
+
+
+
+############################## PW: Pop-up ######################################
+
+(Open)
+(Save)
+(Undo)
+(Spell)
+(Command)
+(Plugin)
+(Help)
+(Quit)
+
+
+
+
+
+
+################################################################################
+#############################                   ################################
+#############################   Egon Animator   ################################
+#############################                   ################################
+################################################################################
+
+Egon Editor				Editor do Egon
+
+######################### EGON: Menu principal #################################
+
+(File)
+(Edit)
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+
+
+######################### EGON: Barra de ferramentas #############################
+
+Start another instance of Egon Animator	Iniciar outra sesión do Egon Animator
+Open an Egon Animator document		Abrir un documento do Egon Animator
+(Save the contents of the current buffer)
+(Preview the contents of the current buffer)
+(Print the contents of the current buffer)
+Pause the animation			Parar animación
+Previous animation frame		Cadro precedente
+Play the animation			Executar animación
+Next animation frame			Cadro seguinte
+Display the Egon online documentation	Mostrar a documentación en liña do Egon
+(Display the Gnu general public license)
+
+
+
+######################### EGON: Barra de atributos #############################
+
+(Change the font family)
+(Change the font size)
+(Change the display style)
+(Change the color)
+(Bold text)
+(Italic text)
+
+
+
+###################### EGON: Estilos de visualización ###########################
+
+(None)
+Line					Liña
+Rectangle				Rectángulo
+Arc					Arco
+Ellipse					Elipse
+Pixmap					Pixmap
+String					Texto
+Point					Ponto
+Filled Rectangle			Rectángule recheo
+Filled Arc				Arco recheo
+Filled Ellipse				Elipse rechea
+
+
+
+######################### EGON: Menu Arquivos ##################################
+
+(New)
+(Open)
+(Save)
+(Save As)
+(Preview)
+(Print)
+(Backup Copies)
+(Load External)
+(Save External)
+(Exit)
+
+
+
+######################### EGON: Menu Editar ##################################
+
+Show Editor				Mostrar editor
+Hide Editor				Ocultar editor
+Begin Empty Animation			Iniciar unha animación
+Add Object				Engadir obxecto
+(Line)
+(Rectangle)
+(Arc)
+(Ellipse)
+Image					Imaxe
+(String)
+(Point)
+(Filled Rectangle)
+(Filled Arc)
+(Filled Ellipse)
+(Other)
+Delete Object				Eliminar obxecto
+Add Tick				Engadir marca
+Delete Tick				Eliminar marca
+Edit Properties				Editar propriedades
+Set Background				Definir fundo
+Timing					Ritmo
+Set Geometry				Definir xeometria
+
+
+
+##################### EGON: Menu Miniaplicativo ################################
+
+(Import)
+(Export)
+(Link)
+(Delete)
+(Move)
+
+
+
+######################## EGON: Menu Xanela ###################################
+
+(Change Buffer)
+(Delete Buffer)
+(Split Window)
+(Remove Window)
+(One Window)
+(Change Window)
+(Helptexts)
+(Disable)
+(Label)
+(Popup)
+(Both)
+(Save Preferences)
+
+
+
+######################## EGON: Menu Ferramentas ###############################
+
+(Command)
+(Terminal)
+(Editor)
+(File Manager)
+Demo					Demo
+Box					Rectángulo
+Circle					Circulo
+(Line)
+Combo					Combinado
+
+
+
+######################### EGON: Menu Axuda ####################################
+
+(Contents)
+(Search)
+(Copying)
+(Help for Help)
+(Links)
+About Egon Animator			Sobre O Egon Animator
+
+
+
+############################## EGON: Pop-up ####################################
+
+Show editor				Mostrar editor
+Hide editor				Ocultar editor
+Open file				Abrir arquivo
+Save file				Gardar arquivo
+Stop animation				Parar a animación
+Previous frame				Cadro prévio
+Next frame				Cadro seguinte
+Play animation				Executar a animación
+Quit Egon				Sair do Egon
+
+
+
+################################################################################
+#############################                   ################################
+#############################  Editor Xedplus   ################################
+#############################                   ################################
+################################################################################
+
+no file yet				Sen arquivo
+
+
+######################### Xedplus: Menu principal ##############################
+
+(File)
+(Edit)
+Jump					Ir
+Find					Procurar
+Special					Especial
+Commands				Comandos
+Pipes					Pipes
+-Insert-				-Engadir-
+-Overwrite-				-Sobreescreber-
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+
+
+####################### Xedplus: Barra de ferramentas ###########################
+
+Start another editor			Iniciar outra xanela do Editor
+Open a text file			Abrir un documento de texto
+Save the file				Gardar o arquivo
+Print the file				Imprimir o arquivo
+(Cut)
+(Copy)
+(Paste)
+Display the online documentation	Mostrar a documentación en liña
+
+
+####################### Xedplus: Menu Arquivos ##################################
+
+(Open)
+Insert					Inserir
+(Save)
+(Save As)
+Save Selection				Gardar selección
+(Print)
+Print Selection				Imprimir selección
+Exit					Sair
+
+
+
+######################## Xedplus: Menu Editar ####################################
+
+(Cut)
+(Paste)
+Shift Selection Right			Mover o seleccionado á direita
+Shift Selection Left			Mover o seleccionado á esquerda
+
+
+
+########################### Xedplus: Menu Ir ####################################
+
+(Line)
+Begin					Início
+End					Fin
+Selection Start				Início do seleccionado
+Selection End				Fin do seleccionado
+
+
+
+######################## Xedplus: Menu Procurar #################################
+
+(Find)
+Search Selection			Procurar seleccionado
+(Replace)
+Replace Selection			Substituir seleccionado
+Find Bracket				Procurar paréntese
+Check Brakets				Comprobar paréntese
+
+
+
+######################## Xedplus: Menu Especial ################################
+
+Options					Opcións
+Call Sed				Chamar Sed
+(Help)
+About					Sobre
+
+
+
+######################## Xedplus: Menu Comandos ################################
+
+(Command)
+New Xedplus				Novo editor
+Manual					Manual
+
+
+######################### Xedplus: Menu Pipes #################################
+
+#Pipe
+(Date)
+
+
+
+################################################################################
+###########################                      ###############################
+###########################  Xestor de Arquivos  ###############################
+###########################                      ###############################
+################################################################################
+
+
+######################### Xfiler: menu principal ###############################
+
+(File)
+Folder					Cartafol
+View					Ver
+Find					Procurar
+(Help)
+
+
+####################### Xfiler: Barra de ferramentas ###########################
+
+Close window				Fechar xanela
+Go to home directory			Ir ao directório base
+Go up one directory			Subir un directório
+Create folder				Criar un cartafol
+Open command window			Abrir terminal
+Change view mode			Trocar modo de visualización
+Change sort mode			Trocar modo de ordenación
+Update icons				Actualizar icones
+Text editor				Editor de texto
+Find file				Procurar ficheiro
+
+
+####################### Xfiler: Menu Arquivos ##################################
+
+New...					Novo...
+Move...					Mover...
+Copy...					Copiar...
+Link...					Ligar...
+(Delete)
+Select...				Seleccionar
+Select all				Seleccionar todo
+Deselect all				Deseleccionar todo
+(Quit)
+
+
+######################## Xfiler: Menu Cartafol ##################################
+
+(New...)
+Go to...				Ir a...
+Home					Base
+(Up)
+Empty					Limpar
+(Command)
+Close					Fechar
+
+
+######################## Xfiler: Menu Ver ##################################
+
+Tree					Árbore
+Icons					Icones
+(Text)
+Sort by name				Ordenar por nome
+Sort by size				Ordenar por tamaño
+Sort by date				Ordenar por data
+Filter...				Filtro...
+Hide folders				Ocultar cartafois
+Mix folders/files			Mix cartafois/ficheiros
+Show hidden files			Mostrar ficheiros ocultos
+
+######################## Xfiler: Menu Axuda ################################
+
+(Contents)
+(About)
+
+######################## Xfiler: Pop Up     ################################
+
+(Edit)
+(View)
+(Open)
+Open with...				Abrir con
+(Move...)
+(Copy...)
+(Link...)
+(Delete)
+Command Window				Terminal
+Information...				Información...
+Permissions...				Permisos...
+
+
+################################################################################
+##########################                      ################################
+##########################        Dialogos      ################################
+##########################                      ################################
+################################################################################
+
+Alert					Alerta
+Dialog					Dialogo
+List					Lista
+Form					Formulário
+Select File				Seleccionar arquivo
+
+Change %s:				Trocar %s:
+
+Parameters:				Parámetros:
+
+Select Plugin:				Seleccionar miniaplicativo:
+
+Previewer				Visualización PS
+Print Command				Impresión
+
+Search:					Procurar:
+Search					Procurar
+Start at:				Comezando en:
+Cursor position				Posición do cursor
+Textbeginning				Início do texto
+Textending				Fin do texto
+Direction:				Dirección:
+Forward					Adiante
+Backward				Atrás
+Search for:				Procurar:
+Replace with:				Substituir por:
+Replace veto				Ignorar
+Replace all				Substituir todas
+
+Change Buffer:				Trocar documento:
+Kill Buffer:				Cancelar documento:
+
+External Program:			Programa externo:
+
+Go to:					Ir a:
+Goto line				Ir á liña
+Line number?				Número de liña?
+
+%s command:				Comando %s:
+%s expression:				Expresión %s:
+
+
+
+
+
+
+######################### Confirmación #########################################
+
+Yes					Si
+No					Non
+Cancel					Cancelar
+
+yes					si
+on					on
+
+
+
+######################## Selección de arquivos ###############################
+
+File Name:				Nome do arquivo:
+Directory:				Directório:
+Format:					Formato:
+OK					OK
+(Cancel)
+(Find)
+(Help)
+Home					Directório base
+Examples				Exemplos
+
+Find pattern:				Critério da procura:
+Pick one:				Escoller un:
+No files found				Non achou arquivos
+
+Save %s?				Gardar %s?
+Overwrite existing %s?			Sobreescreber %s?
+
+Couldn't save				Imposíbel de gardar
+
+Load auto startup code?			Carregar código de início automático?
+
+
+
+######################## Formulários de prova ##################################
+
+Enter user data				Introducir dados
+First name				Nome
+Last name				Apelido
+Address					Enderezo
+Förnamn					Nome
+Efternamn				Apelido
+Gatuadress				Enderezo
+Nummer					Número
+Postnummer				Código postal
+Postadress				Enderezo postal
+Land					Pais
+
+
+
+######################### SIAG: Diálogos  ######################################
+
+Width:					Largura:
+Height:					Altura:
+
+Key					Tecla
+Value					Valor
+
+SIOD command:				Comando SIOD:
+C command:				Comando C:
+Guile command:				Comando Guile:
+Tcl command:				Comando Tcl:
+
+Expression style:			Estilo da expresión:
+
+New expression interpreter:		Novo interprete de expresións:
+
+
+
+############################ EGON: Diálogos ###################################
+
+Object type:				Tipo de obxecto:
+
+Time:					Hora:
+
+Duration				Duración
+Delta					Intervalo
+
+Width					Largura
+Height					Altura
+
+Text					Texto
+
+############################ Xfiler: Diálogos ##################################
+
+New file				Arquivo novo
+Create file:				Criar arquivo
+Move					Mover
+Move to:				Mover a:
+Copy					Copiar
+Copy to:				Copiar a:
+Link					Ligar
+Link to:				Ligar a:
+Confirm					Confirmar
+Deleting %s item from			Eliminando %s item de
+Abort					Abortar
+Select					Seleccionar
+#Filename pattern:			
+Add					Engadir
+Remove					Eliminar
+New folder				Novo cartafol
+Create folder:				Criar cartafol:
+Go To					Ir A
+Go to folder:				Ir ao cartafol
+Filter					Filtro
+Clear					Limpar
+
+		
+
+################################################################################
+##################                                      ########################
+##################  Mensaxes de erro ou informativos    ########################
+##################                                      ########################
+################################################################################
+
+Loading					Carregando
+Saving					Gardando
+File saved				Arquivo gardado
+New file				Novo arquivo
+Can't open header file			Imposíbel abrir o encabezador de arquivos
+Can't open loader file			Imposíbel abrir o carregador de arquivos
+Can't open saver file			Imposíbel abrir o gardador de arquivos
+
+
+
+Can't exec GV				Imposíbel executar GV
+Can't exec lpr				Imposíbel executar lpr
+External program failed			Fallou programa externo
+
+
+
+No such buffer				Non hai documento tal
+Couldn't kill last buffer		Imposíbel cancelar o último documento
+Attempt to delete sole ordinary window	Tentativa de eliminar unha xanela
+This window is too small to split	Esta xanela é pequena de máis para a dividir
+
+
+
+Already defining kbd macro!		Macro de teclado xa definida !
+Defining kbd macro...			Definindo macro de teclado...
+Not defining kbd macro			Non se esta a definir macro de teclado
+Keyboard macro defined			Macro de teclado definida
+Can't execute anonymous macro while defining one	Imposíbel executar macro anónima mentres se está a definir outra
+Input buffer overflow; macro execution terminated	Buffer de entrada cheo; rematada execución da macro
+
+
+
+This command does nothing		Este comando non fai nada
+No object selected			Non hai obxectos seleccionados
+Can't overwrite embedded object		Imposíbel sobreescreber obxecto inserido
+
+
+
+Style Default changed			Estilo "Padrón" trocado
+Style Header 1 changed			Estilo "Cabezallo 1" trocado
+# etc...
+Style Header 6 changed			Estilo "Cabezallo 6" trocado
+Style User 1 changed			Estilo "Usuário 1" trocado
+# etc...
+Style User 6 changed			Estilo  "Usuário 6" trocado
+# etc...
+
+
+
+
+
+
+################################################################################
+##############################                  ################################
+##############################   SEN EFECTO ?   ################################
+##############################                  ################################
+################################################################################
+
+Style %s changed			Cambiou-se o estilo %s
+Can't make postscript			Imposibel gerar Postscript
+<none>					<nada>
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s en %d] [tamaño = %dx%d] [duracion=%d intervalo=%d]
+
+GIF image				Imaxe GIF
+Jpeg image				Imaxe JPEG
+BMP image				Imaxe BMP
+All files (*)				Todos os arquivos (*)
+
+Local File				Arquivo local
+Compressed File				Ficheiro comprimido
+Archive					Arquivo
+Compressed Archive			Arquivo comprimido
+Generic					Xenerico
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

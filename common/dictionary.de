@@ -1,0 +1,573 @@
+## German dictonary for Siag Office
+###### siag #####	
+File	Datei
+Edit	Bearbeiten
+Block	Block
+Format	Format
+Data	Daten
+Plugin	Plugin
+Window	Fenster
+Plot	Diagramm
+Tools	Extras
+Help	Hilfe
+Calculator			Taschenrechner
+Environment			Arbeitsumgebung
+Defaults			Standard
+Custom				Anpassen
+Start another instance of Siag	Noch ein Siag starten
+Open a Siag document		Ein Siag-Dokument öffnen
+Save the contents of the current buffer	Inhalt des aktuellen Dokumentes speichern unter
+Preview the contents of the current buffer	Seitenansicht des aktuellen Dokumentess
+Print the contents of the current buffer	Aktuelles Dokument drucken
+Spelling checker		Rechtschreibprüfung
+Cut				Ausschneiden
+Copy				Kopieren
+Paste				Einfügen
+Undo				Rückgängig
+Sort ascending			Aufsteigend sortieren
+Sort descending			Absteigend sortieren
+Plot the contents of the block using lines	Inhalt des Blocks als Liniendiagramm darstellen
+Add the contents of the block	Inhalt des Blocks einfügen
+Display the Siag online documentation	Onlinehilfe von Siag darstellen
+Display the Gnu general public license	GNU-GPL-Lizenz darstellen
+Change the font family		Schrift ändern
+Change the font size		Schriftgröße ändern
+Change the display style	Schriftstil ändern
+Change the color		Farbe ändern
+Bold text			Fett
+Italic text			Kursiv
+Left adjusted text		Linksbündig
+Centered text			Zentriert
+Right adjusted text		Rechtsbündig
+Draw grid lines in the block	Gitterlinien im Block zeichnen
+Draw borders around the block	Rahmen um den Block zeichnen
+Underline the block		Block unterstreichen
+Remove grid lines from the block	Gitterlinien im Block entfernen
+Select everything		Alles markieren
+OK				OK
+Cancel				Abbrechen
+Abort				Abbruch
+File Name:			Dateiname:
+Directory:			Verzeichnis:
+Directories			Verzeichnisse
+Files				Dateien
+Select File			Datei auswählen
+Find				Suchen
+Extra				Extra
+Home				Heimverzeichnis
+Examples			Beispiele
+Family Name			Familienname
+Size				Größe
+Attributes			Attribute
+Borders				Ränder
+Adjustment			Absatzformat
+Misc				Verschiedenes
+List Selection			Listenauswahl
+New				Neu
+Open				Öffnen
+Save				Speichern
+Save As				Speichern unter
+Preview				Seitenansicht
+Close				Schliessen
+Backup Copies			Sicherungskopien
+Settings			Einstellungen
+Margins				Ränder
+Paper Size			Papiergrösse
+Size:				Grösse:
+Header and Footer		Kopf- und Fusszeile
+Header:				Kopfzeile:
+Footer:				Fusszeile:
+Header on first page		Kopfzeile auf der ersten Seite
+Print				Drucken
+Print Format			Druckformat
+Orientation			Ausrichtung
+Portrait			Hochformat
+Landscape			Querformat
+Cell Protection			Zellenschutz
+Respect				Beachten
+Respect protection		Zellenschutz beachten
+Ignore				Ignorieren
+Load External			Externes Dokument öffnen
+Save External			Externes Dokument speichern
+Exit				Beenden
+Undo				Rückgängig
+Delete				Löschen
+Insert Line			Zeile einfügen
+Remove Line			Zeile löschen
+Insert Column			Spalte einfügen
+Remove Column			Spalte entfernen
+Select All			Alle markieren
+Select everything		Alles markieren
+Find				Suchen
+Find Backward			Rückwärts suchen
+Label				Beschriftung
+SIOD Expression			SIOD-Ausdruck
+C Expression			C-Ausdruck
+Guile Expression		Guile-Ausdruck
+Tcl Expression			Tcl-Ausdruck
+Change default interpreter	Standardinterpreter ändern
+Change Default Interpreter	Standardinterpreter ändern
+Other				Andere
+Add Property			Eigenschaft hinzufügen
+Embed Object			Objekt einbetten
+Remove Object			Objekt entfernen
+Open Object			Objekt öffnen
+Save Object			Objekt speichern
+Set Mark			Markierung setzen
+Set Block			Blockmarkierung setzen
+Unset Block			Blockmarkierung aufheben
+Copy Block			Block kopieren
+Delete Block			Block löschen
+Fill Block			Block füllen
+Smart Fill Block		Block intelligent füllen
+Sort				Sortieren
+Rows Ascending as Text		Zeilen aufsteigend als Text
+Rows Ascending as Numbers	Zeilen aufsteigend als Zahl
+Rows Descending as Text		Zeilen absteigend als Text
+Rows Descending as Numbers	Zeilen absteigend als Zahl
+Columns Ascending as Text	Spalten aufsteigend als Text
+Columns Ascending as Numbers	Spalten aufsteigend als Zahl
+Columns Descending as Text	Spalten absteigend als Text
+Columns Descending as Numbers	Spalten absteigend als Zahl
+Block Sum			Blocksumme
+Block Minimum			Blockminimum
+Block Maximum			Blockmaximum
+Block Average			Blockdurchschnitt
+Borders				Rahmen
+Grid				Gitter
+Underline			Unterstreichen
+None				Keine
+First Page Number		Nummer der ersten Seite
+First page number:		Nummer der ersten Seite:
+Column Width			Spaltenbreite
+Set				Setzen
+Fit Block			An Block anpassen
+Set Default			Standard setzen
+Fit Block Width			An Blockbreite anpassen
+Row Height			Zeilenhöhe
+Fit Block Height		An Blockhöhe anpassen
+Set Default Format		Standardformat setzen
+Font				Font
+Style				Stil
+List				Liste
+Change style:			Stil ändern:
+Cell Format			Zellenformat
+Block Format			Blockformat
+Cell Style			Zellenformat
+Block Style			Blockformat
+Define Style			Format definieren
+Foreground Color		Vordergrundfarbe
+Background Color		Hintergrundfarbe
+Cell Color			Zellenfarbe
+Block Color			Blockfarbe
+Edit Record			Eintrag bearbeiten
+######## Menü Daten #####
+Data Entry			Daten eintragen
+Siag-net			Siag-Netz
+Enter Date			Datum eingeben
+Date:				Datum:
+Enter Time			Uhrzeit eingeben
+Time:				Uhrzeit:
+Identify Cell			Zelle identifizieren
+Recalculate			Neu berechnen
+##### Menü Fenster #####
+Change Buffer			Puffer wechseln
+Delete Buffer			Puffer löschen
+Split Window			Fenster teilen
+Remove Window			Fenster entfernen
+One Window			Ein Fenster
+Change Window			Fenster ändern
+Add Sheet			Blatt hinzufügen
+Move Sheet			Blatt verschieben
+Remove Sheet			Blatt entfernen
+Rename Sheet			Blatt umbenennen
+Protect Cells			Zellen schützen
+Remove Protection		Schutz entfernen
+Go To				Gehe zu
+Beginning of buffer		Anfang des Puffers
+End of buffer			Ende des Puffers
+Top of buffer			Oberkante Puffer
+Up				Nach oben
+Down				Nach unten
+Bottom of buffer		Unterkante Puffer
+Cell				Zelle
+Grid Lines			Gitterlinien
+Show				Zeigen
+Hide				Verbergen
+Reference Style			Referenzformat
+Disable Helptexts		Hilfetexte abschalten
+Helptexts			Hilfetexte
+Disable				Abschalten
+Both				Beides
+Save Preferences		Einstellungen speichern
+Lines				Linien
+Points				Punkte
+Linespoints			Linien und Punkte
+Impulses			Impulse
+Dots				Markierungen
+Steps				Stufen
+Boxes				Rechtecke
+Surface				Oberfläche
+Advanced			Fortgeschritten
+Contents			Inhalt
+Search				Suche
+Type:				Typ:
+Orientation:			Ausrichtung:
+Copying				Verbreitung
+About Siag			Über Siag
+About Siag Office...		Über Siag Office
+Help for Help			Hilfe zur Hilfe
+SIOD Command			SIOD-Befehl
+C Command			C-Befehl
+Guile Command			Guile-Befehl
+Tcl Command			Tcl-Befehl
+Web Server			Web-Server
+Mail				Als e-Mail versenden
+File Manager			Dateimanager
+Form Test			Formulartest
+Another Form Test		Noch ein Formulartest
+Yet Another Form Test		Noch ein anderer Formulartest
+Another Form Test Still		Und wieder ein anderer Formulartest
+Import				Importieren
+Export				Exportieren
+Link				Verknüpfen
+Move				Verschieben
+Resize				Grösse ändern
+App				Anwendung
+Expression			Ausdruck
+Command				Befehl
+Sum				Summe
+Import Plugin			Plugin importieren
+Move Plugin			Plugin verschieben
+Quit				Beenden
+External Program:		Externes Programn:
+Local File			Lokale Datei
+Compressed File			Komprimierte Datei
+Archive				Archiv
+Compressed Archive		Komprimiertes Archiv
+Generic				Allgemein
+Search:				Suche:
+Label:				Bezeichnung:
+SIOD expression:		SIOD-Ausdruck:
+C expression:			C-Ausdruck:
+Guile expression:		Guile-Ausdruck:
+Tcl expression:			Tcl-Ausdruck:
+New expression interpreter:	Neuer Ausdrucksinterpreter:
+Key				Schlüssel
+Value				Wert
+Object file:			Objektdatei:
+Width:				Breite:
+Height:				Höhe:
+Bold				Fett
+Italic				Kursiv
+Top				Oben
+Bottom				Unten
+Left				Links
+Right				Rechts
+Center				Mitte
+Expression style:		Ausdrucksformat:
+Color:				Farbe:
+color				Farbe
+Black				Schwarz
+Red				Rot
+Green				Grün
+Blue				Blau
+Yellow				Gelb
+Magenta				Magenta
+Cyan				Zyan
+White				Weiß
+Select Plugin:			Plugin wählen:
+Change Buffer:			Puffer wechseln:
+Kill Buffer:			Puffer löschen:
+SIOD command:			SIOD-Befehl:
+C command:			C-Befehel:
+Guile command:			Guile-Befehl:
+Tcl command:			Tcl-Befehl:
+To:				Nach:
+Enter user data			Benutzerdaten eingeben
+First name			Vorname
+Last name			Nachname
+Address				Adresse
+Find pattern:			Suchmuster:
+Go to:				Gehe zu:
+Pick one:			Bitte wählen:
+Yes				Ja
+No				Nein
+Replace				Ersetzen
+Spell				Rechtschreibung
+Line Height			Zeilenhöhe
+Segment Format			Segmentformat
+Line Format			Zeilenformat
+Copy				Kopieren
+Use				Benutzen
+Cleanup				Aufräumen
+Segment Style			Segmentstil
+Line Style			Zeilenstil
+Segment Color			Segmentfarbe
+Line Color			Zeilenfarbe
+About Pathetic Writer		Über Pathetic Writer
+About Pathetic Writer...	Über Pathetic Writer...
+Spell Test			Rechtschreibprüfung
+Dump Words			Wörter ausspucken
+Default				Standard
+Invisible			Unsichtbar
+Integer				Ganzzahl
+Scientific			Wissenschaftlich
+Fixed				Festkomma
+Date				Datum
+Time				Zeit
+Comma				Komma
+Percent				Prozent
+Hex				Hexadezimal
+Currency			Währung
+User 1				Benutzer 1
+User 2				Benutzer 2
+User 3				Benutzer 3
+User 4				Benutzer 4
+User 5				Benutzer 5
+Header 1			Überschrift 1
+Header 2			Überschrift 2
+Header 3			Überschrift 3
+Header 4			Überschrift 4
+Header 5			Überschrift 5
+Header 6			Überschrift 6
+Title				Titel
+Abstract			Klappentext
+Preformatted			Vorformatiert
+Embed				Einbetten
+
+###############################################################################
+##### pw #####
+Start another instance of Pathetic Writer	Neuen Pathetic Writer starten
+Open a Pathetic Writer document		Ein Pathetic-Writer-Dokument öffnen
+Display the PW online documentation	PW-Onlinedokumentation anzeigen
+Underlined text			Unterstrichener Text
+Superscript			Hochgestellter Text
+Subscript			Tiefgestellt
+Special Char			Sonderzeichen
+##### pw spellchecking #####
+Replacement:			Vorschlag:
+Skip				Überspringen
+Accept				Akzeptieren
+
+##### egon #####
+Show Editor			Editor zeigen
+Hide Editor			Editor verbergen
+Show editor			Editor zeigen
+Hide editor			Editor verbergen
+Begin Empty Animation		Neue Animation beginnen
+Add Object			Objekt hinzufügen
+Line				Linie
+Image				Grafik
+Delete Object			Objekt löschen
+Change Object Type		Objekttyp ändern
+Add tick			Tick hinzufügen
+Delete Tick			Tick löschen
+Edit Properties			Eigenschaften bearbeiten
+Set Background			Hintergrund einstellen
+Timing				Timing
+Set Geometry			Geometrie wählen
+Play Animation			Animation abspielen
+Box Animation Demo		Rechteck-Animation demonstrieren
+Circle Animation Demo		Kreis-Animation demonstrieren
+Line Animation Demo		Linien-Animation demonstrieren
+Combo Animation Demo		Kombinations-Animation demonstrieren
+Box				Rechteck
+Circle				Kreis
+Combo				Kombination
+About Egon Animator		Über Egon Animator
+About Egon Animator...		Über Egon Animator
+Start another instance of Egon Animator	Neuen Egon Animator starten
+Open an Egon Animator document		Ein Egon-Animator-Dokument öffnen
+Pop down animation			Animation verbergen
+Pause the animation			Animation anhalten
+Previous animation frame		Vorheriges Einzelbild
+Play the animation			Animation abspielen
+Next animation frame			Nächstes Einzelbild
+Display the Egon online documentation	Egon-Onlinedokumentation darstellen
+Rectangle				Rechteck
+Arc					Bogen
+Ellipse					Ellipse
+Pixmap					Pixmap
+String					Zeichenkette
+Point					Punkt
+Filled Rectangle			Gefülltes Rechteck
+Filled Arc				Gefüllter Bogen
+Filled Ellipse				Gefüllte Ellipse
+Open file				Datei öffnen
+Save file				Datei schließen
+Quit animation				Animation beenden
+Stop animation				Animation anhalten
+Previous frame				Vorheriges Einzelbild
+Next frame				Nächstes Einzelbild
+Play animation				Animation abspielen
+Quit Egon				Egon beenden
+No files found				Keine Dateien gefunden
+File saved				Datei gespeicher
+This window is too small to split	Fenster zu klein zum Aufteilen
+Couldn't save				Konnte nicht abspeichern
+Save %s?				%s speichern?
+Loading					Laden
+New file				Neue Datei
+Load auto startup code?			Autostart-Code ausführen?
+Can't open loader file			Kann Laderdatei nicht öffnen
+Parameters:				Parameter:
+External program failed			Externes Programm hat abgebrochen
+Attempt to delete sole ordinary window	Versuch, einziges normales Fenster zu löschen
+No such buffer				Puffer nicht vorhanden
+Overwrite existing %s?			%s existiert, überschreiben?
+Can't open saver file			Kann Speicherungsdatei nicht öffnen
+Couldn't kill last buffer		Kann letzten Puffer nicht löschen
+%s command:				%s-Befehl:
+%s expression:				%s-Ausdruck:
+Already defining kbd macro!		Tastaturmakrodefinition läuft bereits!
+Defining kbd macro...			Definiere Tastaturmakro...
+Not defining kbd macro			Definiere kein Tastaturmakro
+Keyboard macro defined			Tastaturmakro definiert
+Can't execute anonymous macro while defining one	Kann kein anonymes Makro während einer anderen Definition ausführen
+Input buffer overflow; macro execution terminated	Eingabepuffer voll; Makroausführung beendet
+Add Tick				Tick hinzufügen
+Add Line				Linie hinzufügen
+Add Rectangle				Rechteck hinzufügen
+Add Arc					Bogen hinzufügen
+Add Ellipse				Ellipse hinzufügen
+Add Image				Grafik hinzufügen
+Add String				Zeichenkette hinzufügen
+Add Point				Punkt hinzufügen
+Add Filled Rectangle			Gefülltes Rechteck hinzufügen
+Add Filled Ellipse			Gefüllte Ellipse hinzufügen
+Add Filled Arc				Gefüllten Bogen hinzufügen
+Sheet %d				Blatt %d
+Dismiss					Schliessen
+Open a PostScript file			PostScript Datei öffnen
+Save the marked pages			Markierte Seiten speichern
+Print the marked pages			Markierte Seiten drucken
+Next page				Nächste Seite
+Previous page				Vorherige Seite
+Center page				Seite zentrieren
+Increase magstep			Ansicht vergrössern
+Decrease magstep			Ansicht verkleinern
+Open...					Öffnen...
+Reopen					Neu laden
+Print...				Drucken...
+Printer Name:				Druckername:
+Print marked pages...			Drucken markierter Seiten...
+Save marked pages...			Speicheren markierter Seiten...
+Display online help			Onlinehilfe anzeigen
+Display copyright information		Copyright Information anzeigen
+Page					Seite
+Next					Nächste
+Redisplay				Erneut anzeigen
+Previous				Vorherige
+Mark					Markieren
+Unmark					Markierung aus
+Magstep					Ansicht
+Media					Medium
+About Gvu...				Über Gvu...
+Start another editor			Neuen Editor starten
+Open a text file			Textdatei öffnen
+Save the file				Datei speichern unter
+Print the file				Datei drucken
+Toggle overwrite/insert			Einfüge-/Überschreibmodus umschalten
+Display the online documentation	Onlinehilfe anzeigen
+Warning					Warnung
+Unsaved Changes!			Es gibt ungespeicherte Änderungen!
+Insert					Einfügen
+Save Selection				Auswahl speichern
+Print Selection				Auswahl drucken
+Shift Selection Right			Auswahl nach rechts schieben
+Shift Selection Left			Auswahl nach links schieben
+Jump					Springen
+Begin					Anfang
+End					Ende
+Selection Start				Anfang Auswahl
+Selection End				Ende Auswahl
+Search Selection			Suche in Auswahl
+Replace Selection			Ersetze in Auswahl
+Find Bracket				Suche Klammer
+Check Brackets				Überprüfe Klammern
+Special					Extras
+Options					Optionen
+Call Sed				Sed aufrufen
+Commands				Kommandos
+Command:				Kommando:
+
+##### Xedplus #####
+New Xedplus				Neuen Xedplus starten
+Pipes					Pipes
+Goto line				Gehe zu Zeile
+Line number?				Zeilennummer?
+Search					Suche
+Start at:				Beginnen bei:
+Cursor position				Cursorposition
+Textbeginning				Textanfang
+Textending				Textende
+Direction:				Richtung:
+Forward					Vorwärts
+Backward				Rückwärts
+Search for:				Suche nach:
+Replace with:				Ersetzen durch:
+Replace veto				Ersetzen mit Bestätigung
+Replace all				Ersetzen alle
+Wrap mode:				Zeilenumbruch:
+Never					Niemals
+Word					Wort
+Tab size:				Tabulator-Breite:
+Autoindent:				Autom. einrücken:
+Autofill:				Autom. füllen:
+Perform a stream editor command (sed)	Ein Stream Editor Kommando ausführen (sed)
+Do it					Ausführen
+Do it Selection				Ausführen auf Auswahl 
+Undo it					Rückgängig
+Perform a User command			Kommando ausführen
+Perform a User pipe			Pipe ausführen
+About XedPlus...			Über XedPlus...
+
+##### Xfiler #####
+Close window				Fenster schliessen
+Go to home directory			Persönliches Verzeichnis
+Go up one directory			Ein Verzeichnis nach oben
+Create Folder				Neuer Ordner
+Create folder				Neuer Ordner
+Open command window			Terminal öffnen
+Change view mode			Ansicht ändern
+Change sort mode			Sortierung ändern
+Update icons				Erneut laden
+Text editor				Texteditor starten
+Find file				Datei suchen
+New...					Neu...
+Move...					Verschieben...
+Move to:				Verschieben nach:
+Copy...					Kopieren...
+Copy to:				Kopieren nach:
+Link...					Verknüpfen...
+Link to:				Verknüpfen mit:
+Select...				Auswählen...
+Open With...				Öffnen mit...
+Open with:				Öffnen mit:
+Command Window				Terminalfenster
+Permissions...				Zugriffsrechte...
+Filename pattern:			Dateinamenmuster
+Add					Hinzufügen
+Remove					Entfernen
+Select all				Alles auswählen
+Deselect all				Alles abwählen
+Folder					Ordner
+Create folder:				Neuer Ordner:
+Create file:				Neue Datei:
+Go to...				Gehe nach...
+Go to folder:				Gehe nach Verzeichnis:
+Empty					Ordner leeren
+View					Ansicht
+Tree					Verzeichnisbaum
+Sort by name				Nach Namen Sortieren
+Sort by size				Nach Grösse sortieren
+Sort by date				Nach Datum sortieren
+Hide folders				Ordner ausblenden
+Mix folders/files			Ordner/Dateien mischen
+Show hidden files			Versteckte Dateien anzeigen
+Clear					Leeren
+Restore					Wiederherstellen
+Redo					Wiederholen
+Continue				Fortsetzen
+About Xfiler...				Über Xfiler...

@@ -1,0 +1,794 @@
+## siag
+Siag (Scheme In A Grid) 3.1.5. No Warranty.	Siag (Scheme In A Grid) 3.1.5. Bez jamstva.
+Siag (Scheme In A Grid) 3.1.6. No Warranty.	Siag (Scheme In A Grid) 3.1.6. Bez jamstva.
+
+# siag: menu names
+File	Datoteka
+Edit	Ureðivanje
+Block	Blok
+Format	Format
+Data	Podaci
+Plugin	Plugin
+Window	Prozor
+Plot	Dijagram
+Tools	Alati
+Help	Pomoæ
+
+# siag: tools
+Start another instance of Siag	Pokreni novi primjerak Siaga
+Open a Siag document		Otvori Siag dokument
+Save the contents of the current buffer	Snimi sadr¾aj trenutnog spremnika
+Preview the contents of the current buffer	Poka¾i sadr¾aj trenutnog spremnika
+Print the contents of the current buffer	Tiskaj sadr¾aj trenutnog spremnika
+Cut				Izre¾i
+Copy				Kopiraj
+Paste				Zalijepi
+Undo				Poni¹ti promjenu
+Sort ascending			Razvrstaj
+Sort descending			Razvrstaj obratno
+Plot the contents of the block using lines	Iscrtaj sadr¾aj bloka pomoæu crta
+Add the contents of the block	Dodaj sadr¾aj bloka
+Display the Siag online documentation	Prika¾i raèunalnu dokumentaciju Siaga
+Display the Gnu general public license	Prika¾i GNU Opæu javnu licencu
+Draw borders around the block	Uokviri blok
+Draw grid lines in the block	Nacrtaj crte re¹etke u bloku
+Underline the block		Potcrtaj blok
+Remove grid lines from the block	Ukloni crte re¹etke iz bloka
+
+# siag: attributes
+Change the font family	Promijeni obitelj fonta
+Change the font size	Promijeni velièinu fonta
+Change the display style	Promijeni stil prikaza
+Change the color	Promijeni boju
+Bold text	Podebljan tekst
+Italic text	Kurziv
+Left adjusted text		Lijevo poravnan tekst
+Centered text			Centriran tekst
+Right adjusted text		Desno poravnan tekst
+
+# siag: display styles
+Currency			Valuta
+Date				Datum
+Default				Podrazumijevano
+Fixed				Nepomièna toèka
+Hex				Heksadecimalno
+Integer				Cijeli broj
+Invisible			Nevidljivo
+Percent				Postotak
+Scientific			Znanstveno
+Time				Vrijeme
+Time Difference			Vremenska razlika
+Ulric Testar			Ulricova proba
+User 1				Osobni 1
+User 2				Osobni 2
+User 3				Osobni 3
+User 4				Osobni 4
+User 5				Osobni 5
+
+# siag: colors
+Black				Crna
+Red				Crvena
+Green				Zelena
+Blue				Plava
+Yellow				®uta
+Magenta				Grimizno-ljubièasta
+Cyan				Cijan
+White				Bijela
+
+# siag: modifying one cell
+Label:				Natpis:
+SIOD expression:		SIOD izraz:
+C expression:			C izraz:
+Guile expression:		Guile izraz:
+Tcl expression:			Tcl izraz:
+
+# siag: basic screen
+Sheet %d			%d. arak
+done.				Gotovo.
+EMPTY				PRAZNO
+LABEL				NATPIS
+ERROR				GRE©KA
+
+# siag: File menu
+New				Nova
+Open				Otvori
+Save				Snimi
+Save As				Snimi kao
+Preview				Poka¾i
+Print				Tiskaj
+Print Format			Format tiskanja
+Orientation			Smjer
+Portrait			Po visini
+Landscape			Po ¹irini
+Cell Protection			Za¹tita æelije
+Respect				Po¹tuj
+Ignore				Zanemari
+Load External			Otvori vanjsku
+Save External			Snimi vanjsku
+Exit				Izaði
+
+# siag: Edit menu
+(Undo)
+Delete				Obri¹i
+Insert Line			Umetni red
+Remove Line			Ukloni red
+Insert Column			Umetni stupac
+Remove Column			Ukloni stupac
+Select All			Odaberi sve
+(Cut)
+(Copy)
+(Paste)
+Find				Tra¾i
+Find Backward			Tra¾i unatrag
+Label				Natpis
+Expression			Izraz
+Change Default Interpreter	Promijeni podrazumijevani interpreter
+Other				Drugo
+Function A-F			Funkcije A-F
+Function G-L			Funkcije G-L
+Function M-S			Funkcije M-S
+Function T-Z			Funkcije T-Z
+Add Property			Dodaj svojstvo
+
+# siag: Block menu
+Set Mark			Postavi oznaku
+Set Block			Postavi blok
+Unset Block			Zaboravi blok
+Copy Block			Kopiraj blok
+Delete Block			Obri¹i blok
+Fill Block			Ispuni blok
+Smart Fill Block		Pametno ispuni blok
+Sort				Razvrstavanje
+Rows Ascending as Text		Redove kao tekst
+Rows Ascending as Numbers	Redove kao brojeve
+Rows Descending as Text		Redove obratno kao tekst
+Rows Descending as Numbers	Redove obratno kao brojeve
+Columns Ascending as Text	Stupce kao tekst
+Columns Ascending as Numbers	Stupce kao brojeve
+Columns Descending as Text	Stupce obratno kao tekst
+Columns Descending as Numbers	Stupce obratno kao brojeve
+Block Sum			Zbroj bloka
+Block Minimum			Minimum bloka
+Block Maximum			Maksimum bloka
+Block Average			Prosjek bloka
+Borders				Okvir
+Grid				Re¹etka
+Underline			Potcrtavanje
+None				Ni¹ta
+
+# siag: Format menu
+Column Width			©irina stupca
+Set				Postavi
+Fit Block			Prilagodi bloku
+Set Default			Postavi podrazumijevanu
+Row Height			Visina reda
+Set Default Format		Postavi podrazumijevani format
+Font				Font
+Style				Stil
+Define Style			Odredi stil
+Foreground Color		Boja teksta
+Background Color		Boja pozadine
+
+# siag: Data menu
+Edit Record			Uredi zapis
+Data Entry			Upis podataka
+Siag-net			Siag-mre¾a
+Identify Cell			Prepoznaj æeliju
+Recalculate			Preraèunaj
+
+# siag: Plugin menu
+Import				Uvezi
+Export				Izvezi
+Link				Ve¾i
+(Delete)
+Move				Premjesti
+App				Aplikacija
+
+# siag: Window menu
+Change Buffer			Promijeni spremnik
+Delete Buffer			Obri¹i spremnik
+Split Window			Podijeli prozor
+Remove Window			Ukloni prozor
+One Window			Jedan prozor
+Change Window			Promijeni prozor
+Add Sheet			Dodaj arak
+Remove Sheet			Ukloni arak
+Rename Sheet			Preimenuj arak
+Protect Cells			Za¹titi æelije
+Remove Protection		Ukloni za¹titu
+Go To				Otiði na
+Beginning of buffer		Poèetak spremnika
+End of buffer			Kraj spremnika
+Top of buffer			Vrh spremnika
+Bottom of buffer		Dno spremnika
+Cell				Æelija
+Grid Lines			Crte re¹etke
+Show				Poka¾i
+Hide				Sakrij
+Reference Style			Stil referenci
+Helptexts			Pomoæni tekstovi
+Disable				Iskljuèi
+(Label)
+Popup				Iskoèni
+Both				Oboje
+Save Preferences		Snimi sklonosti
+
+# siag: Plot menu
+Lines				Crte
+Points				Toèke
+Linespoints			Crte i toèke
+Impulses			Impulsi
+Dots				Crtice
+Steps				Koraci
+Boxes				Okviri
+Surface				Povr¹ina
+Advanced			Napredno
+
+# siag: Tools menu
+Command				Naredba
+Terminal			Terminal
+Webserver			WWW poslu¾itelj
+Mail				Po¹ta
+File Manager			Datoteèni upravnik
+Form Test			Isku¹avanje obrazaca
+Test 1				1. proba
+Test 2				2. proba
+Test 3				3. proba
+
+# siag: Help menu
+Contents			Sadr¾aj
+Search				Tra¾i
+Copying				Distribuiranje
+Help for Help			Pomoæ za pomoæ
+Links				Veze
+Siag Home			Siagove stranice
+FTP Directory			FTP direktorij
+About Siag			O Siagu
+
+# siag: pop-up
+(Open)
+(Save)
+(Undo)
+(Delete)
+(Label)
+(Expression)
+(Command)
+Sum				Zbroj
+(Plugin)
+(Help)
+Quit				Izaði
+
+
+## pw
+Pathetic Writer 3.1.5. No Warranty.	Pathetic Writer 3.1.5. Bez jamstva.
+Pathetic Writer 3.1.6. No Warranty.	Pathetic Writer 3.1.6. Bez jamstva.
+
+# pw: menu names
+(File)
+(Edit)
+(Block)
+(Format)
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+# pw: tools
+Start another instance of Pathetic Writer	Pokreni novi primjerak Pathetic Writera
+Open a Pathetic Writer document		Otvori Pathetic Writer dokument
+(Save the contents of the current buffer)
+(Preview the contents of the current buffer)
+(Print the contents of the current buffer)
+Spelling checker			Provjera pravopisa
+Display the PW online documentation	Prika¾i raèunalnu dokumentaciju PW-a
+(Display the Gnu general public license)
+(Left adjusted text)
+(Centered text)
+(Right adjusted text)
+
+# pw: attributes
+(Change the font family)
+(Change the font size)
+(Change the display style)
+(Change the color)
+(Bold text)
+(Italic text)
+Underlined text			Potcrtani tekst
+Superscript			Eksponent
+Subscript			Indeks
+
+# pw: display styles
+(Default)
+Header 1			Zaglavlje 1
+Header 2			Zaglavlje 2
+Header 3			Zaglavlje 3
+Header 4			Zaglavlje 4
+Header 5			Zaglavlje 5
+Header 6			Zaglavlje 6
+Address				Adresa
+Title				Naslov
+Abstract			Sa¾etak
+Preformatted			Preformatirano
+(User 1)
+(User 2)
+(User 3)
+(User 4)
+(User 5)
+
+# pw: File menu
+(New)
+(Open)
+(Save)
+(Save As)
+(Preview)
+(Print)
+(Print Format)
+(Load External)
+(Save External)
+(Exit)
+
+# pw: Edit menu
+(Delete)
+(Insert Line)
+(Remove Line)
+(Select All)
+(Find)
+(Find Backward)
+Replace				Zamijeni
+Spell				Provjeri pravopis
+
+# pw: Block menu
+(Set Mark)
+(Set Block)
+(Copy Block)
+(Delete Block)
+(Fill Block)
+
+# pw: Format menu
+Line Height			Visina reda
+(Copy)
+Use				Koristi
+Cleanup				Poèisti
+
+# pw: Plugin menu
+(Import)
+(Export)
+(Link)
+(Delete)
+(Move)
+(App)
+
+# pw: Window menu
+(Change Buffer)
+(Delete Buffer)
+(Split Window)
+(Remove Window)
+(One Window)
+(Change Window)
+(Add Sheet)
+(Remove Sheet)
+(Rename Sheet)
+(Go To)
+(Beginning of buffer)
+(End of buffer)
+(Helptexts)
+(Disable)
+(Label)
+(Popup)
+(Both)
+(Save Preferences)
+
+# pw: Tools menu
+(Command)
+(Terminal)
+Spell Test			Provjera pravopisa
+Dump Words			Izbacivanje rijeèi
+(Form Test)
+(Test 1)
+(Test 2)
+(Test 3)
+
+# pw: Help menu
+(Contents)
+(Search)
+(Copying)
+(Help for Help)
+(Links)
+(Siag Home)
+(FTP Directory)
+About Pathetic Writer		O Pathetic Writeru
+
+# pw: pop-up
+(Open)
+(Save)
+(Undo)
+(Spell)
+(Command)
+(Plugin)
+(Help)
+(Quit)
+
+
+## egon
+Egon Animator 3.1.5. No Warranty.	Egon Animator 3.1.5. Bez jamstva.
+Egon Animator 3.1.6. No Warranty.	Egon Animator 3.1.6. Bez jamstva.
+Egon Editor			Egon Editor
+
+# egon: menu names
+(File)
+(Edit)
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+# egon: tools
+Start another instance of Egon Animator	Pokreni novi primjerak Egon Animatora
+Open an Egon Animator document		Otvori Egon Animator dokument
+(Save the contents of the current buffer)
+(Preview the contents of the current buffer)
+(Print the contents of the current buffer)
+Pause the animation			Zastani s animacijom
+Previous animation frame		Prethodna slika animacije
+Play the animation			Poka¾i animaciju
+Next animation frame			Slijedeæa slika animacija
+Display the Egon online documentation	Prika¾i raèunalnu dokumentaciju Egona
+
+# egon: attributes
+(Change the font family)
+(Change the font size)
+(Change the display style)
+(Change the color)
+(Bold text)
+(Italic text)
+
+# egon: display styles
+(None)
+Line				Crta
+Rectangle			Pravokutnik
+Arc				Kru¾ni isjeèak
+Ellipse				Elipsa
+Pixmap				Pixmap
+String				Niz znakova
+Point				Toèka
+Filled Rectangle		Ispunjeni pravokutnik
+Filled Arc			Ispunjeni kru¾ni isjeèak
+Filled Ellipse			Ispunjena elipsa
+
+# egon: File menu
+(New)
+(Open)
+(Save)
+(Save As)
+(Preview)
+(Print)
+(Print Format)
+(Load External)
+(Save External)
+(Exit)
+
+# egon: Edit menu
+Show Editor			Poka¾i Editor
+Hide Editor			Sakrij Editor
+Begin Empty Animation		Zapoèni praznu animaciju
+Add Object			Dodaj objekt
+(Line)
+(Rectangle)
+(Arc)
+(Ellipse)
+Image				Grafika
+(String)
+(Point)
+(Filled Rectangle)
+(Filled Arc)
+(Filled Ellipse)
+(Other)
+Delete Object			Obri¹i objekt
+Add Tick			Dodaj sat
+Delete Tick			Obri¹i sat
+Edit Properties			Uredi svojstva
+Set Background			Postavi pozadinu
+Timing				Mjerenje vremena
+Set Geometry			Postavi geometriju
+
+# egon: Plugin menu
+(Import)
+(Export)
+(Link)
+(Delete)
+(Move)
+
+# egon: Window menu
+(Change Buffer)
+(Delete Buffer)
+(Split Window)
+(Remove Window)
+(One Window)
+(Change Window)
+(Helptexts)
+(Disable)
+(Label)
+(Popup)
+(Both)
+(Save Preferences)
+
+# egon: Tools menu
+(Command)
+(Terminal)
+Demo				Demonstracija
+Box				Okvir
+Circle				Kru¾nica
+(Line)
+Combo				Kombinacija
+
+# egon: Help menu
+(Contents)
+(Search)
+(Copying)
+(Help for Help)
+(Links)
+(Siag Home)
+(FTP Directory)
+About Egon Animator		O Egon Animatoru
+
+# egon: pop-up
+(Show Editor)
+(Hide Editor)
+Open file			Otvori datoteku
+Save file			Snimi datoteku
+Stop animation			Zaustavi animaciju
+Previous frame			Prethodna slika
+Next frame			Slijedeæa slika
+Play animation			Poka¾i animaciju
+Quit Egon			Izaði iz Egona
+
+
+## dialogs
+Alert				Pa¾nja
+Dialog				Dijalog
+List				Popis
+Form				Obrazac
+Select File			Odaberite datoteku
+Change %s:			Promijeniti %s:
+Parameters:			Parametri:
+Select Plugin:			Odaberite plugin:
+Previewer			Pregled
+Print Command			Naredba tiskanja
+Search:				Potraga:
+Change Buffer:			Promijeniti spremnik:
+Kill Buffer:			Ubiti spremnik:
+External Program:		Vanjski program:
+Go to:				Otiæi na:
+%s command:			%s naredba:
+%s expression:			%s izraz:
+
+# confirmation
+Yes				Da
+No				Ne
+Cancel				Odustajem
+yes				da
+no				ne
+on				ne
+
+# file selection
+File Name:			Ime datoteke:
+Directory:			Direktorij:
+Format:				Format:
+OK				U redu
+(Cancel)
+(Find)
+(Help)
+Home				Home
+Examples			Primjeri
+Find pattern:			Tra¾eni uzorak:
+Pick one:			Izaberite izmeðu:
+No files found			Nije pronaðena nijedna datoteka
+Save %s?			Snimiti %s?
+Overwrite existing %s?		%s veæ postoji, prebrisati?
+Couldn't save			Nije se moglo snimiti
+Load auto startup code?		Uèitati kod za automatsko pokretanje?
+
+# test forms
+Enter user data			Upi¹ite korisnièke podatke
+First name			Ime
+Last name			Prezime
+(Address)
+Förnamn				Ime
+Efternamn			Prezime
+Gatuadress			Ulica
+Nummer				Broj
+Postnummer			Po¹tanski broj
+Postadress			Mjesto
+Land				Zemlja
+
+# siag: dialogs
+Width:				©irina:
+Height:				Visina:
+Key				Kljuè
+Value				Vrijednost
+SIOD command:			SIOD naredba:
+C command:			C naredba:
+Guile command:			Guile naredba:
+Tcl command:			Tcl naredba:
+Expression style:		Stil izraza:
+New expression interpreter:	Novi interpreter izraza:
+
+# egon: dialogs
+Object type:			Vrsta objekta:
+Time:				Vrijeme:
+Duration			Trajanje
+Delta				Interval
+Width				©irina
+Height				Visina
+Text				Tekst
+
+
+## informative and error messages
+Loading				Uèitava se
+Saving				Snima se
+File saved			Datoteka snimljena
+New file			Nova datoteka
+Can't open header file		Nije moguæe otvoriti datoteku zaglavlja
+Can't open loader file		Nije moguæe otvoriti datoteku uèitavanja
+Can't open saver file		Nije moguæe otvoriti datoteku snimanja
+
+Can't exec GV			Nije moguæe izvr¹iti naredbu GV
+Can't exec lpr			Nije moguæe izvr¹iti naredbu lpr
+External program failed		Vanjski program podbacio
+
+No such buffer				Takav spremnik ne postoji
+Couldn't kill last buffer		Nije moguæe ubiti posljednji spremnik
+Attempt to delete sole ordinary window	Poku¹aj brisanja jedinog obiènog prozora
+This window is too small to split	Ovaj prozor je premalen za podjelu
+
+Already defining kbd macro!		Makro tipkovnice se veæ definira!
+Defining kbd macro...			Definira se makro tipkovnice...
+Not defining kbd macro			Makro tipkovnice se ne definira
+Keyboard macro defined			Makro tipkovnice definiran
+Can't execute anonymous macro while defining one	Nije moguæe izvr¹iti anonimni makro dok se makro definira
+Input buffer overflow; macro execution terminated	Prekoraèenje ulaznog spremnika; izvr¹avanje makroa prekinuto
+
+This command does nothing		Ova naredba ne radi ni¹ta
+No object selected			Nije odabran nijedan objekt
+Can't overwrite embedded object		Nije moguæe prepisati ugraðeni objekt
+
+Style Default changed			Stil "Podrazumijevano" izmijenjen
+Style Header 1 changed			Stil "Zaglavlje 1" izmijenjen
+Style Header 2 changed			Stil "Zaglavlje 2" izmijenjen
+Style Header 3 changed			Stil "Zaglavlje 3" izmijenjen
+Style Header 4 changed			Stil "Zaglavlje 4" izmijenjen
+Style Header 5 changed			Stil "Zaglavlje 5" izmijenjen
+Style Header 6 changed			Stil "Zaglavlje 6" izmijenjen
+Style User 1 changed			Stil "Osobni 1" izmijenjen
+Style User 2 changed			Stil "Osobni 2" izmijenjen
+Style User 3 changed			Stil "Osobni 3" izmijenjen
+Style User 4 changed			Stil "Osobni 4" izmijenjen
+Style User 5 changed			Stil "Osobni 5" izmijenjen
+
+
+## without effect?
+Style %s changed			Stil %s izmijenjen
+Can't make postscript			Nije moguæe proizvesti Postscript
+<none>					<ni¹ta>
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s na %d] [velièina=%dx%d] [trajanje=%d interval=%d]
+
+GIF image				GIF grafika
+Jpeg image				JPEG grafika
+BMP image				BMP grafika
+Text (*.txt)				Tekst (*.txt)
+Scheme Code (*.scm)			Scheme kod (*.scm)
+All files (*)				Sve datoteke (*)
+
+Local File				Lokalna datoteka
+Compressed File				Sa¾eta datoteka
+Archive					Arhiva
+Compressed Archive			Sa¾eta arhiva
+Generic					Opæenita
+
+
+## obsolete?
+Select everything		Odaberi sve
+Change default interpreter	Promijeni podrazumijevani interpreter
+SIOD Expression			SIOD izraz
+C Expression			C izraz
+Guile Expression		Guile izraz
+Tcl Expression			Tcl izraz
+Embed Object			Ugradi objekt
+Remove Object			Ukloni objekt
+Open Object			Otvori objekt
+Save Object			Snimi objekt
+
+Object file:			Datoteka objekta:
+
+Fit Block Width			Prilagodi ¹irini bloka
+Fit Block Height		Prilagodi visini bloka
+Cell Format			Format æelije
+Block Format			Format bloka
+Cell Style			Stil æelije
+Block Style			Stil bloka
+Cell Color			Boja æelije
+Block Color			Boja bloka
+
+Import Plugin			Uvezi plugin
+Move Plugin			Premjesti plugin
+
+SIOD Command			SIOD naredba
+C Command			C naredba
+Guile Command			Guile naredba
+Tcl Command			Tcl naredba
+Web Server			WWW poslu¾itelj
+Another Form Test		Drugo isku¹avanje obrazaca
+Yet Another Form Test		Jo¹ jedno isku¹avanje obrazaca
+Another Form Test Still		I jo¹ jedno isku¹avanje obrazaca
+
+Disable Helptexts		Iskljuèi pomoæne tekstove
+
+Change Object Type		Promijeni vrstu objekta
+Play Animation			Poka¾i animaciju
+
+Quit animation			Izaði iz animacije
+
+Comma				Toèka
+
+Embed				Ugradi
+
+Show editor			Poka¾i editor
+Hide editor			Sakrij editor
+Add tick			Dodaj sat
+
+Add Line			Dodaj crtu
+Add Rectangle			Dodaj pravokutnik
+Add Arc				Dodaj kru¾ni isjeèak
+Add Ellipse			Dodaj elipsu
+Add Image			Dodaj grafiku
+Add String			Dodaj niz znakova
+Add Point			Dodaj toèku
+Add Filled Rectangle		Dodaj ispunjen pravokutnik
+Add Filled Ellipse		Dodaj ispunjenu elipsu
+Add Filled Arc			Dodaj ispunjen kru¾ni isjeèak
+
+No warranty			Nema jamstva
+
+Box Animation Demo		Demonstriraj animaciju okvira
+Circle Animation Demo		Demonstriraj animaciju kru¾nice
+Line Animation Demo		Demonstriraj animaciju crte
+Combo Animation Demo		Demonstriraj animaciju kombinacije
+
+Segment Format			Format segmenta
+Line Format			Format reda
+Segment Style			Stil segmenta
+Line Style			Stil reda
+Segment Color			Boja segmenta
+Line Color			Boja reda
+
+black				crna
+red				crvena
+green				zelena
+blue				plava
+yellow				¾uta
+magenta				grimizno-ljubièasta
+cyan				cijan
+white				bijela
+
+Extra				Dodatno
+Family Name			Ime obitelji
+Size				Velièina
+Attributes			Osobine
+Adjustment			Prilagodba
+Misc				Sporedno
+List Selection			Popis odabira
+
+Bold				Podebljano
+Italic				Kurziv
+Top				Vrh
+Bottom				Dno
+Left				Lijevo
+Right				Desno
+Center				Na sredini
+color				boja
+Color:				Boja:
+
+Save %s ?			Snimiti %s?
+To:				Na:
+
+Pop down animation		Skini animaciju

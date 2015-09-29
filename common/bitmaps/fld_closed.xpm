@@ -1,0 +1,36 @@
+/* XPM */
+static char * fld_closed_xpm[] = {
+/**/
+"24 24 6 1",
+/* colors ш*/
+" 	s None	c None",
+".	c #808080",
+"X	c #c0c0c0",
+"o	c yellow",
+"O	c white",
+"+	c black",
+/*ряряая*/
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"      .....             ",
+"     .XoXoX.            ",
+"    .XoXoXoX......      ",
+"    .OOOOOOOOOOOO.+     ",
+"    .OoXoXoXoXoXo.+     ",
+"    .OXoXoXoXoXoX.+     ",
+"    .OoXoXoXoXoXo.+     ",
+"    .OXoXoXoXoXoX.+     ",
+"    .OoXoXoXoXoXo.+     ",
+"    .OXoXoXoXoXoX.+     ",
+"    .OoXoXoXoXoXo.+     ",
+"    .OXoXoXoXoXoX.+     ",
+"    ..............+     ",
+"     ++++++++++++++     ",
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"                        "};

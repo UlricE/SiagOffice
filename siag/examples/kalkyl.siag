@@ -1,0 +1,146 @@
+# Creator: Siag (Scheme In A Grid) 1.13. No Warranty.
+.sw 80
+.sh 20
+.sf 33
+.fmt131072 %d
+.fmt196608 %g
+.fmt262144 %.2f
+.fmt327680 %d/%d/%d
+.fmt393216 %d:%d:%d
+.fmt458752 %.2f
+.fmt524288 %.2f %%
+.fmt589824 %lX
+.fmt655360 $%.2f
+.fmt720896 %.2f
+.fmt786432 %.2f
+.fmt851968 %.2f
+.fmt917504 %.2f
+.fmt983040 %.2f
+# /usr/local/siag/siag/examples/kalkyl.siag
+# 33 lines
+#
+.cw 1 10
+.cw 2 10
+.cw 3 109
+.cw 5 10
+.cw 6 98
+# Line 1
+# Line 2
+2 3 2098	"Investeringskapital
+2 4 2098	#
+2 5 50	#
+2 6 2098	"Rörelsekapital
+2 7 2098	#
+# Line 3
+3 3 33	"Lokal
+3 4 274465	=500000
+3 6 33	"Likvida medel
+3 7 274465	=10000
+# Line 4
+4 3 33	"Iordningställande
+4 4 274465	=100000
+4 6 33	"Varulager
+4 7 274465	=10000
+# Line 5
+5 3 33	"Maskiner, inst.
+5 4 274465	==15*(5500+2500)
+5 6 33	"Kundfordringar
+5 7 274465	==(15,4)*60/365
+# Line 6
+6 3 33	"Inventarier, inredning
+6 4 274465	==20*2000
+6 6 33	"Övriga fordringar
+6 7 274465	=10000
+# Line 7
+7 3 33	"Patent, goodwill
+7 4 274465	==10000
+7 6 33	"Leverantörsskulder
+7 7 274465	=0
+# Line 8
+8 3 33	"Marknadsföring
+8 4 274465	==50000
+8 6 33	"Övriga kortfr. sk.
+8 7 274465	==(15,4)*.2/12
+# Line 9
+9 3 33	"Oförutsett
+9 4 274465	==(3;r-1)/5
+9 7 274465	#
+# Line 10
+10 3 57	"Summa
+10 4 274465	==3;r-1
+10 6 57	"Summa
+10 7 274465	==(3;6)-(7;8)
+# Line 11
+# Line 12
+12 3 2098	"Resultatbudget
+12 4 2098	#
+12 6 2098	"Startkapital
+12 7 2098	#
+# Line 13
+13 3 33	"Försäljning
+13 4 274465	==12*40*5000
+13 6 33	"Investeringskap.
+13 7 274465	==(10,4)
+# Line 14
+14 3 33	"Övriga intäkter
+14 4 274465	=0
+14 6 33	"Rörelsekapital
+14 7 274465	==(10,7)
+# Line 15
+15 3 57	"Summa intäkter
+15 4 274465	==r-2;r-1
+15 6 57	"Summa
+15 7 274465	==r-2;r-1
+# Line 16
+16 4 274465	#
+# Line 17
+17 3 33	"Material & varor
+17 4 274465	==40*10000
+# Line 18
+18 3 33	"Förbrukningsmaterial
+18 4 274465	==40*1000
+# Line 19
+19 3 33	"Löner
+19 4 274465	==2*12*22000
+# Line 20
+20 3 33	"Arbetsgivaravg. mm
+20 4 274465	==(19,4)*.4
+# Line 21
+21 3 33	"Hyror
+21 4 274465	==40*1000
+# Line 22
+22 3 33	"Administration
+22 4 274465	==40*1000
+# Line 23
+23 3 33	"Bokföring
+23 4 274465	==40*1000
+# Line 24
+24 3 33	"Reklam
+24 4 274465	==40*1000
+# Line 25
+25 3 33	"Försäkringar
+25 4 274465	==40*1000
+# Line 26
+26 3 33	"Resekostnader
+26 4 274465	==40*1000
+# Line 27
+27 3 33	"Frakter
+27 4 274465	==40*1000
+# Line 28
+28 3 33	"Övrigt
+28 4 274465	==40*1000
+# Line 29
+29 3 33	"Räntekostnader
+29 4 274465	==(15,7)*.10
+# Line 30
+30 3 33	"Avskrivningar
+30 4 274465	==(5,4)*.5
+# Line 31
+31 3 57	"Summa kostnader
+31 4 274465	==17;r-1
+# Line 32
+32 4 274465	#
+# Line 33
+33 3 2106	"Resultat
+33 4 276538	==(15,4)-(31,4)
+# End of file /usr/local/siag/siag/examples/kalkyl.siag

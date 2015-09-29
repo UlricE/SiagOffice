@@ -1,0 +1,13 @@
+# Creator: Egon Animator 3.0pre1. No Warranty.
+# noname.egon
+.delta 50
+.duration 2000
+.geometry 800 600
+# Object FilledRectangle1
+.object 8 FilledRectangle1 7 34 
+.tick 0 0 0 800 600 1
+# Object Line1
+.object 1 Line1 3 34 
+.tick 0 0 0 800 600 1
+.tick 1000 0 600 800 -600 1
+.tick 2000 800 600 -800 -600 1

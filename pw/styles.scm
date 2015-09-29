@@ -1,0 +1,20 @@
+; Defining default styles
+
+(register-style "Default" "Default" "Times" 120 0 0 0 0 "black")
+(register-style "Header 1" "Default" "Helvetica" 240 1 0 0 0 "black")
+(register-style "Header 2" "Default" "Helvetica" 180 1 0 0 0 "black")
+(register-style "Header 3" "Default" "Helvetica" 140 1 0 0 0 "black")
+(register-style "Header 4" "Default" "Helvetica" 120 1 0 0 0 "black")
+(register-style "Header 5" "Default" "Helvetica" 100 1 0 0 0 "black")
+(register-style "Header 6" "Default" "Helvetica" 80 1 0 0 0 "black")
+(register-style "Address" "Address" "Times" 120 0 1 0 0 "black")
+(register-style "Title" "Title" "Times" 180 1 0 0 0 "black")
+(register-style "Abstract" "Abstract" "Times" 140 1 0 0 0 "black")
+(register-style "Preformatted" "Preformatted" "Courier" 120 0 0 0 0 "black")
+(register-style "User 1" "User 1" "Times" 120 0 0 0 0 "black")
+(register-style "User 2" "User 1" "Times" 120 0 0 0 0 "black")
+(register-style "User 3" "User 1" "Times" 120 0 0 0 0 "black")
+(register-style "User 4" "User 1" "Times" 120 0 0 0 0 "black")
+(register-style "User 5" "User 1" "Times" 120 0 0 0 0 "black")
+(register-style "Ulric Testar" "Ulric Testar" "Symbol" 120 0 1 1 0 "Pink")
+

@@ -1,0 +1,751 @@
+#Hungarian localization of Siag Office
+#Magyar nyelvi fájl a Siag Office-hoz
+#
+#Authors:
+#Szerzõ:
+#Sólya Zoltán
+#
+#Send comments to:
+#Megjegyzéseket a alábbi címre küldhetsz:
+#solya.zoltan@ln.matav.hu
+
+A file manager for X		File kezelõ X-re
+A postscript viewer for X	Postcript nézegetõ X-re
+A spreadsheet for X		Táblázatkezelõ X-re
+A word processor for X		Szövegszerkesztõ X-re
+About Egon Animator		Az Egon Animator névjegye
+About Egon Animator...		Az Egon Animator névjegye...
+About Gvu...			A Gvu névjegye...
+About Pathetic Writer		A Pathetic Writer névjegye
+About Pathetic Writer...	A Pathetic Writer névjegye...
+About Siag			A Siag névjegye
+About Siag Office...		A Siag Office névjegye...
+About Siag...			A Siag névjegye...
+About XedPlus...		Az XedPlus névjegye..
+About Xfiler...			Az Xfiler névjegye..
+About				Névjegy
+Abstract			Elvon
+Accept				Elfogad
+Acces Permissions		Hozzáférési engedély
+Add				Új
+Add Arc				Új körív
+Add Ellipse			Új ellipszis
+Add Filled Arc			Új kitöltött ív
+Add Filled Ellipse		Új kitöltött ellipszis
+Add Filled Rectangle		Új kitöltött sokszög
+Add Image			Új kép
+Add Line			Új sor
+Add Object			Új objektum
+Add Point			Új pont
+Add Property			Új tulajdonság
+Add Rectangle			Új sokszög
+Add Sheet			Új lap
+Add String			Új szöveg
+Add the contents of the block	Kijelölés összege
+Add tick			Hozzáad (tick?)
+Address				Cím
+Adjustment			Szabályozás
+Advanced			Haladó
+Alert				Figyelem!
+All files (*)			Minden fájl (*)
+Already defining kbd macro!	Már definiált makró!
+Another Form Test		További tesztûrlap
+Another Form Test Still		További tesztûrlap leállítás
+App				Alkalmazás
+Applets				Bedolgozó modulok
+Arc				Körív
+Archive				Archívum (tar)
+Attempt to delete sole ordinary window	Pokus o smazání jediného okna
+Attributes			Attribútumok
+Authors:			Szerzõk:
+Autofill:			Autokitöltés:
+Autoindent:			Odsazování:
+BMP image			BMP kép
+Background Color		Háttérszín
+Backup Copies			Biztonsági másolatok
+Backward			Vissza
+Begin				Kezdet
+Begin Empty Animation		Új animáció
+Beginning of buffer		Lap elejére
+Beginning of paragraph		Bekezdés elejére
+Black				Fekete
+Block				Kijelölés
+Block Average			Kijelölés átlaga
+Block Color			Kijelölés színe
+Block Format			Kijelölés formátuma
+Block Maximum			Kijelölés maximuma
+Block Minimum			Kijelölés minimum
+Block Style			Kijelölés stílusa
+Block Sum			Kijelölés összeg
+Blue				Kék
+Bold				Félkövér
+Bold text			Félkövér
+Borders				Keretek
+Both				Mindkettõ
+Bottom				Alja
+Bottom:				Alja:
+Bottom of buffer		Lap aljára
+Box				Doboz
+Box Animation Demo		Példa doboz animációra
+Boxes				Dobozok
+C Command			C parancs
+C Expression			C kifejezés
+C command:			C parancs:
+C expression:			C kifejezés:
+Calculator			Számológép
+Call Sed			A Sed meghívása
+Can't exec GV			GV nem indítható
+Can't exec lpr			Nyomtató nem indítható
+Can't execute anonymous macro while defining one	Makró nem futtatható, amíg nincs definiálva legalább egy!
+Can't make postscript		Postscript fájl nem készíthetõ
+Can't open header file		Nem tudom megnyitni a fejléc fájlt
+Can't open loader file		Nem tudom megnyitni a betöltõ fájlt
+Can't open saver file		Nem tudom megnyitni a mentés fájlt
+Can't overwrite embedded object	Nem tudom felülírni a beágyazott objektumot
+Cancel				Mégsem
+Cannot create backup file!	A biztonsági másolat nem hozható létre!
+Cannot create file!		A fájl nem hozható létre!
+Cannot open file for reading!   Nem tudom olvasásra megnyitni a fájlt!
+Cannot open file!		Nem tudom megnyitni a fájlt!
+Cannot save file!		Nem tudom elmenteni a fájlt!
+Cell				Cella
+Cell Color			Cella szín
+Cell Format			Cella formátum
+Cell Protection			Cellavédelem
+Cell Style			Cella stílus
+Center				Középre
+Center page			Középre igazított lap
+Centered text			Középre igazítás
+Change				Módosít
+Change %s:			%s módosítás:
+Change Buffer			Váltás másik dokumentumra
+Change Buffer:			Váltás a dokumentumok között:
+Change Default Interpreter	Alapértelmezett parancsértelmezõt cserél
+Change Object Type		Objektum-típus módosítás
+Change Window			Váltás a másik ablakba
+Change bg:			Háttérbe küld:
+Change default interpreter	Alapértelmezett parancsértelmezõt cserél
+Change family:			Betûtípus váltás:
+Change fg:			Elõtérbe hoz:
+Change sort mode		Rendezési mód váltása
+Change sort mode:		Rendezési mód váltása:
+Change style:			Stílus váltás:
+Change the color		Színváltás
+Change the display style	Stílus váltás
+Change the font family		Betûtípus váltás
+Change the font size		Betûméret váltás
+Change view mode		Nézet váltás
+Changing access permissions for %s	Hozzáférési jog módosítása %s számára
+Check Brackets			Zárójelek ellenõrzése
+Circle				Kör
+Circle Animation Demo		Példa kör animációra 
+Cleanup				Alapformátumra visszaáll
+Clear				Töröl
+Close				Bezár
+Close Buffer:			Dokumentumot bezár:
+Close Window:			Ablakot bezár:
+Code:				Kód:
+Color:				Szín:
+Column Width			Oszlop szélesség
+Columns Ascending as Numbers	Oszlop rendezése számként
+Columns Ascending as Text	Oszlop rendezése szövegként
+Columns Descending as Numbers	Oszlop fordított rendezése számként
+Columns Descending as Text	Oszlop fordított rendezése szövegként
+Combo				Lenyíló
+Combo Animation Demo		Lenyíló animáció példa
+Comma				Vesszõ
+Command				Parancs
+Command Window			Parancsablak
+Command:			Parancs:
+Commands			Parancsok:
+Compressed Archive		Tömörített archívum (tgz)
+Compressed File			Tömörített fájl
+Contents			Tartalom
+Copy				Másol
+Copy Block			Kijelölés másolása
+Copy to:			Hová másol:
+Copy...				Másolás...
+Copying				Másolás
+Copyright			Szerzõi jogok
+Copyright...			Szerzõi jogok...
+Couldn't kill last buffer	Couldn't kill last buffer
+Couldn't save			Nem mentett dokumentum
+Create file:			Fájl létrehozása:
+Create folder			Könyvtár létrehozása
+Create folder:			Könyvtár létrehozása:
+Currency			Pénznem
+Cursor position			Kurzor pozíció
+Custom				Személyre szabott
+Cut				Kivág
+Cyan				Cyan
+Data				Adat
+Data Entry			Adatbevitel
+Date				Dátum
+Date:				Dátum:
+Decrease magstep		Nagyítás csökkentése
+Default				Alapértelmezett
+Defaults			Alapértelmezések
+Define Style			Stílus definiálás
+Defining kbd macro...		Makró definiálás...
+Delete				Törlés
+Delete Block			Kijelölt törlése
+Delete Buffer			Dokumentum bezárása
+Delete Object			Objektum törlés
+Delete Tick			Tick(?) törlés
+Delta				Változás
+Demo				Bemutató
+Deselect all			Kijelölés törlése
+Dialog				Adatbevitel
+Dialog:				Adatbevitel:
+Direction:			Irány:
+Directories			Könyvtárak
+Directory:			Könyvtár:
+Disable				Nem elérhetõ
+Disable Helptexts		Segítség nem elérhetõ
+Dismiss				Abbahagy
+Display copyright information	Copyright megjelenítése
+Display online help		Segítség
+Display the Egon online documentation	Az Egon leírása
+Display the Gnu general public license	GNU licensz
+Display the PW online documentation	A PW leírása
+Display the Siag online documentation	A Siag leírása
+Display the online documentation	A Siag Office leírása
+Dots				pontok
+Do it				Végrehajt
+Down				Le
+Draw borders around the block	Keret a kijelölés körül
+Draw grid lines in the block	Rácsvonalak a kijelölésben
+Dump Words			Dump Words
+Duration			Élettartam
+EMPTY				ÜRES
+ERROR				HIBA
+CONSTANT			SZÁM
+Edit				Szerkeszt
+Edit Applications		Szerkesztõ programok
+Edit Properties			Tulajdonságok szerkesztése
+Edit Record			Cella szerkesztés
+Editor				Egyszerû szövegszerkesztõ
+Efternamn			Vezetéknév
+Egon Animator 3.1.5. No Warranty.	Egon Animator 3.1.5. Mindennemû jótállás nélkül.
+Egon Animator 3.1.6. No Warranty.	Egon Animator 3.1.6. Mindennemû jótállás nélkül.
+Egon Animator 3.4.7. No Warranty.	Egon Animator 3.4.7. Mindennemû jótállás nélkül.
+Egon Editor			Egon Editor
+Ellipse				Ellipszis
+Embed				Beágyaz
+Embed Object			Objektum beágyazás
+Empty				Üres
+End				Vége
+End of buffer			Lap végére
+End of paragraph		Bekezdés végére
+Enter Date			Dátum beszúrása
+Enter Time			Idõ beszúrása
+Enter user data			Felhasználói adatok beszúrása
+Environment			Környezet
+Error in Print Command String	Hiba a parancs nyomtatásakor
+Examples			Példák
+Exit				Kilépés
+Export				Export
+Export				Export
+Expression			Kifejezés
+Expression style:		Kifejezés stílusa:
+External Program:		Külsõ program:
+External program failed		Külsõ programhiba
+Extra				Extrák
+FTP Directory			FTP cím
+Family Name			Családi név
+File				Fájl
+File Manager			Fájl kezelõ
+File Name:			Fájl név:
+File does not exist and directory is write protected!	A fájl nem létezik, és a könyvtár írásvédett!
+File has been modified by someone else!	A fájlt valaki közben módosította!
+File manager			Fájl kezelõ
+File opened READ ONLY		A fájl megnyitva CSAK OLVASHATÓ-ként
+File saved			A fájl elmentve
+Filename pattern:		Fájlnév maszk:
+Files				Fájlok
+Fill Block			Kijelölés feltöltése
+Filled Arc			Kitöltött körív
+Filled Ellipse			Kitöltött ellipszis
+Filled Rectangle		Kitöltött sokszög
+Find				Keres
+Find Backward			Visszafelé keres
+Find Bracket			Zárójel keresés
+Find file			Fájl keresés
+Find pattern:			Keresési maszk:
+First Page Number		Kezdõ oldalszám
+First name			Vezetéknév
+First page number:		Kezdõ oldalszám:
+Fit Block			Automatikus méretezés
+Fit Block Height		Automatikus magasság
+Fit Block Width			Automatikus szélesség
+Fixed				Rögzitett
+Folder				Könyvtár
+Font				Betû
+Footer:				Lábléc:
+Foreground Color		Elõtérszín
+Form				Ûrlap
+Form Test			Ûrlap teszt
+Format				Formátum
+Format:				Formátum:
+Forward				Elõre
+Full adjusted text		Szélekhez igazítás
+Function A-F			Függvények A-F
+Function G-L			Függvények G-L
+Function M-S			Függvények M-S
+Function T-Z			Függvények T-Z
+Förnamn				Keresztnév
+GIF image			GIF kép
+Gatuadress			Utca
+Generic				Általános
+Go To				Ugrás
+Go to folder:			Könyvtárra ugrás:
+Go to home directory		Home könyvtárra ugrás
+Go to...			Ugrás...
+Go to:				Ugrás:
+Go up one directory		Egy könyvtárral feljebb lép
+Green				Zöld
+Grid				Rács
+Grid Lines			Rács vonalak
+Group				Csoport
+Guile Command			Guile parancs
+Guile Expression		Guile kifejezés
+Guile command:			Guile parancs:
+Guile expression:		Guile kifejezés:
+Has ticks			Pipák(?) használata
+Has titles			Címsor használata
+Header 1			Fejléc 1
+Header 2			Fejléc 2
+Header 3			Fejléc 3
+Header 4			Fejléc 4
+Header 5			Fejléc 5
+Header 6			Fejléc 6
+Header and Footer		Fejléc és lábléc
+Header on first page		Fejléc az elsõ oldalon
+Header:				Fejléc:
+Height				Magasság
+Height:				Magasság:
+Help				Segítség
+Help browser			Segítség-et kezelõ program
+Help for Help			A Segítség kezelése
+Help...				Segítség...
+Helptexts			Segítség szövegek
+Hex				Hexadecimális
+Hide				Elrejt
+Hide editor			Szerkesztõ elrejtése
+Hide folders			Könyvtár elrejtése
+Home				Home
+Icons				Ikonok
+Identify Cell			Cellaazonosító
+Ignore				Felfüggeszt
+Image				Grafika
+Import				Import
+Import Plugin			Beépülõk importja
+Impulses			Impulzusok
+Increase magstep		Nagyítás növelése
+Input buffer overflow; macro execution terminated	Bemenet túlcsordulás, makró leállitva!
+Insert				Beszúr
+Insert Column			Oszlop beszúrás
+Insert Line			Sor beszúrás
+Integer				Egész szám
+Integration			Integráció
+Invisible			Nem látható
+Italic				Dõlt
+Italic text			Dõlt
+Jpeg image			JPEG kép
+Jump				Ugrás
+Key				Kulcs
+Keyboard macro defined		Billentyûzet makró definiálva
+Kill Buffer:			Dokumentum bezárása:
+LABEL				CIMKE
+Label				Cimke
+Label:				Cimke:
+Land				Ország
+Landscape			Fekvõ
+Last Modification		Utolsó módosítás
+Last Status Change		Utolsó állapot változás
+Last name			Keresztnév
+Left				Bal
+Left adjusted text		Balra igazítás
+Left:				Bal:
+Length				Hossz
+Line				Sor
+Line Animation Demo		Vonal animáció példa
+Line Color			Vonal szín
+Line Format			Vonal formátum
+Line Height			Sormagasság
+Line Style			Vonal stílus
+Line in buffer			Sorra
+Line number?			Sor száma?
+Line:				Sor száma:
+Lines				Vonalak
+Linespoints			Vonalpontok
+Link				Link
+Link to:			Link:
+Link...				Link...
+Links				Linkek
+List				Lista
+List Selection			Kijelölt lista
+Load External			Dokumentum importálás
+Load auto startup code?		Betöltsem az automatikus indítást?
+Loading				Betöltés
+Local File			Helyi fájl
+Logarithmic X axis		Logaritmikus X tengely
+Logarithmic Y axis		Logaritmikus Y tengely
+Magenta				Fialová
+Magenta				Bíborvörös
+Magstep				Nagyítás
+Mail				Posta
+Margins				Margók
+Mark				Kijelöl
+Media				Lapméret
+Misc				Vegyes
+Mix folders/files		Könyvtár és fájlnév vegyesen
+Move				Mozgat
+Move Plugin			Beépülõ mozgatás
+Move Sheet			Lap mozgatás
+Move to:			Mozgatás:
+Move...				Mozgatás...
+Name				Név
+Name: 				Név:
+Never				Soha
+New				Új
+New Xedplus			Újabb Xedplus indítása
+New expression interpreter:	Új kifejezés interpreter :
+New file			Új fájl
+New...				Új...
+Next				Következõ
+Next animation frame		Új keret animáció
+Next animation frame		Következõ keret animáció
+Next frame			Következõ keret
+Next page			Következõ oldal
+No				Nem
+No file yet			Nincs megnyitott fájl
+No files found			Fájl nem található
+No files found			Nenalezeny ¾ádné soubory
+No object selected		Nincs kijelölt objektum
+No such buffer			Nincs elég buffer
+No warranty			Mindennemû jótállás nélkül.
+None				Nincs
+None selected			Nincs kiválasztva
+Not defining kbd macro		Nincs definiált makró
+Nummer				Házszám
+OK				Rendben
+Ok				Rendben
+Object file:			Objektum fájl:
+Object type:			Objektum tipus:
+Objects				Objektum
+Okay				OK
+One Window			Egy ablak
+Open				Megnyitás
+Open Object			Objektum megnyitása
+Open With...			Megnyitás mással...
+Open a Pathetic Writer document		Dokumentum megnyitása
+Open a PostScript file		PostScript fájl megnyitása
+Open a Siag document		Dokumentum megnyitása
+Open a text file		Szöveges fájl megnyitása
+Open an Egon Animator document	Egon Animator dokumentum megnyitása
+Open command window		Parancsablak megnyitása
+Open file			Fájl megnyitása
+Open with...			Megnyitás mással...
+Open...				Megnyitás...
+Options				Opciók
+Orientation			Tájolás
+Orientation:			Tájolás:
+Original:			Eredeti:
+Other				Egyébb
+Others				Egyebek
+Overwrite existing %s?		%s már létezik, felülírjam?
+Owner				Tulajdonos
+Page				Lap
+Paper Size			Papír méret
+Parameters:			Paraméterek:
+Part of Siag Office		A program a Siag Office része
+Paste				Beilleszt
+Pathetic Writer 3.1.5. No Warranty.	Pathetic Writer 3.1.5. Mindennemû jótállás nélkül.
+Pathetic Writer 3.1.6. No Warranty.	Pathetic Writer 3.1.6. Mindennemû jótállás nélkül.
+Pathetic Writer 3.4.7. No Warranty	Pathetic Writer 3.4.7. Mindennemû jótállás nélkül.
+Pause the animation		Az animáció felfüggesztése
+Percent				Százalék
+Perform a User command		Felhasználói utasítás végrehajtása
+Perform a User pipe		Felhasználói átirányítás végrehajtása
+Perform a stream-editor command (sed)	Folyamatszerkesztõ parancs végrehajtása (sed)
+Permissions...			Engedélyek...
+Pick one:			Válassz egyet:
+Pipe				Parancs átirányítás
+Pipes				Parancs átirányítások
+Pixmap				Pixmap
+Play Animation			Animáció lejátszása
+Play animation			Animáció lejátszása
+Play the animation		Animáció lejátszása
+Plot				Diagram
+Plot the contents of the block using lines	Diagram rajzolása a kijelölés sorai alapján
+Plugin				Beépülõ
+Point				Pont
+Points				Pontok
+Pop down animation		Lenyíló animáció
+Popup				Buborék
+Portrait			Álló
+Postadress			Postacím
+Postnummer			Irányítószám
+Preformatted			Elõformázott
+Preview				Elõnézet
+Preview the contents of the current buffer	Nyomtatási elõnézet
+Previewer			Nézõke
+Previous			Elõzõ
+Previous animation frame	Elõzõ keret az animációban
+Previous frame			Elõzõ keret
+Previous page			Elõzõ oldal
+Print				Nyomtatás
+Print Command			Nyomtatási parancs
+Print Format			Nyomtatási formátum
+Print Selection			Nyomtatásra kijelölt terület
+Print marked pages...		Kijelölt oldalak nyomtatása...
+Print the contents of the current buffer	Aktuális dokumentum nyomtatása
+Print the file			Fájl nyomtatása
+Print the marked pages		Kijelölt oldalak nyomtatása
+Print...			Nyomtatás...
+Printer				Nyomtató
+Printer Name:			Nyomtató neve:
+Properties			Tulajdonságok
+Protect Cells			Védett cellák
+Quit				Kilépés
+Quit Egon			Kilépés az  Egon-ból
+Quit animation			Kilépés az animációból
+Recalculate			Újraszámol
+Rectangle			Sokszög
+Red				piros
+Redisplay			Újrarajzol
+Redo				Újra
+Reference Style			Hivatkozási stílus
+Remove				Eltávolít
+Remove Column			Oszlop törlés
+Remove Line			Vonal törlés
+Remove Object			Objektum törlése
+Remove Protection		Cellavédelem törlés
+Remove Sheet			Lap törlés
+Remove Window			Ablak törlése
+Remove grid lines from the block	Rács eltávolítása a kijelölésben
+Rename Sheet			Lap átnevezés
+Reopen				Újból megnyit
+Replace				Csere
+Replace Selection		Kijelölést lecserél
+Replace all			Mindent lecserél
+Replace veto			Nechat
+Replace with:			Helyettesítõ:
+Replacement:			Helyettesítés:
+Resize				Átméretez
+Respect				Figyelembe vesz
+Respect protection		Védelmet figyelembe vesz
+Restore				Helyreállít
+Right				Jobb
+Right adjusted text		Jobbra igazítás
+Right:				Jobb:
+Row Height			Sormagasság
+Rows Ascending as Numbers	Sorok rendezése számként
+Rows Ascending as Text		Sorok  rendezése szövegként
+Rows Descending as Numbers	Sorok  fordított rendezése számként
+Rows Descending as Text		Sorok  fordított rendezése szövegként
+SIOD Command			SIOD parancs
+SIOD Expression			SIOD kifejezés
+SIOD command:			SIOD parancs:
+SIOD expression:		SIOD kifejezés:
+Save				Mentés
+Save %s ?			Mentsem %s dokumentumot?
+Save %s?			Mentsem %s dokumentumot?
+Save Application		Alkalmazás mentése
+Save As				Mentés más néven
+Save External			Mentés más formátumban
+Save Object			Objektum mentése
+Save Preferences		Beállítások mentése
+Save Selection			Kijelölés mentése
+Save file			Fálj mentése
+Save marked pages...		Kijelölt oldalak mentése...
+Save the contents of the current buffer	Az aktuális dokumentum mentése
+Save the file			Fálj mentése
+Save the marked pages		Kijelölt oldalak mentése
+Saved %s			%s elmentve
+Saved as %s			Elmentve mint %s
+Saving				Mentés
+Scheme Code (*.scm)		Séma kód (*.scm)
+Scheme In A Grid		Táblázatkezelõ (Siag)
+Scientific			Tudományos
+Section %d			%d. fejezet
+Search				Keresés
+Search Selection		Kijelölést megkeres
+Search at:			Keresés innen:
+Search for:			Keresési minta:
+Search:				Keresés:
+Seascape			Teljes oldal
+Segment Color			Szegmens színe
+Segment Format			Szegmens formátuma
+Segment Style			Styl segmentu
+Segment Style			Szegmens stílusa
+Select All			Kijelöl mindent
+Select File			Fájl választás
+Select Plugin:			Beépülõ választás:
+Select all			Mindent kijelöl
+Select everything		Mindent kijelöl
+Select...			Kijelöl...
+Selection End			Kijelölés vége
+Selection Start			Kijelölés vége
+Set				Beállít
+Set Background			Háttér beállítás
+Set Block			Blokk beállítás
+Set Default			Alapértelmezettnek beállít
+Set Default Format		Alapértelmezett formátumnak beállít
+Set Geometry			Geometriát beállít
+Set Mark			Kijelölés
+Settings			Beállítások
+Sheet %d			%d. táblázat
+Shift Selection Left		Kijelölést balra mozgat
+Shift Selection Right		Kijelölést jobbra mozgat
+Show				Mutat
+Show Editor			Szerkesztõ mutatása
+Show editor			Szerkesztõ mutatása
+Show hidden files		Rejtett fájlok megmutatása
+Siag (Scheme In A Grid) %s. No Warranty.	Siag (Scheme In A Grid) %s. Mindennemû jótállás nélkül.
+Siag (Scheme In A Grid) 3.4.7. No Warranty.	Siag (Scheme In A Grid) 3.4.7. Mindennemû jótállás nélkül.
+Siag Home			Siag honlap
+Siag-net			Siag-net
+Size				Méret
+Size:				Méret:
+Skip				Átugorja
+Smart Fill Block		Kijelölés auto feltöltése
+Sort				Sorbarendezés
+Sort ascending			Sorbarendezés
+Sort by date			Sorbarendezés dátum szerint
+Sort by name			Sorbarendezés név szerint
+Sort by size			Sorbarendezés méret szerint
+Sort descending			Sorbarendezés csökkenõ sorrendben
+Special				Különleges
+Special Char			Különleges karakter
+Spell				Helyesírás
+Spell Test			Helyesírás ellenõrzés
+Spelling checker		Helyesírás ellenõrzõ
+Split Window			Ablak megosztása
+Start another editor		Másik szerkesztõ indítása
+Start another instance of Egon Animator		Új dokumentum
+Start another instance of Pathetic Writer	Új dokumentum
+Start another instance of Siag			Új dokumentum
+Start at:			Indítás innen:
+Steps				Lépések
+Stop				Leállítás
+Stop animation			Animáció leállítása
+String				Betûsorozat
+Strikethrough			Áthúzott
+Style				Stílus
+Style %s changed		%s stílus megváltozott
+Style Default changed		"Alap" stílus megváltozott
+Style Header 1 changed		"Fejléc 1" stílus megváltozott
+Style Header 2 changed		"Fejléc 2" stílus megváltozott
+Style Header 3 changed		"Fejléc 3" stílus megváltozott
+Style Header 4 changed		"Fejléc 4" stílus megváltozott
+Style Header 5 changed		"Fejléc 5" stílus megváltozott
+Style Header 6 changed		"Fejléc 6" stílus megváltozott
+Style User 1 changed		"Felhasználói 1" stílus megváltozott
+Style User 2 changed		"Felhasználói 2" stílus megváltozott
+Style User 3 changed		"Felhasználói 3" stílus megváltozott
+Style User 4 changed		"Felhasználói 4" stílus megváltozott
+Style User 5 changed		"Felhasználói 5" stílus megváltozott
+Subscript			Alsó index
+Sum				Összeg
+Superscript			Felsõ index
+Surface				Felület
+Swap Landscape			Nézetet vált
+Symbolic Lint To		Szimbólumot ideköt
+Tab Distance			Tabulátorok
+Tab distance:			Tabulátorok távolsága:
+Tab size:			Tabulátor méret:
+Tcl Command			Tcl parancs
+Tcl Expression			Tcl kifejezés
+Tcl command:			Tcl parancs:
+Tcl expression:			Tcl kifejezés:
+Terminal			Terminál
+Test 1				1. próba
+Test 2				2. próba
+Test 3				3. próba
+Text				Szöveg
+Text (*.txt)			Szöveg (*.txt)
+Text editor			Egyszerû szerkesztõ (Xedplus)
+Textbeginning			Szöveg kezdete
+Textending			Szöveg vége
+The interactive text editor for X	Egy interaktív szövegszerkesztõ X-re
+This command does nothing		Ez a parancs nem csinál semmit
+This program is part of Siag Office,\nan effort to create a full-featured, free\noffice package for Unix and X.	Ez a program a Siag Office része,\namivel megkísérelünk egy teljes értékû,\n free irodai csomagot létrehozni Unix-ra és X-re.
+This window is too small to split	Ez az ablak túl kicsi a felosztáshoz
+Ticks				Pipák (?)
+Time				Idõ
+Time Difference			Idõ különbség
+Time:				Idõ:
+Timing				Idõzítés
+Title				Címzett
+To:				Kinek:
+Toggle overwrite/insert		Átíró/Beszúró mód váltás
+Tools				Eszközök
+Top				Teteje
+Top of buffer			Lap tetejére
+Top:				Teteje:
+Tree				Fa
+Type:				Típus:
+Ulric Testar			Ulric teszt
+Underline			Alsó vonal
+Underline the block		Kijelölés aláhúzása
+Underlined text			Aláhúzott
+Undo				Visszavon
+Undo it				Visszavon
+Unmark				Kijelölés törlése
+Unsaved Changes!		A változások nem lettek elmentve!
+Unset Block			Kijelölés törlése
+Up				Fel
+Update icons			Ikonok frissítése
+Upside-down			Fejreállít
+Use				Használ
+Use				Stílust használatba vesz
+User 1				Felhasználó 1
+User 2				Felhasználó 2
+User 3				Felhasználó 3 
+User 4				Felhasználó 4 
+User 5				Felhasználó 5 
+Value				Érték
+View				Nézet
+Visible				Látható
+Warning				Figyelem!
+Warning!			Figyelem!
+Web Server			Web szerver
+Webserver			Web szerver
+Which format?			Melyik formátum?
+White				Fehér
+Width				Szélesség
+Width:				Szélesség:
+Window				Ablak
+Wizard				Varázsló
+Word				Szó
+Word:				Szó:
+Wrap mode:			Tördelési mód:
+Yellow				Sárga
+Yes				Igen
+Yet Another Form Test		Egyéb ûrlaptesztek
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s és %d] [méret=%dx%d] [idõtartam=%d különbség=%d]
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s v %d] [velikost = %dx%d] [trvání=%d krok=%d]
+black				fekete
+blue				kék
+color				szín
+cyan				cyan
+done.				Kész.
+green				zöld
+magenta				bíborvörös
+no				nem
+on				nem
+red				piros
+white				fehér
+yellow				sárga
+yes				igen
+Zoom				Nagyítás
+Zoom:				Nagyítás
+zoom 				nagyítás
+zoom: 				nagyítás
+%s command:			%s parancs:
+%s expression:			Kifejezés %s:
+-Insert-			-Beszúrás-
+-Overwrite-			-Felülírás-
+<none>				<nincs>

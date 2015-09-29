@@ -1,0 +1,12 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowExec=
+SwallowTitle=
+BinaryPattern=
+Name[C]=Xfiler
+Exec=xfiler %f
+Icon=xfiler.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

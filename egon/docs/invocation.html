@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Egon Animator - Invocation</title>
+</head>
+
+<body>
+<h1>Invocation</h1>
+Egon Animator is invoked as:
+<pre>
+egon [X-options] [siod-options] [filename]
+</pre>
+<h3>X Options</h3>
+Egon Animator accepts the
+standard X Toolkit command line options and arguments:
+<dl>
+<dt>-display display
+<dt>-geometry geometry
+<dt>-bg color, -background color
+<dt>-bd color, -bordercolor color
+<dt>-bw number, -borderwidth number
+<dt>-fg color, -foreground color
+<dt>-fn font, -font font
+<dt>-iconic
+<dt>-name
+<dt>-rv, -reverse
+<dt>+rv
+<dt>-selectionTimeout
+<dt>-synchronous
+<dt>-title string
+<dt>-xnllanguage language[ territory][.codeset]
+<dt>-xrm resourcestring
+</dl>
+
+<h3>Siod options</h3>
+Any options not accepted by X are passed on to Siod, which accepts
+the following options:
+<dl>
+<dt>-hXXXXX:[N]
+	<dd>XXXXX is an integer, to specify the heap size in obj cells.
+	N is an optional number of heaps limit (default 2).
+<dt>-iXXXXX
+	<dd>XXXXX is a filename to load before going into the repl loop.
+<dt>-gX
+	<dd>X = 1 for stop-and-copy garbage collection, 0 for
+	mark-and-sweep.
+<dt>-oXXXXX
+	<dd>XXXXX is the size of the symbol hash table to use,
+	default 100.
+<dt>-nXXXXX
+	<dd>XXXXX is the number of preconsed/interned non-negative
+	numbers.
+<dt>-sXXXXX
+	<dd>XXXXX is the number of bytes of machine recursion stack.
+<dt>-eXXXXX
+	<dd>XXXXX is an expression to evaluate, then exit.
+</dl>
+
+<h3>Filenames</h3>
+Any other arguments are taken as names of Egon Animator documents to be loaded
+on startup. If no filenames are given, Egon Animator is started with an empty
+document called "noname".
+
+<h3>Environment Variables</h3>
+The following environment variables can be used to customize Egon Animator.
+<dl>
+<dt>SIAGHOME
+	<dd>The base directory of the Egon Animator installation. This variable
+	is used to find the documentation. Defaults to "/usr/local/siag".
+<dt>SIAGHELP
+	<dd>The name of the web browser that will be used to view
+	the on-line help. Defaults to "siaghelp".
+</dl>
+<hr>
+<address>Ulric Eriksson - February 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

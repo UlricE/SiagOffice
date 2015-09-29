@@ -1,0 +1,1137 @@
+# Creator: Siag (Scheme In A Grid) 3.4.0pre2. No Warranty.
+.sw 80
+.sh 20
+.margins 72 72 72 72 36 36
+.paper A4 595 842 0
+.header &n
+.footer &p
+.header_on_first 1
+.first_page 1
+.a1_refs 1
+.style 0
+name Default
+fmt %d
+type 0
+end
+.ft 0
+size 100
+end
+.nsf 0
+.sheet 0 Ark 1
+# /home/ulric/siag/siag/examples/allfunctions.siag
+# 341 lines
+#
+.cw 1 116
+.cw 2 200
+# Line 1
+.ft 2
+size 100
+bold 1
+end
+1 1 2	"Function
+1 2 2	"Result
+1 3 2	"Expected
+# Line 2
+2 1 0	"abs
+2 2 0	==abs(-17)
+# Line 3
+3 1 0	"acos
+3 2 0	==acos(0.5)
+# Line 4
+4 1 0	"acosh
+4 2 0	==acosh(2)
+# Line 5
+5 1 0	"address
+5 2 0	==address(1, 2)
+# Line 6
+6 1 0	"and
+6 2 0	==@AND(1, 2)
+# Line 7
+7 1 0	"ash
+7 2 0	==ash(13, 2)
+# Line 8
+8 1 0	"asin
+8 2 0	==asin(0.5)
+# Line 9
+9 1 0	"asinh
+9 2 0	==asinh(2)
+# Line 10
+10 1 0	"atan
+10 2 0	==atan(2)
+# Line 11
+11 1 0	"atan_2
+11 2 0	==atan_2(1,2)
+# Line 12
+12 1 0	"atanh
+12 2 0	==atanh(0.5)
+# Line 13
+13 1 0	"avedev
+13 2 0	==avedev(11.4,17.3,21.3,25.9,40.1)
+13 3 0	==7.84
+# Line 14
+14 1 0	"average
+14 2 0	==average(11.4,17.3,21.3,25.9,40.1)
+14 3 0	==23.2
+# Line 15
+15 1 0	"averagea
+15 2 0	==averagea(11.4,17.3,"missing",25.9,40.1)
+15 3 0	==18.94
+# Line 16
+16 1 0	"base64decode
+16 2 0	==base64decode("U2lhZw==")
+# Line 17
+17 1 0	"base64encode
+17 2 0	==base64encode("Siag")
+# Line 18
+18 1 0	"besseli
+18 2 0	==besseli(0.7,3)
+18 3 0	==0.007367374
+# Line 19
+19 1 0	"besselj
+19 2 0	==besselj(0.89,3)
+19 3 0	==0.013974004
+# Line 20
+20 1 0	"besselk
+20 2 0	==besselk(3,9)
+20 3 0	==397.95880
+# Line 21
+21 1 0	"bessely
+21 2 0	==bessely(4,2)
+21 3 0	==0.215903595
+# Line 22
+22 1 0	"betadist
+22 2 0	==betadist(0.12,2,3)
+22 3 0	==0.07319808
+# Line 23
+23 1 0	"betainv
+23 2 0	==betainv(0.45,1.6,1)
+23 3 0	==0.607096629
+# Line 24
+24 1 0	"bin2dec
+24 2 0	==bin2dec("1011011")
+# Line 25
+25 1 0	"bin2hex
+25 2 0	==bin2hex("1011011")
+# Line 26
+26 1 0	"bin2oct
+26 2 0	==bin2oct("1011011")
+# Line 27
+27 1 0	"binomdist
+27 2 0	==binomdist(3,5,0.8,0)
+27 3 0	==0.2048
+# Line 28
+28 1 0	"cbrt
+28 2 0	==cbrt(27)
+28 3 0	==3
+# Line 29
+29 1 0	"ceil
+29 2 0	==ceil(3.14)
+29 3 0	==4
+# Line 30
+30 1 0	"ceiling
+30 2 0	==ceiling(123.123,3)
+30 3 0	==126
+# Line 31
+31 1 0	"char
+31 2 0	==char(65)
+# Line 32
+32 1 0	"chidist
+32 2 0	==chidist(5.3,2)
+32 3 0	==0.070651213
+# Line 33
+33 1 0	"chiinv
+33 2 0	==chiinv(0.98,7)
+33 3 0	==1.564293004
+# Line 34
+34 1 0	"choose
+34 2 0	==choose(1,2,3,4)
+34 3 0	==2
+# Line 35
+35 1 0	"code
+35 2 0	==code("A")
+# Line 36
+36 1 0	"columns
+36 2 0	==columns(a1..b2)
+36 3 0	==2
+# Line 37
+37 1 0	"combin
+37 2 0	==combin(8,6)
+37 3 0	==28
+# Line 38
+38 1 0	"complex
+38 2 0	==complex(2, -3)
+# Line 39
+39 1 0	"concatenate
+39 2 0	==concatenate("Siag", " sucks ", "less")
+# Line 40
+40 1 0	"confidence
+40 2 0	==confidence(0.05,1,33)
+40 3 0	==0.341185936
+# Line 41
+41 1 0	"convert
+41 2 0	==convert(7.9,"kcal","kJ")
+41 3 0	==33.07567
+# Line 42
+42 1 0	"cos
+42 2 0	==cos(2)
+# Line 43
+43 1 0	"cosh
+43 2 0	==cosh(2)
+# Line 44
+44 1 0	"count
+44 2 0	==count(1,2,3,4,5,"foo")
+# Line 45
+45 1 0	"counta
+45 2 0	==counta(1,2,3,4,5,"foo")
+# Line 46
+46 1 0	"countblank
+46 2 0	==countblank(1,2,3,4,5,"foo")
+# Line 47
+47 1 0	"countif
+47 2 0	==countif(A2..B3,">=1")
+# Line 48
+48 1 0	"critbinom
+48 2 0	==critbinom(10,0.5,0.75)
+48 3 0	==6
+# Line 49
+49 1 0	"crypt
+49 2 0	==crypt("tiger", "XX")
+# Line 50
+50 1 0	"datevalue
+50 2 0	==datevalue("1/1/1999")
+# Line 51
+51 1 0	"daverage
+51 2 0	"See database.siag
+# Line 52
+52 1 0	"day
+52 2 0	==day(realtime())
+# Line 53
+53 1 0	"dcount
+53 2 0	"See database.siag
+# Line 54
+54 1 0	"dcounta
+54 2 0	"See database.siag
+# Line 55
+55 1 0	"dec2bin
+55 2 0	==dec2bin(123)
+# Line 56
+56 1 0	"dec2hex
+56 2 0	==dec2hex(123)
+# Line 57
+57 1 0	"dec2oct
+57 2 0	==dec2oct(123)
+# Line 58
+58 1 0	"degrees
+58 2 0	==degrees(pi())
+# Line 59
+59 1 0	"delta
+59 2 0	==delta(2)
+# Line 60
+60 1 0	"devsq
+60 2 0	==devsq(1,2)
+# Line 61
+61 1 0	"dget
+61 2 0	"See database.siag
+# Line 62
+62 1 0	"dmax
+62 2 0	"See database.siag
+# Line 63
+63 1 0	"dmin
+63 2 0	"See database.siag
+# Line 64
+64 1 0	"dollar
+64 2 0	==dollar(12)
+# Line 65
+65 1 0	"dproduct
+65 2 0	"See database.siag
+# Line 66
+66 1 0	"drem
+66 2 0	==drem(-12,5)
+# Line 67
+67 1 0	"dstdev
+67 2 0	"See database.siag
+# Line 68
+68 1 0	"dstdevp
+68 2 0	"See database.siag
+# Line 69
+69 1 0	"dsum
+69 2 0	"See database.siag
+# Line 70
+70 1 0	"duration
+70 2 0	==duration(1,2,3)
+# Line 71
+71 1 0	"dvar
+71 2 0	"See database.siag
+# Line 72
+72 1 0	"dvarp
+72 2 0	"See database.siag
+# Line 73
+73 1 0	"effect
+.style 8
+name Percent
+fmt %.2f %%
+type 5
+end
+.ft 3
+size 100
+style 8
+end
+73 2 3	==effect(0.19,12)
+73 3 3	==.2075
+# Line 74
+74 1 0	"erf
+74 2 0	==erf(1)
+# Line 75
+75 1 0	"erfc
+75 2 0	==erfc(1)
+# Line 76
+76 1 0	"euro
+76 2 0	==euro("FRF")
+# Line 77
+77 1 0	"even
+77 2 0	==even(3.14)
+# Line 78
+78 1 0	"exact
+78 2 0	==exact("foo","foo")
+# Line 79
+79 1 0	"exp
+79 2 0	==exp(1)
+# Line 80
+80 1 0	"expm_1
+80 2 0	==expm_1(1)
+# Line 81
+81 1 0	"expondist
+81 2 0	==expondist(2,4,0)
+81 3 0	==0.001341851
+# Line 82
+82 1 0	"fabs
+82 2 0	==fabs(-3.14)
+# Line 83
+83 1 0	"fact
+83 2 0	==fact(5)
+# Line 84
+84 1 0	"factdouble
+84 2 0	==factdouble(5)
+# Line 85
+85 1 0	"fdist
+85 2 0	==fdist(2,5,5)
+# Line 86
+86 1 0	"finv
+86 2 0	==finv(0.2,2,4)
+86 3 0	==2.472135955
+# Line 87
+87 1 0	"fisher
+87 2 0	==fisher(0.332)
+87 3 0	==0.345074339
+# Line 88
+88 1 0	"fisherinv
+88 2 0	==fisherinv(2)
+88 3 0	==0.96402758
+# Line 89
+89 1 0	"fixed
+89 2 0	==fixed(2)
+# Line 90
+90 1 0	"floor
+90 2 0	==floor(3.14)
+# Line 91
+91 1 0	"fmod
+91 2 0	==fmod(123,5)
+# Line 92
+92 1 0	"fv
+92 2 0	==fv(5,4,3,2,1)
+92 3 0	==-7254
+# Line 93
+93 1 0	"g_product
+93 2 0	==g_product(1,2,3,4,5)
+93 3 0	==calculate_pvif(1,2)
+# Line 94
+94 1 0	"gammadist
+94 2 0	==gammadist(1,2,3,0)
+94 3 0	==0.07961459
+# Line 95
+95 1 0	"gammainv
+95 2 0	==gammainv(0.34,2,4)
+95 3 0	==4.829093908
+# Line 96
+96 1 0	"gammaln
+96 2 0	==gammaln(23)
+96 3 0	==48.471181352
+# Line 97
+97 1 0	"gcd
+97 2 0	==gcd(470,770)
+97 3 0	==10
+# Line 98
+98 1 0	"geomean
+98 2 0	==geomean(11.4,17.3,21.3,25.9,40.1)
+# Line 99
+99 1 0	"gestep
+99 2 0	==gestep(5,4)
+99 3 0	==1
+# Line 100
+100 1 0	"getcwd
+100 2 0	==getcwd()
+# Line 101
+101 1 0	"getenv
+101 2 0	==getenv("PATH")
+# Line 102
+102 1 0	"getgid
+102 2 0	==getgid()
+# Line 103
+103 1 0	"gethostid
+103 2 0	==gethostid()
+# Line 104
+104 1 0	"gethostname
+104 2 0	==gethostname()
+# Line 105
+105 1 0	"getpgrp
+105 2 0	==getpgrp()
+# Line 106
+106 1 0	"getpid
+106 2 0	==getpid()
+# Line 107
+107 1 0	"getppid
+107 2 0	==getppid()
+.style 3
+name Scientific
+fmt %g
+type 2
+end
+.ft 4
+size 100
+style 3
+end
+107 3 4	==convert(1,"m","mm")
+# Line 108
+108 1 0	"getuid
+108 2 0	==getuid()
+# Line 109
+109 1 0	"hex2bin
+109 2 0	==hex2bin("7E")
+# Line 110
+110 1 0	"hex2dec
+110 2 0	==hex2dec("7E")
+# Line 111
+111 1 0	"hex2oct
+111 2 0	==hex2oct("7E")
+# Line 112
+112 1 0	"hour
+112 2 0	==hour(realtime())
+# Line 113
+113 1 0	"href
+113 2 0	==href(-1)
+# Line 114
+114 1 0	"hyperlink
+114 2 0	==hyperlink("foo")
+# Line 115
+115 1 0	"hypgeomdist
+115 2 0	==hypgeomdist(1,2,3,10)
+115 3 0	==0.466666667
+# Line 116
+116 1 0	"hypot
+116 2 0	==hypot(3,4)
+# Line 117
+117 1 0	"if
+117 2 0	==if(1,2,3)
+# Line 118
+118 1 0	"imabs
+118 2 0	==imabs("3+4j")
+# Line 119
+119 1 0	"imaginary
+119 2 0	==imaginary("3+4j")
+# Line 120
+120 1 0	"imargument
+120 2 0	==imargument("3+4j")
+# Line 121
+121 1 0	"imconjugate
+121 2 0	==imconjugate("3+4j")
+# Line 122
+122 1 0	"imcos
+122 2 0	==imcos("3+4j")
+# Line 123
+123 1 0	"imdiv
+123 2 0	==imdiv("3+4j","1+2j")
+# Line 124
+124 1 0	"imexp
+124 2 0	==imexp("3+4j","1+2j")
+# Line 125
+125 1 0	"imln
+125 2 0	==imln("3+4j")
+# Line 126
+126 1 0	"imlog_10
+126 2 0	==imlog_10("3+4j")
+# Line 127
+127 1 0	"imlog_2
+127 2 0	==imlog_2("3+4j")
+# Line 128
+128 1 0	"impower
+128 2 0	==impower("3+4j","1+2j")
+# Line 129
+129 1 0	"improduct
+129 2 0	==improduct("3+4j","1+2j")
+# Line 130
+130 1 0	"imreal
+130 2 0	==imreal("3+4j")
+# Line 131
+131 1 0	"imsin
+131 2 0	==imsin("3+4j")
+# Line 132
+132 1 0	"imsqrt
+132 2 0	==imsqrt("3+4j")
+# Line 133
+133 1 0	"imsub
+133 2 0	==imsub("3+4j","1+2j")
+# Line 134
+134 1 0	"imsum
+134 2 0	==imsum("3+4j","1+2j")
+# Line 135
+135 1 0	"imtan
+135 2 0	==imtan("3+4j")
+# Line 136
+136 1 0	"inet_addr
+136 2 0	==dec2hex(inet_addr("127.0.0.1"))
+# Line 137
+137 1 0	"info
+137 2 0	==info()
+# Line 138
+138 1 0	"int
+138 2 0	==int(-3.14)
+# Line 139
+139 1 0	"isblank
+139 2 0	==isblank(1)
+# Line 140
+140 1 0	"iseven
+140 2 0	==iseven(1)
+# Line 141
+141 1 0	"islogical
+141 2 0	==islogical(1)
+# Line 142
+142 1 0	"isna
+142 2 0	==isna(1)
+# Line 143
+143 1 0	"isnontext
+143 2 0	==isnontext(1)
+# Line 144
+144 1 0	"isnumber
+144 2 0	==isnumber(1)
+# Line 145
+145 1 0	"isodd
+145 2 0	==isodd(1)
+# Line 146
+146 1 0	"ispmt
+146 2 0	==ispmt(1,2,3,4)
+# Line 147
+147 1 0	"istext
+147 2 0	==istext(1)
+# Line 148
+148 1 0	"j_0
+148 2 0	==j_0(2)
+# Line 149
+149 1 0	"j_1
+149 2 0	==j_1(2)
+# Line 150
+150 1 0	"kurt
+150 2 0	==kurt(1,2,3,4)
+# Line 151
+151 1 0	"kurtp
+151 2 0	==kurtp(1,2,3,4)
+# Line 152
+152 1 0	"large
+152 2 0	==large(12,13,14,15,3)
+152 3 0	==13
+# Line 153
+153 1 0	"lcm
+153 2 0	==lcm(4,7,5)
+153 3 0	==140
+# Line 154
+154 1 0	"left
+154 2 0	==left("Siag Office", 4)
+# Line 155
+155 1 0	"len
+155 2 0	==len("Siag Office")
+155 3 0	==11
+# Line 156
+156 1 0	"length
+156 2 0	==length("Siag Office")
+156 3 0	==11
+# Line 157
+157 1 0	"lgamma
+157 2 0	==lgamma(10)
+# Line 158
+158 1 0	"ln
+158 2 0	==ln(2)
+# Line 159
+159 1 0	"log
+159 2 0	==log(2)
+# Line 160
+160 1 0	"log_10
+160 2 0	==log_10(2)
+# Line 161
+161 1 0	"log1p
+161 2 0	==log1p(2)
+# Line 162
+162 1 0	"log_2
+162 2 0	==log_2(2)
+# Line 163
+163 1 0	"loginv
+163 2 0	==loginv(0.5,2,3)
+163 3 0	==7.389056099
+# Line 164
+164 1 0	"lognormdist
+164 2 0	==lognormdist(3,1,2)
+164 3 0	==0.519662338
+# Line 165
+165 1 0	"lower
+165 2 0	==lower("Siag Office")
+# Line 166
+166 1 0	"max
+166 2 0	==max(1,2,3,4,5)
+# Line 167
+167 1 0	"maxa
+167 2 0	==maxa(1,2,3,4,5,"foo")
+# Line 168
+168 1 0	"median
+168 2 0	==median(12,13,14,15,16)
+# Line 169
+169 1 0	"min
+169 2 0	==min(12,13,14,15,16)
+# Line 170
+170 1 0	"mina
+170 2 0	==mina(12,13,14,15,16,"foo")
+# Line 171
+171 1 0	"minute
+171 2 0	==minute(realtime())
+# Line 172
+172 1 0	"mmult
+172 2 0	==mmult(B171..B171,B171..B171)
+# Line 173
+173 1 0	"mod
+173 2 0	==mod(234,5)
+# Line 174
+174 1 0	"month
+174 2 0	==month(realtime())
+# Line 175
+175 1 0	"mpf_abs
+175 2 0	==mpf_abs("3.14")
+# Line 176
+176 1 0	"mpf_add
+176 2 0	==mpf_add(2,3)
+# Line 177
+177 1 0	"mpf_ceil
+177 2 0	==mpf_ceil(3.14)
+# Line 178
+178 1 0	"mpf_cmp
+178 2 0	==mpf_cmp(2,3)
+# Line 179
+179 1 0	"mpf_div
+179 2 0	==mpf_div(2,3)
+# Line 180
+180 1 0	"mpf_div_2exp
+180 2 0	==mpf_div_2exp(2,3)
+# Line 181
+181 1 0	"mpf_eq
+181 2 0	==mpf_eq(2,3,4)
+# Line 182
+182 1 0	"mpf_floor
+182 2 0	==mpf_floor(3.14)
+# Line 183
+183 1 0	"mpf_mul
+183 2 0	==mpf_mul(2,3)
+# Line 184
+184 1 0	"mpf_mul_2exp
+184 2 0	==mpf_mul_2exp(2,3)
+# Line 185
+185 1 0	"mpf_neg
+185 2 0	==mpf_neg("3.14")
+# Line 186
+186 1 0	"mpf_pow_ui
+186 2 0	==mpf_pow_ui(2,3)
+# Line 187
+187 1 0	"mpf_reldiff
+187 2 0	==mpf_reldiff(2,3)
+# Line 188
+188 1 0	"mpf_sgn
+188 2 0	==mpf_sgn(3.14)
+# Line 189
+189 1 0	"mpf_sqrt
+189 2 0	==mpf_sqrt("3.14")
+# Line 190
+190 1 0	"mpf_sub
+190 2 0	==mpf_sub(2,3)
+# Line 191
+191 1 0	"mpf_trunc
+191 2 0	==mpf_trunc(3.14)
+# Line 192
+192 1 0	"mpz_abs
+192 2 0	==mpz_abs(-3.14)
+# Line 193
+193 1 0	"mpz_add
+193 2 0	==mpz_add(2,3)
+# Line 194
+194 1 0	"mpz_and
+194 2 0	==mpz_and(3,5)
+# Line 195
+195 1 0	"mpz_bin_ui
+195 2 0	==mpz_bin_ui(2,3)
+# Line 196
+196 1 0	"mpz_cdiv_q
+196 2 0	==mpz_cdiv_q(-10,3)
+# Line 197
+197 1 0	"mpz_cdiv_r
+197 2 0	==mpz_cdiv_r(-10,3)
+# Line 198
+198 1 0	"mpz_clrbit
+198 2 0	==mpz_clrbit(13,2)
+# Line 199
+199 1 0	"mpz_cmp
+199 2 0	==mpz_cmp(2,3)
+# Line 200
+200 1 0	"mpz_cmpabs
+200 2 0	==mpz_cmpabs(2,-3)
+# Line 201
+201 1 0	"mpz_com
+201 2 0	==mpz_com(17)
+201 3 0	==-18
+# Line 202
+202 1 0	"mpz_divexact
+202 2 0	==mpz_divexact(15,3)
+# Line 203
+203 1 0	"mpz_fac_ui
+203 2 0	==mpz_fac_ui(5)
+# Line 204
+204 1 0	"mpz_fdiv_q
+204 2 0	==mpz_fdiv_q(-12,5)
+# Line 205
+205 1 0	"mpz_fdiv_q_2exp
+205 2 0	==mpz_fdiv_q_2exp(-12,5)
+# Line 206
+206 1 0	"mpz_fdiv_r
+206 2 0	==mpz_fdiv_r(-12,5)
+# Line 207
+207 1 0	"mpz_fdiv_r_2exp
+207 2 0	==mpz_fdiv_r_2exp(-12,5)
+# Line 208
+208 1 0	"mpz_fib_ui
+208 2 0	==mpz_fib_ui(9)
+# Line 209
+209 1 0	"mpz_gcd
+209 2 0	==mpz_gcd(28,21)
+# Line 210
+210 1 0	"mpz_hamdist
+210 2 0	==mpz_hamdist(28,21)
+# Line 211
+211 1 0	"mpz_invert
+211 2 0	==mpz_invert(-12,5)
+# Line 212
+212 1 0	"mpz_ior
+212 2 0	==mpz_ior(12,5)
+# Line 213
+213 1 0	"mpz_jacobi
+213 2 0	==mpz_jacobi(12,5)
+# Line 214
+214 1 0	"mpz_lcm
+214 2 0	==mpz_lcm(12,21)
+214 3 0	==84
+# Line 215
+215 1 0	"mpz_legendre
+215 2 0	==mpz_legendre(12,5)
+# Line 216
+216 1 0	"mpz_mod
+216 2 0	==mpz_mod(-12,5)
+# Line 217
+217 1 0	"mpz_mul
+217 2 0	==mpz_mul(-12,5)
+# Line 218
+218 1 0	"mpz_mul_2exp
+218 2 0	==mpz_mul_2exp(-12,5)
+# Line 219
+219 1 0	"mpz_neg
+219 2 0	==mpz_neg(12)
+# Line 220
+220 1 0	"mpz_nextprime
+220 2 0	==mpz_nextprime(29)
+220 3 0	==31
+# Line 221
+221 1 0	"mpz_perfect_power_p
+221 2 0	==mpz_perfect_power_p(14)
+# Line 222
+222 1 0	"mpz_perfect_square_p
+222 2 0	==mpz_perfect_square_p(25)
+# Line 223
+223 1 0	"mpz_popcount
+223 2 0	==mpz_popcount(12345)
+# Line 224
+224 1 0	"mpz_pow_ui
+224 2 0	==mpz_pow_ui(-12,5)
+# Line 225
+225 1 0	"mpz_powm
+225 2 0	==mpz_powm(-12,5,7)
+# Line 226
+226 1 0	"mpz_probab_prime_p
+226 2 0	==mpz_probab_prime_p(54321,3)
+# Line 227
+227 1 0	"mpz_remove
+227 2 0	==mpz_remove(12345,12)
+# Line 228
+228 1 0	"mpz_root
+228 2 0	==mpz_root(25,2)
+# Line 229
+229 1 0	"mpz_scan0
+229 2 0	==mpz_scan0(123,5)
+# Line 230
+230 1 0	"mpz_scan1
+230 2 0	==mpz_scan1(123,5)
+# Line 231
+231 1 0	"mpz_setbit
+231 2 0	==mpz_setbit(123,5)
+# Line 232
+232 1 0	"mpz_sgn
+232 2 0	==mpz_sgn(123)
+# Line 233
+233 1 0	"mpz_sizeinbase
+233 2 0	==mpz_sizeinbase(12345,7)
+# Line 234
+234 1 0	"mpz_sqrt
+234 2 0	==mpz_sqrt(25)
+# Line 235
+235 1 0	"mpz_sub
+235 2 0	==mpz_sub(-12,5)
+# Line 236
+236 1 0	"mpz_tdiv_q
+236 2 0	==mpz_tdiv_q(-12,5)
+# Line 237
+237 1 0	"mpz_tdiv_q_2exp
+237 2 0	==mpz_tdiv_q_2exp(-12,5)
+# Line 238
+238 1 0	"mpz_tdiv_r
+238 2 0	==mpz_tdiv_r(-12,5)
+# Line 239
+239 1 0	"mpz_tdiv_r_2exp
+239 2 0	==mpz_tdiv_r_2exp(-12,5)
+# Line 240
+240 1 0	"mpz_tstbit
+240 2 0	==mpz_tstbit(123,5)
+# Line 241
+241 1 0	"mpz_xor
+241 2 0	==mpz_xor(-12,5)
+# Line 242
+242 1 0	"mround
+242 2 0	==mround(123,5)
+# Line 243
+243 1 0	"n
+243 2 0	==n("foo")
+# Line 244
+244 1 0	"negbinomdist
+244 2 0	==negbinomdist(2,5,0.55)
+244 3 0	==0.152872629
+# Line 245
+245 1 0	"nominal
+245 2 0	==nominal(1,2)
+# Line 246
+246 1 0	"normdist
+246 2 0	==normdist(2,1,2,0)
+246 3 0	==0.176032663
+# Line 247
+247 1 0	"norminv
+247 2 0	==norminv(0.76,2,3)
+247 3 0	==4.118907689
+# Line 248
+248 1 0	"normsdist
+248 2 0	==normsdist(2)
+248 3 0	==0.977249868
+# Line 249
+249 1 0	"normsinv
+249 2 0	==normsinv(0.2)
+249 3 0	==-0.841621234
+# Line 250
+250 1 0	"not
+250 2 0	==@NOT(1)
+# Line 251
+251 1 0	"now
+251 2 0	==now()
+# Line 252
+252 1 0	"nper
+252 2 0	==nper(0.06,0,-10000,20000,0)
+252 3 0	==11.895661046
+# Line 253
+253 1 0	"oct2bin
+253 2 0	==oct2bin("777")
+# Line 254
+254 1 0	"oct2dec
+254 2 0	==oct2dec("777")
+# Line 255
+255 1 0	"oct2hex
+255 2 0	==oct2hex("777")
+# Line 256
+256 1 0	"odd
+256 2 0	==odd(-3.14)
+# Line 257
+257 1 0	"or
+257 2 0	==@OR(0,1)
+# Line 258
+258 1 0	"permut
+258 2 0	==permut(7,3)
+258 3 0	==210
+# Line 259
+259 1 0	"pi
+259 2 0	==pi()
+# Line 260
+260 1 0	"pmt
+260 2 0	==pmt(1,2,3)
+# Line 261
+261 1 0	"poisson
+261 2 0	==poisson(3,6,0)
+261 3 0	==0.089235078
+# Line 262
+262 1 0	"pow
+262 2 0	==pow(2,3)
+# Line 263
+263 1 0	"pow_10
+263 2 0	==pow_10(2)
+263 3 0	==100
+# Line 264
+264 1 0	"pow_2
+264 2 0	==pow_2(2)
+264 3 0	==4
+# Line 265
+265 1 0	"power
+265 2 0	==power(2,3)
+265 3 0	==8
+# Line 266
+266 1 0	"ppmt
+266 2 0	==ppmt(1,2,3,4,5)
+# Line 267
+267 1 0	"product
+267 2 0	==product(1,2,3,4,5,"foo")
+# Line 268
+268 1 0	"pv
+268 2 0	==pv(1,2,3,4,5)
+# Line 269
+269 1 0	"quotient
+269 2 0	==quotient(-12,5)
+# Line 270
+270 1 0	"r_avg
+270 2 0	==r_avg(12,13,14,15,16)
+# Line 271
+271 1 0	"r_max
+271 2 0	==r_max(12,13,14,15,16)
+# Line 272
+272 1 0	"r_min
+272 2 0	==r_min(12,13,14,15,16)
+# Line 273
+273 1 0	"r_sum
+273 2 0	==r_sum(12,13,14,15,16)
+# Line 274
+274 1 0	"radians
+274 2 0	==radians(180)
+# Line 275
+275 1 0	"rand
+275 2 0	==rand()
+# Line 276
+276 1 0	"randbernoulli
+276 2 0	==randbernoulli(0.5)
+# Line 277
+277 1 0	"randbetween
+277 2 0	==randbetween(3,7)
+# Line 278
+278 1 0	"randbinom
+278 2 0	==randbinom(0.5,2)
+# Line 279
+279 1 0	"randexp
+279 2 0	==randexp(10)
+# Line 280
+280 1 0	"randnegbinom
+280 2 0	==randnegbinom(0.5,2)
+# Line 281
+281 1 0	"random
+281 2 0	==random()
+# Line 282
+282 1 0	"randpoisson
+282 2 0	==randpoisson(3)
+# Line 283
+283 1 0	"realtime
+283 2 0	==realtime()
+# Line 284
+284 1 0	"rept
+284 2 0	==rept("foo",3)
+# Line 285
+285 1 0	"round
+285 2 0	==round(1501.15,-2)
+# Line 286
+286 1 0	"rounddown
+286 2 0	==rounddown(1501.15,-2)
+# Line 287
+287 1 0	"roundup
+287 2 0	==roundup(1501.15,-2)
+# Line 288
+288 1 0	"row
+288 2 0	==row()
+# Line 289
+289 1 0	"rows
+289 2 0	==rows(A2..B3)
+# Line 290
+290 1 0	"second
+290 2 0	==second(realtime())
+# Line 291
+291 1 0	"sign
+291 2 0	==sign(-3.14)
+# Line 292
+292 1 0	"sin
+292 2 0	==sin(2)
+# Line 293
+293 1 0	"sinh
+293 2 0	==sinh(2)
+# Line 294
+294 1 0	"skew
+294 2 0	==skew(11.4,17.3,21.3,25.9,40.1)
+# Line 295
+295 1 0	"skewp
+295 2 0	==skewp(11.4,17.3,21.3,25.9,40.1)
+# Line 296
+296 1 0	"sln
+296 2 0	==sln(10000,700,10)
+296 3 0	==930
+# Line 297
+297 1 0	"small
+297 2 0	==small(12,13,14,15,16,2)
+# Line 298
+298 1 0	"sqrt
+298 2 0	==sqrt(25)
+# Line 299
+299 1 0	"sqrtpi
+299 2 0	==sqrtpi(25)
+# Line 300
+300 1 0	"standardize
+300 2 0	==standardize(3,2,4)
+300 3 0	==0.25
+# Line 301
+301 1 0	"stdev
+301 2 0	==stdev(11.4,17.3,21.3,25.9,40.1)
+# Line 302
+302 1 0	"stdeva
+302 2 0	==stdeva(11.4,17.3,21.3,25.9,40.1)
+# Line 303
+303 1 0	"stdevp
+303 2 0	==stdevp(11.4,17.3,21.3,25.9,40.1)
+# Line 304
+304 1 0	"stdevpa
+304 2 0	==stdevpa(11.4,17.3,21.3,25.9,40.1)
+# Line 305
+305 1 0	"strcmp
+305 2 0	==strcmp("foo","bar")
+# Line 306
+306 1 0	"strcspn
+306 2 0	==strcspn("Siag Office","Siag")
+# Line 307
+307 1 0	"strspn
+307 2 0	==strspn("Siag Office","Siag")
+# Line 308
+308 1 0	"substring
+308 2 0	==substring("Siag sucks less", 5, 10)
+# Line 309
+309 1 0	"sum
+309 2 0	==sum(1,2,3,4,5,"foo")
+309 3 0	==15
+# Line 310
+310 1 0	"suma
+310 2 0	==suma(1,2,3,4,5,"foo")
+310 3 0	==15
+# Line 311
+311 1 0	"sumif
+311 2 0	==sumif(B323..B324,"<=15")
+311 3 0	==30
+# Line 312
+312 1 0	"sumproduct
+312 2 0	==sumproduct(B318..B319,B323..B324)
+# Line 313
+313 1 0	"sumsq
+313 2 0	==sumsq(1,2,3)
+313 3 0	==1+4+9
+# Line 314
+314 1 0	"sumx2my2
+314 2 0	==sumx2my2(B318..B319,B323..B324)
+# Line 315
+315 1 0	"sumx2py2
+315 2 0	==sumx2py2(B318..B319,B323..B324)
+# Line 316
+316 1 0	"sumxmy_2
+316 2 0	==sumxmy_2(B318..B319,B323..B324)
+# Line 317
+317 1 0	"sxhash
+317 2 0	==sxhash()
+# Line 318
+318 1 0	"syd
+318 2 0	==syd(5000,200,5,2)
+318 3 0	==1280
+# Line 319
+319 1 0	"tan
+319 2 0	==tan(2)
+# Line 320
+320 1 0	"tanh
+320 2 0	==tanh(2)
+# Line 321
+321 1 0	"tbilleq
+321 2 0	==tbilleq(1,2,3)
+# Line 322
+322 1 0	"tbillprice
+322 2 0	==tbillprice(1,2,3)
+# Line 323
+323 1 0	"tbillyield
+323 2 0	==tbillyield(1,2,3)
+# Line 324
+324 1 0	"tdist
+324 2 0	==tdist(2,5,1)
+324 3 0	==0.050969739
+# Line 325
+325 1 0	"time
+325 2 0	==time(11,22,33)
+# Line 326
+326 1 0	"timevalue
+326 2 0	==timevalue("11:22:33")
+# Line 327
+327 1 0	"tinv
+327 2 0	==tinv(0.4,32)
+327 3 0	==0.852998454
+# Line 328
+328 1 0	"totalheight
+328 2 0	==totalheight(2,5)
+# Line 329
+329 1 0	"totalwidth
+329 2 0	==totalwidth(2,5)
+# Line 330
+330 1 0	"trunc
+330 2 0	==trunc(-3.14)
+# Line 331
+331 1 0	"upper
+331 2 0	==upper("Siag Office")
+# Line 332
+332 1 0	"var
+332 2 0	==var(11.4,17.3,21.3,25.9,40.1)
+# Line 333
+333 1 0	"vara
+333 2 0	==vara(11.4,17.3,0,25.9,40.1)
+# Line 334
+334 1 0	"varp
+334 2 0	==varp(11.4,17.3,21.3,25.9,40.1)
+# Line 335
+335 1 0	"varpa
+335 2 0	==varpa(11.4,17.3,0,25.9,40.1)
+# Line 336
+336 1 0	"vref
+336 2 0	==vref(-1)
+# Line 337
+337 1 0	"weekday
+337 2 0	==weekday(realtime())
+# Line 338
+338 1 0	"weibull
+338 2 0	==weibull(3,2,4,0)
+338 3 0	==0.213668559
+# Line 339
+339 1 0	"y_0
+339 2 0	==y_0(0.5)
+# Line 340
+340 1 0	"y_1
+340 2 0	==y_1(0.5)
+# Line 341
+341 1 0	"year
+341 2 0	==year(realtime())
+# End of file /home/ulric/siag/siag/examples/allfunctions.siag

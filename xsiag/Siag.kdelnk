@@ -1,0 +1,13 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowExec=
+SwallowTitle=
+BinaryPattern=
+Name[C]=Siag Spreadsheet
+MimeType=application/x-siag;
+Exec=siag %f
+Icon=siag.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

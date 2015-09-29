@@ -1,0 +1,190 @@
+#
+# sample xfm configuration file   Sun Apr 24 1994   AG
+#
+##########################################################
+
+##########################################################
+#
+# backups & temps
+#
+##########################################################
+###*~:win95_waste.xpm:rm -f $*:
+###*%:win95_waste.xpm:rm -f $*:
+###*.bak:win95_waste.xpm:rm -f $*:
+###*.tmp:win95_waste.xpm:rm -f $*:
+###*.log:win95_waste.xpm:rm -f $*:
+###.*~:win95_waste.xpm:rm -f $*:
+###.*%:win95_waste.xpm:rm -f $*:
+###.*.bak:win95_waste.xpm:rm -f $*:
+###.*.tmp:win95_waste.xpm:rm -f $*:
+###.*.log:win95_waste.xpm:rm -f $*:
+
+##########################################################
+#
+# programs
+#
+##########################################################
+###*.c:linux_c.xpm:EDIT:
+###*.cc:linux_cpp.xpm:EDIT:
+###*.cxx:linux_cpp.xpm:EDIT:
+###*.C:linux_cpp.xpm:EDIT:
+###*.h:linux_h.xpm:EDIT:
+
+*.siag:siag.xpm:siag $1:
+*.wk1:siag.xpm:siag $*:
+*.wks:siag.xpm:siag $*:
+*.csv:siag.xpm:siag $*:
+*.xls:siag.xpm:siag $*:
+
+*.pw:pw.xpm:pw $*:
+*.rtf:pw.xpm:pw $*:
+*.doc:pw.xpm:pw $*:
+
+*.egon:egon.xpm:egon $*:
+
+# This should have a more neutral icon
+*.html:netscape.xpm:SIAGHELP:
+*.htm:netscape.xpm:SIAGHELP:
+
+##########################################################
+#
+# math
+#
+##########################################################
+###*.sci:linux_math4.xpm:EDIT:
+###*.m:linux_math4.xpm:EDIT:
+###*.gnuplot:linux_graph.xpm:EDIT:
+
+##########################################################
+#
+# images
+#
+##########################################################
+# Uses the image plugin to display.
+###*.dvi:win31_dviview.xpm:exec xdvi $1:
+###*.fig:win31_paintbrush.xpm:exec xfig $1:
+*.xbm:image.xpm:exec bitmap $1:
+
+*.gif:image.xpm:IMAGE:
+*.GIF:image.xpm:IMAGE:
+*.jpg:image.xpm:IMAGE:
+*.jpeg:image.xpm:IMAGE:
+*.JPG:image.xpm:IMAGE:
+*.tif:image.xpm:IMAGE:
+*.tiff:image.xpm:IMAGE:
+*.png:image.xpm:IMAGE:
+*.bmp:image.xpm:IMAGE:
+*.BMP:image.xpm:IMAGE:
+*.xpm:image.xpm:IMAGE:
+*.ppm:image.xpm:IMAGE:
+*.pbm:image.xpm:IMAGE:
+*.pgm:image.xpm:IMAGE:
+*.pnm:image.xpm:IMAGE:
+*.xwd:image.xpm:IMAGE:
+
+*.ps:ghost.xpm:exec gvu $1:
+*.eps:ghost.xpm:exec gvu $1:
+*.pdf:ghost.xpm:exec acroread $1:
+###*.tga.gz:win31_paintbrush.xpm:exec xli $1:
+
+##########################################################
+#
+# sounds
+#
+##########################################################
+###*.au:linux_notes_color.xpm:exec cat $1 > /dev/audio:
+###*.wav:linux_notes_color.xpm:exec vplay $1:
+###*.raw:linux_notes_color.xpm:exec cat $1 > /dev/audio:
+*.mp3:image.xpm:exec xmms "$1":
+
+##########################################################
+#
+# compressed (nice to colormap)
+#
+##########################################################
+*.tar.gz:compress.xpm:runcmd tar xfvz $1:runcmd tar cfvz $*
+*.gz:compress.xpm:runcmd gunzip $1:
+*.tar.Z:compress.xpm:runcmd tar xfvZ $1:runcmd tar cfvZ $*
+*.Z:compress.xpm:runcmd uncompress $1:
+*.tar.z:compress.xpm:runcmd tar xfvz $1:runcmd tar cfvz $*
+*.z:compress.xpm:runcmd gunzip $1:
+*.zip:compress.xpm:runcmd unzip $1:runcmd zip -r $*
+
+*.tar:compress.xpm:runcmd tar xfv $1:runcmd tar cfv $*
+*.taz:compress.xpm:runcmd tar xfvz $1:runcmd tar cfvz $*
+*.tgz:compress.xpm:runcmd tar xfvz $1:runcmd tar cfvz $*
+
+##########################################################
+#
+# makefiles
+#
+##########################################################
+###Imakefile:linux_make.xpm:runcmd xmkmf:
+###Makefile:linux_make.xpm:runcmd make:
+###Makefile.*:linux_make.xpm:runcmd make -f $*:
+###makefile:linux_make.xpm:runcmd make:
+###makefile.*:linux_make.xpm:runcmd make -f $*:
+###BackUp:linux_floppy.xpm::
+
+##########################################################
+#
+# textfiles
+#
+##########################################################
+###*.doc:win31_write.xpm:EDIT:
+###*.tex:win31_write.xpm:EDIT:
+###*.latex:win31_typewriter.xpm:EDIT:
+###*.txi:win31_typewriter.xpm:EDIT:
+###*.texi:win31_typewriter.xpm:EDIT:
+###*.texinfo:win31_typewriter.xpm:EDIT:
+*.txt:xedplus.xpm:EDIT:
+
+##########################################################
+#
+# info
+#
+##########################################################
+readme:xedplus.xpm:EDIT:
+read.me:xedplus.xpm:EDIT:
+README:xedplus.xpm:EDIT:
+README*:xedplus.xpm:EDIT:
+*.README:xedplus.xpm:EDIT:
+
+##########################################################
+#
+# others
+#
+##########################################################
+#core:bomb_file.xpm::
+*.pfa:fonts.xpm::
+*.pfb:fonts.xpm::
+
+##########################################################
+#
+# Examples using MAGIC_HEADERS
+#
+##########################################################
+<COMPRESS>:compress.xpm:runcmd uncompress $1:
+###<FIG>:win31_paintbrush.xpm:exec xfig $1:
+###<GZIP>:compress.xpm:runcmd gunzip $1:
+<PS>:ghost.xpm:exec gv $1:
+<XBM>:image.xpm:exec bitmap $1:
+<XPM>:image.xpm:IMAGE:
+<GIF>:image.xpm:IMAGE:
+# default  entries
+<unreadable>:::
+<ascii>::EDIT:
+<data>:data.xpm:EDIT:
+<empty>::EDIT:
+
+# Device section
+# Do NOT change the previous comment
+#
+# sample xfm device configuration   Thu Apr 28 1994   AG
+# Adapt this to your system configuration.
+#
+##########################################################################
+
+/disk/a:mount -t msdos -o user /dev/fd0 /disk/a:umount /disk/a
+#/disk/b:mount -t msdos -o user /dev/fd1 /disk/b:umount /disk/b
+

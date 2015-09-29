@@ -1,0 +1,46 @@
+# Creator: Siag (Scheme In A Grid) 1.55. No Warranty.
+.sw 80
+.sh 20
+.sf 33
+.fmt131072 %d
+.fmt196608 %g
+.fmt262144 %.2f
+.fmt327680 %d/%d/%d
+.fmt393216 %d:%d:%d
+.fmt458752 %.2f
+.fmt524288 %.2f %%
+.fmt589824 %lX
+.fmt655360 $%.2f
+.fmt720896 %.2f
+.fmt786432 %.2f
+.fmt851968 %.2f
+.fmt917504 %.2f
+.fmt983040 %.2f
+# /usr/local/siag/siag/examples/hyperhelp.siag
+# 10 lines
+#
+.rh 1 30
+.cw 1 87
+# Line 1
+1 1 2099	"Siag Online Help Hypertext Menu
+1 2 2099	#
+1 3 2099	#
+# Line 2
+# Line 3
+3 1 66	"Siag has simple hypertext capabilities. By pressing Enter on any of the red items below,
+# Line 4
+4 1 66	"it is possible to access the online help.
+# Line 5
+# Line 6
+6 1 1048626	"Contents
+6 2 65569	"(help-contents)
+# Line 7
+7 1 1048626	"Copyright
+7 2 65569	"(help-copyright)
+# Line 8
+8 1 1048626	"Help for Help
+8 2 65569	"(help-for-help)
+# Line 9
+# Line 10
+10 1 66	"This works by executing the commands in the (invisible) labels to the right.
+# End of file /usr/local/siag/siag/examples/hyperhelp.siag

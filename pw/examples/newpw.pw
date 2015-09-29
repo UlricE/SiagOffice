@@ -1,0 +1,35 @@
+# Creator: Pathetic Writer 2.66. No Warranty.
+.sh 20
+.sf 98
+.sty0 Default,98,20,0
+.sty1 Header 1,53,30,0
+.sty2 Header 2,52,20,0
+.sty3 Header 3,51,20,0
+.sty4 Header 4,50,20,0
+.sty5 Header 5,49,20,0
+.sty6 Header 6,48,20,0
+.sty7 Address,106,20,7
+.sty8 Ordered List,114,20,8
+.sty9 Unordered List,114,20,9
+.sty10 Preformatted,2,20,10
+.sty11 User 1,98,20,11
+.sty12 User 2,98,20,12
+.sty13 User 3,98,20,13
+.sty14 User 4,98,20,14
+.sty15 Embed,98,20,0
+# /usr/local/siag/pw/examples/newpw.pw
+# 8 lines
+#
+.rh 1 30
+.st 1 1
+.st 6 7
+.ad 6 8192
+# Line 1
+1 1 53	"Det här är en rubrik
+# Line 3
+3 1 98	"Nu skall vi se vad som händer när jag skriver i fönstret. Var bryts raden? Kommer
+# Line 4
+4 1 98	"fönstrets bredd att räcka till?
+# Line 6
+6 1 106	"Ja, det verkar faktiskt så.
+# End of file /usr/local/siag/pw/examples/newpw.pw

@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Pathetic Writer - Spelling Checking</title>
+</head>
+
+<body>
+<center>
+<h1>Spelling Checking</h1>
+</center>
+PW has powerful spelling checking, using <i>ispell</i> to do the
+actual checking. To check the spelling of an entire buffer,
+select Edit - Spell from the menu. PW will then start ispell
+and send every word to it for checking.
+<p>
+Words that are not in the dictionary will be handed by a separate
+dialog, which has the original word and a text field where a
+replacement word can be entered. It is possible that there
+is already a word in the replacement field, suggested by ispell.
+Be careful to check that the word is correct; not all suggestions
+are very helpful.
+<p>
+Under the text fields are several buttons.
+<ul>
+<li><b>Replace</b> the word in the buffer with the one in the
+	replacement field.
+<li><b>Accept</b> the word and do not ask again during this session.
+<li><b>Insert</b> the word permanently into ispell's dictionary.
+<li><b>Skip</b> the word this once without replacing it.
+<li><b>Cancel</b> the whole session and do not complete the
+	checking of the rest of the buffer.
+<li><b>Help</b> brings up the on-line help page (this one!)
+</ul>
+
+If ispell is not available but aspell is, aspell can be used as
+a replacement by symlinking like this:
+<pre>
+ln -s `which aspell` /usr/local/bin/ispell
+</pre>
+
+<hr>
+<address>Ulric Eriksson - August 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

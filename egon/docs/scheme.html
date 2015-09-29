@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Egon Animator - Scheme</title>
+</head>
+
+<body>
+<h1>Scheme</h1>
+
+Egon Animator uses Scheme for commands. This means that the program
+can be easily extended with new functions. When Load is chosen from the
+File menu, for instance, the Lisp function (load-buffer) is called.
+It is thus possible to make File - Load do something completely different
+by writing a new load-buffer function, perhaps adding the ability to
+read other file formats.
+<p>
+<h3>Functions available as commands</h3>
+<dl>
+<dt><b>(backward-cell)</b>
+	<dd>Move point one cell to the left.
+<dt><b>(forward-cell)</b>
+	<dd>Move point one position to the right.
+<dt><b>(next-line)</b>
+	<dd>Move point one line down.
+<dt><b>(previous-line)</b>
+	<dd>Move point one line up.
+<dt><b>(beginning-of-line)</b>
+	<dd>Move point to column 1.
+<dt><b>(end-of-line)</b>
+	<dd>Move point to the last used position in the current line.
+<dt><b>(beginning-of-buffer)</b>
+	<dd>Move point to column 1, line 1.
+<dt><b>(end-of-buffer)</b>
+	<dd>Move point to the last used position in the last used line.
+<dt><b>(top-of-buffer)</b>
+	<dd>Move point to line 1 without changing the column.
+<dt><b>(bottom-of-buffer)</b>
+	<dd>Move point to the last used line without changing the column.
+<dt><b>(scroll-up)</b>
+	<dd>Move the window up one windowful.
+<dt><b>(scroll-cell-up)</b>
+	<dd>Move the window up one line.
+<dt><b>(scroll-down)</b>
+	<dd>Move the window down one windowful.
+<dt><b>(scroll-cell-down)</b>
+	<dd>Move the window down one line.
+<dt><b>(scroll-left)</b>
+	<dd>Move the window left one windowful.
+<dt><b>(scroll-cell-left)</b>
+	<dd>Move the window left one column.
+<dt><b>(scroll-right)</b>
+	<dd>Move the window right one windowful.
+<dt><b>(scroll-cell-right)</b>
+	<dd>Move the window right one column.
+<dt><b>(what-cursor-position)</b>
+	<dd>Prints information about the current position
+	on the status bar.
+<dt><b>(delete-cell)</b>
+	<dd>Delete the contents of the current position.
+<dt><b>(insert-line)</b>
+	<dd>Insert an empty line, moving the rest of the document down.
+<dt><b>(set-mark-command)</b>
+	<dd>Move mark to the current position.
+<dt><b>(exchange-point-and-mark)</b>
+	<dd>Swap point and mark.
+<dt><b>(kill-region)</b>
+	<dd>Should delete everything between point and mark for compatibility
+	with Emacs, but currently does nothing. Block commands are available
+	for that purpose.
+<dt><b>(copy-block)</b>
+	<dd>Copy the block to the current position.
+<dt><b>(delete-block)</b>
+	<dd>Deletes all the block.
+<dt><b>(print-block)</b>
+	<dd>Dumps the block to a text file.
+<dt><b>(set-block)</b>
+	<dd>Sets the block to be the area between mark and point.
+<dt><b>(save-block-file)</b>
+	<dd>What does this do?
+<dt><b>(new-egon)</b>
+	<dd>Loads a new Egon Animator window.
+<dt><b>(load-buffer)</b>
+	<dd>Loads a Egon Animator document into a new buffer.
+<dt><b>(save-buffer)</b>
+	<dd>Saves the current buffer as an Egon Animator document.
+<dt><b>(save-buffer-as)</b>
+	<dd>Saves the current buffer using a new file name.
+<dt><b>(print-version)</b>
+	<dd>Prints version information on the status bar.
+<dt><b>(help-contents)</b>
+	<dd>Starts the Chimera program with egon.html as argument.
+<dt><b>(help-search)</b>
+	<dd>Search for keyword. Currently not implemented.
+<dt><b>(help-for-help)</b>
+	<dd>Starts the Chimera program with siaghelp.html as argument.
+<dt><b>(recenter)</b>
+	<dd>Redraws the screen.
+<dt><b>(execute-extended-command)</b>
+	<dd>Read and execute a Scheme command.
+<dt><b>(keyboard-quit)</b>
+	<dd>Abort a multi-key command sequence.
+<dt><b>(quit-egon)</b>
+	<dd>Exit from Egon Animator. If there are any unsaved changes, asks if they
+	should be saved.
+<dt><b>(no-op)</b>
+	<dd>Does nothing. Sometimes useful for debugging.
+</dl>
+
+There are two ways to execute Scheme code:
+<ol>
+	<li>Pressing ( and typing it in the input window
+	<li>Loading it from a file using 
+		<b>(load </b><i>"filename"</i><b>)</b>
+</ol>
+A file can be loaded on startup by giving the option <b>-iFilename</b>
+on the command line. A useful file to load is siod.scm which adds
+common functions like caar, cadr and the like.
+
+<h2>Commands</h2>
+
+<h3><a name="new-buffer">(new-buffer)</a></h3>
+Opens a new empty Egon Animator window.
+
+<h3><a name="load-buffer">(load-buffer)</a></h3>
+Asks for a file name and opens the file with that name as a
+Pathetic Writer document.
+
+<h3><a name="save-buffer">(save-buffer)</a></h3>
+Saves the currently open document
+using the most recently used filename. If no name has been
+given to the document, the name "noname" is used.
+
+<h3><a name="save-buffer-as">(save-buffer-as)</a></h3>
+Asks for a filename and saves the currently open document
+using that filename.
+
+<h3><a name="preview">(preview)</a></h3>
+Preview the contents of the current buffer.
+
+<h3><a name="print">(print)</a></h3>
+Prints the current buffer using the <b>lpr</b> command.
+
+<h3><a name="quit-program">(quit-program)</a></h3>
+Quits from Egon Animator. If there are any changes that have not
+been saved, Egon Animator asks if they should be saved.
+
+<h3><a name="switch-to-buffer">(switch-to-buffer)</a></h3>
+Change which buffer is displayed in the current window.
+
+<h3><a name="kill-buffer">(kill-buffer)</a></h3>
+Delete the current buffer.
+
+<h3><a name="split-window-vertically">(split-window-vertically)</a></h3>
+Split the current buffer in two.
+
+<h3><a name="delete-window">(delete-window)</a></h3>
+Remove the current window and give its space to its neighbors.
+
+<h3><a name="delete-other-windows">(delete-other-windows)</a></h3>
+Remove all windows except the current one.
+
+<h3><a name="other-window">(other-window)</a></h3>
+Make the next window current.
+
+<h3><a name="help-contents">(help-contents)</a></h3>
+Displays the Egon Animator online documentation.
+
+<h3><a name="help-search">(help-search)</a></h3>
+This command does nothing.
+
+<h3><a name="help-copyright">(help-copyright)</a></h3>
+Displays the GNU public licence.
+
+<h3><a name="help-for-help">(help-for-help)</a></h3>
+Displays help for using the online help.
+
+<h3><a name="print-version">(print-version)</a></h3>
+Displays the current version string.
+
+<hr>
+<address>Ulric Eriksson - February 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

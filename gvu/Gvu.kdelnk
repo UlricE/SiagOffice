@@ -1,0 +1,12 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowExec=
+SwallowTitle=
+BinaryPattern=
+Name[C]=Gvu
+Exec=gvu %f
+Icon=gvu.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

@@ -1,0 +1,73 @@
+# Creator: Pathetic Writer 2.70. No Warranty.
+.sh 13
+.sf 98
+.sty0 Default,98,13,0
+.sty1 Header 1,53,26,0
+.sty2 Header 2,52,26,0
+.sty3 Header 3,51,18,0
+.sty4 Header 4,50,18,0
+.sty5 Header 5,49,18,0
+.sty6 Header 6,48,18,0
+.sty7 Address,106,13,7
+.sty8 Title,116,26,8
+.sty9 Abstract,115,13,9
+.sty10 Preformatted,2,13,10
+.sty11 User 1,98,13,11
+.sty12 User 2,98,13,12
+.sty13 User 3,98,13,13
+.sty14 User 4,98,13,14
+.sty15 Embed,98,13,0
+# /usr/local/siag/pw/examples/styles2.pw
+# 15 lines
+#
+.rh 1 26
+.st 1 1
+.rh 2 26
+.st 2 2
+.rh 3 18
+.st 3 3
+.rh 4 18
+.st 4 4
+.rh 5 18
+.st 5 5
+.rh 6 18
+.st 6 6
+.st 7 7
+.rh 8 26
+.st 8 8
+.st 9 9
+.st 10 10
+.st 11 11
+.st 12 12
+.st 13 13
+.st 14 14
+.st 15 14
+# Line 1
+1 1 53	"Header 1
+# Line 2
+2 1 52	"Header 2
+# Line 3
+3 1 51	"Header 3
+# Line 4
+4 1 50	"Header 4
+# Line 5
+5 1 49	"Header 5
+# Line 6
+6 1 48	"Header 6
+# Line 7
+7 1 106	"Address
+# Line 8
+8 1 116	"Title
+# Line 9
+9 1 115	"Abstract
+# Line 10
+10 1 2	"Preformatted
+# Line 11
+11 1 98	"User 1
+# Line 12
+12 1 98	"User 2
+# Line 13
+13 1 98	"User 3
+# Line 14
+14 1 98	"User 4
+# End of file /usr/local/siag/pw/examples/styles2.pw

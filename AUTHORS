@@ -1,0 +1,18 @@
+
+Siag Office was written by Ulric Eriksson and this impressive crowd:
+
+Dan Gohman		(Tsiag, the Curses interface)
+Russ McManus		(Guile support)
+Daniel Risacher		(R1C1 references, Gtk support)
+Robert Wittams		(More Gtk work)
+Daniel M Duley		(KDE port)
+John Jones		("Smart" filling)
+Jon K Hellan		(Format support in WK1 code)
+Dag Nygren		(Date/time formatting)
+Emmanuel Bigler		(HPUX port)
+Rob McMullen		(TextField widget)
+Cesar Crusius		(Drag and drop protocol)
+George J Carrette	(SIOD Scheme interpreter)
+
+(Clue me in if I forgot somebody.)
+

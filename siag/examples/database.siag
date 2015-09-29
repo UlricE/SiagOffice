@@ -1,0 +1,193 @@
+# Creator: Siag (Scheme In A Grid) 3.4.0a1. No Warranty.
+.sw 80
+.sh 20
+.margins 72 72 72 72 36 36
+.paper A4 595 842 0
+.header &n
+.footer &p
+.header_on_first 1
+.first_page 1
+.a1_refs 1
+.style 0
+name Default
+fmt %d
+type 0
+end
+.ft 0
+size 100
+end
+.nsf 0
+.sheet 0 Ark 1
+# database.siag
+# 40 lines
+#
+.cw 4 179
+# Line 1
+.ft 2
+size 100
+bold 1
+end
+1 1 2	"Name
+1 2 2	"Age
+1 3 2	"Salary
+1 4 2	"Function
+1 5 2	"Result
+1 6 2	"Expected
+# Line 2
+2 1 0	"John
+2 2 0	==34
+.style 10
+name Currency
+fmt $%.2f
+type 2
+end
+.ft 3
+size 100
+style 10
+end
+2 3 3	==54342
+2 4 0	"daverage(A1..C7, "Salary", A9..A11)
+2 5 0	==daverage(A1..C7, "Salary", A9..A11)
+2 6 0	==42296.3333
+# Line 3
+3 1 0	"Bill
+3 2 0	==35
+3 3 3	==22343
+3 4 0	"daverage(A1..C7, "Age", A9..A11)
+3 5 0	==daverage(A1..C7, "Age", A9..A11)
+3 6 0	==39
+# Line 4
+4 1 0	"Clark
+4 2 0	==29
+4 3 3	==34323
+4 4 0	"daverage(A1..C7, "Salary", A9..B11)
+4 5 0	==daverage(A1..C7, "Salary", A9..B11)
+4 6 0	==40782.5
+# Line 5
+5 1 0	"Bob
+5 2 0	==43
+5 3 3	==47242
+5 4 0	"daverage(A1..C7, "Age", A9..B11)
+5 5 0	==daverage(A1..C7, "Age", A9..B11)
+5 6 0	==36
+# Line 6
+6 1 0	"Susan
+6 2 0	==37
+6 3 3	==42932
+# Line 7
+7 1 0	"Jill
+7 2 0	==45
+7 3 3	==45324
+7 4 0	"dcount(A1..C7, "Salary", A9..A11)
+7 5 0	==dcount(A1..C7, "Salary", A9..A11)
+7 6 0	==3
+# Line 8
+8 4 0	"dcount(A1..C7, "Salary", A9..B11)
+8 5 0	==dcount(A1..C7, "Salary", A9..B11)
+8 6 0	==2
+# Line 9
+9 1 2	"Age
+9 2 2	"Salary
+9 4 0	"dcount(A1..C7, "Name", A9..B11)
+9 5 0	==dcount(A1..C7, "Name", A9..B11)
+9 6 0	==0
+# Line 10
+10 1 0	"<30
+# Line 11
+11 1 0	">40
+11 2 0	">46000
+11 4 0	"dcounta(A1..C7, "Salary", A9..A11)
+11 5 0	==dcounta(A1..C7, "Salary", A9..A11)
+11 6 0	==3
+# Line 12
+12 4 0	"dcounta(A1..C7, "Salary", A9..B11)
+12 5 0	==dcounta(A1..C7, "Salary", A9..B11)
+12 6 0	==2
+# Line 13
+13 1 0	==utest_2()
+13 4 0	"dcounta(A1..C7, "Name", A9..B11)
+13 5 0	==dcounta(A1..C7, "Name", A9..B11)
+13 6 0	==2
+# Line 14
+14 1 0	==utest()
+# Line 15
+15 4 0	"dget(A1..C7, "Salary", A9..A10)
+15 5 0	==dget(A1..C7, "Salary", A9..A10)
+15 6 0	==34323
+# Line 16
+16 4 0	"dget(A1..C7, "Name", A9..A10)
+16 5 0	==dget(A1..C7, "Name", A9..A10)
+16 6 0	"Clark
+# Line 17
+# Line 18
+18 4 0	"dmax(A1..C7, "Salary", A9..A11)
+18 5 0	==dmax(A1..C7, "Salary", A9..A11)
+18 6 0	==47242
+# Line 19
+19 4 0	"dmax(A1..C7, "Age", A9..A11)
+19 5 0	==dmax(A1..C7, "Age", A9..A11)
+19 6 0	==45
+# Line 20
+20 4 0	"dmax(A1..C7, "Age", A9..B11)
+20 5 0	==dmax(A1..C7, "Age", A9..B11)
+20 6 0	==43
+# Line 21
+# Line 22
+22 4 0	"dmin(A1..C7, "Salary", A9..B11)
+22 5 0	==dmin(A1..C7, "Salary", A9..B11)
+22 6 0	==34323
+# Line 23
+23 4 0	"dmin(A1..C7, "Age", A9..B11)
+23 5 0	==dmin(A1..C7, "Age", A9..B11)
+23 6 0	==29
+# Line 24
+# Line 25
+25 4 0	"dproduct(A1..C7, "Age", A9..B11)
+25 5 0	==dproduct(A1..C7, "Age", A9..B11)
+25 6 0	==1247
+# Line 26
+# Line 27
+27 4 0	"dstdev(A1..C7, "Age", A9..B11)
+27 5 0	==dstdev(A1..C7, "Age", A9..B11)
+27 6 0	==9.89949
+# Line 28
+28 4 0	"dstdev(A1..C7, "Salary", A9..B11)
+28 5 0	==dstdev(A1..C7, "Salary", A9..B11)
+28 6 0	==9135.112506
+# Line 29
+# Line 30
+30 4 0	"dstdevp(A1..C7, "Age", A9..B11)
+30 5 0	==dstdevp(A1..C7, "Age", A9..B11)
+30 6 0	==7
+# Line 31
+31 4 0	"dstdevp(A1..C7, "Salary", A9..B11)
+31 5 0	==dstdevp(A1..C7, "Salary", A9..B11)
+31 6 0	==6459.5
+# Line 32
+# Line 33
+33 4 0	"dsum(A1..C7, "Age", A9..B11)
+33 5 0	==dsum(A1..C7, "Age", A9..B11)
+33 6 0	==72
+# Line 34
+34 4 0	"dsum(A1..C7, "Salary", A9..B11)
+34 5 0	==dsum(A1..C7, "Salary", A9..B11)
+34 6 0	==81565
+# Line 35
+# Line 36
+36 4 0	"dvar(A1..C7, "Age", A9..B11)
+36 5 0	==dvar(A1..C7, "Age", A9..B11)
+36 6 0	==98
+# Line 37
+37 4 0	"dvar(A1..C7, "Salary", A9..B11)
+37 5 0	==dvar(A1..C7, "Salary", A9..B11)
+37 6 0	==83450280.5
+# Line 38
+# Line 39
+39 4 0	"dvarp(A1..C7, "Age", A9..B11)
+39 5 0	==dvarp(A1..C7, "Age", A9..B11)
+39 6 0	==49
+# Line 40
+40 4 0	"dvarp(A1..C7, "Salary", A9..B11)
+40 5 0	==dvarp(A1..C7, "Salary", A9..B11)
+40 6 0	==41725140.25
+# End of file database.siag

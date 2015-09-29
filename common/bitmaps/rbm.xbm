@@ -1,0 +1,4 @@
+#define rbm_width 6
+#define rbm_height 7
+static unsigned char rbm_bits[] = {
+   0x01, 0x03, 0x07, 0x0f, 0x07, 0x03, 0x01};

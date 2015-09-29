@@ -1,0 +1,166 @@
+.TH XEDPLUS 1 "6.4.1999" "X Version 11"
+.SH NAME
+xedplus - a text editor for X
+.SH SYNTAX
+\fBxedplus\fP [ \fI-toolkitoption\fP ...] [ filename ] [ line-number ]
+.SH OPTIONS
+.I Xedplus
+accepts all of the standard X Toolkit command line
+options (see \fIX(1)\fP).  The order of the command line options is
+not important.
+.TP 8
+.I filename
+Specifies the file that is to be loaded during start-up. This is the
+file which will be edited. If a file is not specified,
+.I xedplus
+lets you load a file or create a new file after it has started up.
+The filename `-' means to read from standard input. 
+When reading from stdin, 
+.I xedplus 
+will quit if it reaches end of file without
+reading anything from stdin.
+.TP 8
+.I line-number
+Specifies the current line number after start-up.
+.SH DESCRIPTION
+.I Xedplus
+provides a window consisting of the following three areas:
+.IP "Menus Section" 25
+A set of pull-down menus hopefully allowing you to do everything you want with the text file.
+.IP "Filename Display"
+Displays the name of the file currently being edited, and whether this file
+is \fIRead - Write\fP or \fIRead Only\fP.
+.IP "Edit Window" 25
+Displays the text of the file that you are editing or creating.  
+.SH EDITING
+The Athena Text widget is used for the three sections of this
+application that allow text input.  The characters typed will go to
+the Text widget that the pointer cursor is currently over.  If the
+pointer cursor is not over a Text widget then the keypresses will have
+no effect on the application.
+.SH MENUS
+.IP "File" 8
+Provides commands dealing with loading, saving and printing the text file and
+of course quitting \fIxed\fP. All fileselection are done by a fileselector popup.
+Warning popup messages will appear if the selected command is going to discard
+changes. 
+.IP "Edit"
+Provides special editing commands for cutting, pasting, indenting and unindenting
+a selected textblock.
+.IP "Jump"
+Provides commands for jumping to a linenumber, textbeginning, textending, selection start
+and selection end.
+.IP "Search"
+Provides commands for searching and replaceing text. The activated popup allows you
+to search, replace once, replace in a query mode or to replace all.
+Although commands for finding
+the corresponding bracket to a selected bracket and for checking the bracket
+hierachy all over the text are available. Known brackets are "{,},[,],(,),/*,*/".
+.IP "Special"
+Provides some special commands for setting some edit options, calling the \fIsed\fP
+stream editor, displaying a helpfile and getting a copyright information.
+.IP "Commands"
+Provides a panel for performing Unix commands on the whole textfile or the current
+text selection. The result is diplayed in another xed window. Also commands can
+be predefined by the user (see commands RESOURCE).
+.IP "Pipes"
+Provides a panel for performing Unix commands on the whole textfile or the current
+text selection. The result replaces the current text selection. Also commands can
+be predefined by the user (see pipes RESOURCE).
+.SH RESOURCES
+For \fIxedplus\fP the available resources are:
+.TP 8
+.B enableBackups (\fPClass\fB EnableBackups)
+Specifies that, when edits made to an existing file are saved,
+.I xedplus
+is to copy the original version of that file to \fIfile\fP<suffix>
+before it saves the changes.  The default value for this resource is
+"off", stating that no backups should be created.
+.TP 8
+.B backupNameSuffix (\fPClass\fB BackupNameSuffix)
+Specifies a string that is to be appended to the backup filename.  The
+default is to append the string ".BAK".
+.TP 8 
+.B printCommand (\fPClass\fB PrintCommand)
+Specifies a command for printing the current file. An "%f" in the string 
+is expanded to the filename which has to be printed (A copy of the current file
+in the tmp directory). "%t" is expanded to the real filename. The default
+command is "lpr -p -T %t %f".
+.TP 8
+.B autoIndent (\fPClass\fB AutoIndent)
+Specifies whether to autoindent by default or not. The default is to autoindent.
+.TP 8
+.B *editWindow.autoFill (\fPClass\fB AutoFill)
+Specifies whether to break a line when the user attempts to type into the right margin
+or not.
+.TP 8
+.B *editWindow.wrap (\fPClass\fB Wrap)
+Specifies default wrapmode for lines longer than the textwindow. Values are never, word and line.
+The default value is never.
+.TP 8
+.B tabsize (\fPClass\fB Tabsize)
+Specifies the default tabsize in characters. The default value is 8.
+.TP 8
+.B textheight (\fPClass\fB Textheight)
+Specifies the default height of the textwindow in number of characters. The default value is 40.
+.TP 8
+.B textwidth (\fPClass\fB Textwidth)
+Specifies the default width of the textwindow in number of characters. The default value is 80.
+.TP 8
+.B maxScrollbreak (\fPClass\fB MaxScrollbreak)
+Specifies how many cursor up/down events with the same serial number should
+be ignored.
+.TP 8
+.B insertranslations (\fPClass\fB Insertranslations)
+Keybindings in Insert mode
+.TP 8
+.B overwritetranslations (\fPClass\fB Overwritetranslations)
+Keybindings in Overwrite mode
+.TP 8
+.B commands (\fPClass\fB Commands) pipes (\fPClass\fB Pipes)
+Each command has the format "<Menu entry> <Tab> <Command string>\\n\\". Here
+is a short example with some useful commands. It may be placed in the users
+"~/.Xdefaults" file:
+
+XedPlus*commands: Make	make\\n\\
+.br
+CC	cc $stripped.c -o $stripped
+.br
+XedPlus*pipes: Date	date
+
+The following variables are set and may be used in a command:
+
+$selection: Filename of the temporary file containing the current selection
+
+$tempfile : Filename of the temporary saved text file
+
+$filename : Filename of the edited file
+
+$stripped : Stripped Filename (without postfix and path) of the edited file
+
+.SH ENVIRONMENT
+.PP
+.TP 8
+.B DISPLAY
+to get the default host and display number.
+.TP 8
+.B XENVIRONMENT
+to get the name of a resource file that overrides the global resources
+stored in the RESOURCE_MANAGER property.
+.SH FILES
+$prefix/doc/siag/xedplus/xedplus.html - help text
+.br
+$prefix stands for "/usr/local" or
+whatever was specified when Siag Office was built.
+.SH SEE ALSO
+X(1), xrdb(1), xedit(1), Athena Widget Set
+.SH COPYRIGHT
+See \fIX(1)\fP for a full statement of rights and permissions.
+.SH AUTHORS
+Ulric Eriksson, ulric@siag.nu
+.br
+Randolf Werner,    University Koblenz, Germany
+.br
+Karl-Heinz Staudt, University Koblenz, Germany                       
+.br
+Chris D. Peterson, MIT X Consortium 

@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Egon Animator - String Handling</title>
+</head>
+
+<body>
+<center>
+<h1>String Handling</h1>
+</center>
+Egon Animator has string support. Strings can be entered as string constants
+(text surrounded by quotation marks) or as expressions that
+evaluate to strings.
+<p>
+The following Scheme functions can be used for strings:
+
+<dl>
+<dt><b>(string-append s1 s2...)</b>
+	<dd>Append the string arguments and return the resulting string.
+<dt><b>(substring str start end)</b>
+	<dd>Returns the part of str between start and end.
+<dt><b>(string-search token str)</b>
+	<dd>Returns the index of token in str.
+<dt><b>(string-trim str)</b>
+	<dd>Removes whitespace from both ends of str.
+<dt><b>(string-trim-left str)</b>
+	<dd>Removes whitespace from the beginning of str.
+<dt><b>(string-trim-right str)</b>
+	<dd>Removes whitespace from the end of str.
+<dt><b>(string-upcase str)</b>
+	<dd>Converts all characters in str to upper case.
+<dt><b>(string-downcase str)</b>
+	<dd>Converts all characters in str to lower case.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - February 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

@@ -1,0 +1,238 @@
+<html>
+<head>
+<title>Pathetic Writer - Scheme</title>
+</head>
+
+<body>
+<h1>Scheme</h1>
+
+Pathetic Writer uses Scheme for commands. This means that the program
+can be easily extended with new functions. When Load is chosen from the
+File menu, for instance, the Lisp function (load-buffer) is called.
+It is thus possible to make File - Load do something completely different
+by writing a new load-buffer function, perhaps adding the ability to
+read other file formats.
+<p>
+<h3>Functions available as commands</h3>
+<dl>
+<dt><b>(backward-cell)</b>
+	<dd>Move point one cell to the left.
+<dt><b>(forward-cell)</b>
+	<dd>Move point one position to the right.
+<dt><b>(next-line)</b>
+	<dd>Move point one line down.
+<dt><b>(previous-line)</b>
+	<dd>Move point one line up.
+<dt><b>(beginning-of-line)</b>
+	<dd>Move point to column 1.
+<dt><b>(end-of-line)</b>
+	<dd>Move point to the last used position in the current line.
+<dt><b>(beginning-of-buffer)</b>
+	<dd>Move point to column 1, line 1.
+<dt><b>(end-of-buffer)</b>
+	<dd>Move point to the last used position in the last used line.
+<dt><b>(top-of-buffer)</b>
+	<dd>Move point to line 1 without changing the column.
+<dt><b>(bottom-of-buffer)</b>
+	<dd>Move point to the last used line without changing the column.
+<dt><b>(scroll-up)</b>
+	<dd>Move the window up one windowful.
+<dt><b>(scroll-cell-up)</b>
+	<dd>Move the window up one line.
+<dt><b>(scroll-down)</b>
+	<dd>Move the window down one windowful.
+<dt><b>(scroll-cell-down)</b>
+	<dd>Move the window down one line.
+<dt><b>(scroll-left)</b>
+	<dd>Move the window left one windowful.
+<dt><b>(scroll-cell-left)</b>
+	<dd>Move the window left one column.
+<dt><b>(scroll-right)</b>
+	<dd>Move the window right one windowful.
+<dt><b>(scroll-cell-right)</b>
+	<dd>Move the window right one column.
+<dt><b>(what-cursor-position)</b>
+	<dd>Prints information about the current position
+	on the status bar.
+<dt><b>(delete-cell)</b>
+	<dd>Delete the contents of the current position.
+<dt><b>(insert-line)</b>
+	<dd>Insert an empty line, moving the rest of the document down.
+<dt><b>(set-mark-command)</b>
+	<dd>Move mark to the current position.
+<dt><b>(exchange-point-and-mark)</b>
+	<dd>Swap point and mark.
+<dt><b>(kill-region)</b>
+	<dd>Should delete everything between point and mark for compatibility
+	with Emacs, but currently does nothing. Block commands are available
+	for that purpose.
+<dt><b>(copy-block)</b>
+	<dd>Copy the block to the current position.
+<dt><b>(delete-block)</b>
+	<dd>Deletes all the block.
+<dt><b>(print-block)</b>
+	<dd>Dumps the block to a text file.
+<dt><b>(set-block)</b>
+	<dd>Sets the block to be the area between mark and point.
+<dt><b>(save-block-file)</b>
+	<dd>What does this do?
+<dt><b>(new-pw)</b>
+	<dd>Loads a new Pathetic Writer window.
+<dt><b>(load-buffer)</b>
+	<dd>Loads a Pathetic Writer document into a new buffer.
+<dt><b>(save-buffer)</b>
+	<dd>Saves the current buffer as a Pathetic Writer document.
+<dt><b>(save-buffer-as)</b>
+	<dd>Saves the current buffer using a new file name.
+<dt><b>(print-version)</b>
+	<dd>Prints version information on the status bar.
+<dt><b>(help-contents)</b>
+	<dd>Starts the Chimera program with pw.html as argument.
+<dt><b>(help-search)</b>
+	<dd>Search for keyword. Currently not implemented.
+<dt><b>(help-for-help)</b>
+	<dd>Starts the Chimera program with siaghelp.html as argument.
+<dt><b>(recenter)</b>
+	<dd>Redraws the screen.
+<dt><b>(execute-extended-command)</b>
+	<dd>Read and execute a Scheme command.
+<dt><b>(keyboard-quit)</b>
+	<dd>Abort a multi-key command sequence.
+<dt><b>(quit-pw)</b>
+	<dd>Exit from Pathetic Writer. If there are any unsaved changes, asks if they
+	should be saved.
+<dt><b>(no-op)</b>
+	<dd>Does nothing. Sometimes useful for debugging.
+</dl>
+
+There are two ways to execute Scheme code:
+<ol>
+	<li>Pressing ( and typing it in the input window
+	<li>Loading it from a file using 
+		<b>(load </b><i>"filename"</i><b>)</b>
+</ol>
+A file can be loaded on startup by giving the option <b>-iFilename</b>
+on the command line. A useful file to load is siod.scm which adds
+common functions like caar, cadr and the like.
+
+<h2>Function Reference</h2>
+
+<h3><a name="new-buffer">(new-buffer)</a></h3>
+Opens a new empty Pathetic Writer window.
+
+<h3><a name="load-buffer">(load-buffer)</a></h3>
+Asks for a file name and opens the file with that name as a
+Pathetic Writer document.
+
+<h3><a name="save-buffer">(save-buffer)</a></h3>
+Saves the currently open document
+using the most recently used filename. If no name has been
+given to the document, the name "noname" is used.
+
+<h3><a name="save-buffer-as">(save-buffer-as)</a></h3>
+Asks for a filename and saves the currently open document
+using that filename.
+
+<h3><a name="preview">(preview)</a></h3>
+Preview the contents of the current buffer.
+
+<h3><a name="make-backups">(make-backups 0/1)</a></h3>
+Turn on or off the optional backups that are made of the original file
+when the buffer is saved. The backup has the same name as the original
+with .BAK appended.
+
+<h3><a name="change-margins">(change-margins buffer)</a></h3>
+Set the top, bottom, left, right, header and footer margins.
+The header/footer margin is the distance to the edge of the sheet.
+If buffer is nil, the current buffer is changed. If buffer is "",
+the global default is set for new buffers.
+
+<h3><a name="change-paper-size">(change-paper-size buffer)</a></h3>
+Set paper size and select portrait or landscape orientation.
+If buffer is nil, the current buffer is changed. If buffer is "",
+the global default is set for new buffers.
+
+<h3><a name="change-headfoot">(change-headfoot buffer)</a></h3>
+Set the header and footer printed on each page. They are specified
+by strings in the same format as those used by strftime, with two
+additions: &n substitutes the buffer name and &p substitutes the
+page number.
+<p>
+If buffer is nil, the current buffer is changed. If buffer is "",
+the global default is set for new buffers.
+
+<h3><a name="print">(print)</a></h3>
+Prints the current buffer using the <b>lpr</b> command.
+
+<h3><a name="print-format">(print-format)</a></h3>
+Allows the user to enter the name of the print command and the previewer.
+
+<h3><a name="load-external">(load-external)</a></h3>
+Load document using external program such as wget.
+
+<h3><a name="save-external">(save-external)</a></h3>
+Save document using external program.
+
+<h3><a name="quit-program">(quit-program)</a></h3>
+Quits from Pathetic Writer. If there are any unsaved changes,
+Pathetic Writer asks if they should be saved.
+
+<h3><a name="insert-line">(insert-line)</a></h3>
+Insert a line into the document, shifting the rest of the document
+down.
+
+<h3><a name="set-mark-command">(set-mark-command)</a></h3>
+Moves the mark to the current cell.
+
+<h3><a name="set-block">(set-block)</a></h3>
+Sets the block to be the rectangular area between the mark and
+the current cell.
+
+<h3><a name="copy-block">(copy-block)</a></h3>
+Copies the contents of the block to the area to the right and
+below the current cell.
+
+<h3><a name="delete-block">(delete-block)</a></h3>
+Deletes all the cells in the block.
+
+<h3><a name="set-line-height">(set-line-height)</a></h3>
+Sets the height in pixels of the current row.
+
+<h3><a name="switch-to-buffer">(switch-to-buffer)</a></h3>
+Change which buffer is displayed in the current window.
+
+<h3><a name="kill-buffer">(kill-buffer)</a></h3>
+Delete the current buffer.
+
+<h3><a name="split-window-vertically">(split-window-vertically)</a></h3>
+Split the current buffer in two.
+
+<h3><a name="delete-window">(delete-window)</a></h3>
+Remove the current window and give its space to its neighbors.
+
+<h3><a name="delete-other-windows">(delete-other-windows)</a></h3>
+Remove all windows except the current one.
+
+<h3><a name="other-window">(other-window)</a></h3>
+Make the next window current.
+
+<h3><a name="help-contents">(help-contents)</a></h3>
+Displays the Pathetic Writer online documentation.
+
+<h3><a name="help-search">(help-search)</a></h3>
+This command does nothing.
+
+<h3><a name="help-copyright">(help-copyright)</a></h3>
+Displays the GNU public licence.
+
+<h3><a name="help-for-help">(help-for-help)</a></h3>
+Displays help for using the online help.
+
+<h3><a name="print-version">(print-version)</a></h3>
+Displays the current version string.
+
+<hr>
+<address>Ulric Eriksson - February 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

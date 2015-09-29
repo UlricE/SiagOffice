@@ -1,0 +1,120 @@
+
+This is a prerelease of what will become Siag Office 3.4. Being a
+prerelease, some of the functionality is not implemented, does not work
+or is not properly documented. The purpose of this release is to give those
+who wish a chance to try out the new version before it is officially
+available.
+
+Here is a list of things that are new from Siag Office 3.3. Some were
+implemented towards the end of the 3.3.x development cycle; items marked
+with a + are completely new.
+
+
+PW
+==
+
+ + Left-, right- and center aligned adjustable tabs.
+
+ + Left-, right- and center aligned plugins.
+
+ + "Full" adjustment with straight left and right edges.
+
+ + Print raised, lowered and underlined text properly.
+
+ + Strikethrough.
+
+ + Faster HTML (and hence Word) loader.
+
+ + Display LaTeX and DVI files in the Clipart plugin.
+
+ + Fetch stock quotes from Yahoo over the Internet.
+
+ - Load and save as PDF
+
+ - Colour printing.
+
+ - Zoom.
+
+ - Redisplay more efficiently.
+
+
+Siag
+====
+
+ + $A$1 style references, which are not updated when cells are moved.
+
+ + Examples for all functions.
+
+ + Hundreds of functions, many Excel compatible, all documented in
+   the function reference.
+
+ + Arbitrary precision integer functions.
+
+ + Arbitrary precision floating-point functions.
+
+ + Rudimentary loading of ABS files.
+
+ + New operators ** (power) and \ (quotient).
+
+ + Complex numbers; example in complex.siag.
+
+ + Matrix functions; example in matrix.siag.
+
+ + New or updated documentation, automatically generated from the source.
+
+ + "C" interpreter translates expressions to Scheme rather than evaluating
+   the expression itself.
+
+ + Convert currencies, using information from Yahoo over the Internet.
+
+ - Save as PDF.
+
+ - Colour printing.
+
+ - Zoom.
+
+ - Redisplay more efficiently.
+
+
+
+Egon
+====
+
+ - Save as PDF.
+
+ - Load and save plaintext.
+
+ - Load and save HTML.
+
+ - Load Powerpoint.
+
+ - Load MagicPoint (rudimentary).
+
+ - Keyboard control.
+
+ - Updated documentation.
+
+ - Postscript output and printing.
+
+ - Background gradients.
+
+ - Multiple buffers and sheets (pages).
+
+ - Full-screen mode.
+
+
+All
+===
+
+ + Support for the XDND drag and drop protocol.
+
+ - New or updated translations: Brazilian, Czech, Danish, German,
+   Russian, Spanish, Swedish
+
+ - Image plugin redisplays more efficiently.
+
+
+And lots of small changes that are either invisible or too insignificant
+to mention here.
+
+

@@ -1,0 +1,38 @@
+
+Message catalogs for Siag Office are available for the following languages:
+
+Language	Code	Translator
+--------	----	----------
+Croatian	cr	Matej Vela <vela@zagreb.mioc.hr>
+Czech		cs	Petr Klíma and Martin Klozik
+			<klima.petr@post.cz>.
+Danish		da	Birger Langkjer <birger.langkjer@image.dk>
+French		fr	<ghislain.picard@snafu.de> and Xavier Henne
+Galician	gl	Ramon Flores <fa2ramon@usc.es>
+German		de	Matthias Warkus <mawarkus@t-online.de>
+			Theodor Willax <willax@tarantel.rz.fh-muenchen.de>
+Norwegian	no	Bjørn-Ove Heimsund <s811@drone.ii.uib.no>
+Polish		pl	Przemek Borys
+Portuguese	pt_BR	arfreitas@ig.com.br
+Russian		ru	Sergey Korepanov <korep@softhome.net>
+Spanish		es	Willian Sanches <wisanche@netscape.net>
+Swedish		sv	Ulric Eriksson <ulric@siag.nu>
+
+To use, set the LANG environment variable to the codes above, for
+example by putting
+
+LANG="sv"; export LANG
+
+into your .profile.
+
+By default, Siag Office produces Postscript in Latin1 encoding
+for printed output. According to Przemek Borys, who did the Polish
+translation, the ogonkify program can be used to convert into Latin2.
+
+
+Is your language not supported? You can make a difference! Take one of
+the existing dictionary.* files from the common subdirectory and
+replace all the translations with ones in your language. When you are
+done, send the file to ulric@siag.nu, so it can be included
+in future releases of Siag Office.
+

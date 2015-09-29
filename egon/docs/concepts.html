@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Egon Animator - Concepts</title>
+</head>
+
+<body>
+<h1>Concepts</h1>
+
+<dl>
+<dt><b>cast</b>
+	<dd>The cast is the list of objects that take part in an
+	animation.
+<dt><b>object</b>
+	<dd>The available object types are Line, Rectangle, Arc,
+	Ellipse, Pixmap, String, Point, Filled Rectangle, Filled
+	Arc and Filled Ellipse.
+<dt><b>script</b>
+	<dd>Every object has a script, which is a list of ticks
+	telling the object where it should move and when.
+<dt><b>tick</b>
+	<dd>A tick is a structure containing all properties of
+	an object at a certain point in time.
+<dt><b>property</b>
+	<dd>The available properties are position (x and y), size
+	(width and height), visibility, color, font and string.
+<dt><b>duration</b>
+	<dd>The number of milliseconds the animation will take.
+<dt><b>delta</b>
+	<dd>The number of milliseconds between each frame. A smaller
+	delta can make the movement smoother but also present the CPU
+	with a heavier load.
+<dt><b>now</b>
+	<dd>The "current time" in the animation. For every frame, the
+	position and size of each object is calculated at the time now.
+	If no tick matches now exactly in the object's script, the
+	values are interpolated from the surrounding ticks.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - July 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

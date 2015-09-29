@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Siag - String Handling</title>
+</head>
+
+<body>
+<center>
+<h1>String Handling</h1>
+</center>
+Siag has string support. Strings can be entered as string constants
+(text surrounded by quotation marks) or as expressions that
+evaluate to strings.
+<p>
+The following Scheme functions can be used for strings:
+
+<dl>
+<dt><b>(string-append s1 s2...)</b>
+	<dd>Append the string arguments and return the resulting string.
+<dt><b>(substring str start end)</b>
+	<dd>Returns the part of str between start and end.
+<dt><b>(string-search token str)</b>
+	<dd>Returns the index of token in str.
+<dt><b>(string-trim str)</b>
+	<dd>Removes whitespace from both ends of str.
+<dt><b>(string-trim-left str)</b>
+	<dd>Removes whitespace from the beginning of str.
+<dt><b>(string-trim-right str)</b>
+	<dd>Removes whitespace from the end of str.
+<dt><b>(string-upcase str)</b>
+	<dd>Converts all characters in str to upper case.
+<dt><b>(string-downcase str)</b>
+	<dd>Converts all characters in str to lower case.
+<dt><b>(get-cell row col)</b>
+	<dd>Returns the value of the cell in (row,col), which may or
+		may not be a string.
+<dt><b>(x-get-cell row col buffer)</b>
+	<dd>The same as get-cell, but returns a value from another
+	buffer by specifying the buffer name. The buffer must
+	be loaded.
+<dt><b>(get-string row col)</b>
+	<dd>Returns the value of the cell in (row,col) in the form
+		of a string, no matter what is in the cell.
+<dt><b>(x-get-string row col buffer)</b>
+	<dd>The same as get-string, but returns a string from another
+	buffer by specifying the buffer name.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - October 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

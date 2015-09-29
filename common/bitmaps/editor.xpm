@@ -1,0 +1,35 @@
+/* XPM */
+static char * editor_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"24 24 5 1",
+/* colors */
+" 	s None	c None",
+".	c #808080",
+"X	c white",
+"o	c black",
+"O	c blue",
+/* pixels */
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"    .........           ",
+"    .XXXXXXX.o          ",
+"    .X.....X.Xo    O    ",
+"    .XXXXXXX.ooo  OO    ",
+"    .X.....XXXXo OOo    ",
+"    .XXXXXXXXXXoOOo     ",
+"    .X........XOOo      ",
+"    .XXXXXXXXXOOo       ",
+"    .X.......oOo        ",
+"    .XXXXXXXoooo        ",
+"    .X.....oooXo        ",
+"    .XXXXXoXXXXo        ",
+"    .XXXXXXXXXXo        ",
+"    oooooooooooo        ",
+"                        ",
+"                        ",
+"                        ",
+"                        ",
+"                        "};

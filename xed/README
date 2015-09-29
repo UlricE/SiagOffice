@@ -1,0 +1,65 @@
+Xed is an interactive texteditor for X based on the Athena widgets.
+The program should be self explaining see the manual page for further
+informations.
+
+The program has been tested with X 11 Release 5 and Release 6 on the
+following platforms:
+
+	Sun3, SunOs 4.0.3 (use Imakefile.sun3)
+        Sun4, SunOs 4.0.3 + SunOs 4.1.1 + SunOS 5.3
+        NeXT, Mach (Motorola, Intel)
+	Linux 1.2
+	DG/UX 4.32
+
+It has been tested with the following windowmanagers:
+
+	twm, fvwm, mwm, olwm
+
+There are still some problems with scrolling performances on Sun3. Therefore
+you should compile with -DSCROLLBREAK on this platform (see Imakefile). If
+you do so the resource MaxScrollbreak has some effect on text scrolling and
+after every linescrolling XFlush is called. Try to find the smallest value
+for MaxScrollbreak which is still big enough to stop scrolling right after
+releasing the cursor key.
+Perhaps you also have to define one of the following Defines:
+
+	-DUSEGETCWD     : Use "getcwd" instead of "getwd"
+	-DNORENAME      : Use build in "rename" instead of unix "rename"
+	-DUSEDIRENT     : Use "dirent" struct instead of "direct"
+
+To comiple the program:
+
+1. Edit Imakefile if necessary (see above)
+2. Make a Makefile with imake (xmkmf)
+3. Type "make"
+4. If you are using an X Release older than X11R6 you have to install
+   the application defaults XedoldX.ad instead of Xed.ad by typeing
+        "make old"
+5. Type "make install"
+6. Type "make install.man"
+
+ 
+
+
+	Randolf Werner
+	(evol@infko.uni-koblenz.de)
+
+--------
+
+On April 6 1999, Ulric snarfed this code to become part of Siag Office.
+Intended as a small baseline text editor, it is available for all text
+editing needs, but can be configured away for those who prefer something
+more advanced.
+
+My changes:
+
+ - Use the Rudegrid widget for all layout
+ - Use the Frame widget to get that beveled look
+ - App-default tweaking to make it look like other Siag cousins
+ - Replaced file selector
+ - General bugfixing, added missing headers et al
+ - Name changed to xedplus to avoid bogus app-defaults
+ - Employ ad2c to compile app-defaults into executable
+ - Switch from imake to autoconf
+
+And more to come. See TODO for a list.

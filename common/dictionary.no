@@ -1,0 +1,386 @@
+	
+File	Fil
+Edit	Rediger
+Block	Blokk
+Format	Format
+Data	Data
+Plugin	Plugin
+Window	Vindu
+Plot	Diagram
+Tools	Verktøy
+Help	Hjelp
+Start another instance of Siag	Start en ny Siag
+Open a Siag document		Åpne ett dokument
+Save the contents of the current buffer	Lagre det åpne dokumentet
+Preview the contents of the current buffer	Forhåndsvis det åpne dokumentet
+Print the contents of the current buffer	Skriv ut det åpne dokumentet
+Spelling checker		Stavningskontroll
+Cut				Klipp ut
+Copy				Kopier
+Paste				Lim in
+Undo				Angre
+Sort ascending			Sorter stigende
+Sort descending			Sorter fallende
+Plot the contents of the block using lines	Plott blokkens innhold ved hjelp av linjer
+Add the contents of the block	Summer inneholdet i blokken
+Display the Siag online documentation	Vis direkte-hjelp for Siag
+Display the Gnu general public license	Vis Gnu-lisensen
+Change the font family	Bytt skrifttype-familien
+Change the font size	Bytt skriftstørrelsen
+Change the display style	Bytt fremvisningsstil
+Change the color	Bytt farge
+Bold text	Fet tekst
+Italic text	Kursiv tekst
+Left adjusted text		Venstrejustert
+Centered text			Sentrert
+Right adjusted text		Høyrejustert
+Draw grid lines in the block	Tegn rutemønstre i blokken
+Draw borders around the block	Tegn ramme rundt blokken
+Underline the block		Understrek blokken
+Remove grid lines from the block	Ta bort alle linjene fra blokken
+Select everything		Marker alt
+OK				OK
+Cancel				Avbryt
+File Name:			Filnavn:
+Directory:			Katalog:
+Select File			Velg fil
+Find				Søk
+Extra				Ekstra
+Home				Hjem
+Examples			Eksempel
+Family Name			Familienavn
+Size				Størrelse
+Attributes			Attribut
+Borders				Kanter
+Adjustment			Justering
+Misc				Annet
+List Selection			Listvalg
+New				Nytt
+Open				Åpne
+Save				Lagre
+Save As				Lagre som
+Preview				Forhåndsvisning
+Print				Skriv ut
+Print Format			Utskriftsformat
+Orientation			Orientering
+Portrait			Stående
+Landscape			Liggande
+Cell Protection			Celle-beskyttelse
+Respect				Respekter
+Ignore				Ignorer
+Load External			Åpne eksternt dokument
+Save External			Lagre eksternt dokument
+Exit				Avslutt
+Undo				Angre
+Delete				Slett
+Insert Line			Sett inn rad
+Remove Line			Fjern rad
+Insert Column			Satt in kolonne
+Remove Column			Fjern kolunne
+Select All			Marker alt
+Select everything		Marker alt
+Find				Søk
+Find Backward			Søk bakover
+Label				Etikett
+SIOD Expression			SIOD-formel
+C Expression			C-formel
+Guile Expression		Guile-formel
+Tcl Expression			Tcl-formel
+Change default interpreter	Bytt standardtolk
+Change Default Interpreter	Bytt standardtolk
+Other				Annet
+Add Property			Legg till egenskap
+Embed Object			Legg inn objekt
+Remove Object			Fjern objekt
+Open Object			Åpne objekt
+Save Object			Lagre objekt
+Set Mark			Sett merke
+Set Block			Marker blokk
+Unset Block			Ta bort markering
+Copy Block			Kopier blokk
+Delete Block			Slett blokk
+Fill Block			Fyll blokk
+Smart Fill Block		Fyll blokk smart
+Sort				Sorter
+Rows Ascending as Text		Rader stigende som tekst
+Rows Ascending as Numbers	Rader stigende som tall
+Rows Descending as Text		Rader fallende som tekst
+Rows Descending as Numbers	Rader fallende som tall
+Columns Ascending as Text	Kolonner stigende som tekst
+Columns Ascending as Numbers	Kolonner stigende som tall
+Columns Descending as Text	Kolonner fallende som tekst
+Columns Descending as Numbers	Kolonner fallende som tall
+Block Sum			Summer blokken
+Block Minimum			Minste verdi
+Block Maximum			Størst verdi
+Block Average			Gjennomsnitt
+Borders				Kantlinjer
+Grid				Rutemønster
+Underline			Stryk under
+None				Ingen
+Column Width			Kolonnebredde
+Set				Sett
+Fit Block			Pass inn til block
+Set Default			Sett standard
+Fit Block Width			Pass inn bredde etter blokk
+Row Height			Rekkehøyde
+Fit Block Height		Pass inn høyde til blokk
+Set Default Format		Sett standardformat
+Cell Format			Cellformat
+Block Format			Blokkformat
+Cell Style			Cellestil
+Block Style			Blokkstil
+Define Style			Definier stil
+Cell Color			Cellefarge
+Block Color			Blokkfarge
+Edit Record			Rediger post
+Data Entry			Mat inn data
+Siag-net			Siag-nettverk
+Identify Cell			Identifiser cell
+Recalculate			Beregn om
+Change Buffer			Bytt buffer
+Delete Buffer			Slett buffer
+Split Window			Del vindu
+Remove Window			Fjern vindu
+One Window			Ett vindu
+Change Window			Bytt vindu
+Add Sheet			Legg til ark
+Remove Sheet			Fjern ark
+Rename Sheet			Døp om ark
+Protect Cells			Beskytt cellene
+Remove Protection		Ta bort beskyttelse
+Go To				Gå til
+Beginning of buffer		Begynnelsen av buffer
+End of buffer			Slutten av buffer
+Top of buffer			Toppen av buffer
+Bottom of buffer		Bunnen av buffer
+Grid Lines			Rutemønster
+Show				Vis
+Hide				Gjem
+Reference Style			Referanse stil
+Disable Helptexts		Skru av hjelptekster
+Helptexts			Hjelpetekster
+Disable				Skru av
+Both				Både
+Save Preferences		Lagre innstillinger
+Lines				Linjer
+Points				Punkter
+Linespoints			Linjer og punkter
+Impulses			Strek
+Dots				Prikker
+Steps				Stegdiagram
+Boxes				Stolper
+Surface				Overflate
+Advanced			Avansert
+Contents			Innhold
+Search				Søk
+Copying				Opphavsrett
+About Siag			Om Siag
+Help for Help			Hjelp for hjelp
+SIOD Command			SIOD-kommando
+C Command			C-kommando
+Guile Command			Guile-kommando
+Tcl Command			Tcl-kommando
+Web Server			Webtjener
+Mail				Send e-post
+File Manager			Filhåndterere
+Form Test			Test av formulär
+Another Form Test		En annen test av formler
+Yet Another Form Test		Enda en test av formler
+Another Form Test Still		Ytterliger en test av formler
+Import				Importer
+Export				Eksporter
+Link				Lenk
+Move				Flytt
+Expression			Formel
+Command				Kommando
+Sum				Summer
+Import Plugin			Importer plugin
+Move Plugin			Flytt plugin
+Quit				Avslutt
+External Program:		Eksternt program:
+Local File			Lokal fil
+Compressed File			Komprimert fil
+Archive				Arkiv
+Compressed Archive		Komprimert arkiv
+Generic				Allment
+Search:				Søk:
+Label:				Etikett:
+SIOD expression:		SIOD-uttrykk:
+C expression:			C-uttrykk:
+Guile expression:		Guile-uttrykk:
+Tcl expression:			Tcl-uttrykk:
+New expression interpreter:	Ny formeltolk:
+Key				Nøkkel
+Value				Verdi
+Object file:			Objektfil:
+Width:				Bredde:
+Height:				Høyde:
+Bold				Fet
+Italic				Kursiv
+Top				Topp
+Bottom				Bunnen
+Left				Venstre
+Right				Høyre
+Center				Sentrer
+Expression style:		Uttrykksstil:
+Color:				Farge:
+color				farge
+Black				Svart
+Red				Rød
+Green				Grøn
+Blue				Blå
+Yellow				Gul
+Magenta				Magenta
+Cyan				Cyan
+White				Hvit
+Select Plugin:			Velg plugin:
+Change Buffer:			Endre buffer:
+Kill Buffer:			Slett buffer:
+SIOD command:			SIOD-kommando:
+C command:			C-kommando:
+Guile command:			Guile-kommando:
+Tcl command:			Tcl-kommando:
+To:				Til:
+Enter user data			Skriv inn brukerdata
+First name			Fornavn
+Last name			Etternavn
+Address				Adresse
+Find pattern:			Søk etter mønster:
+Go to:				Gå til:
+Pick one:			Velg en:
+Yes				Ja
+No				Nei
+Replace				Erstatt
+Spell				Staving
+Line Height			Rekkehøyde
+Segment Format			Segmentformat
+Line Format			Rekkeformat
+Copy				Kopier
+Use				Bruk
+Cleanup				Rydd opp
+Segment Style			Segmentstil
+Line Style			Rekkestil
+Segment Color			Segmentfarge
+Line Color			Rekkefarge
+About Pathetic Writer		Om Pathetic Writer
+Spell Test			Stavningskontroll
+Dump Words			Dump ordlisten
+Default				Standard
+Invisible			Usynlig
+Integer				Heltall
+Scientific			Vitenskapelig
+Fixed				Fast
+Date				Dato
+Time				Tid
+Comma				Komma
+Percent				Prosent
+Hex				Hex
+Currency			Valuta
+User 1				Bruker 1
+User 2				Bruker 2
+User 3				Bruker 3
+User 4				Bruker 4
+User 5				Bruker 5
+Header 1			Overskrift 1
+Header 2			Overskrift 2
+Header 3			Overskrift 3
+Header 4			Overskrift 4
+Header 5			Overskrift 5
+Header 6			Overskrift 6
+Title				Tittel
+Abstract			Utdrag
+Preformatted			Førformatert
+Embed				Sett inn
+Start another instance of Pathetic Writer	Start en ny Pathetic Writer
+Open a Pathetic Writer document		Åpne ett Pathetic Writer-dokument
+Display the PW online documentation	Vis direktehjelp for PW
+Underlined text			Understreken tekst
+Superscript			Høy tekst
+Subscript			Senkt tekst
+Show Editor			Vis redigerer
+Hide Editor			Gjem redigerer
+Show editor			Vis redigerer
+Hide editor			Gjem redigerer
+Begin Empty Animation		Start ny animasjon
+Add Object			Legg til objekt
+Line				Linje
+Image				Bilde
+Delete Object			Ta bort objekt
+Change Object Type		Endre objektstype
+Add tick			Legg till tidpunkt
+Delete Tick			Ta bort tidpunkt
+Edit Properties			Rediger egenskaper
+Set Background			Velg bakgrunn
+Timing				Tidsflyt
+Set Geometry			Velg geometri
+Play Animation			Spill animasjon
+Box Animation Demo		Demo av boksanimasjon
+Circle Animation Demo		Demo av sirkelanimasjon
+Line Animation Demo		Demo av linjeanimasjon
+Combo Animation Demo		Kombinasjonsdemo
+Box				Rektangel
+Circle				Sirkel
+Combo				Kombinasjon
+About Egon Animator		Om Egon Animator
+Start another instance of Egon Animator	Start en til Egon Animator
+Open an Egon Animator document		Åpne ett Egon Animator-dokument
+Pop down animation			Stopp animasjonen
+Pause the animation			Pause animasjonen
+Previous animation frame		Tilbake ett bilde
+Play the animation			Spill animasjonen
+Next animation frame			Neste bilderute
+Display the Egon online documentation	Vis direktehjelp for Egon
+Rectangle				Rektangel
+Arc					Bue
+Ellipse					Ellipse
+Pixmap					Pixmap
+String					Tekst
+Point					Punkt
+Filled Rectangle			Fylt rektangel
+Filled Arc				Fylt bue
+Filled Ellipse				Fylt ellipse
+Open file				Åpne fil
+Save file				Lagre fil
+Quit animation				Avslutt animasjonen
+Stop animation				Stopp animasjonen
+Previous frame				Tilbake ett bilde
+Next frame				Fram ett bilde
+Play animation				Spill animasjon
+Quit Egon				Avslutt Egon
+No files found				Ingen filer funnet
+File saved				Filen lagret
+This window is too small to split	Dette vinduet er for lite for å dele
+Couldn't save				Kunne ikke lagre
+Save %s?				Lagre %s?
+Loading					Laster inn
+New file				Ny fil
+Load auto startup code?			Last inn automatisk startkode?
+Can't open loader file			Kan ikke åpne innlastingsfil
+Parameters:				Parametrer:
+External program failed			Eksternt program feilet
+Attempt to delete sole ordinary window	Kan ikke slette det siste vinduet
+No such buffer				Det finnes ingen slik buffer
+Overwrite existing %s?			Skriv over eksisterende %s?
+Can't open saver file			Kan ikke åpne lagringsfilen
+Couldn't kill last buffer		Kan ikke slette den siste bufferen
+%s command:				%s-kommando:
+%s expression:				%s-uttrykk:
+Already defining kbd macro!		Allerede definert tastaturmakro!
+Defining kbd macro...			Definerer tastaturmakro...
+Not defining kbd macro			Definerer ikke tastaturmakro
+Keyboard macro defined			Tastaturmakro definert
+Can't execute anonymous macro while defining one	Kan ikke kjøre anonym makro når den defineres
+Input buffer overflow; macro execution terminated	For mye inndata; makro utføringen avsluttet
+Add Tick				Legg till tidspunkt
+Add Line				Legg till linje
+Add Rectangle				Legg till rektangel
+Add Arc					Legg till bue
+Add Ellipse				Legg till ellipse
+Add Image				Legg till bilde
+Add String				Legg till tekst
+Add Point				Legg till punkt
+Add Filled Rectangle			Legg till fylt rektangel
+Add Filled Ellipse			Legg till fylt ellipse
+Add Filled Arc				Legg till fylt bue
+Sheet %d				Ark %d

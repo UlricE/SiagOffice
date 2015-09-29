@@ -1,0 +1,199 @@
+{\rtf1\ansi \deff3\deflang1053
+{\fonttbl
+{\f0\fmodern Courier;}
+{\f1\fswiss Helvetica;}
+{\f2\froman New Century Schoolbook;}
+{\f3\froman Times;}
+}
+{\stylesheet
+{\s0\fs24 \snext0 Default;}
+{\s1 \fs24 \sbasedon0\snext0 Header 1;}
+{\s2 \fs24 \sbasedon0\snext0 Header 2;}
+{\s3 \fs24 \sbasedon0\snext0 Header 3;}
+{\s4 \fs24 \sbasedon0\snext0 Header 4;}
+{\s5 \fs24 \sbasedon0\snext0 Header 5;}
+{\s6 \fs24 \sbasedon0\snext0 Header 6;}
+{\s7 \fs24 \sbasedon0\snext7 Address;}
+{\s8 \fs24 \sbasedon0\snext8 Ordered List;}
+{\s9 \fs24 \sbasedon0\snext9 Unordered List;}
+{\s10 \f2\fs24 \sbasedon0\snext10 Preformatted;}
+{\s11 \fs24 \sbasedon0\snext11 User 1;}
+{\s12 \fs24 \sbasedon0\snext12 User 2;}
+{\s13 \fs24 \sbasedon0\snext13 User 3;}
+{\s14 \fs24 \sbasedon0\snext14 User 4;}
+}
+\paperw11900\paperh16840
+\margl1440\margr1440\margt1440\margb1440
+\gutter0 \deftab720\widowctrl\ftnbj\hyphhotz425 
+\sectd 
+\binfsxn1\binsxn1\linex0\endnhere 
+\pard\plain 
+\s1 
+\f1\fs24\b0\i0\ul0 Egon Animator
+\par
+\pard\plain 
+\s0 
+
+ The latest addition to the Siag family is a program to create animated sequences.
+ Examples of where such a program can be useful is:
+\par
+\pard\plain 
+\s0 
+
+\par
+\pard\plain 
+\s9 
+\f13\fs24\b0\i0\ul0 Presentation graphics
+ Computerized toons
+ Demonstrations
+ Animated GIF creation
+\par
+\pard\plain 
+\s0 
+
+ The name of this program is Egon Animator. The look and feel of the program is very
+ similar to that of Siag and Pathetic Writer; however not all of their powerful features like
+ embedding are yet implemented. But the core of the program is the same, in fact the three
+ programs share much of the same source. The multiple interpreter support is present
+ (with only SIOD implemented properly, but the hooks are there for Guile and Tcl).
+\par
+\pard\plain 
+\s0 
+
+\par
+\pard\plain 
+\s2 
+\f2\fs24\b0\i0\ul0 Why an animation program?
+\par
+\pard\plain 
+\s0 
+
+ Well, why not? When I first started working on my spreadsheet Siag, the long term goal
+ was to create a full, free office package. Now that Siag and the word processor Pathetic
+ Writer are operational, if not finished, it seemed like a small but natural step to add a
+ simple program to create presentation graphics. As usual, I had an old program lying
+ around which could be botched into a new role.
+\par
+\pard\plain 
+\s0 
+
+\par
+\pard\plain 
+\s2 
+\f2\fs24\b0\i0\ul0 So, what is it like?
+\par
+\pard\plain 
+\s0 
+
+ Egon has an editing interface with three lists for the objects, the ticks and the properties.
+ Objects include rectangles, lines, pixmaps and so on. Every object has a list of one or
+ more ticks, which are "milestones" telling where the object should be at a particular time,
+ what shape, colour and so on. When the animation is played, Egon automatically
+ interpolates intermediate positions between the ticks so that a smooth linear movement
+ can be specified with only the endpoints.
+\par
+\pard\plain 
+\s0 
+
+ There will also be a Visual Basic-style interface where objects can be chosen from a
+ palette and placed on the animation window using drag-and-drop, but that is not yet
+ implemented.
+\par
+\pard\plain 
+\s0 
+
+ The animations are stored as Scheme scripts in human-readable form so that they can be
+ edited manually. It is also easy to write scripts without using the editing interface at all.
+ For example, here is a script to create a ticker-tape:
+\par
+\pard\plain 
+\s0 
+
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0 (define (ticker-tape width height duration text)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-object ANI_LINE)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_X 0 ANI_Y (- height 21) ANI_WIDTH width)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-object ANI_FILLRECT)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_X 0 ANI_Y (- height 20))
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_WIDTH width ANI_HEIGHT 20)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_COLOR WHITE)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-object ANI_STRING)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_X width ANI_Y (- height 5))
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_TEXT text)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-time duration)
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0   (ani-properties ANI_X 0))
+\par
+\pard\plain 
+\s0 
+
+ Interpretation: At the bottom of the window, create a horizontal black line and a white
+ rectangle. Using the rectangle as background, make the message move from left to right
+ throughout the presentation.
+\par
+\pard\plain 
+\s0 
+
+ Once defined, this function can be called from any number of animations with different
+ parameters. For example, assuming we have a demo with a window size of 600x500 and a
+ playing time of 2 seconds:
+\par
+\pard\plain 
+\s0 
+
+\par
+\pard\plain 
+\s10 
+\f10\fs24\b0\i0\ul0 (ticker-tape 600 500 2000 "Egon Animation 2.23. No Warranty")
+\par
+\pard\plain 
+\s0 
+
+ Simple, eh?
+\par
+\pard\plain 
+\s0 
+
+ Simple scripts can also be merged into more complex animations, so the above definition
+ can be stored in a separate file ticker.scm and used in other animations. This makes it
+ possible to create a library of reusable animation snippets.
+\par
+\pard\plain 
+\s0 
+
+\par
+}

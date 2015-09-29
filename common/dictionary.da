@@ -1,0 +1,737 @@
+	
+Siag (Scheme In A Grid) %s. No Warranty.	Siag (Scheme In A Grid) %s. Ingen garanti.
+File	Filer
+Edit	Redigér
+Block	Blok
+Format	Format
+Data	Data
+Plugin	Indstik
+Window	Vindue
+Plot	Diagram
+Tools	Værktøj
+Help	Hjælp
+Start another instance of Siag	Start en ny Siag
+Open a Siag document		Åbn et dokument
+Save the contents of the current buffer	Gem det åbne dokument
+Preview the contents of the current buffer	Eksempel på det endelige resultat
+Print the contents of the current buffer	Udskriv det åbne dokument
+Spelling checker		Stavekontrol
+Cut				Klip
+Copy				Kopiér
+Paste				Indsæt
+Undo				Fortryd
+Sort ascending			Sortér stigende
+Sort descending			Sortér faldende
+Plot the contents of the block using lines	Plot indholdet af blokken ved hjælp af linjer
+Add the contents of the block	Tilføj indholdet af blokken
+Display the Siag online documentation	Vis onlinehjælp for Siag
+Display the Gnu general public license	Vis Gnu-licensvilkår
+Change the font family		Vælg skrifttype
+Change the font size		Vælg skriftstørrelse
+Change the display style	Vælg stil
+Change the color		Vælg farve
+Bold text			Fed
+Italic text			Kursiv
+Left adjusted text		Venstrejusteret
+Centered text			Centreret
+Right adjusted text		Højrejusteret
+Draw grid lines in the block	Vis gittermønster i blokken
+Draw borders around the block	Vis kanter rundt om blokken
+Underline the block		Understreg blokken
+Remove grid lines from the block	Fjern alle linjer fra blokken
+Select everything		Markér alt
+OK				Ok
+Cancel				Annullér
+File Name:			Filnavn:
+Directory:			Mappe:
+Select File			Vælg fil
+Find				Søg
+Extra				Ekstra
+Home				Hjem
+Examples			Eksempler
+Family Name			Familienavn
+Size				Størrelse
+Attributes			Attributter
+Borders				Kanter
+Adjustment			Justering
+Misc				Diverse
+List Selection			Listevalg
+New				Ny
+Open				Åbn...
+Save				Gem
+Save As				Gem som...
+Preview				Vis udskrift
+Close				Luk
+Backup Copies			Sikkerhedskopier
+Settings			Indstillinger
+Margins				Marginer
+Paper Size			Papirsstørrelse
+Header and Footer		Sidehoved og -fod
+First Page Number		Første sidenummer
+Style				Stil
+Foreground Color		Forgrundsfarve
+Background Color		Baggrundsfarve
+Enter Date			Indtast dato
+Enter Time			Indtast tid
+Move Sheet			Flyt ark
+Up				Op
+Down				Ned
+Edit Applications		Redigér programmer
+Save Applications		Gem programmer
+Applets				Små programmer
+Resize				Ændr størrelse
+Print				Udskriv
+Print Format			Udskriftsformat
+Orientation			Orientering
+Portrait			Stående
+Landscape			Liggende
+Cell Protection			Celle-beskyttelse
+Respect				Respektér
+Ignore				Ignorér
+Load External			Åbn eksternt dokument
+Save External			Gem eksternt dokument
+Exit				Afslut
+Undo				Fortryd
+Delete				Slet
+Insert Line			Indsæt linje
+Remove Line			Fjern linje
+Insert Column			Indsæt kolonne
+Remove Column			Fjern kolonne
+Select All			Markér alt
+Select everything		Markér alt
+Find				Søg
+Find Backward			Søg baglæns
+Label				Etiket
+SIOD Expression			SIOD-formel
+C Expression			C-formel
+Guile Expression		Guile-formel
+Tcl Expression			Tcl-formel
+Change default interpreter	Ændr standardfortolker
+Change Default Interpreter	Ændr standardfortolker
+Other				Andre
+Add Property			Tilføj egenskab
+Embed Object			Indfæld i objekt
+Remove Object			Fjern objekt
+Open Object			Åbn objekt
+Save Object			Gem objekt
+Set Mark			Sæt mærke
+Set Block			Markér blok
+Unset Block			Fjern markering
+Copy Block			Kopiér blok
+Delete Block			Slet blok
+Fill Block			Fyld blok
+Smart Fill Block		Fyld blok smart
+Sort				Sortér
+Rows Ascending as Text		Rækker stigende som tekst
+Rows Ascending as Numbers	Rækker stigende som tal
+Rows Descending as Text		Rækker faldende som tekst
+Rows Descending as Numbers	Rækker faldende som tal
+Columns Ascending as Text	Kolonner stigende som tekst
+Columns Ascending as Numbers	Kolonner stigende som tal
+Columns Descending as Text	Kolonner faldende som tekst
+Columns Descending as Numbers	Kolonner faldende som tal
+Block Sum			Sum af blok
+Block Minimum			Mindste værdi
+Block Maximum			Største værdi
+Block Average			Gennemsnit
+Borders				Kantlinjer
+Grid				Gittermønster
+Underline			Understreg
+None				Ingen
+Column Width			Kolonnebredde
+Set				Vælg
+Fit Block			Tilpas blok
+Set Default			Vælg som standard
+Fit Block Width			Tilpas bredde efter blok
+Row Height			Rækkehøjde
+Fit Block Height		Tilpas højde til blok
+Set Default Format		Sæt standardformat
+Cell Format			Celleformat
+Block Format			Blokformat
+Cell Style			Cellestil
+Block Style			Blokstil
+Define Style			Definiér stil
+Cell Color			Cellefarve
+Block Color			Blokfarve
+Edit Record			Redigér post
+Data Entry			Datapost
+Siag-net			Siag-netværk
+Identify Cell			Identificér celle
+Recalculate			Regn om igen
+Change Buffer			Skift buffer
+Delete Buffer			Slet buffer
+Split Window			Opdel vindue
+Remove Window			Fjern vindue
+One Window			Et vindue
+Change Window			Skift vindue
+Add Sheet			Tilføj ark
+Remove Sheet			Fjern ark
+Rename Sheet			Omdøb ark
+Protect Cells			Beskyt celler
+Remove Protection		Fjern beskyttelse
+Go To				Gå til
+Beginning of buffer		Begyndelse af buffer
+End of buffer			Slutning af buffer
+Top of buffer			Top af buffer
+Bottom of buffer		Bund af buffer
+Grid Lines			Gittermønster
+Show				Vis
+Hide				Skjul
+Reference Style			Referencestil
+Disable Helptexts		Sluk for hjælpetekster
+Helptexts			Hjælpetekster
+Disable				Sluk
+Both				Begge
+Save Preferences		Gem indstillinger
+Lines				Linjer
+Points				Punkter
+Linespoints			Linjer och punkter
+Impulses			Impulser
+Dots				Prikker
+Steps				Trindiagram
+Boxes				Kasser
+Surface				Overflade
+Advanced			Avanceret
+Contents			Indhold
+Search				Søg
+Copying				Ophavsret
+About Siag			Om Siag
+About Siag...			Om Siag...
+About Siag Office...		Om Siag Office...
+About Pathetic Writer...	Om Pathetic Writer...
+About Egon Animator...		Om Egon Animator...
+About Xfiler...			Om Xfiler...
+About XedPlus...		Om XedPlus...
+About Gvu...			Om Gvu...
+Help for Help			Hjælp om Hjælp
+Links				Henvisninger
+Siag Home			Siags hjemmeside
+FTP Directory			FTP-mappe
+SIOD Command			SIOD-kommando
+C Command			C-kommando
+Guile Command			Guile-kommando
+Tcl Command			Tcl-kommando
+Web Server			Webserver
+Mail				Send e-post
+File Manager			Filhåndtering
+Form Test			Test af formular
+Another Form Test		En anden test af formular
+Yet Another Form Test		Endnu en test af formular
+Another Form Test Still		Yderligere en test af formular
+Import				Importér
+Export				Exportér
+Link				Henvisning
+Move				Flyt
+Expression			Formel
+Command				Kommando
+Sum				Summering
+Import Plugin			Importér indstik
+Move Plugin			Flyt instik
+Quit				Afslut
+External Program:		Eksternt program:
+Local File			Lokal fil
+Compressed File			Komprimeret fil
+Archive				Arkiv
+Compressed Archive		Komprimeret arkiv
+Generic				Alment
+Search:				Søg:
+Label:				Etiket:
+SIOD expression:		SIOD-udtryk:
+C expression:			C-udtryk:
+Guile expression:		Guile-udtryk:
+Tcl expression:			Tcl-udtryk:
+New expression interpreter:	Ny formelfortolker:
+Key				Nøgle
+Value				Værdi
+Object file:			Objektfil:
+Width:				Bredde:
+Height:				Højde:
+Bold				Fed
+Italic				Kursiv
+Top				Top
+Bottom				Bund
+Left				Venstre
+Right				Højre
+Center				Center
+Expression style:		Udtryksstil:
+Color:				Farve:
+color				farve
+Black				Sort
+Red				Rød
+Green				Grøn
+Blue				Blå
+Yellow				Gul
+Magenta				Magenta
+Cyan				Cyan
+White				Hvid
+Select Plugin:			Vælg indstik:
+Change Buffer:			Ændr buffer:
+Kill Buffer:			Dræb buffer:
+SIOD command:			SIOD-kommando:
+C command:			C-kommando:
+Guile command:			Guile-kommando:
+Tcl command:			Tcl-kommando:
+To:				Til:
+Enter user data			Indtast brugerdata
+First name			Fornavn
+Last name			Efternavn
+Address				Adresse
+Find pattern:			Find mønster:
+Go to:				Gå til:
+Pick one:			Vælg en:
+Yes				Ja
+No				Nej
+Replace				Erstat
+Spell				Stavning
+Tab Distance			Tabulatorlængde
+Beginning of paragraph		Begyndelse af afsnit
+End of paragraph		Slutning af afsnit
+Line Height			Linjehøjde
+Segment Format			Segmentsformat
+Line Format			Linjeformat
+Copy				Kopiér
+Use				Anvend
+Cleanup				Ryd op
+Segment Style			Segmentstil
+Line Style			Linjestil
+Segment Color			Segmentfarve
+Line Color			Linjefarve
+About Pathetic Writer		Om Pathetic Writer
+Spell Test			Stavetest
+Dump Words			Dump ordliste
+Default				Standard
+Invisible			Usynlig
+Integer				Heltal
+Scientific			Videnskabelig
+Fixed				Fast
+Date				Dato
+Time				Tid
+Comma				Komma
+Percent				Procent
+Hex				Hex
+Currency			Valuta
+User 1				Bruger 1
+User 2				Bruger 2
+User 3				Bruger 3
+User 4				Bruger 4
+User 5				Bruger 5
+Header 1			Overskrift 1
+Header 2			Overskrift 2
+Header 3			Overskrift 3
+Header 4			Overskrift 4
+Header 5			Overskrift 5
+Header 6			Overskrift 6
+Title				Titel
+Abstract			Uddrag
+Preformatted			Præformateret
+Embed				Indfæld
+Start another instance of Pathetic Writer	Start en ny Pathetic Writer
+Open a Pathetic Writer document			Åbn et Pathetic Writer-dokument
+Display the PW online documentation		Onlinehjælp for PW
+Underlined text			Understreget tekst
+Superscript			Forhøjet tekst
+Subscript			Sænket tekst
+Show Editor			Vis editor
+Hide Editor			Skjul editor
+Show editor			Vis editor
+Hide editor			Skjul editor
+Begin Empty Animation		Start ny animation
+Add Object			Tilføj objekt
+Line				Linje
+Image				Billede
+Delete Object			Slet objekt
+Change Object Type		Ændr objektstype
+Add tick			Tilføj tidspunkt
+Delete Tick			Slet tidspunkt
+Edit Properties			Redigér egenskaber
+Set Background			Vælg baggrund
+Timing				Timing
+Set Geometry			Vælg geometri
+Play Animation			Afspil animation
+Box Animation Demo		Demo af boksanimation
+Circle Animation Demo		Demo af cirkelanimation
+Line Animation Demo		Demo af linjeanimation
+Combo Animation Demo		Kombinationsdemo
+Box				Rektangel
+Circle				Cirkel
+Combo				Kombination
+About Egon Animator		Om Egon Animator
+Start another instance of Egon Animator	Start en ny Egon Animator
+Open an Egon Animator document		Åbn et Egon Animator-dokument
+Pop down animation			Skjul animation
+Pause the animation			Pause
+Previous animation frame		Forrige billede
+Play the animation			Afspil animationen
+Next animation frame			Næste billede
+Display the Egon online documentation	Onlinehjælp for Egon
+Rectangle				Rektangel
+Arc					Bue
+Ellipse					Ellipse
+Pixmap					Pixmap
+String					Tekst
+Point					Punkt
+Filled Rectangle			Udfyldt rektangel
+Filled Arc				Udfyldt bue
+Filled Ellipse				Udfyldt ellipse
+Open file				Åbn fil
+Save file				Gem fil
+Quit animation				Afslut animation
+Stop animation				Stop animation
+Previous frame				Forrige billede
+Next frame				Næste billede
+Play animation				Afspil animation
+Quit Egon				Afslut Egon
+No files found				Ingen filer fundet
+File saved				Fil gemt
+This window is too small to split	Dette vindue er for lille til at opdele
+Couldn't save				Kunne ikke gemme
+Save %s?				Gem %s?
+Loading					Indlæser
+New file				Ny fil
+Load auto startup code?			Indlæs startkode automatisk?
+Can't open loader file			Kan ikke åbne indlæsningsfil
+Parameters:				Parametre:
+External program failed			Eksternt program mislykkedes
+Attempt to delete sole ordinary window	Kan ikke slette sidste vindue
+No such buffer				Der findes ingen sådan buffer
+Overwrite existing %s?			Overskriv eksisterende %s?
+Can't open saver file			Kan ikke åbne gemmefil
+Couldn't kill last buffer		Kunne ikke dræbe sidste buffer
+%s command:				%s-kommando:
+%s expression:				%s-udtryk:
+Already defining kbd macro!		Definerer allerede tataturmakro!
+Defining kbd macro...			Definerer tastaturmakro...
+Not defining kbd macro			Definerer ikke tastaturmakro
+Keyboard macro defined			Tastaturmakro defineret
+Can't execute anonymous macro while defining one	Kan ikke udføre makro mens den defineres
+Input buffer overflow; macro execution terminated	For meget inddata; makrodefinition afsluttes
+Add Tick				Tilføj tidspunkt
+Add Line				Tilføj linje
+Add Rectangle				Tilføj rektangel
+Add Arc					Tilføj bue
+Add Ellipse				Tilføj ellipse
+Add Image				Tilføj billedfil
+Add String				Tilføj tekst
+Add Point				Tilføj punkt
+Add Filled Rectangle			Tilføj udfyldt rektangel
+Add Filled Ellipse			Tilføj udfyldt ellips
+Add Filled Arc				Tilføj udfyldt bue
+Sheet %d				Ark %d
+Sheet %d				Ark %d
+-Insert-				-Indsæt-
+-Overwrite-				-Overskriv-
+About					Om
+Access Permissions			Læserettigheder
+Add					Tilføj
+Alert					Advarsel
+All files (*)				Alle filer (*)
+Autofill:				Autoudfyld:
+Autoindent:				Autoindryk:
+Backward				Baglæns
+Begin					Begynd
+Bottom:					Bund:
+Call Sed				Kald Sed
+Can't make postscript			Kan ikke oprette postscript
+Cannot create backup file!		Kan ikke oprette sikkerhedskopi!
+Cannot create file!			Kan ikke oprette fil!
+Cannot open file for reading!		Kan ikke åbne fil for læsning!
+Cannot open file!			Kan ikke åbne fil!
+Cannot save file!			Kan ikke gemme fil!
+Center page				Centrér side
+Change %s:				Ændr %s:
+Change sort mode			Ændr sorteringsmåde
+Change view mode			Ændr visningsmåde
+Changing access permissions for %s	Ændr læserettigheder for %s
+Check Brackets				Tjek firkantede paranteser
+Clear					Ryd
+Close window				Luk vindue
+Code:					Kode:
+Command Window				Kommandovindue
+Command:				Kommando:
+Commands				Kommandoer
+Copy to:				Kopiér til:
+Copy...					Kopiér...
+Copyright...				Ophavsret...
+Create file:				Opret fil:
+Create folder				Opret mappe
+Create folder:				Opret mappe:
+Cursor position				Markørplacering
+Date:					Dato:
+Decrease magstep			Forøg zoom
+Deselect all				Umarkér alt
+Direction:				Retning:
+Directories				Mapper
+Display copyright information		Vis ophavsretsinformation
+Display online help			Vis onlinehjælp
+Display the online documentation	Vis onlinedokumentation
+Do it					Gør det
+Do it Selection				Gør det for det markerede
+Don't know how to handle this drop!	Ved ikke hvordan 'slip' skal behandles!
+Duration				Varighed
+EMPTY					TOM
+ERROR					FEJL
+Editor					Editor
+Empty					Tom
+End					Slut
+Error in Print Command String		Fejl i udskrivningskommando
+File does not exist and directory is write protected!	Filen eksisterer ikke og mappen er skrivebeskyttet!
+File has been modified by someone else!	Filen er blevet ændret af en anden!
+File manager				Filhåndtering
+File opened READ ONLY			Fil åbnet som skrivebeskyttet
+Filename pattern:			Filnavnsmønster:
+Files					Filer
+Find Bracket				Find firkantet parantes
+Find file				Find fil
+First page number:			Første side nummer:
+Folder					Mappe
+Font					Skrifttype
+Footer:					Sidefod:
+Forward					Fremad
+Go to folder:				Gå til mappe:
+Go to home directory			Gå til hjemmemappe
+Go to...				Gå til...
+Go up one directory			Gå en mappe op
+Group					Gruppe
+Has ticks				Har tik
+Has titles				Har titler
+Header on first page			Sidehoved på første side
+Header:					Sidehoved:
+Height					Højde
+Help browser				Hjælpebrowser
+Help...					Hjælp...
+Hide folders				Skjul mapper
+Icons					Ikoner
+Increase magstep			Forøg zoom
+Information...				Information...
+Insert					Indsæt
+Integration				Integration
+Jump					Spring
+LABEL					ETIKET
+Last Modification			Sidste ændring
+Last Status Change			Sidste status ændring
+Left:					Venstre:
+Length					Længde
+Line in buffer				Linje i buffer
+Line number?				Linjenummer?
+Line:					Linje:
+Link to:				Lænke til:
+Link...					Lænke...
+Logarithmic X axis			Logaritmisk X-akse
+Logarithmic Y axis			Logaritmisk Y-akse
+Magstep					Zoomniveau
+Mark					Mærke
+Mix folders/files			Bland mapper/filer
+Move to:				Flyt til:
+Move...					Flyt...
+Name					Navn
+Name:					Navn:
+Never					Aldrig
+New Xedplus				Ny Xedplus
+New...					Ny...
+Next					Næste
+Next page				Næste side
+No object selected			Intet objekt valgt
+No warranty				Ingen garanti
+None selected				Ingen valgt
+Object type:				Objekttype:
+Objects					Objekter
+Okay					Okay
+Open With...				Åbn med...
+Open a PostScript file			Åbn en postscript fil
+Open a text file			Åbn en tekstfil
+Open command window			Åbn kommandovindue
+Open with:				Åbn med:
+Open...					Åbn...
+Options					Indstillinger
+Orientation:				Orientering:
+Others					Andre
+Owner					Ejer
+Page					Side
+Parametric				Parametrisk
+Perform a User command			Udfør en brugerkommando
+Perform a User pipe			Udfør en brugerpibe
+Perform a stream editor command (sed)	Udfør en stream editor kommando (sed)
+Permissions...				Tilladelser
+Pipe					Pibe
+Pipes					Piber
+Previewer				Vis udskrift
+Previous				Forrige
+Previous page				Forrige side
+Print Command				Udskriv kommando
+Print Selection				Udskriv markering
+Print marked pages...			Udskriv mærkede sider...
+Print the file				Udskriv filen
+Print the marked pages			Udskriv de mærkede sider...
+Print...				Udskriv
+Printer					Printer
+Printer Name:				Printernavn:
+Properties				Egenskaber
+Redisplay				Gentag visning
+Redo					Gentag
+Remove					Fjern
+Reopen					Genåbn
+Replace Selection			Erstat markering
+Replace all				Erstat alt
+Replace veto				Erstatningsveto
+Replace with:				Erstat med:
+Respect protection			Respekter beskyttelse
+Restore					Gendan
+Right:					Højre:
+Save %s ?				Gem %s ?
+Save Selection				Gem markering
+Save marked pages...			Gem mærkede sider...
+Save the file				Gem filen
+Save the marked pages			Gem de mærkede sider
+Saved %s				Gemte %s
+Saved as %s				Gemte som %s
+Saving					Gemmer
+Search Selection			Søg i det markerede
+Search for:				Søg efter:
+Seascape				Panorama
+Select all				Vælg alle
+Select...				Vælg...
+Selection End				Slut på markering
+Selection Start				Start af markering
+Shift Selection Left			Flyt markering til venstre
+Shift Selection Right			Flyt markering til højre
+Show hidden files			Vis skjulte filer
+Size:					Størrelse:
+Sort by date				Sortér efter dato
+Sort by name				Sortér efter navn
+Sort by size				Sortér efter størrelse
+Special Char				Specialtegn
+Start another editor			Start en anden editor
+Start at:				Start ved:
+Stop					Stop
+Style %s changed			Stil %s ændret
+Swap Landscape				Ændr orientering
+Symbolic Link To			Symbolsk lænke til
+Tab distance:				Tabulatorafstand:
+Tab size:				Tabulatorstørrelse:
+Text					Tekst
+Text editor				Teksteditor
+Textbeginning				Tekstbegyndelse
+Textending				Tekstslutning
+This command does nothing		Denne kommando gør intet
+Ticks					Tik
+Time Difference				Tidsforskel
+Time:					Tid:
+Top:					Top:
+Tree					Træ
+Type					Type
+Type:					Type:
+Undo it					Fortryd det
+Unmark					Umarkér
+Unsaved Changes!			Ugemte ændringer
+Update icons				Opdatér ikoner
+Upside-down				På hovedet
+View					Vis
+Visible					Synlig
+Width					Bredde
+Word					Ord
+Word:					Ord:
+Wrap mode:				Tekstombrydning:
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s ved %d] [størrelse = %dx%d] [varighed=%d delta=%d]
+black					sort
+blue					blå
+cyan					cyan
+done.					færdig.
+green					grøn
+magenta					magenta
+no file yet				ingen fil endnu
+white					hvid
+yellow					gul
+yes					ja
+A file manager for X			En filhåndtering til X
+A postscript viewer for X		En postscriptviser til X
+A spreadsheet for X			Et regneark til X
+A word processor for X			En tekstbehandler til X
+Abort					Afbryd
+An animation program for X		Et animationsprogram til X
+App					App
+Authors:				Udviklere:
+BMP image				BMP-billede
+Can't exec GV				Kan ikke køre GV
+Can't exec lpr				Kan ikke køre lpr
+Can't open header file			Kan ikke åbne hovedfil
+Can't overwrite embedded object		Kan ikke overskrive indlejret objekt
+Cell					Celle
+Change  the font family			Ændr skrifttypefamilien
+Check Brakets				Tjek klammer
+Close Buffer				Luk buffer
+Confirm					Bekræft
+Custom					Personlig
+Defaults				Standard
+Deleting %s item from			Sletter %s element(er) fra
+Delta					Delta
+Demo					Demo
+Dialog					Dialogboks
+Efternamn				Efternavn
+Egon Animator 3.1.3. No Warranty.	Egon Animator 3.1.3. Ingen garanti.
+Egon Animator 3.1.5. No Warranty.	Egon Animator 3.1.5. Ingen garanti.
+Egon Animator 3.1.6. No Warranty.	Egon Animator 3.1.6. Ingen garanti.
+Egon Animator %s. No Warranty.		Egon Animator %s. Ingen garanti.
+Egon Editor				Egon Editor
+Environment				Miljø
+Filter			Filter
+Filter...		Filter...
+Form			Formular
+Format:			Format:
+Function A-F		Funktion A-F
+Function G-L		Funktion G-L
+Function M-S		Funktion M-S
+Function T-Z		Funktion T-Z
+Förnamn			Fornavn
+Gatuadress		Gadenavn
+GIF image		GIF-billede
+Goto line		Gå til linje
+Jpeg image		Jpeg-billede
+Land			Land
+List			Liste
+Manual			Manual
+New folder		Ny mappe
+no			nej
+<none>			<ingen>
+Nummer			Nummer
+on			på
+Open with...		Åbn med...
+Part of Siag Office	En del af Siag Office
+Pathetic Writer 3.1.3. No Warranty.	Pathetic Writer 3.1.3.  Ingen garanti.
+Pathetic Writer 3.1.5. No Warranty.	Pathetic Writer 3.1.5.  Ingen garanti.
+Pathetic Writer 3.1.6. No Warranty.	Pathetic Writer 3.1.6.  Ingen garanti.
+Pathetic Writer %s. No Warranty.	Pathetic Writer %s. Ingen garanti.
+Popup				Popop
+Postadress			Postadresse
+Postnummer			Postnummer
+red				rød
+Scheme Code (*.scm)		Scheme-kode (*.scm)
+Select				Vælg
+Siag (Scheme In A Grid) 3.1.6. No Warranty.	Siag (Scheme In A Grid) 3.1.6. Ingen garanti.
+Special				Speciel
+Style Default changed		Standardstil ændret
+Style Header 1 changed		Stilhoved 1 ændret
+Style Header 2 changed		Stilhoved 2 ændret
+Style Header 3 changed		Stilhoved 3 ændret
+Style Header 4 changed		Stilhoved 4 ændret
+Style Header 5 changed		Stilhoved 5 ændret
+Style Header 6 changed		Stilhoved 6 ændret
+Style User 1 changed		Brugerstil 1 ændret
+Style User 2 changed		Brugerstil 2 ændret
+Style User 3 changed		Brugerstil 3 ændret
+Style User 4 changed		Brugerstil 4 ændret
+Style User 5 changed		Brugerstil 5 ændret
+Style User 6 changed		Brugerstil 6 ændret
+Terminal			Terminal
+Test 1				Test 1
+Test 2				Test 2
+Test 3				Test 3
+Text (*.txt)			Tekst (*.txt)
+The interactive text editor for X	Den interaktive teksteditor for X
+This program is part of Siag Office,\nan effort to create a full-featured, free\noffice package for Unix and X.		Dette program er en del af Siag Office,\net forsøg på at lave en fuldt funktionsdygtig,\nfri kontorpakke for Unix og X.
+Toggle overwrite/insert		Skift m. overskriv/indsæt
+Ulric Testar		Ulric tester
+(Undo)			(Fortryd)
+Warning!		Advarsel!
+Webserver		Webserver
+Which format?		Hvilket format?
+Calculator		Lommeregner

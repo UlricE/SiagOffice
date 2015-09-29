@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Fonts</title>
+</head>
+
+<body>
+<h1>Fonts</h1>
+
+Fonts are defined by listing them in the file fonts.txt, which is
+installed in ${prefix}/share/siag/common, usually
+/usr/local/share/siag/common. The format of
+the file is:
+
+<pre>
+[Font Name]   Name as it appears to the user
+AFM=roman|italic|bold|italicbold      AFM filename
+PFB=roman|italic|bold|italicbold      PFB filename
+X=roman|italic|bold|italicbold        X fonts
+PS=roman|italic|bold|italicbold       PS fonts for printing
+T1=roman|italic|bold|italicbold       T1 fonts (used by libt1)
+<pre>
+
+<h3>Example</h3>
+
+<pre>
+[Avant Garde]
+AFM=agw.afm|agwo.afm|agd.afm|agdo.afm
+X=-*-courier-medium-r-*--*-%d-%d-%d-*-*-*-*|-*-courier-medium-i-*--*-%d-%d-%d-*-*-*-*|-*-courier-bold-r-*--*-%d-%d-%d-*-*-*-*|-*-courier-bold-i-*--*-%d-%d-%d-*-*-*-*
+PS=AvantGarde-Book|AvantGarde-BookOblique|AvantGarde-Demi|AvantGarde-DemiOblique 
+[Bitstream Charter]
+AFM=bchr.afm|bchri.afm|bchb.afm|bchbi.afm
+X=-*-new century schoolbook-medium-r-*--*-%d-%d-%d-*-*-*-*|-*-new century schoolbook-medium-i-*--*-%d-%d-%d-*-*-*-*|-*-new century schoolbook-bold-r-*--*-%d-%d-%d-*-*-*-*|-*-new century schoolbook-bold-i-*--*-%d-%d-%d-*-*-*-*
+T1=CharterBT-Roman|CharterBT-Italic|CharterBT-Bold|CharterBT-BoldItalic
+
+[Times2]
+AFM=tnrl2___.afm|tnrl2i__.afm|tnrl2b__.afm|tnrl2bi_.afm
+X=-*-times-medium-r-*--*-%d-%d-%d-*-*-*-2|-*-times-medium-i-*--*-%d-%d-%d-*-*-*-2|-*-times-bold-r-*--*-%d-%d-%d-*-*-*-2|-*-times-bold-i-*--*-%d-%d-%d-*-*-*-2
+PS=TimesNewRomanL2|TimesNewRomanL2-Italic|TimesNewRomanL2-Bold|TimesNewRomanL2-BoldItalic
+PFB=tnrl2___.pfb|tnrl2i__.pfb|tnrl2b__.pfb|tnrl2bi_.pfb
+</pre>
+
+The AFM directive specifies where the font metric files are. If the files
+are not available, X metrics will be used instead which will be less precise.
+<p>
+The optional PFB directive specifies where the font files are. A font
+that is not already installed on the printer must be included in the
+printout, which is what this directive accomplishes. In the example,
+Times2 is a Latin2 equivalent of Times. This is necessary because
+Latin2 glyphs are not included in most standard fonts.
+<p>
+The afm and pfb files are by default installed in the directory
+${prefix}/share/siag/common/fonts.
+
+<hr>
+<address>Ulric Eriksson - October 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

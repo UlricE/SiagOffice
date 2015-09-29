@@ -1,0 +1,98 @@
+.TH DUMMY_PLUGIN 1 LOCAL
+
+.SH NAME
+dummy_plugin
+
+.SH SYNOPSIS
+.B dummy_plugin
+[X-options] [siod-options] [filename...]
+
+.SH DESCRIPTION
+.I dummy_plugin
+is used by applications in the Siag Office package to allow
+applications that were not designed as plugins to be embedded
+into documents.
+
+.SH COMMAND LINE OPTIONS
+.TP
+.BI X-options
+See on-line documentation.
+.TP
+.BI SIOD-options
+See on-line documentation.
+
+.SH FILES
+.TP
+.BI $SIAGHOME/plugins/dummy.scm
+is automatically read on startup and contains the configuration
+necessary to tell dummy_plugin what to do with different types
+of files.
+.TP
+.BI $HOME/.siag/dummy.scm
+contains optional Scheme code which should be loaded after
+dummy.scm. This allows the user to override system-wide sttings
+for the dummy plugin.
+
+.PD
+.SH SEE ALSO
+On-line documentation, which contains more complete information about the
+invocation and usage.
+
+.SH DIAGNOSTICS
+Most error messages come from SIOD and are printed on the bottom line.
+See SIOD source and documentation for interpretation.
+
+.SH LIMITATIONS
+Due to the fact that the "kidnapped" applications do not speak
+the communications protol for plugins used by the Siag Office suite,
+there may be no way to do things that would be expected from normal
+plugins, such as loading and saving files, printing or even
+terminating gracefully.
+
+.SH BUGS
+Handles out of memory conditions ungracefully.
+
+And more.
+
+.SH VERSION
+The dummy plugin is part of Siag Office by Ulric Eriksson, 
+ulric\@siag.nu. 
+
+.SH AUTHOR
+Copyright (C) 1996-2000 Ulric Eriksson
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+MA 02111-1307, USA.
+
+.SH ACKNOWLEDGEMENTS
+Major parts of this program are written by people other than myself.
+There is no reason to re-implement stuff that is already freely available.
+
+For copyright information and installation instructions, see the
+various packages. The sources are hacked by Yours Truly to give the
+programs a uniform look. If you don't approve of that and/or already
+have the programs installed, there is no need to install my versions.
+
+These are not the original versions. If my modifications break
+anything, complain to me about it, not the original authors.
+If the original versions work and mine don't, then don't use mine.
+.TP
+.BI SIOD
+The embedded Scheme interpreter is an extremely small interpreter
+called Siod, which can be used stand-alone or easily integrated
+into a program as an extension language.
+
+Author: George J. Carrette, gjc\@delphi.com
+

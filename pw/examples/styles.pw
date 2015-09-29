@@ -1,0 +1,69 @@
+# Creator: Pathetic Writer 2.22. No Warranty.
+.sh 20
+.sf 98
+.sty0 Default,98,20,0
+.sty1 Header 1,53,30,0
+.sty2 Header 2,52,20,0
+.sty3 Header 3,51,20,0
+.sty4 Header 4,50,20,0
+.sty5 Header 5,49,20,0
+.sty6 Header 6,48,20,0
+.sty7 Address,106,20,7
+.sty8 Ordered List,98,20,8
+.sty9 Unordered List,98,20,9
+.sty10 Preformatted,2,20,10
+.sty11 User 1,98,20,11
+.sty12 User 2,98,20,12
+.sty13 User 3,98,20,13
+.sty14 User 4,98,20,14
+.sty15 User 5,98,20,15
+# /usr/local/siag/pw/examples/styles.pw
+# 24 lines
+#
+.rh 1 30
+.st 1 1
+.st 6 2
+.st 12 3
+.st 18 4
+.st 23 7
+# Line 1
+1 1 53	"Header 1
+# Line 2
+# Line 3
+3 1 98	"DefaultDefaultDefaultDefaultDefaultDefaultDefaultDefaultDefaultDefault
+# Line 4
+4 1 98	"DefaultDefaultDefaultDefaultDefaultDefaultDefaultDefaultDefaultDefault
+# Line 5
+# Line 6
+6 1 52	"Header 2
+# Line 7
+# Line 8
+8 1 98	"And some more text in Default. Typing Return in any of the header styles resets
+# Line 9
+9 1 98	"the style for the next line to Default. Of course, this can be defined on a per-style
+# Line 10
+10 1 98	"basis.
+# Line 11
+# Line 12
+12 1 51	"Header 3
+# Line 13
+# Line 14
+14 1 98	"The styles have default formats that are closely correlated to my version of Chimera.
+# Line 15
+15 1 98	"This is so that documents saved as HTML will look in Chimera just like they did in
+# Line 16
+16 1 98	"Pathetic Writer.
+# Line 17
+# Line 18
+18 1 50	"Saving as HTML
+# Line 19
+# Line 20
+20 1 98	"The styles have been selected so that they can easily be saved using HTML tags.
+# Line 21
+21 1 98	"The next paragraph is written in Address.
+# Line 22
+# Line 23
+23 1 106	"Ulric Eriksson - July 1997 - ulric@edu.stockholm.se
+# Line 24
+24 1 98	"
+# End of file /usr/local/siag/pw/examples/styles.pw

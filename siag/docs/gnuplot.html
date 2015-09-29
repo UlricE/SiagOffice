@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Siag - The Plotter</title>
+</head>
+
+<body>
+<h1>The Plotter</h1>
+
+Siag uses Gnuplot for plotting. Gnuplot is normally used interactively,
+that is, commands are entered on the command line. When used from Siag,
+however, Siag automatically 
+produces data and command files which are then processed
+by Gnuplot, so that it is not necessary to learn any Gnuplot commands
+to produce graphs from Siag.
+<h2>Gnuplot Made Easy</h2>
+To produce a graph from Siag, do the following:
+<ol>
+<li>Set the block on the data you want to plot
+<li>Click on the plotting icon
+</ol>
+That's it. This will produce a graph using lines. If the top row
+in the block contains labels, these will automatically be used
+for tic marks on the x axis. If the leftmost column contains
+labels, these will automatically be used as titles for the graphs.
+Anything else is used as data with one dataset per line.
+<p>
+The Plot menu can be used to select other plot styles. These are
+available:
+<dl>
+<dt><b>Lines</b>
+	<dd>Connects adjacent lines with points.
+<dt><b>Points</b>
+	<dd>Displays a small symbol at each point.
+<dt><b>Linespoints</b>
+	<dd>The linespoints style does both lines and points.
+<dt><b>Impulses</b>
+	<dd>Displays a vertical line from the x axis
+	to each point.
+<dt><b>Dots</b>
+	<dd>Plots a tiny dot at each point.
+<dt><b>Steps</b>
+	<dd>This style connects consecutive points with two
+	line segments: the first from (x1,y1) to (x1,y2)
+	and the second from (x1,y2) to (x2,y2).
+<dt><b>Boxes</b>
+	<dd>The boxes style draws
+	a box centered about the yaxis to the given y
+	coordinate.
+</dl>
+
+<h2>Advanced Plotting</h2>
+<i>None of this is actually implemented yet. This only describes
+what I would eventually be able to do with Siag.</i>
+<p>
+The "Advanced" plotting mode is only for users who are familiar with
+Gnuplot and the inner workings of Siag. It provides the possibility
+to plot <i>anything</i> that Gnuplot can plot, including 3D plots
+and plots where different datasets use different styles. The cost
+of this flexibility is that the plotting commands have to be entered
+as text.
+<p>
+The description below comes from the on-line help in Gnuplot.
+While the numerous parameters may seem intimidating, reasonable
+defaults are available for everything.
+<dl>
+<dt><b>mode</b>
+	<dd>The two primary plotting modes are 2D and 3D.
+<dt><b>title</b>
+	<dd>A title of each plot appears in the key
+<dt><b>style</b>
+	<dd>Plots may be displayed in one of eight styles:
+	<dl>
+	<dt><b>lines</b>
+		<dd>Connects adjacent lines with points.
+	<dt><b>points</b>
+		<dd>Displays a small symbol at each point.
+	<dt><b>linespoints</b>
+		<dd>The linespoints style does both lines and points.
+	<dt><b>impulses</b>
+		<dd>Displays a vertical line from the x axis
+		(or from the grid base for 3D plots) to each point.
+	<dt><b>dots</b>
+		<dd>Plots a tiny dot at each point.
+	<dt><b>errorbars</b>
+		<dd>The errorbars style is only relevant for 2D plotting.
+		It is like points, except that a vertical error bar
+		is also drawn from (x,ylow) to (x,yhigh). A tic
+		mark is placed at the ends of the error bar.
+	<dt><b>steps</b>
+		<dd>This style connects consecutive points with two
+		line segments: the first from (x1,y1) to (x1,y2)
+		and the second from (x1,y2) to (x2,y2).
+	<dt><b>boxes</b>
+		<dd>The boxes style is only relevant to 2D plotting. It draws
+		a box centered about the yaxis to the given y
+		coordinate.
+	<dt><b>boxerrorbars</b>
+		<dd>This style is a combination is combination of the boxes
+		and errorbars styles.
+	</dl>
+<dt><b>labels</b>
+	<dd>The x- and y-axis have lables. The x label is centered
+	along the x axis and the position of the y label depends
+	on the terminal.
+<dt><b>terminal</b>
+	<dd>Selects the type of graphics device for which Gnuplot
+	will produce output.
+<dt><b>output</b>
+	<dd>Directs the display to the specified file or device.
+<dt><b>logscale</b>
+	<dd>Log scaling may be set on the x, y, and z axes. Any combination
+	of x, y and z axes may use log scaling. If the base is not set,
+	10 is assumed.
+<dt><b>tics</b>
+	<dd>Fine control of the axis tic marks is possible. See the
+	documentation that comes with Gnuplot for more on this.
+<dt><b>grid</b>
+	<dd>If this is selected, a grid is drawn at the tic marks.
+<dt><b>time</b>
+	<dd>If selected, the time and date of the plot is placed
+	at the top or bottom of the left margin. The exact location
+	is device dependent.
+<dt><b>size</b>
+	<dd>Scales the displayed size of the plot.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - January 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

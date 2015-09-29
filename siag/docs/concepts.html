@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Siag - Concepts</title>
+</head>
+
+<body>
+<h1>Concepts</h1>
+
+<dl>
+<dt><b>label</b>
+	<dd>A descriptive text in a cell that is not used for any
+	calculations.
+<dt><b>expression</b>
+	<dd>A string in a cell which evaluates to a (floating point)
+	numeric result. The
+	simplest expression is a number; more complicated expressions
+	can be entered in Scheme syntax.
+	<p>
+	The Scheme used in Siag has a few extensions to make it more
+	useful in a spreadsheet. These new functions have been added:
+	<ul>
+		<li><b>(row)</b> Returns the row number of the
+			cell which is being computed.
+		<li><b>(col)</b> Returns the column number of
+			the cell which is being computed.
+		<li><b>(get-cell </b><i>row col</i><b>)</b> Returns
+			the contents of the cell with the given
+			coordinates.
+		<li><b>(sum </b><i>start end</i><b>)</b> Returns the sum
+			of all the cells in the rectangle between <i>start</i>
+			and <i>end</i>.
+	</ul>
+<dt><b>grid</b>
+	<dd>The area where labels and expressions are displayed.
+<dt><b>colnum</b>
+	<dd>The grey area where column numbers are displayed.
+<dt><b>rownum</b>
+	<dd>The grey area where row numbers are displayed.
+<dt><b>mark</b>
+	<dd>The "other" standard position in 
+	the document, which is used
+	for commands which need two coordinates.
+<dt><b>point</b> or <b>current cell</b>
+	<dd>The cell where labels and expressions 
+	are entered. The current
+	cell can be moved using arrow keys, the mouse and other
+	methods.
+<dt><b>block</b>
+	<dd>The block is a rectangular area which 
+	is displayed in inverse.
+	It is used for commands which operate on a 
+	whole range of cells.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - January 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

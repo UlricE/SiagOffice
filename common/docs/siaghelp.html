@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Using the Online Help in Siag Office</title>
+</head>
+
+<body>
+<h1>Using the Online Help in Siag Office</h1>
+
+The online help is accessed through any HTML browser by clicking
+on the "i" button on the toolbar or by selecting from the items
+on the Help menu.
+<p>
+The environment variable SIAGHELP can be set to the name of the
+preferred browser. It defaults to a
+<a href="siaghelp">wrapper</a> which starts
+Netscape with the help document loaded, but any HTML browser
+will do. SIAGHELP can be changed from the command line before
+starting Siag, or in ~/.profile to make the change permanent.
+<p>
+Note that Netscape can't be used without the wrapper, as it behaves
+differently depending on whether an instance of Netscape is
+already running.
+
+<pre>
+
+# Example using Chimera
+SIAGHELP="chimera"
+export SIAGHELP
+
+# Another example using Lynx in an xterm
+SIAGHELP="xterm -e lynx"
+export SIAGHELP
+
+# This won't work properly
+SIAGHELP="netscape"
+export SIAGHELP
+
+</pre>
+
+(Chimera is a browser written by John Kilburg. Chimera
+uses the Athena widget set; for this version I have used the 
+Athena 3D widgets, giving it a more modern look.)
+
+<hr>
+
+<address>Ulric Eriksson - July 1998 - ulric@siag.nu</address>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+.TH RUNCMD 1 LOCAL
+
+.SH NAME
+runcmd
+
+.SH SYNOPSIS
+.B runcmd
+application [args to application]
+
+.SH DESCRIPTION
+.I Runcmd
+is a simple tool that work as a wrapper to non-X applications. It
+redirects stdout/stderr of the application to an X window. From that window the
+user is able to abort the running program, to quit completely or to restart
+the application.
+
+.I Xfiler
+uses Runcmd to launch applications.
+
+.I Runcmd
+was originally written by Andre Hentz for the OffiX project,
+then under the name Execute. It was ported by Ulric Eriksson
+for Siag Office, but retains full compatibility with OffiX.
+
+.SH VERSION
+Current version (21 March 2000) is Runcmd 3.3.0 by Ulric Eriksson,
+ulric\@siag.nu.
+

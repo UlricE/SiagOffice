@@ -1,0 +1,10 @@
+
+! Global resources
+
+Runcmd.geometry:			600x200
+
+
+! Settings for widget classes, in alphabetic order
+
+Runcmd*Command.cursor:			hand2
+

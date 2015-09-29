@@ -1,0 +1,8 @@
+# KDE Config File
+[KDE Desktop Entry]
+MimeType=application/x-pw
+Comment=Pathetic Writer
+DefaultApp=pw
+Icon=pw.xpm
+Type=MimeType
+Patterns=*.pw;*.rtf;*.doc;

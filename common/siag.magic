@@ -1,0 +1,4 @@
+# File format identifiers, suitable for /etc/magic
+11	string		Siag		Siag spreadsheet file
+11	string		Pathetic	Pathetic Writer word processor document
+11	string		Egon		Egon Animator graphics file

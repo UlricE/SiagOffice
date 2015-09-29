@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Siag - Form Input</title>
+</head>
+<body>
+<h1>Form Input</h1>
+The Form interface is a convenient way to create dialogs. It is done by
+adding different widgets to a form, using a collection of Scheme
+functions. Each input widget has a name and a value, and the results
+are returned as an associative list.
+<p>
+Example: <a href="../xcommon/form.scm">form.scm</a>
+<p>
+Example: <a href="data.scm">data.scm</a>
+<p>
+It is also possible to declare an area of the sheet to be a "database" and
+use the form interface to edit the contents. To do this, set the
+block on the first line of the fields in the area. These columns
+can now be edited using the (data-record-edit) function.
+<p>
+<i>This is not a real database, only a nice way to edit the contents
+of a spreadsheet.</i>
+<dl>
+<dt><b>(form-begin)</b>
+<dd>Start a new form
+<dt><b>(form-label <i>label</i>)</b>
+<dd>Add a label to the form
+<dt><b>(form-text <i>name</i>)</b>
+<dd>Add a text entry field to the form
+<dt><b>(form-withprompt <i>prompt value width</i>)</b>
+<dd>Create a label followed by a text field of a specified width
+<dt><b>(form-record <i>name name ...</i>)</b>
+<dd>Create a form with one label and one text field per line
+<dt><b>(form-menu <i>name</i>)</b>
+<dd>Add a pull-down menu
+<dt><b>(form-menuentry <i>text</i>)</b>
+<dd>Add one entry to the menu
+<dt><b>(form-okbutton <i>label</i>)</b>
+<dd>Add a button which pops down the form, collects
+	the values and returns them
+<dt><b>(form-cancelbutton <i>label</i>)</b>
+<dd>Add a button which pops down the form, discards the values
+	and returns the empty list
+<dt><b>(form-property <i>name value</i>)</b>
+<dd>Changes an X property of the most recently added widget
+<dt><b>(form-properties <i>name value name value ...</i>)</b>
+<dd>Changes several properties in a single call
+<dt><b>(form-newline)</b>
+<dd>Add the next widget below the last one, rather than to the right
+<dt><b>(form-end)</b>
+<dd>Pop up the form, wait for the user to do something,
+	return the results
+<dt><b>(data-fieldnames)</b>
+<dd>Make a list of the strings from the first row of the block
+<dt><b>(data-record-collect <i>row</i>)</b>
+<dd>Collect the values from row <i>row</i>, returning the
+	results as an associative list of the form<br>
+	((fieldname . value) (fieldname . value) ...)
+<dt><b>(data-record-store <i>record row</i>)</b>
+<dd>Store a record back at row <i>row</i>
+<dt><b>(data-record-form <i>record labelwidth textwidth</i>)</b>
+<dd>Display a form with one line per field
+<dt><b>(data-record-edit <i>row</i>)</b>
+<dd>Edit one row in the "database". This is available on the menu
+	as Data - Edit Record.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - June 1997 - ulric@siag.nu</address>
+</body>
+</html>
+

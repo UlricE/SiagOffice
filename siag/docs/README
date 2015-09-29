@@ -1,0 +1,39 @@
+
+How to make the function reference
+----------------------------------
+
+The function reference lives in the file siag-functions.html, which is
+generated automatically from specially formatted comments in the program
+source. This is done in two steps:
+
+1. The program snarfdocs collects all the comments and creates one file
+   for each function in a temporary directory.
+
+2. The program snarfindex creates an index and copies all the temporary
+   files into siag-functions.html.
+
+Snarfdocs is written in C. Snarfindex is a Bourne shell script.
+
+Here is the complete set of commands. Starting in this directory.
+
+(make snarfdocs
+rm -rf tmp
+mkdir tmp
+cd tmp
+cat ../../*.c ../../*.scm | ../snarfdocs
+../snarfindex > ../siag-functions.html)
+(make snarfcmds
+rm -rf tmp
+mkdir tmp
+cd tmp
+cat ../../*.c ../../*.scm | ../snarfcmds
+../cmdindex > ../siag-commands.html)
+
+Generate keys.html:
+
+../../siod/siod keys.scm
+
+Generate commands.html:
+
+../../siod/siod menus.scm
+

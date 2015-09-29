@@ -1,0 +1,30 @@
+# Creator: Siag (Scheme In A Grid) 1.63. No Warranty.
+.sw 80
+.sh 20
+.sf 33
+.fmt131072 %d
+.fmt196608 %g
+.fmt262144 %.2f
+.fmt327680 %d/%d/%d
+.fmt393216 %d:%d:%d
+.fmt458752 %.2f
+.fmt524288 %.2f %%
+.fmt589824 %lX
+.fmt655360 $%.2f
+.fmt720896 %.2f
+.fmt786432 %.2f
+.fmt851968 %.2f
+.fmt917504 %.2f
+.fmt983040 %.2f
+# /usr/local/siag/siag/examples/tcltest.siag
+# 2 lines
+#
+# Line 1
+1 1 33	+Tcl,expr 1+2
+1 2 33	+Tcl,expr 234
+1 3 33	+Tcl,expr sin(0.5*3.14)
+1 4 33	+Tcl,set foo "foobar"
+# Line 2
+2 1 33	+Guile,(sin 3)
+2 4 33	+Tcl,set bar $foo
+# End of file /usr/local/siag/siag/examples/tcltest.siag

@@ -1,0 +1,820 @@
+<HTML><HEAD><TITLE>Manpage of XFILER</TITLE>
+</HEAD><BODY>
+<H1>XFILER</H1>
+Section: User Commands  (1)<BR>Updated: 12 April 1999<BR><A HREF="#index">Index</A>
+<HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+xfiler - X file manager with drag and drop capabilities
+<P>
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>xfiler</B>
+
+[<I>-version</I>] [<I>directories</I> ...]
+<P>
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<I>Xfiler</I> is a file  manager program for the X window system formely known
+as <I>files</I>, and before that as
+<I>xfm</I>. It provides virtually all of the features that you would expect in a file
+manager - move around your directory tree in multiple windows, move, copy
+or delete files, and launch programs with simple mouse operations. Directory
+displays are updated automatically in regular intervals when the contents of
+the directory changes. User-definable file types let you specify a command
+to be executed when double-clicking on a file. Last but not least,
+<I>xfiler</I> can automatically mount and unmount special devices like
+floppies as you open and close the corresponding directories (mount points).
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+<I>xfiler</I> accepts a list of directories as command line arguments. For
+each directory, <I>xfiler</I> opens a  file window. If no directory is given, 
+the user's home directory will be used.
+<A NAME="lbAF">&nbsp;</A>
+<H2>USAGE</H2>
+
+Most of it should be fairly obvious. There is one 
+or more file windows in which directories (also termed <I>folders</I>) are
+displayed. In order to perform an action, you either select items and then
+invoke a menu operation, or you drag items from a file window to a second
+(maybe the same) file window. You can also
+double-click on an item to start a corresponding action (like launching an
+application, editing a file, or changing directories), and press the right
+menu button on an item to bring up a menu containing operations for a single
+file or application. File operations are accessed
+from the file window menu bar as usual.
+<P>
+
+The left-hand mouse button selects an item (and deselects all others in the
+same window). The second button toggles the selected state of an item.
+<P>
+
+You can drag with the left-hand button to another window to move files from
+one directory to another. The second button used in the same way will copy
+files. New file windows can be opened by simply dragging a directory icon 
+to the root window. 
+<P>
+
+The action taken when double-clicking on a file depends on the type of the
+file. If it is a directory, it is displayed in the file window. If it is an
+executable, the program is started. Other files are opened in the default
+editor (specified by the <I>defaultEditor</I> resource), unless another action
+is given in the <I>rc</I> file (see CONFIGURATION below).
+<P>
+
+Directories can be displayed in three different forms: <I>tree</I> (display
+subdirectories in tree-like form), <I>icon</I> (display directories and files
+as icons) and <I>text</I> (similar to <I>ls -l</I>). These options are selected
+from the <I>View</I> menu. In the tree form, clicking on the arrows takes you
+up or down one level.
+<P>
+
+Directory displays are updated automatically in regular intervals when the
+contents of the directory changes. You can also explicitly request a folder
+update by double-clicking on the directory name field of the corresponding
+file window.
+<A NAME="lbAG">&nbsp;</A>
+<H2>MENU COMMANDS</H2>
+
+<P>
+FILE MENU
+<P>
+
+File manipulation operations.
+<DL COMPACT>
+<DT><I>New...</I>
+
+<DD>
+<BR>
+
+Create a new (and empty) file.
+<DT><I>Move...</I>
+
+<DD>
+<BR>
+
+Rename a single item (directory or file) or move selected items to another
+directory.
+<DT><I>Copy...</I>
+
+<DD>
+<BR>
+
+Create a copy of a single item under a new name or copy selected items to
+another directory.
+<DT><I>Link...</I>
+
+<DD>
+<BR>
+
+Like <I>Copy</I>, but creates symbolic links rather than copying the selected
+items.
+<DT><I>Delete</I>
+
+<DD>
+<BR>
+
+Delete the selected items.
+<DT><I>Select...</I>
+
+<DD>
+<BR>
+
+Select items by pattern. The usual metacharacters are recognized (<I>*</I>,
+<I>?</I>, <I>[ ]</I>). (Currently there is no provision for escaping these.)
+<DT><I>Select all</I>
+
+<DD>
+<BR>
+
+Select all items in the current directory (except the parent directory).
+<DT><I>Deselect</I>
+
+<DD>
+<BR>
+
+Deselect all items.
+<DT><I>Quit</I>
+
+<DD>
+<BR>
+
+Terminate <I>xfiler</I>.
+</DL>
+<P>
+
+FOLDER MENU
+<P>
+
+Operations dealing with directories and the file window.
+<DL COMPACT>
+<DT><I>New...</I>
+
+<DD>
+<BR>
+
+Create a new directory.
+<DT><I>Go to...</I>
+
+<DD>
+<BR>
+
+Display the specified directory.
+<DT><I>Home</I>
+
+<DD>
+<BR>
+
+Display your home directory.
+<DT><I>Up</I>
+
+<DD>
+<BR>
+
+Display the parent directory.
+<DT><I>Empty</I>
+
+<DD>
+<BR>
+
+Delete all items in the current directory.
+<DT><I>Close</I>
+
+<DD>
+<BR>
+
+Close this file window.
+</DL>
+<P>
+
+VIEW MENU
+<P>
+
+Options for the directory display.
+<DL COMPACT>
+<DT><I>Tree</I>
+
+<DD>
+<BR>
+
+Select the tree form display.
+<DT><I>Icons</I>
+
+<DD>
+<BR>
+
+Select the icons form display.
+<DT><I>Text</I>
+
+<DD>
+<BR>
+
+Select the text form display.
+<DT><I>Sort by name</I>
+
+<DD>
+<BR>
+
+Sort directory by name.
+<DT><I>Sort by size</I>
+
+<DD>
+<BR>
+
+Sort directory by size.
+<DT><I>Sort by date</I>
+
+<DD>
+<BR>
+
+Sort directory by date.
+<DT><I>Filter...</I>
+
+<DD>
+<BR>
+
+Specify a pattern to determine the files which should be displayed in the file
+window. (This only affects normal files, i.e. directory items will not be
+filtered. The <I>Clear</I> button in the Filter dialog form reverts to the full
+display.)
+<DT><I>Hide folders</I>
+
+<DD>
+<BR>
+
+Suppress directory items.
+<DT><I>Mix folders/files</I>
+
+<DD>
+<BR>
+
+Mix directories and other files.
+<DT><I>Show hidden files</I>
+
+<DD>
+<BR>
+
+Show hidden files (files starting with a dot).
+</DL>
+<P>
+
+FILE POPUP MENU
+<P>
+
+Operations on a single file. This menu pops up when pressing the right mouse
+button on a directory or file icon.
+<DL COMPACT>
+<DT><I>Open</I>
+
+<DD>
+Open a file window on the selected item. This option is only available if the
+selected item is a directory.
+<DT><I>Edit</I>
+
+<DD>
+<BR>
+
+Edit the selected item using the program specified in the <I>defaultEditor</I>
+resource (only available if the selected item is not a directory).
+<DT><I>View</I>
+
+<DD>
+<BR>
+
+Same as Edit, but invokes a program for viewing the file (<I>defaultViewer</I>
+resource).
+<DT><I>Move...</I>
+
+<DD>
+<BR>
+
+Move the selected item.
+<DT><I>Copy...</I>
+
+<DD>
+<BR>
+
+Copy the selected item.
+<DT><I>Link...</I>
+
+<DD>
+<BR>
+
+Create a symbolic link.
+<DT><I>Delete</I>
+
+<DD>
+<BR>
+
+Delete the selected item.
+<DT><I>Information...</I>
+
+<DD>
+<BR>
+
+Display information about the selected item (file size, permissions and such).
+<DT><I>Permissions...</I>
+
+<DD>
+<BR>
+
+Change the permissions of the selected item.
+</DL>
+<P>
+
+<A NAME="lbAH">&nbsp;</A>
+<H2>RESOURCES</H2>
+
+Various aspects of <I>xfiler</I> can be configured by changing corresponding
+resource settings in the applications default file. Some important resources
+are listed below:
+<DL COMPACT>
+<DT><B>bitmapPath</B>
+
+<DD>
+<DT><B>pixmapPath</B>
+
+<DD>
+<BR>
+
+The path on which to search for bitmap and pixmap icons, respectively.
+<DT><B>configFile</B>
+
+<DD>
+<BR>
+
+The names of the system-wide configuration file used by <I>Xfiler</I> (see
+CONFIGURATION). 
+<DT><B>doubleClickTime</B>
+
+<DD>
+<BR>
+
+Set the time interval in milliseconds for which a sequence of two mouse clicks
+should be interpreted as a double click. Default: 300.
+<DT><B>updateInterval</B>
+
+<DD>
+<BR>
+
+Set the time interval in milliseconds in which to perform automatic folder
+updates. Default: 10000.
+<DT><B>confirmXXX</B>
+
+<DD>
+<BR>
+
+Resources to request confirmation for various operations. <I>XXX</I> can be
+any one of <I>Deletes</I>, <I>DeleteFolder</I>, <I>Copies</I>, <I>Moves</I>,
+<I>Overwrite</I> and <I>Quit</I>. By default these are all enabled.
+<DT><B>defaultEditor</B>
+
+<DD>
+<BR>
+
+The command with which <I>xfiler</I> invokes your favourite editor.
+<DT><B>defaultViewer</B>
+
+<DD>
+<BR>
+
+The command with which <I>xfiler</I> invokes your favorite viewer.
+<DT><B>BourneShells</B>
+
+<DD>
+<BR>
+
+<I>Xfiler</I> calls other programs by executing your shell (as taken from the
+environment variable <I>SHELL</I>). Since Bourne compatible shells need one
+extra parameter, <I>xfiler</I> needs to know about the type of the shell. If this
+resource is not set (default), or is equal to the special string <I>AUTO</I>, a
+quick-and-dirty test is done at startup. 
+Set the <I>BourneShells</I> resource to a comma separated list of full path
+names of Bourne compatible shells if you experience problems. If your shell matches an entry in this
+list, <I>xfiler</I> will assume it is a Bourne shell.
+</DL>
+<P>
+
+There are way too many available resources to list them all in this manual
+page, so please take a look at the application defaults file for more
+information.
+<A NAME="lbAI">&nbsp;</A>
+<H2>CONFIGURATION</H2>
+
+Besides the application resources, <I>xfiler</I> can be configured by means of a
+configuration file called <I>.Filesrc</I> located in your home directory. If
+this file is not found, <I>xfiler</I> search for a system-wide one. The
+location of such file may vary and can be adjusted using the corresponding
+X resource. It is a plain ASCII file which can be edited using any text editor.
+Any line in this file which starts with a hash sign (<I>#</I>) is interpreted
+as a comment; empty lines are ignored. Note that there exists a line
+splitting this file in two parts: file type configuration and device
+configuration. Also, if <I>xfiler</I> has been compiled with the 
+<I>MAGIC_HEADERS</I> option then another file called <I>FilesMagic</I>
+(system-wide) or <I>~/.FilesMagic</I> is used (see below).
+<P>
+<A NAME="lbAJ">&nbsp;</A>
+<H2>FILE TYPE CONFIGURATION</H2>
+
+The first half of the <I>Filesrc</I> file specifies the types of ordinary (non-executable,
+non-directory) files which <I>xfiler</I> should recognize. 
+Each file type associates a pattern with an icon and two different kinds
+of actions (commands to be executed on the file). If <I>xfiler</I> has been
+compiled with the <I>MAGIC_HEADERS</I> option then it is possible to specify
+icons (but not actions) for directories and executables as well. Each line 
+has the following format:
+<P>
+<PRE>
+        pattern:icon:push-action:drop-action
+</PRE>
+
+<P>
+As indicated, the different fields are separated by a colon (use <I>\:</I>
+to escape the <I>:</I> character, and <I>\\</I> to escape the backslash
+character itself). The meaning of these fields is explained below.
+<DL COMPACT>
+<DT><B>pattern</B>
+
+<DD>
+This field allows you to specify which files belong to the type. File types
+can either be specified by a <I>filename pattern</I>, which refers to the name
+of a file, or a <I>magic header</I>, which refers to the contents of the file,
+or both.
+<P>
+There are three types of filename patterns: <I>Literal</I> patterns
+specify a literal filename such as ``<I>core</I>.'' <I>Suffix</I> patterns
+specify a suffix the filename must match, and are indicated by a leading
+asterisk, as in ``<I>*.c</I>.'' (All characters following the initial <I>*</I>
+are interpreted as literals; there is no expansion of embedded wildcards.)
+Finally, <I>prefix</I> patterns specify a prefix to be matched against the
+filename. They are denoted by a trailing asterisk, as in ``<I>README*</I>.''
+<P>
+Magic headers are specified by a symbolic name given in the <I>FilesMagic</I> 
+file, enclosed in angle brackets. Entries referring to a magic header cause the
+contents of the file to be checked against the magic numbers in the
+<I>FilesMagic</I> file. The format of these entries is described in Section 
+MAGIC HEADERS below.
+<DT><B>icon</B>
+
+<DD>
+The name of the bitmap or pixmap file containing the icon to be displayed
+for this file type.
+<DT><B>push-action</B>
+
+<DD>
+The command to be executed when the user double-clicks on a file of this
+type. This command is passed to the shell (via <I>-c</I>), together with
+the name of the selected file. The command is executed in the directory
+where the selected file is located. The filename is available in the command
+as the positional parameter number one, such that an action of the form
+<I>xyz $1</I> invokes the command <I>xyz</I> on the selected file. 
+There are also two special kinds of push actions built into <I>xfiler</I>,
+<I>EDIT</I> and <I>VIEW</I> which invoke the default editor and default viewer 
+on the selected file, respectively.
+<DT><B>drop-action</B>
+
+<DD>
+Similar to the push action, this field denotes a command to be executed when
+a collection of selected files is dropped onto the file. The absolute target
+filename itself is available as positional parameter <I>$1</I>, the remaining
+arguments denote the names of the files dropped onto the target file. The
+command is executed in the directory which contains the selected files. No
+special built-in commands are available for this type of action.
+</DL>
+<P>
+
+If an action field is empty, the corresponding action defaults to ``do
+nothing.'' For instance, the following entry defines an icon and an
+<I>EDIT</I> push action for <I>.c</I> files:
+<P>
+<PRE>
+        *.c:files_c.xpm:EDIT:
+</PRE>
+
+<P>
+As another example, here is an entry for compressed (i.e. gzipped) tar
+files. The push action causes the archive to be extracted, while the drop
+action replaces the contents of the archive with the files which have been
+dragged onto the archive:
+<P>
+<PRE>
+        *.tar.gz:files_taz.xpm:exec tar xfvz $1:exec tar cfvz $*
+</PRE>
+
+<P>
+(Note the use of the shell's <I>exec</I> command. Since actions are invoked
+through the shell, it is often useful to replace the shell with the actual
+command which is to be executed, in order to conserve memory space on
+small systems.)
+<P>
+
+It is possible that different patterns given in the <I>filesrc</I> file overlap.
+In this case <I>xfiler</I> uses the <I>first</I> pattern which matches. Therefore
+you should always list the more specific patterns first. For instance, the
+following two entries specify what to do with compressed tar files (specific
+case) and other <I>.gz</I> files (default case):
+<P>
+<PRE>
+        *.tar.gz:files_taz.xpm:exec tar xfvz $1:exec tar cfvz $*
+        *.gz:files_z.xpm:exec gunzip $1:
+</PRE>
+
+<P>
+
+<I>xfiler</I> also enables you to prompt for additional parameters before an action
+is executed. This is generally more useful with application entries than
+with file actions, and will therefore be described in the context of
+application configuration, see PARAMETER DIALOGS below.
+<A NAME="lbAK">&nbsp;</A>
+<H2>DRAG AND DROP OPERATIONS</H2>
+
+<I>xfiler</I> handles the following DND types:
+DndFile, DndExe, DndLink, DndFiles, DndRawData and DndText.
+DndText and DndRawData are ignored unless the drop occurred
+over a dir icon or over an empty region of the file window (called iconbox).
+Over the iconbox or a dir icon a new file is created and the DND data
+is thrown into it. Other kinds of drops are treated according to the target.
+Over icons with drop actions the corresponding action is executed
+in the directory of the target;
+the target name and the DND data are passed as parameters.
+When the drop occurs over an executable file that file is executed
+in its directory and the DND data is used as parameters.
+Over dir icons or the iconbox, a distinction between internal and external
+(drops that come from another application) is made;
+external drops are ignored while internal ones yield move/copy operations.
+Drop made over other kind of icons are ignored.
+<A NAME="lbAL">&nbsp;</A>
+<H2>MAGIC HEADERS</H2>
+
+When compiled with the <I>MAGIC_HEADERS</I> option, <I>xfiler</I> can determine
+file types using the magic numbers contained in the files.
+<P>
+
+The magic numbers are described in a configuration file whose path is obtained
+from the <I>magicFile</I> resource. The format of the file is the same as that
+of the <I><A HREF="../man5/magic.5">magic</A></I>(5) file, with some extensions like regular expression
+matching. (See <I><A HREF="../man1/xfmtype.1">xfmtype</A></I>(1).)
+<P>
+
+There are five built-in types which are used if all the patterns in the
+<I>magic</I> file fail:
+<DL COMPACT>
+<DT><B>unreadable</B>
+
+<DD>
+Read failed.
+<DT><B>empty</B>
+
+<DD>
+File size is zero.
+<DT><B>special</B>
+
+<DD>
+Not a regular file.
+<DT><B>ascii</B>
+
+<DD>
+Could be read and looks like ASCII.
+<DT><B>data</B>
+
+<DD>
+Could be read but all tests failed and doesn't look like ASCII.
+</DL>
+<P>
+
+To specify a magic file type you include it between angle brackets at the
+beginning of the pattern field:
+<P>
+<PRE>
+        &lt;GIF&gt;:files_gif.xpm:exec xpaint $1:
+</PRE>
+
+<P>
+or combined with a filename pattern:
+<P>
+<PRE>
+        &lt;ascii&gt;*.cc:files_cc.xpm:EDIT:
+</PRE>
+
+<P>
+
+In the latter case, the file must meet both conditions, i.e. be an ASCII file
+and have a <I>.cc</I> suffix.
+<P>
+
+To include angle brackets in the type or the pattern you must escape them
+using backslashes.
+<P>
+
+If <I>xfiler</I> is compiled with the <I>MAGIC_HEADERS</I> option, it is also
+possible to specify custom icons for directories and executables. For this
+purpose, the <I>magic</I> file distributed with <I>xfiler</I> provides magic file
+types named <I>&lt;DIR&gt;</I>, <I>&lt;EXEC&gt;</I>, etc. For instance, here is an entry
+which specifies a special icon for hidden directories:
+<P>
+<PRE>
+        &lt;DIR&gt;.*:hidden_dir.xpm::
+</PRE>
+
+<P>
+
+In the same way you can also override the built-in icons for displaying
+arbitrary directories and executables:
+<P>
+<PRE>
+        &lt;DIR&gt;..:parent_dir.xpm::
+        &lt;DIR&gt;:plain_dir.xpm::
+        &lt;DIR LNK&gt;:link_dir.xpm::
+</PRE>
+
+<A NAME="lbAM">&nbsp;</A>
+<H2>DEVICE CONFIGURATION</H2>
+
+The device configuration section of <I>filesrc</I>, lets you specify which mount
+points <I>xfiler</I> should keep track of, and which actions to perform in order
+to mount and unmount the corresponding file systems. This allows you to access
+file systems on special devices such as floppies, CD-Roms, etc. in a
+transparent way. All you have to do is to enter a directory named
+in <I>filesrc</I> (e.g. by opening a file window on it), and <I>xfiler</I> will
+automatically perform the corresponding mount action for you. Likewise, if you
+leave such a directory, <I>xfiler</I> invokes the corresponding unmount
+action. (CAUTION: You still have to take care that you unmount a file system,
+e.g. by closing every file window which has been opened on it, before you
+physically remove the corresponding medium.) Alternatively, it is
+recommended that you use external utilities like <I>supermount</I> to perform
+such operations without any risk of data loss.
+<P>
+
+An entry of the devide section has the following format:
+<P>
+<PRE>
+        directory:mount-action:umount-action
+</PRE>
+
+<P>
+The <I>directory</I> field denotes the mount point of the file system,
+<I>mount-action</I> the command to be executed in order to mount the file
+system, and <I>umount-action</I> the command for unmounting the file system.
+Here is a ``typical'' entry from a <I>filesrc</I> file:
+<P>
+<PRE>
+        /disk/a:mount -t msdos -o user /dev/fd0 /disk/a:umount /disk/a
+</PRE>
+
+<P>
+Of course, the details of how to mount a floppy file system may vary from
+system to system, and you might have to take special actions if you want to
+use <I>mount</I> as an ordinary user. See <I><A HREF="../man8/mount.8">mount</A></I>(8) for details.
+<A NAME="lbAN">&nbsp;</A>
+<H2>PARAMETER DIALOGS</H2>
+
+<I>xfiler</I> lets you prompt the user for additional parameters when a push
+or drop action is invoked. In such a case, a dialog form appears, with one
+field for each parameter, into which the user can enter the required
+arguments. Currently, no checking is done on the supplied parameters; in
+fact, the user can simply leave all fields empty. Parameters are specified
+in an action using the form
+<P>
+<PRE>
+        %parameter-name%
+</PRE>
+
+<P>
+where <I>parameter-name</I> is an arbitrary string not containing the <I>%</I>
+character, which will be displayed in the dialog form. (As usual, a literal
+<I>%</I> character can be escaped with the backslash.) <I>xfiler</I> replaces
+each such <I>%...%</I> construct with the corresponding value entered by the
+user.
+<P>
+
+<A NAME="lbAO">&nbsp;</A>
+<H2>CONSOLE OUTPUT</H2>
+
+Programs started by <I>xfiler</I> inherit their standard output and error streams
+from <I>xfiler</I>. Therefore, if you start <I>xfiler</I> from your session or window
+manager instead of an xterm, you should redirect <I>xfiler</I>'s standard
+output and error to something which you can read while <I>xfiler</I> is running,
+if the window manager does not already do that for you. Usually, you will
+reassign both <I>stdout</I> and <I>stderr</I> to <I>/dev/console</I>, using the
+command:
+<P>
+<PRE>
+        xfiler &gt;/dev/console 2&gt;&amp;1
+</PRE>
+
+<P>
+Then you can read error messages and other output produced by launched
+applications in the console window on your desktop (such as <I>xconsole</I>,
+or <I>xterm -C</I>).
+<A NAME="lbAP">&nbsp;</A>
+<H2>ICONS</H2>
+
+<I>xfiler</I> supports icons in both the X bitmap and Arnaud Le Hors' XPM format.
+A collection of useful icons is included in the distribution.
+<A NAME="lbAQ">&nbsp;</A>
+<H2>FILES</H2>
+
+<DL COMPACT>
+<DT><B>~/.Filesrc</B>
+
+<DD>
+Standard location for <I>xfiler</I> configuration file.
+</DL>
+<A NAME="lbAR">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<I>X</I>(1), <I>xconsole</I>(1), <I>xterm</I>(1), <I>mount</I>(8), Arnaud Le Hors:
+<I>XPM Manual. The X PixMap Format</I>, Groupe Bull, 1993. <I>The Drag and Drop
+HOWTO</I> by Cesar Crusius.
+<P>
+<A NAME="lbAS">&nbsp;</A>
+<H2>CAVEATS AND BUGS</H2>
+
+<I>xfiler</I> catches the TERM signal to gracefully terminate the program,
+unmounting all open file systems which have been mounted by <I>xfiler</I>.
+However, some window and session managers may not send TERM signals
+to their client applications when terminating an X session. Therefore it might
+be necessary to explicitly quit <I>xfiler</I> or manually close file windows before exiting X.
+<P>
+
+<I>xfiler</I> depends on your shell - see resource <I>BourneShells</I>.
+<P>
+
+Overwriting a directory while moving does not work.
+<A NAME="lbAT">&nbsp;</A>
+<H2>COPYRIGHT</H2>
+
+Copyright (c) 1990-1993 by Simon Marlow
+<BR>
+
+Copyright (c) 1994, 1995 by Albert Graef
+<BR>
+
+Copyright (c) 1996 by Andre Hentz
+<BR>
+
+Copyright (c) 1999 by Ulric Eriksson
+<A NAME="lbAU">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+The original version of this program (called <I>xfm</I>) was written by Simon 
+Marlow (simonm@dcs.glasgow.ac.uk) at the University of Glasgow. Albert Graef
+(ag@muwiinfa.geschichte.uni-mainz.de) at the University of Mainz 
+is the author of the lastest <I>xfm</I> version (1.3.2) which contains many 
+bug fixes and enhancements. Other people have contributed additional 
+features: 
+Dave Safford (dave.safford@edu.tamu.sc; automatic folder updates); 
+Robert Vogelgesang (vogelges@rhrk.uni-kl.de; shell detection code); 
+Juan D. Martin (juando@cnm.us.es; magic headers);
+Kevin Rodgers (rodgers@lvs-emh.lvs.loral.com; Filter option);
+Scott Heavner (sdh@falstaff.MAE.cwru.edu; View option); 
+Brian King (ender@ee.WPI.EDU; default values in parameter dialogs).
+<P>
+
+In 1996, this program underwent a complete reformulation in order to be able
+to work together with <I>DnD</I> (the Drag and Drop protocol by Cesar
+Crusius). Many features of earlier versions were removed due to the new role
+played by <I>xfiler</I> in the context of <I>OffiX</I>. <I>OffiX</I> is an
+expandable environment built around <I>DnD</I> and aimed to give novice and
+expert users a comfortable and common desktop.
+<P>
+
+In 1999 this code was snarfed by Ulric Eriksson to become part of Siag Office.
+At the same time, the user interface was redesigned to conform to the other
+Siag cousins.
+Intended as a small baseline file manager, it is available for all file
+management needs, but can be configured away.
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">USAGE</A><DD>
+<DT><A HREF="#lbAG">MENU COMMANDS</A><DD>
+<DT><A HREF="#lbAH">RESOURCES</A><DD>
+<DT><A HREF="#lbAI">CONFIGURATION</A><DD>
+<DT><A HREF="#lbAJ">FILE TYPE CONFIGURATION</A><DD>
+<DT><A HREF="#lbAK">DRAG AND DROP OPERATIONS</A><DD>
+<DT><A HREF="#lbAL">MAGIC HEADERS</A><DD>
+<DT><A HREF="#lbAM">DEVICE CONFIGURATION</A><DD>
+<DT><A HREF="#lbAN">PARAMETER DIALOGS</A><DD>
+<DT><A HREF="#lbAO">CONSOLE OUTPUT</A><DD>
+<DT><A HREF="#lbAP">ICONS</A><DD>
+<DT><A HREF="#lbAQ">FILES</A><DD>
+<DT><A HREF="#lbAR">SEE ALSO</A><DD>
+<DT><A HREF="#lbAS">CAVEATS AND BUGS</A><DD>
+<DT><A HREF="#lbAT">COPYRIGHT</A><DD>
+<DT><A HREF="#lbAU">AUTHORS</A><DD>
+</DL>
+<HR>
+Ulric Eriksson - April 1999 - ulric@siag.nu
+</BODY>
+</HTML>

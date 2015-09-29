@@ -1,0 +1,142 @@
+
+By default, files are installed into this structure. It matches the
+World According to Stallman, aka the GNU filesystem standard.
+
+A "feature" of this standard is to scatter files around the file system
+depending on their purpose. This map is my attempt to document where
+everything ends up and why.
+
+The exact locations depend on arguments given to configure when compiling.
+Type './configure --help' for a summary of available options. See also
+comments after the map.
+
+Some of the directories in this tree are empty. They are included here
+because they are defined in the GNU FSS.
+
+/usr
+|-/include
+`-/local [1][2]
+  |-/bin [3]		siag, pw, egon executables
+  |-/sbin
+  |-/lib [4]
+  | `-/siag
+  |   `-/plugins	plugins (all of them)
+  |-/share [5]
+  | |-/siag
+  | | |-/siod		SIOD runtime library
+  | | |-/common		Dictionaries, common Scheme libraries
+  | | |-/xcommon	Scheme libraries for X support
+  | | |-/plugins	Scheme libraries for plugins
+  | | |-/siag		Scheme for all versions of Siag
+  | | |-/xsiag		Scheme for Xt version of Siag
+  | | |-/pw		you get the picture...
+  | | |-/xpw
+  | | |-/egon
+  | | `-/xegon
+  | `-/emacs
+  |   `-/site-lisp
+  |-/etc
+  |-/com
+  |-/var
+  |-/lib		nothing
+  |-/info
+  |-/include
+  |-/man [6]
+  | `/man1		siag.1, pw.1, egon.1, image_plugin.1
+  `-/doc
+    `-/siag
+      |-/siod		SIOD docs
+      |-/common		Common docs
+      |-/xcommon	Common X docs
+      |-/siag		Siag docs
+      | `-/examples	Siag examples
+      |-/xsiag		Xt Siag docs
+      |-/pw		PW docs
+      | `-/examples	PW examples
+      |-/xpw		Xt PW docs
+      |-/egon		Egon docs
+      | `-/examples	Egon examples
+      `-/xegon		Xt Egon docs
+
+[1] prefix, default /usr/local
+[2] exec-prefix, default ${prefix}
+[3] bindir, default ${exec-prefix}/bin
+[4] libdir, default ${exec-prefix}/lib
+[5] datadir, default ${prefix}/share
+[6] mandir, default ${prefix}/man
+
+The following C preprocessor symbols are defined, along with their
+default values:
+
+LIBDIR="/usr/local/lib/siag"
+DATADIR="/usr/local/share/siag"
+DOCDIR="/usr/local/doc/siag"
+
+The following C and SIOD string variables are set, along with their
+default values:
+
+libdir=LIBDIR
+datadir=DATADIR
+docdir=DOCDIR
+
+The libdir variable is used to find plugins. The datadir is used to
+find Scheme libraries. The docdir is used to find online documentation.
+The docdir is a de facto standard extension to the GNU standard.
+
+Important change: nothing is installed into the /usr/local/libexec
+directory. Previous versions installed plugins there.
+
+As usual, things are meant to be installed by typing "make install" and
+not moved around manually afterwards. Putting files where Siag can't find
+them will inevitably lead to loss of functionality and possibly loss of
+data. However, it is possible to move the files if the environment
+variables SIAGHOME and SIAGDOCS are used to tell Siag their new
+whereabouts. If the variables are set, the following changes are
+made to the directory structure:
+
+$SIAGHOME
+ |-/siod		SIOD runtime library
+ |-/common		Dictionaries, common Scheme libraries
+ |-/xcommon		Scheme libraries for X support
+ |-/plugins		Plugins, scheme libraries for plugins
+ |-/siag		Scheme for all versions of Siag
+ |-/xsiag		Scheme for Xt version of Siag
+ |-/pw			you get the picture...
+ |-/xpw
+ |-/egon
+ `-/xegon
+
+$SIAGDOCS
+ |-/siod		SIOD docs
+ |-/common		Common docs
+ |-/xcommon		Common X docs
+ |-/siag		Siag docs
+ | `-/examples		Siag examples
+ |-/xsiag		Xt Siag docs
+ |-/pw			PW docs
+ | `-/examples		PW examples
+ |-/xpw			Xt PW docs
+ |-/egon		Egon docs
+ | `-/examples		Egon examples
+ `-/xegon		Xt Egon docs
+
+Setting the variables changes these C and SIOD variables in the
+following way:
+
+libdir=$SIAGHOME
+datadir=$SIAGHOME
+docdir=$SIAGDOCS
+
+Simply put: $SIAGHOME contains the merged contents of
+/usr/local/lib/siag and /usr/local/share/siag.
+$SIAGDOCS contains the contents of /usr/local/docs/siag.
+
+This exercise is not recommended. It is only meant for installing
+pre-compiled binaries on systems where you are not root and recompiling
+is not an option. Better solutions include:
+
+ - become root
+ - get a compiler
+ - get a new system
+ - grow tomatoes
+

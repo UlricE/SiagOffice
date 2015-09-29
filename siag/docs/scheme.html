@@ -1,0 +1,512 @@
+<html>
+<head>
+<title>Siag - Scheme</title>
+</head>
+
+<body>
+<h1>Scheme</h1>
+
+Siag uses Scheme for commands and expressions. This means that the program
+can be easily extended with new functions. When Load is chosen from the
+File menu, for instance, the Lisp function (load-buffer) is called.
+It is thus possible to make File - Load do something completely different
+by writing a new load-buffer function, perhaps adding the ability to
+read other file formats.
+<p>
+<a href="../siod/siod.html">
+Documentation for Siod, the Scheme interpreter used in Siag
+</a>
+<p>
+<h2>Cell references</h2>
+References to cells in the sheet can be done using A1 or R1C1 notation.
+Note that this is a nonstandard extension to the Scheme language
+which means that symbols cannot have names that start with one or
+more letters and finishes with one or more digits.
+<p>
+When lines and columns are inserted or removed, the references
+are automatically updated.
+<p>
+There is also a functional interface to the spreadsheet contents.
+<dl>
+<dt><b>(get-cell row column)</b>
+	<dd>Returns the value of the cell.
+<dt><b>(x-get-cell row column buffer)</b>
+	<dd>Cross-references between buffers are possible by
+	specifying the buffer name. The buffer must be loaded.
+<dt><b>(get-string row column)</b>
+	<dd>Returns the value of the cell in the form of a string,
+	regardless of what's actually there: a string, a number,
+	a label, an error or nothing.
+<dt><b>(x-get-string row column buffer)</b>
+	<dd>The same as get-string, but references another buffer.
+<dt><b>(href n)</b>
+	<dd>Refers to a cell n columns to the right (left for
+	negative n) of the current cell.
+<dt><b>(vref n)</b>
+	<dd>Refers to a cell n rows below (above for
+	negative cell) the current cell.
+<dt><b>(area-sum r1 c1 r2 c2)</b>
+	<dd>The sum of all cells from (r1,c1) to (r2,c2)
+<dt><b>(area-min r1 c1 r2 c2)</b>
+	<dd>The minimum of all cells from (r1,c1) to (r2,c2)
+<dt><b>(area-max r1 c1 r2 c2)</b>
+	<dd>The maximum of all cells from (r1,c1) to (r2,c2)
+<dt><b>(area-avg r1 c1 r2 c2)</b>
+	<dd>The average of all cells from (r1,c1) to (r2,c2)
+</dl>
+Additional functions can be defined in $SIAGHOME/siag/siag.scm,
+where they will be available for all users, or in
+$HOME/.siagrc, where they will be available for one user only.
+
+<h3>Ranges</h3>
+
+Certain functions can handle not only numbers and references, but whole
+ranges of cells. Such ranges are written as, for example,
+a1..c2 (A1 notation) or r1c1..r2c3 (R1C1 notation).
+In this case,
+the range consists of all cells from row 1, column 1 to row 2, column 3
+(6 cells altogether). Not all fuctions can handle ranges.
+<p>
+Ranges update when lines and columns are inserted or deleted, just
+like the references described above.
+
+<h2>Functions</h2>
+
+Siag adds the following functions to those defined by SIOD:
+<dl>
+<dt><b>(backward-cell)</b>
+	<dd>Move point one cell to the left.
+<dt><b>(forward-cell)</b>
+	<dd>Move point one cell to the right.
+<dt><b>(next-line)</b>
+	<dd>Move point one line down.
+<dt><b>(previous-line)</b>
+	<dd>Move point one line up.
+<dt><b>(beginning-of-line)</b>
+	<dd>Move point to column 1.
+<dt><b>(end-of-line)</b>
+	<dd>Move point to the last used cell in the current line.
+<dt><b>(beginning-of-buffer)</b>
+	<dd>Move point to column 1, line 1.
+<dt><b>(end-of-buffer)</b>
+	<dd>Move point to the last used cell in the last used line.
+<dt><b>(top-of-buffer)</b>
+	<dd>Move point to line 1 without changing the column.
+<dt><b>(bottom-of-buffer)</b>
+	<dd>Move point to the last used line without changing the column.
+<dt><b>(scroll-up)</b>
+	<dd>Move the window up one windowful.
+<dt><b>(scroll-cell-up)</b>
+	<dd>Move the window up one line.
+<dt><b>(scroll-down)</b>
+	<dd>Move the window down one windowful.
+<dt><b>(scroll-cell-down)</b>
+	<dd>Move the window down one line.
+<dt><b>(scroll-left)</b>
+	<dd>Move the window left one windowful.
+<dt><b>(scroll-cell-left)</b>
+	<dd>Move the window left one column.
+<dt><b>(scroll-right)</b>
+	<dd>Move the window right one windowful.
+<dt><b>(scroll-cell-right)</b>
+	<dd>Move the window right one column.
+<dt><b>(what-cursor-position)</b>
+	<dd>Prints information about the contents of the current cell
+	on the status bar.
+<dt><b>(delete-cell)</b>
+	<dd>Delete the contents of the current cell.
+<dt><b>(insert-line)</b>
+	<dd>Insert an empty line, moving the rest of the document down.
+<dt><b>(edit-label)</b>
+	<dd>Create a label in the current cell.
+<dt><b>(edit-expression)</b>
+	<dd>Create an expression in the current cell.
+<dt><b>(set-mark-command)</b>
+	<dd>Move mark to the current cell.
+<dt><b>(exchange-point-and-mark)</b>
+	<dd>Swap point and mark.
+<dt><b>(kill-region)</b>
+	<dd>Should delete everything between point and mark for compatibility
+	with Emacs, but currently does nothing. Block commands are available
+	for that purpose.
+<dt><b>(copy-block)</b>
+	<dd>Copy the block to the rectangular area with its top left corner
+	in the current cell. If the block overlaps the destination area,
+	useful fill operations can be achieved.
+<dt><b>(intelligent-copy-block)</b>
+	<dd>Copies the block in such a way that overlapping areas are handled
+	correctly.
+<dt><b>(delete-block)</b>
+	<dd>Deletes all the cells in block.
+<dt><b>(print-block)</b>
+	<dd>Dumps the block to a text file.
+<dt><b>(set-block)</b>
+	<dd>Sets the block to be the area between mark and point.
+<dt><b>(save-block-file)</b>
+	<dd>What does this do?
+<dt><b>(new-siag)</b>
+	<dd>Loads a new Siag window.
+<dt><b>(load-buffer)</b>
+	<dd>Loads a Siag document into a new buffer.
+<dt><b>(save-buffer)</b>
+	<dd>Saves the current buffer as a Siag document.
+<dt><b>(save-buffer-as)</b>
+	<dd>Saves the current buffer using a new file name.
+<dt><b>(print-version)</b>
+	<dd>Prints version information on the status bar.
+<dt><b>(help-contents)</b>
+	<dd>Starts the Chimera program with siag.html as argument.
+<dt><b>(help-search)</b>
+	<dd>Search for keyword. Currently not implemented.
+<dt><b>(help-for-help)</b>
+	<dd>Starts the Chimera program with siaghelp.html as argument.
+<dt><b>(recenter)</b>
+	<dd>Redraws the screen.
+<dt><b>(recalc-matrix)</b>
+	<dd>Recalculates all the cells once. If the are circular references,
+	this may need to be repeated.
+<dt><b>(execute-extended-command)</b>
+	<dd>Read and execute a Scheme command.
+<dt><b>(keyboard-quit)</b>
+	<dd>Abort a multi-key command sequence.
+<dt><b>(quit-siag)</b>
+	<dd>Exit from Siag. If there are any unsaved changes, asks if they
+	should be saved.
+<dt><b>(no-op)</b>
+	<dd>Does nothing. Sometimes useful for debugging.
+</dl>
+
+<h3>Functions available for expressions</h3>
+
+Hundreds of string and/or numeric functions are available. The full
+reference is <a href="siag-functions.html">here</a>. The reference
+shows the standard syntax, not the Scheme syntax. The mapping
+between the two is trivial.
+<p>
+There are three ways to execute Scheme code:
+<ol>
+	<li>Enter it as an expression in a cell
+	<li>Press ( or Alt-X and type it in the input window
+	<li>Load it from a file using 
+		<b>(load </b><i>"filename"</i><b>)</b>
+</ol>
+A file can be loaded on startup by giving the option <b>-iFilename</b>
+on the command line. A useful file to load is siod.scm which adds
+common functions like caar, cadr and the like.
+<p>
+There is no difference between functions that are intended for commands
+and those that are intended for expressions. It is quite possible to
+enter the function (forward-cell) into a cell, making the point move
+forward every time the sheet is recalculated (a command cannot be
+entered directly as it returns nil and an expression must return
+a number, but it can be entered as <b>(begin (forward-cell) 0)</b>,
+which returns 0).
+<p>
+It is also possible
+to make the program compute the sum (+ 1 2) every time a certain key
+is pressed. Not very useful (except for debugging), but possible.
+This is done by changing the keybindings in the resource file.
+
+<h2>Examples</h2>
+<dl>
+<dt><b>123.4</b>
+	<dd>The constant 123.4
+<dt><b>(- (+ 1 2) 3)</b>
+	<dd>This evaluates to 0
+<dt><b>(get-cell 3 4)</b>
+	<dd>The contents of the cell in row 3, column 4
+<dt><b>(get-cell R (- C 1))</b>
+	<dd>The contents of the cell immediately to the left of the
+		current cell
+<dt><b>(href -1)</b>
+	<dd>The same as above
+<dt><b>(+ r2c3 r2c4)</b>
+	<dd>The sum of the value in row 2, column 3 and the value
+	in row 2, column 4
+<dt><b>(+ c2 d2)</b>
+	<dd>The same as above, except that A1 notation was used
+	instead of R1C1.
+<dt><b>(acos r3c1)</b>
+	<dd>Arc cosine of the value in row 3, column 1.
+<dt><b>(tan r2c2)</b>
+	<dd>Tangent of r2c2.
+<dt><b>(/ (sin r2c2) (cos r2c2))</b>
+	<dd>Also tangent of r2c2.
+<dt><b>(pow temp 0.25)</b>
+	<dd>The variable temp raised to the power of 1/4.
+<dt><b>(pow temp (/ 1 4))</b>
+	<dd>The same as above.
+<dt><b>(asin (sin 1.59))</b>
+	<dd>This evaluates to 1.59
+<dt><b>(r_sum r2c2..r5c6 r1c1 12)</b>
+	<dd>The sum of all numbers between row 2, column 2 and row 5,
+	column 6; the number in row 1, column 1; and the number 12.
+</dl>
+
+<h2>Command Reference</h2>
+
+<h3><a name="load-buffer">(load-buffer)</a></h3>
+Asks for a file name and opens the file with that name as a
+Siag document.
+
+<h3><a name="new-buffer">(new-buffer)</a></h3>
+Opens a new empty Siag window.
+
+<h3><a name="preview">(preview)</a></h3>
+Preview the contents of the current buffer.
+
+<h3><a name="print">(print)</a></h3>
+Prints the current buffer using the <b>lpr</b> command.
+
+<h3><a name="save-buffer">(save-buffer)</a></h3>
+Saves the currently open document
+using the most recently used filename. If no name has been
+given to the document, the name "noname.siag" is used.
+
+<h3><a name="save-buffer-as">(save-buffer-as)</a></h3>
+Asks for a filename and saves the currently open document
+using that filename.
+
+<h3><a name="load-external">(load-external)</a></h3>
+Calls an external program to load a document. This can be used to
+load over a network, using a program like httpget. The program
+must print the document on stdout.
+
+<h3><a name="save-external">(save-external)</a></h3>
+Calls an external program to save a document. The program must
+read the document from stdin.
+
+<h3><a name="quit-program">(quit-program)</a></h3>
+Quits from Siag. If there are any changes that have not
+been saved, Siag asks if they should be saved.
+
+<h3><a name="undo-restore">(undo-restore)</a></h3>
+Undoes the latest undoable operation. Not all operations can be
+undone; in particular, operations involving very large ranges of
+cells can require so much space that it is not realistic to store
+the previous state. Also, some commands simply don't implement undo.
+
+<h3><a name="delete-cell">(delete-cell)</a></h3>
+Delete the contents of the current cell.
+
+<h3><a name="insert-line">(insert-line)</a></h3>
+Insert a line into the document, shifting the rest of the document
+down.
+
+<h3><a name="remove-line">(remove-line)</a></h3>
+Remove one line, shifting the rest of the document up.
+
+<h3><a name="insert-col">(insert-col)</a></h3>
+Insert one column, shifting the rest of the document right.
+
+<h3><a name="remove-col">(remove-col)</a></h3>
+Remove one column, shifting the rest of the document left.
+
+<h3><a name="select-all">(select-all)</a></h3>
+Select every cell in the grid.
+
+<h3><a name="search-forward">(search-forward)</a></h3>
+Search the grid for a cell where the text matches a string.
+
+<h3><a name="search-backward">(search-backward)</a></h3>
+Like Find, but search backwards.
+
+<h3><a name="edit-label">(edit-label)</a></h3>
+Asks for a label to insert into the current cell.
+
+<h3><a name="edit-siod">(edit-siod)</a></h3>
+Asks for a SIOD expression to insert into the current cell.
+
+<h3><a name="edit-c">(edit-c)</a></h3>
+Asks for a C expression to insert into the current cell.
+
+<h3><a name="edit-guile">(edit-guile)</a></h3>
+Asks for a Guile expression to insert into the current cell.
+Requires the optional Guile interpreter.
+
+<h3><a name="edit-tcl">(edit-tcl)</a></h3>
+Asks for a Tcl expression to insert into the current cell.
+Requires the optional Tcl interpreter.
+
+<h3><a name="set-mark-command">(set-mark-command)</a></h3>
+Moves the mark to the current cell.
+
+<h3><a name="set-block">(set-block)</a></h3>
+Sets the block to be the rectangular area between the mark and
+the current cell.
+
+<h3><a name="unset-block">(unset-block)</a></h3>
+Clears the block from the grid.
+
+<h3><a name="copy-block">(copy-block)</a></h3>
+Copies the contents of the block to the area to the right and
+below the current cell.
+
+<h3><a name="delete-block">(delete-block)</a></h3>
+Deletes all the cells in the block.
+
+<h3><a name="fill-block">(fill-block)</a></h3>
+Fill every cell in the selection with a single value or a pattern
+of values.
+
+<h3><a name="block-sum">(block-sum)</a></h3>
+Inserts a formula calculating the sum of the cells in the block
+into the current cell.
+
+<h3><a name="block-min">(block-min)</a></h3>
+Inserts a formula calculating the smallest value of the cells in the block
+into the current cell.
+
+<h3><a name="block-max">(block-max)</a></h3>
+Inserts a formula calculating the largest value of the cells in the block
+into the current cell.
+
+<h3><a name="block-avg">(block-avg)</a></h3>
+Inserts a formula calculating the average of the cells in the block
+into the current cell.
+
+<h3><a name="block-borders">(block-borders 0/1/2/3)</a></h3>
+<ul>
+<li>0: Removes borders from every cell in the block.
+<li>1: Puts borders around the block.
+<li>2: Puts borders around every cell in the block.
+<li>3: Puts borders under the last line of the block.
+</ul>
+
+<h3><a name="set-cell-width">(set-cell-width)</a></h3>
+Sets the width in pixels of the current column.
+
+<h3><a name="fit-block-width">(fit-block-width)</a></h3>
+Sets the width of every column in the selection to be just wide
+enough for the values that are to be displayed.
+
+<h3><a name="set-cell-height">(set-cell-height)</a></h3>
+Sets the height in pixels of the current row.
+
+<h3><a name="fit-block-height">(fit-block-height)</a></h3>
+Sets the height of every row in the selection to be just
+high enough for the values that are to be displayed.
+
+<h3><a name="define-style">(define-style)</a></h3>
+All the styles can be redefined, given a little care and understanding
+of how printf works. Most formats are simply variations of floating
+point, but Integer and Hex are by definition integer and are called
+with integer arguments. Date and Time are really weird and should
+be more flexible.
+
+<h3><a name="new-attribute">(new-attribute
+"family"/"style"/"fg"/"bg")</a></h3>
+Change the way the current cell or the selection looks.
+
+<h3><a name="data-record-edit">(data-record-edit)</a></h3>
+Enter values into a record, where the field names are taken from the
+first line of the block. This way, all a user has to do is to set the
+block where the database is to be, put the cursor on the line where
+he wants to edit a record and select Data - Edit Record.
+
+<h3><a name="data-entry">(data-entry)</a></h3>
+This function is useful when entering data into many cells. After
+a record has been edited, the program automatically moves down one
+line and continues with the next.
+
+<h3><a name="siag-net port">(siag-net port)</a></h3>
+Starts a trivial TCP based data server which listens on port 8080
+and understands the following commands:
+<dl>
+<dt><b>PUT r1 c1 r2 c2</b>
+	<dd>Reads one label per line and puts them into r1c1..r2c2.
+<dt><b>GET r1 c1 r2 c2</b>
+	<dd>Prints one label per line from the range r1c1..r2c2.
+<dt><b>QUIT</b>
+	<dd>Exits the server and returns to Siag.
+</dl>
+Note that once the server is started, Siag no longer responds to
+user input until it recieves a QUIT command.
+
+<h3><a name="switch-to-buffer">(switch-to-buffer)</a></h3>
+Change which buffer is displayed in the current window.
+
+<h3><a name="kill-buffer">(kill-buffer 1)</a></h3>
+Delete the current buffer.
+
+<h3><a name="split-window-vertically">(split-window-vertically)</a></h3>
+Split the current buffer in two.
+
+<h3><a name="delete-window">(delete-window)</a></h3>
+Remove the current window and give its space to its neighbors.
+
+<h3><a name="delete-other-windows">(delete-other-windows)</a></h3>
+Remove all windows except the current one.
+
+<h3><a name="other-window">(other-window)</a></h3>
+Make the next window current.
+
+<h3><a name="protect-cells">(protect-cells)</a></h3>
+Prevents the point from moving into any of the cells above and to
+the left of it. Also makes those lines and columns stay on the
+window so that they are visible even if the grid is scrolled.
+
+<h3><a name="remove-protection">(remove-protection)</a></h3>
+Removes the protection previously set by Window - Protect Cells.
+
+<h3><a name="grid-lines">(grid-lines 1/0)</a></h3>
+Toggles visibility of the grid lines on the screen. This does not
+in any way affect the output when the sheet is printed.
+
+<h3><a name="tooltip-set">(tooltip-set 0)</a></h3>
+Removes the yellow popup bubbles when the mouse pointer is moved over
+the toolbar buttons. See also the function (tooltip-set N).
+
+<h3><a name="splot">(splot "lines")</a></h3>
+Makes a surface plot using lines.
+
+<h3><a name="plot-wizard">(plot-wizard)</a></h3>
+Show a form where the user can specify the appearance of a plot.
+
+<h3><a name="exec-siod">(exec-siod)</a></h3>
+Enter a command to be executed by the SIOD interpreter.
+
+<h3><a name="exec-c">(exec-c)</a></h3>
+Enter a command to be executed by the C interpreter. This currently
+is not operational.
+
+<h3><a name="exec-guile">(exec-guile)</a></h3>
+Enter a command to be executed by the optional Guile interpreter.
+
+<h3><a name="exec-tcl">(exec-tcl)</a></h3>
+Enter a command to be executed by the optional Tcl interpreter.
+
+<h3><a name="spawn command">(spawn command)</a></h3>
+Forks and runs an external program as a separate process.
+
+<h3><a name="webserver">(webserver)</a></h3>
+Starts a simple one-shot web server on port 8080.
+
+<h3><a name="mailto">(mailto)</a></h3>
+Mails the current document using SMTP. Requires sendmail running on
+the local host.
+
+<h3><a name="filemgr">(filemgr)</a></h3>
+A simple demo of Siag as a file manager. Adds a few file management
+commands and displays the contents of the current directory in the grid.
+
+<h3><a name="help-contents">(help-contents)</a></h3>
+Displays the Siag online documentation.
+
+<h3><a name="help-search">(help-search)</a></h3>
+This command does nothing useful.
+
+<h3><a name="help-copyright">(help-copyright)</a></h3>
+Displays the GNU public licence.
+
+<h3><a name="help-for-help">(help-for-help)</a></h3>
+Displays help for using the online help.
+
+<h3><a name="print-version">(print-version)</a></h3>
+Displays the current version string.
+
+<hr>
+<address>Ulric Eriksson - July 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

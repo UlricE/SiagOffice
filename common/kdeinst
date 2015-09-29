@@ -1,0 +1,96 @@
+#!/bin/sh
+
+mkdirpath()
+{
+	(IFS=/
+	p=/
+	for f in $1; do
+		p="$p/$f"
+		if [ ! -d "$p" ]; then
+			mkdir "$p"
+		fi
+	done) 2> /dev/null
+}
+		
+MODE=install
+APPLNK=""
+MIMELNK=""
+ICON=""
+VERBOSE=no
+
+while [ "$1" ]; do
+	case $1 in
+	-u )
+		MODE=uninstall
+		;;
+	-d )
+		KDEDIR="$2"
+		shift
+		;;
+	-a )
+		APPLNK="$2"
+		shift
+		;;
+	-m )
+		MIMELNK="$2"
+		shift
+		;;
+	-i )
+		ICON="$2"
+		shift
+		;;
+	-v )
+		VERBOSE=yes
+		;;
+	* )
+		echo Bogus argument "$1" to kdeinst
+		exit
+		;;
+	esac
+	shift
+done
+
+if [ "$KDEDIR" = "" -o ! -w "$KDEDIR" ]; then
+	if [ -d /opt/kde -a -w /opt/kde ]; then
+		KDEDIR=/opt/kde			# SUSE, Slackware
+	elif [ -d /usr/local/kde -a -w /usr/local/kde ]; then
+		KDEDIR=/usr/local/kde		# YGIAGAM
+	elif [ -d /usr/kde -a -w /usr/kde ]; then
+		KDEDIR=/usr/kde			# Another guess
+	elif [ -d "$HOME/.kde" -a -w "$HOME/.kde" ]; then
+		KDEDIR="$HOME/.kde"		# Home directory
+	else
+		if [ $VERBOSE = yes ]; then
+			echo Don\'t know where to put anything
+		fi
+		exit
+	fi
+fi
+
+if [ "$APPLNK" ]; then
+	if [ "$MODE" = uninstall ]; then
+		rm -f "$KDEDIR/share/applnk/Siag Office/$APPLNK"
+	else
+		mkdirpath "$KDEDIR/share/applnk/Siag Office"
+		cp "$APPLNK" "$KDEDIR/share/applnk/Siag Office"
+	fi
+fi
+
+if [ "$MIMELNK" ]; then
+	if [ $MODE = uninstall ]; then
+		rm -f "$KDEDIR/share/mimelnk/application/$MIMELNK"
+	else
+		mkdirpath "$KDEDIR/share/mimelnk/application"
+		cp "$MIMELNK" "$KDEDIR/share/mimelnk/application"
+	fi
+fi
+
+if [ "$ICON" ]; then
+	if [ $MODE = uninstall ]; then
+		rm -f "$KDEDIR/share/icons/$ICON"
+	else
+		mkdirpath "$KDEDIR/share/icons"
+		cp "$ICON" "$KDEDIR/share/icons"
+	fi
+fi
+

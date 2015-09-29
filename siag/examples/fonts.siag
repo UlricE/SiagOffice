@@ -1,0 +1,26 @@
+.sw 80
+.sh 20
+.sf 33
+# /home/ulric/siag-0.93/siag/examples/fonts.siag
+# 4 lines
+#
+.rh 2 25
+.rh 3 30
+.rh 4 25
+# Line 1
+1 1 1395	"Times 14 bold
+1 2 1057	#
+1 3 1057	#
+1 4 1569	#
+# Line 2
+2 1 332	"New Century Schoolbook 18 italic
+2 4 545	#
+# Line 3
+3 1 317	"Helvetica 24 bold oblique
+3 4 545	#
+# Line 4
+4 1 2308	"Courier 18
+4 2 2081	#
+4 3 2081	#
+4 4 2593	#
+# End of file /home/ulric/siag-0.93/siag/examples/fonts.siag

@@ -1,0 +1,12 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowExec=
+SwallowTitle=
+BinaryPattern=
+Name[C]=Xedplus
+Exec=xedplus %f
+Icon=xedplus.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

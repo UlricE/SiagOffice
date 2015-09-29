@@ -1,0 +1,55 @@
+! This file is theme.kde, a theme to make Siag Office resemble KDE.
+
+! Use KDE-like toolbar icons
+PIXPATH:		.../common/bitmaps/kde:.../common/bitmaps
+
+! Buttons are not animated
+Siag*Command.translations:  #override       \n\
+        <Enter>:
+        <Leave>:
+Siag*Repeater.translations: #override       \n\
+        <Enter>:
+        <Leave>:
+Siag*Toggle.translations:   #override       \n\
+        <Enter>:
+        <Leave>:
+Pw*Command.translations:  #override       \n\
+        <Enter>:
+        <Leave>:
+Pw*Repeater.translations: #override       \n\
+        <Enter>:
+        <Leave>:
+Pw*Toggle.translations:   #override       \n\
+        <Enter>:
+        <Leave>:
+
+! Flat buttons on the toolbar that pop out 2 pixels when mouse passes over
+Siag*vsep.topShadowContrast:		0
+Siag*vsep.bottomShadowContrast:		0
+Siag*formatbox.Command.shadowWidth:	0
+Siag*toolbox.Command.shadowWidth:	0
+Siag*toolbox.Toggle.shadowWidth:	0
+Siag*toolbar_toggle.translations:	#override \n\
+	<Enter>:	siag-highlight(2 2)		\n\
+	<Leave>:	siag-unhighlight(0 2)
+Siag*toolbar_command.translations:	#override \n\
+	<Enter>:	siag-highlight(2)		\n\
+	<Leave>:	siag-unhighlight(0)
+
+Pw*toolbar_toggle.translations:	#override \n\
+	<Enter>:	siag-highlight(2 2)		\n\
+	<Leave>:	siag-unhighlight(0 2)
+Pw*toolbar_command.translations:	#override \n\
+	<Enter>:	siag-highlight(2)		\n\
+	<Leave>:	siag-unhighlight(0)
+
+! Help menu button to the far right
+Siag*btnHelp.gravitation:		right
+
+Siag*Command.shadowWidth:		2
+Siag*Repeater.shadowWidth:		2
+Siag*Toggle.shadowWidth:		2
+Pw*Command.shadowWidth:		2
+Pw*Repeater.shadowWidth:		2
+Pw*Toggle.shadowWidth:		2
+

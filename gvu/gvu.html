@@ -1,0 +1,1115 @@
+<html>
+<head>
+<title> 
+GVU
+</title>
+</head>
+</body>
+<h1>GVU</h1>
+
+<h2>NAME</h2>
+       gvu - View PostScript documents using ghostscript
+
+<h2>SYNOPSIS</h2>
+<pre>
+       gvu [filename]
+</pre>
+       or
+<pre>
+       gvu   [-monochrome]   [-grayscale]  [-color]  [-[no]title]
+       [-[no]date] [-[no]locator] [-[no]labels] [-resolution dpi]
+       [-dpi dpi]     [-xdpi dpi]     [-ydpi dpi]    [-magstep n]
+       [-[no]safer]      [-[no]quiet]      [-arguments arguments]
+       [-[no]center]   [-portrait]   [-landscape]   [-upsidedown]
+       [-seascape]  [-[no]swap]  [-letter]  [-tabloid]  [-ledger]
+       [-legal] [-statement] [-executive] [-a3] [-a4] [-a5] [-b4]
+       [-b5] [-folio] [-quarto] [-10x14] [-force] [-forceorienta-
+       tion] [-forcemedia] [-[no]openwindows] [-[no]ncdwm] [-page
+       label] [-toolkitoption ...]  [filename]
+</pre>
+
+<h2>DESCRIPTION</h2>
+       The gvu program provides an X11  user  interface  for  the
+       ghostscript  interpreter.  gvu and ghostscript function as
+       two cooperating programs.  gvu creates the viewing  window
+       and ghostscript draws in it.
+<p>
+       Don't be alarmed by the number of options.  Generally, one
+       invokes gvu with just one parameter, the name of the  file
+       to  be previewed.  If the filename is ``-'', gvu will read
+       from ``stdin''.  The  options  provide  a  way  to  set  X
+       resources from the command line for a single invocation of
+       gvu.  For  that  reason,  discussion  of  the  options  is
+       delayed until after the X resources are discussed.
+
+<h2>MAIN WINDOW</h2>
+       The main viewport is on the right side of the main window.
+       If the page is larger than the  viewport,  there  will  be
+       scroll  bars along the bottom and right edges of the view-
+       port.  To the left of the viewport is the  table  of  con-
+       tents.   If  the  PostScript file has document structuring
+       convention (DSC) comments, the table of context will  dis-
+       play  the page labels (i.e. usually page numbers).  To the
+       left of the table of contents is the menu box.  Each  push
+       button  brings  up  a  popup  menu.  Over the menu box and
+       table of contents there are  three  optional  labels  that
+       contain  the  title,  date,  and locator.  The title label
+       contains the document title found in the DSC comments.  If
+       no  title can be found, the filename is used in its place.
+       The date label contains the document date found in the DSC
+       comments.  If no date can be found, the last modified date
+       of the file is used in its place.   Since  the  title  and
+       date  labels may be clipped by the main viewport, the date
+       and title labels are push buttons that bring  up  a  popup
+       window  with  the title or date.  These popup windows also
+       show the ``document'' icon when the displayed string comes
+       from  the DSC comments.  The locator shows the location of
+       the cursor in the viewport.  The location is expressed  in
+       the default user coordinate system.  The locator is useful
+       for measuring bounding boxes.
+<p>
+       Within the main viewport the mouse cursor is a  ``target''
+       when  ghostscript  is doing work.  The cursor is a ``cross
+       hair'' when ghostscript is idle.  When moving  to  another
+       page  in  a  document,  it  is  generally best to wait for
+       ghostscript  to  become  idle.   Otherwise,  the   current
+       ghostscript  process  must  be  killed and the overhead of
+       reading the prologue is incurred again.
+<p>
+       Gvu will check to see if the file has been  modified  just
+       before  it  displays  a  page  or  when the application is
+       deiconified.  If the file has changed, it will reopen  the
+       file.
+<p>
+       Clicking  anywhere  within  the viewport will popup a zoom
+       window.  The window is centered about  the  location  that
+       was clicked.  Clicking with the first mouse button pops up
+       a low resolution zoom window.  Clicking  with  the  second
+       mouse  button  pops  up  a  medium resolution zoom window.
+       Clicking with the third mouse button pops up a high  reso-
+       lution  zoom  window.   The cursor in the zoom window will
+       display a ``target'' or ``cross hair''  depending  on  the
+       state of ghostscript.  The locator reports the position of
+       the cursor in the zoom windows as well as the  main  view-
+       port.
+<p>
+       In the table of contents, the first and third mouse button
+       function exactly as they do in a Text widget.  That is the
+       first mouse button selects text and the third mouse button
+       extends selections.  However, clicking  on  a  page  label
+       with  the  second  mouse button will cause that page to be
+       shown.  The page being displayed is marked with a  '<'  in
+       the right margin of the table of contents.
+
+<h2>POPUP WINDOWS</h2>
+       There are several additional windows that may appear.  The
+       copyright window will appear whenever  copyright  informa-
+       tion  is  requested.  The information window appears when-
+       ever the  ghostscript  process  writes  to  ``stdout''  or
+       ``stderr''.   Whenever there is an error in the PostScript
+       program, the stack trace will appear in this window.  When
+       ghostscript  is invoked without the quiet option, informa-
+       tional message regarding the  state  of  ghostscript  will
+       appear  in  the  information  window.   The  copyright and
+       information windows can be dismissed by pushing the ``Dis-
+       miss'' button.
+<p>
+       The Select File dialog widget will appear when you wish to
+       open or save a file.  The Select File dialog widget allows
+       an  X11  user  to  select  a file by typing the path or by
+       browsing in directory listings and selecting entries  with
+       the mouse.
+<p>
+       All  the  usual  key
+       bindings can be used in the text widget, except for Return
+       and Control-M, which are equivalent  to  pressing  the  OK
+       button.  The path can be scrolled using the large horizon-
+       tal scroll bar, or by moving the insertion cursor  in  the
+       text  widget.  The directory entries can be scrolled using
+       the vertical scroll bars, or by  holding  a  mouse  button
+       down  and  moving out of the listing.  The scrolling speed
+       varies with the distance from the listing.
+<p>
+       The directory entries are terminated with special  charac-
+       ters that show the type of entry, similar to the -F option
+       of ls(1).
+<p>
+       The Select File dialog widget is in total control until is
+       pops down.  No other controls in gvu will be active during
+       this time.
+
+<h2>MENUS</h2>
+       There are five buttons in the  menu  box.   They  are  the
+       File,  Page,  Magstep,  Orientation,  and  Media  buttons.
+       There are keyboard accelerators  for  most  of  the  popup
+       menus.   Be sure to read the keyboard accelerator section.
+
+<dl>
+       <dt>File      <dd>This popup menu controls file access:
+
+                 <dt>Open...   <dd>Pops up  the  Select  File  window  in
+                           preparation   to  open  a  file.   The
+                           Select File widget is in total control
+                           until  it  pops  down.  Opens the file
+                           for viewing.
+
+                 <dt>Reopen    <dd>Reopens the current file.
+
+                 <dt>Print...  <dd>Pops up a dialog widget to ask for the
+                           printer  name.   Sends the whole docu-
+                           ment to the printer.
+
+                 <dt>Print marked pages...
+                           <dd>Pops up a dialog widget to ask for the
+                           printer  name.  Sends the marked pages
+                           to the printer.  If no pages have been
+                           marked,  the  mark procedure is called
+                           before printing and  then  the  unmark
+                           procedure is called after printing.
+
+                 <dt>Save marked pages...
+                          <dd> Pops  up  the  Select  File  window in
+                           preparation  to  save  a  file.    The
+                           Select File widget is in total control
+                           until it pops down.  Saves the  marked
+                           pages  in  the  selected  file.  If no
+                           pages  have  been  marked,  the   mark
+                           procedure  is called before saving and
+                           then the unmark  procedure  is  called
+                           after saving.
+
+                 <dt>Copyright...
+                           <dd>Pops up the copyright window.
+
+                 <dt>Quit      <dd>Causes gvu to exit.
+</dl>
+
+       <dt>Page      <dd>This popup menu controls page access:
+<dl>
+                 <dt>Next      <dd>Display the next page.
+
+                 <dt>Redisplay <dd>Display the current page.
+
+                 <dt>Previous  <dd>Display the previous page.
+
+                 <dt>Center    <dd>Center the page in the viewport.
+
+                 <dt>Mark      <dd>Mark the pages that have been selected
+                           in the table of contents.  If no pages
+                           have  been  selected, mark the current
+                           page.
+
+                 <dt>Unmark    <dd>Unmark  the  pages  that   have   been
+                           selected in the table of contents.  If
+                           no pages have  been  selected,  unmark
+                           the current page.
+</dl>
+       <dt>Magstep   <dd>The  Magstep  menu controls the magnification at
+                 which the document is viewed.  The default  mag-
+                 step  of  0  implies  no magnification (i.e. the
+                 size on the screen  should  match  the  size  on
+                 paper).   Gvu borrows the notion of magstep from
+                 TeX.   The  magnification  is  defined   to   be
+                 1.2**magstep.   At  magstep  1,  the document is
+                 magnified by 1.2.  At magstep -1,  the  document
+                 is  reduced by 1.2.  The Magstep menu lists val-
+                 ues from -5 to 5.
+
+       <dt>Orientation
+                 <dd>The Orientation menu controls the display orien-
+                 tation.   A ``dot'' appears in front of the cur-
+                 rent orientation.  The first mouse  button  sets
+                 the  default  orientation.  The DSC comments may
+                 specify an orientation of Portrait or  Landscape
+                 that  overrides  the  default.   In this case, a
+                 "document" appears in front of the current  ori-
+                 entation.   The  second mouse button can be used
+                 to ``force'' the orientation on  a  document  to
+                 override the DSC comments.  If an orientation is
+                 being forced, then a ``tie fighter'' will appear
+                 in front of the current orientation.
+<dl>
+                 <dt>Portrait  <dd>Set  the orientation to Portrait. This
+                           implies no rotation.  A portrait  ori-
+                           entation  indicates  that  the longest
+                           edge of the paper is parallel  to  the
+                           vertical (y) axis.
+
+                 <dt>Landscape <dd>Set   the  orientation  to  Landscape.
+                           This implies a clockwise  rotation  of
+                           the  paper by 90 degrees.  A landscape
+                           orientation indicates that the longest
+                           edge  of  the paper is parallel to the
+                           horizontal (x) axis.
+
+                 <dt>Upside-down
+                           <dd>Set the orientation to Upside-Down.
+
+                 <dt>Seascape  <dd>Set the orientation to Seascape.  This
+                           implies a counterclockwise rotation of
+                           the paper by 90 degrees.
+
+                 <dt>Swap Landscape
+                           <dd>Swap  the  meaning  of  Landscape  and
+                           Seascape.  Most of the Landscape docu-
+                           ments that I have encountered  require
+                           a  90  clockwise rotation of the paper
+                           to view.   However, there is no  stan-
+                           dard  and  some  documents  need to be
+                           rotated the other way.  The swap land-
+                           scape  button  allows gvu to automati-
+                           cally rotate the  document  the  right
+                           way  in  response to the %%Orientation
+                           comment in the PostScript file.
+</dl>
+       <dt>Media     <dd>The entries on  the  Media  menu  set  the  page
+                 media.   Media defined in the document appear at
+                 the beginning of the menu separated  by  a  line
+                 from  the  standard media.  A ``dot'' appears in
+                 front of the current  media.   The  first  mouse
+                 button sets the default media.  The DSC comments
+                 may specify the page media  that  overrides  the
+                 default.   In this case, a "document" appears in
+                 front of the current media.   The  second  mouse
+                 button  can  be used to ``force'' the media on a
+                 document to override the DSC comments.   Forcing
+                 the  media  on  an EPSF figure will override the
+                 Bounding Box.  This makes is easy to view a fig-
+                 ure with an incorrect %%BoundingBox comment.  If
+                 a media is being forced, then a ``tie  fighter''
+                 will appear in front of the current media.
+<p>
+                 Here  are  the  standard  media  names and their
+                 sizes.  The size  is  given  as  the  width  and
+                 height in PostScript points.
+<pre>
+                 Letter          612 x  792    (8.5 x 11  in.)
+                 Tabloid         792 x 1224    (11  x 17  in.)
+                 Ledger         1224 x  792    (17  x 11  in.)
+                 Legal           612 x 1008    (8.5 x 14  in.)
+                 Statement       396 x  612    (5.5 x 8.5 in.)
+                 Executive       540 x  720    (7.5 x 10  in.)
+                 A3              842 x 1190
+                 A4              595 x  842
+                 A5              420 x  595
+                 B4              729 x 1032
+                 B5              516 x  729
+                 Folio           612 x  936    (8.5 x 13  in.)
+                 Quarto          610 x  780
+                 10x14           720 x 1008    (10  x 14  in.)
+</pre>
+</dl>
+</dl>
+
+<h2>KEYBOARD ACCELERATORS</h2>
+       Most  of the popup menu commands have an equivalent action
+       that can be invoked from the  keyboard.   The  popup  menu
+       entry  must  be  sensitive  (i.e.  not grayed out) for the
+       action to have effect.  Here is the default keyboard bind-
+       ing:
+<dl>
+       <dt>Q         <dd>Bound  to GhostviewQuit() which is equivalent to
+                 pushing the Quit menu button on the Gvu menu.
+
+       <dt>O         <dd>Bound to GhostviewOpen() which is equivalent  to
+                 pushing  the  Open...  menu  button  on the File
+                 menu.
+
+       <dt>R         <dd>Bound to GhostviewReopen() which  is  equivalent
+                 to  pushing  the  Reopen menu button on the File
+                 menu.
+
+       <dt>S         <dd>Bound to GhostviewSave() which is equivalent  to
+                 pushing  the Save marked pages... menu button on
+                 the File menu.
+
+       <dt>P         <dd>Bound to GhostviewPrintMarked() which is equiva-
+                 lent  to  pushing the Print marked pages... menu
+                 button on the File menu.
+
+       <dt>Shift-P   <dd>Bound to GhostviewPrintWhole() which is  equiva-
+                 lent  to pushing the Print... menu button on the
+                 File menu.
+
+       <dt>BackSpace, Delete, Prior, B
+                 <dd>Bound to GhostviewPrevious() which is equivalent
+                 to  pushing the Previous menu button on the Page
+                 menu.
+
+       <dt>space, Return, Next, F
+                 <dd>Bound to GhostviewNext() which is equivalent  to
+                 pushing the Next menu button on the Page menu.
+
+       <dt>period, Ctrl-L
+                 <dd>Bound  to GhostviewShow() which is equivalent to
+                 pushing the Redisplay menu button  on  the  Page
+                 menu.
+
+       <dt>M         <dd>Bound  to GhostviewMark() which is equivalent to
+                 pushing the Mark menu button on the Page menu.
+
+       <dt>N      <dd>   Bound to GhostviewUnMark() which  is  equivalent
+                 to  pushing  the  Unmark menu button on the Page
+                 menu.
+
+       <dt>0         <dd>Bound to GhostviewMagstep(0) which is equivalent
+                 to  pushing  the  0  menu  button on the Magstep
+                 menu.
+
+       <dt>1         <dd>Bound to GhostviewMagstep(1) which is equivalent
+                 to  pushing  the  1  menu  button on the Magstep
+                 menu.
+
+       <dt>2         <dd>Bound to GhostviewMagstep(2) which is equivalent
+                 to  pushing  the  2  menu  button on the Magstep
+                 menu.
+
+       <dt>3         <dd>Bound to GhostviewMagstep(3) which is equivalent
+                 to  pushing  the  3  menu  button on the Magstep
+                 menu.
+
+       <dt>4         <dd>Bound to GhostviewMagstep(4) which is equivalent
+                 to  pushing  the  4  menu  button on the Magstep
+                 menu.
+
+       <dt>5         <dd>Bound to GhostviewMagstep(5) which is equivalent
+                 to  pushing  the  5  menu  button on the Magstep
+                 menu.
+
+       <dt>+         <dd>Bound   to   GhostviewIncreaseMagstep()    which
+                 increases the magstep by 1.
+
+       <dt>-         <dd>Bound    to   GhostviewDecreaseMagstep()   which
+                 decreases the magstep by 1.
+
+       <dt>U         <dd>Bound to GhostviewUp() which  scrolls  the  main
+                 viewport up.
+
+       <dt>D         <dd>Bound  to GhostviewDown() which scrolls the main
+                 viewport down.
+
+       <dt>H         <dd>Bound to GhostviewLeft() which scrolls the  main
+                 viewport left.
+
+       <dt>J         <dd>Bound  to GhostviewDown() which scrolls the main
+                 viewport down.
+
+       <dt>K         <dd>Bound to GhostviewUp() which  scrolls  the  main
+                 viewport up.
+
+       <dt>L         <dd>Bound to GhostviewRight() which scrolls the main
+                 viewport right.
+
+       <dt>Up (arrow)
+                 <dd>Bound to GhostviewDefault() GhostviewSetOrienta-
+                 tion(portrait)  which  is  equivalent to pushing
+                 Portrait with the first mouse button on the Ori-
+                 entation menu.
+
+       <dt>Right (arrow)
+                 <dd>Bound to GhostviewDefault() GhostviewSetOrienta-
+                 tion(landscape) which is equivalent  to  pushing
+                 Landscape  with  the  first  mouse button on the
+                 Orientation menu.
+
+       <dt>Down (arrow)
+                 <dd>Bound to GhostviewDefault() GhostviewSetOrienta-
+                 tion(upside-down) which is equivalent to pushing
+                 Upside-down with the first mouse button  on  the
+                 Orientation menu.
+
+       <dt>Left (arrow)
+                 <dd>Bound to GhostviewDefault() GhostviewSetOrienta-
+                 tion(seascape) which is  equivalent  to  pushing
+                 Seascape with the first mouse button on the Ori-
+                 entation menu.
+
+       <dt>Shift-Up (arrow)
+                 <dd>Bound to  GhostviewForce()  GhostviewSetOrienta-
+                 tion(portrait)  which  is  equivalent to pushing
+                 Portrait with the second  mouse  button  on  the
+                 Orientation menu.
+
+       <dt>Shift-Right (arrow)
+                 <dd>Bound  to  GhostviewForce() GhostviewSetOrienta-
+                 tion(landscape) which is equivalent  to  pushing
+                 Landscape  with  the  second mouse button on the
+                 Orientation menu.
+
+       <dt>Shift-Down (arrow)
+                 <dd>Bound to  GhostviewForce()  GhostviewSetOrienta-
+                 tion(upside-down) which is equivalent to pushing
+                 Upside-down with the second mouse button on  the
+                 Orientation menu.
+
+       <dt>Shift-Left (arrow)
+                 <dd>Bound  to  GhostviewForce() GhostviewSetOrienta-
+                 tion(seascape) which is  equivalent  to  pushing
+                 Seascape  with  the  second  mouse button on the
+                 Orientation menu.
+</dl>
+
+<h2>ACTIONS</h2>
+       Most of the popup menu commands have an equivalent  action
+       that  can  be used in a translation.  The popup menu entry
+       must be sensitive (i.e. not grayed out) for the action  to
+       have effect.  Here is the list of actions:
+
+<dl>
+       <dt>GhostviewCopyright()
+                 <dd>Equivalent to pushing the Copyright... menu but-
+                 ton on the Gvu menu.
+
+       <dt>GhostviewQuit()
+                 <dd>Equivalent to pushing the Quit  menu  button  on
+                 the Gvu menu.
+
+       <dt>GhostviewOpen()
+                 <dd>Equivalent to pushing the Open... menu button on
+                 the File menu.
+
+       <dt>GhostviewReopen()
+                 <dd>Equivalent to pushing the Reopen menu button  on
+                 the File menu.
+
+       <dt>GhostviewSave()
+                 <dd>Equivalent  to  pushing the Save marked pages...
+                 menu button on the File menu.
+
+       <dt>GhostviewPrintWhole()
+                 <dd>Equivalent to pushing the Print...  menu  button
+                 on the File menu.
+
+       <dt>GhostviewPrintMarked()
+                 <dd>Equivalent  to pushing the Print marked pages...
+                 menu button on the File menu.
+
+       <dt>GhostviewPrevious()
+                 <dd>Equivalent to pushing the Previous  menu  button
+                 on the Page menu.
+
+       <dt>GhostviewShow()
+                 <dd>Equivalent  to pushing the Redisplay menu button
+                 on the Page menu.
+
+       <dt>GhostviewNext()
+                 <dd>Equivalent to pushing the Next  menu  button  on
+                 the Page menu.
+
+       <dt>GhostviewCenter()
+                 <dd>Equivalent  to pushing the Center menu button on
+                 the Page menu.
+
+       <dt>GhostviewMark()
+                 <dd>Equivalent to pushing the Mark  menu  button  on
+                 the Page menu.
+
+       <dt>GhostviewUnmark()
+       <dd>          Equivalent  to pushing the Unmark menu button on
+                 the Page menu.
+
+       <dt>GhostviewSetMagstep(magstep)
+       <dd>          Sets the magstep.   The  parameter  must  be  an
+                 integer.
+
+       <dt>GhostviewIncreaseMagstep()
+       <dd>          Increases magstep by one.
+
+       <dt>GhostviewDecreaseMagstep()
+       <dd>          Decreases magstep by one.
+
+       <dt>GhostviewSetOrientation(orientation)
+       <dd>          Set  the  orientation  to  the passed parameter.
+                 The  parameter  must  be  portrait,   landscape,
+                 upside-down, or seascape.
+
+       <dt>GhostviewSwapLandscape()
+       <dd>          Equivalent  to  pushing  the Swap Landscape menu
+                 button on the Orientation menu.
+
+       <dt>GhostviewSetPageMedia(media-name)
+       <dd>          Sets the media.  The parameter should be  either
+                 a  media  defined  in the document or a standard
+                 media.
+
+       <dt>GhostviewDefault()
+       <dd>          The orientation or media being set is not forced
+                 on  the  document.  This action is called before
+                 the action that sets the orientation or media.
+
+       <dt>GhostviewForce()
+       <dd>          The orientation or media being set is forced  on
+                 the  document.  This action is called before the
+                 action that sets the orientation or media.
+
+       <dt>GhostviewDeleteWindow()
+       <dd>          Destroy the current window.  This provides a way
+                 to implement the Delete Window protocol for win-
+                 dow managers.
+
+       <dt>GhostviewDismiss()
+       <dd>          Pop down the current window.   This  provides  a
+                 way  to implement the Delete Window protocol for
+                 window managers.
+
+       <dt>GhostviewScrollUp()
+       <dd>          Scroll the main viewport up.
+
+       <dt>GhostviewScrollDown()
+       <dd>          Scroll the main viewport down.
+
+       <dt>GhostviewScrollLeft()
+       <dd>          Scroll the main viewport left.
+
+       <dt>GhostviewScrollRight()
+       <dd>          Scroll the main viewport right.
+
+       <dt>GhostviewEraseLocator()
+       <dd>          Used  to  erase  the  locator  when  leaving   a
+                 Ghostview widget.
+
+       <dt>GhostviewCheckFile()
+       <dd>          Checks  to see if the file changed and refreshes
+                 the screen if necessary.
+</dl>
+
+<h2>APPLICATION RESOURCES</h2>
+       The following application resources may be set to  control
+       the default behavior of gvu.
+
+<dl>
+       <dt>showTitle (class Labels)
+       <dd>          Tells  whether  to  display the %%Title comment.
+                 The default is ``true''.
+
+       <dt>showDate (class Labels)
+       <dd>          Tells whether to  display  the  %%Data  comment.
+                 The default is ``true''.
+
+       <dt>showLocator (class Labels)
+       <dd>          Tells  whether  to  display  the  locator.   The
+                 default is ``true''.
+
+       <dt>autoCenter (class AutoCenter)
+       <dd>          Tells whether to  center  the  page  within  the
+                 viewport  whenever  the  page size changes.  The
+                 default is ``true''.
+
+       <dt>horizonalMargin (class Margin)
+       <dd>          Tells how many pixels  gvu  should  reserve  for
+                 window  decorations in the horizontal direction.
+                 The default value is ``20''.
+
+       <dt>verticalMargin (class Margin)
+       <dd>          Tells how many pixels  gvu  should  reserve  for
+                 window  decorations  in  the vertical direction.
+                 The default value is ``44''.
+
+       <dt>minimumMagstep (class Magstep)
+       <dd>          Tells the  smallest  magstep  to  display.   The
+                 default is ``-5''.
+
+       <dt>maximumMagstep (class Magstep)
+       <dd>          Tells  the  largest  magstep  to  display.   The
+                 default is ``5''.
+
+       <dt>magstep (class Magstep)
+       <dd>          Sets the default magstep.  The default is ``0''.
+
+       <dt>orientation (class Orientation)
+       <dd>          Sets  the  default  orientation.  The default is
+                 ``Portrait''.
+
+       <dt>page (class Page)
+       <dd>          Gives  the  initial  page  to   display.    This
+                 resource  only  affects  the display of the file
+                 listed on the  command  line.   The  default  is
+                 NULL.
+
+       <dt>pageMedia (class PageMedia)
+       <dd>          Sets  the  default  page  media.  The default is
+                 ``Letter''.
+
+       <dt>forceOrientation (class Force)
+       <dd>          Tells whether to force the  orientation  on  the
+                 document.  The default is ``false''.
+
+       <dt>forcePageMedia (class Force)
+       <dd>          Tells  whether  to  force  the page media on the
+                 document.  The default is ``false''.
+
+       <dt>swapLandscape (class SwapLandscape)
+       <dd>          Tells whether to swap the meaning  of  Landscape
+                 and Seascape.  The default is ``false''.
+
+       <dt>printCommand (class PrintCommand)
+       <dd>          Sets the command used for printing.  The printer
+                 environment  variable  is  set  to  the  desired
+                 printer  and then this command is executed using
+                 popen.  This command should read from  ``stdin''
+                 and  send  the  file to the appropriate printer.
+                 The default value is ``lpr'' for BSD and  ``lp''
+                 for System V.
+
+       <dt>printerVariable (class PrinterVariable)
+       <dd>          Gives  the name of the printer environment vari-
+                 able.  The default value is ``PRINTER'' for  BSD
+                 and ``LPDEST'' for System V.
+
+       <dt>defaultPrinter (class DefaultPrinter)
+       <dd>          Gives  the  printer name to use when the printer
+                 environment variable is not  set.   The  default
+                 value is NULL.
+
+       <dt>printPrompt (class PrintPrompt)
+       <dd>          Sets  the  prompt  used  to  ask for the printer
+                 name.  The default value is  ``Printer Name: ''.
+
+       <dt>printFail (class printFail)
+       <dd>          Sets the string used to inform the user that the
+                 printer  command   failed.    The   default   is
+                 ``"lpr" command failed.''.
+
+       <dt>openPrompt (class OpenPrompt)
+       <dd>          Sets  the  prompt used to ask for a file name to
+                 open.  The default value is ``Open File: ''.
+
+       <dt>openFail (class OpenFail)
+       <dd>          Sets the string used to inform the user that the
+                 open    failed.     The    default    value   is
+                 ``Cannot open file: ''.
+
+       <dt>savePrompt (class SavePrompt)
+       <dd>          Sets the prompt used to ask for a file  name  to
+                 save.  The default value is ``Save File: ''.
+
+       <dt>saveFail (class SaveFail)
+       <dd>          Sets the string used to inform the user that the
+                 save   failed.     The    default    value    is
+                 ``Cannot save file: ''.
+
+       <dt>openWindows (class OpenWindows)
+       <dd>          OpenWindows  servers  sometimes cause error mes-
+                 sages about bitmaps not being 1 bit deep.  Turn-
+                 ing  on  this resource avoids the problem by not
+                 using any bitmaps.  You lose  the  functionality
+                 of  having  the current magstep, orientation and
+                 media marked on the popup  menus.   The  default
+                 value is ``false''.
+
+       <dt>ncdwm (class Ncdwm)
+       <dd>          The  Xt  Intrinsics  has a bug that causes bogus
+                 information in the window  manager  size  hints.
+                 Ncdwm  and  possibly  other  window managers get
+                 confused by the bogus information and  make  the
+                 window  extremely small.  Twm and mwm ignore the
+                 bogus  information.   Turning  on  the  resource
+                 avoids  the  problem  with ncdwm by doing things
+                 slightly differently.  However, this can confuse
+                 other  window managers such as mwm.  This bug is
+                 fixed in X11R5 fix-10.  You should only set this
+                 resource  if  you have the problem.  The default
+                 value is ``false''.
+</dl>
+
+<h2>GHOSTVIEW WIDGET RESOURCES</h2>
+       Certain resources in the Gvu widget  may  be  set  by  the
+       user.  These selected resources are presented below.
+<dl>
+       <dt>arguments <dd>(class Arguments)
+                 Additional  arguments passed to the interpreter.
+                 It is convenient  to  name  files  that  preload
+                 fonts here for PostScript programs that continu-
+                 ally reload fonts while rendering a  page.   The
+                 default is no additional arguments.
+
+       <dt>busyCursor (class Cursor)
+       <dd>          The  cursor  shown when ghostscript is rendering
+                 to the window.  The busy cursor is  set  to  the
+                 ``target'' by the application defaults.
+
+       <dt>cursor (class Cursor)
+       <dd>          The  cursor shown when ghostscript is idle.  The
+                 default cursor is the ``crosshair''.
+
+       <dt>interpreter (class Interpreter)
+       <dd>          The name of the executable to call to render the
+                 PostScript.    It  is  convenient  to  set  this
+                 resource to the path of an alternate version  of
+                 ghostscript  for  testing.  The default value is
+                 ``gs''.
+
+       <dt>palette (class Palette)
+       <dd>          Tells ghostscript how to  restrict  the  palette
+                 used  when  rendering.   The possible values are
+                 ``color'',  ``grayscale'',  and  ``monochrome''.
+                 The default value is ``color''.
+
+       <dt>quiet (class Quiet)
+       <dd>          Tells  ghostscript  whether  to supress informa-
+                 tional messages.  The default value is ``true''.
+
+       <dt>safer (class Safer)
+       <dd>          Tells  ghostscript  whether  to run in ``safer''
+                 mode.  The default value is ``true''.
+
+       <dt>useBackingPixmap (class UseBackingPixmap)
+       <dd>          Tells whether to use a backing pixmap.  If  this
+                 resource is false, backing store is requested on
+                 the Gvu window.  Some  X  servers  have  limited
+                 resources  for  large  pixmaps.   Also,  some  X
+                 servers' backing store is much faster than using
+                 a   backing   pixmap.   You  should  reset  this
+                 resource if your X server is one of  the  server
+                 types mentioned.  The default value is ``true''.
+
+       <dt>xdpi (class Resolution)
+       <dd>          Sets the X resolution of the window in dots  per
+                 inch.   You  can use this resource to affect the
+                 main window.  Zoom windows have their X dpi  set
+                 explicitly in the program.  The default value is
+                 calculated from the screen metrics.
+
+       <dt>ydpi (class Resolution)
+       <dd>          Sets the Y resolution of the window in dots  per
+                 inch.   You  can use this resource to affect the
+                 main window.  Zoom windows have their Y dpi  set
+                 explicitly in the program.  The default value is
+                 calculated from the screen metrics.
+</dl>
+
+<h2>GHOSTVIEW WIDGET ACTIONS</h2>
+<dl>
+       <dt>notify(width height xdpi ydpi)
+       <dd>          The notify event is used by the gvu  application
+                 for  the locator and popup zoom windows.  If the
+                 width and height are 0, the event  is  user  for
+                 the  locator.   Otherwise,  it  triggers a popup
+                 zoom window.  The default width and  height  are
+                 72.   The  default  xdpi  and ydpi are 300.  The
+                 height will default to the width if  the  height
+                 is  omitted.   The xdpi will default to the xdpi
+                 if the ydpi is omitted.
+</dl>
+
+<h2>OPTIONS</h2>
+<dl>
+       <dt>-monochrome
+       <dd>          Equivalent  to   setting   ``*Ghostview.palette:
+                 Monochrome''.
+
+       <dt>-grayscale
+       <dd>          Equivalent     to     setting    ``*Gvu.palette:
+                 GrayScale''.
+
+       <dt>-color    <dd>Equivalent to setting ``*Gvu.palette: Color''.
+
+       <dt>-title    <dd>Equivalent to setting ``Gvu.showTitle: True''.
+
+       <dt>-notitle  <dd>Equivalent to setting ``Gvu.showTitle:  False''.
+
+       <dt>-date     <dd>Equivalent to setting ``Gvu.showDate: True''.
+
+       <dt>-nodate   <dd>Equivalent to setting ``Gvu.showDate: False''.
+
+       <dt>-locator  <dd>Equivalent to setting ``Gvu.showLocator: True''.
+
+       <dt>-nolocator
+                 <dd>Equivalent   to    setting    ``Gvu.showLocator:
+                 False''.
+
+       <dt>-labels   <dd>Equivalent to setting ``Gvu.Labels: True''.
+
+       <dt>-nolabels <dd>Equivalent to setting ``Gvu.Labels: False''.
+
+       <dt>-resolution dpi
+                 <dd>Equivalent  to setting ``*Gvu.Resolution: dpi''.
+
+       <dt>-dpi dpi  <dd>Equivalent to setting ``*Gvu.Resolution:  dpi''.
+
+       <dt>-xdpi dpi <dd>Equivalent to setting ``*Gvu.xdpi: dpi''.
+
+       <dt>-ydpi dpi Equivalent to setting ``*Gvu.ydpi: dpi''.
+
+       <dt>-magstep magstep
+                 <dd>Equivalent  to setting ``Gvu.magstep: magstep''.
+
+       <dt>-safer    <dd>Equivalent to setting ``*Gvu.safer: True''.
+
+       <dt>-nosafer  <dd>Equivalent to setting ``*Gvu.safer: False''.
+
+       <dt>-quiet    <dd>Equivalent to setting ``*Gvu.quiet: True''.
+
+       <dt>-noquiet  <dd>Equivalent to setting ``*Gvu.quiet: False''.
+
+       <dt>-arguments arguments
+       <dd>          Equivalent to  setting  ``*Gvu.arguments:  argu-
+                 ments''.
+
+       <dt>-center   <dd>Equivalent  to setting ``Gvu.autoCenter: True''.
+
+       <dt>-nocenter <dd>Equivalent to setting ``Gvu.autoCenter: False''.
+
+       <dt>-portrait <dd>Equivalent  to  setting  ``Gvu.orientation: Por-
+                 trait''.
+
+       <dt>-landscape
+                 <dd>Equivalent to setting  ``Gvu.orientation:  Land-
+                 scape''.
+
+       <dt>-upsidedown
+                 <dd>Equivalent    to    setting   ``Gvu.orientation:
+                 Upside-down''.
+
+       -seascape Equivalent   to    setting    ``Gvu.orientation:
+                 Seascape''.
+
+       -swap     Equivalent   to   setting   ``Gvu.swapLandscape:
+                 True''.
+
+       -noswap   Equivalent   to   setting   ``Gvu.swapLandscape:
+                 False''.
+
+       -letter   Equivalent to setting ``Gvu.pageMedia: Letter''.
+
+       -tabloid  Equivalent    to    setting     ``Gvu.pageMedia:
+                 Tabloid''.
+
+       -ledger   Equivalent to setting ``Gvu.pageMedia: Ledger''.
+
+       -legal    Equivalent to setting ``Gvu.pageMedia:  Legal''.
+
+       -statement
+                 Equivalent  to  setting  ``Gvu.pageMedia: State-
+                 ment''.
+
+       -executive
+                 Equivalent to  setting  ``Gvu.pageMedia:  Execu-
+                 tive''.
+
+       -a3       Equivalent to setting ``Gvu.pageMedia: A3''.
+
+       -a4       Equivalent to setting ``Gvu.pageMedia: A4''.
+
+       -a5       Equivalent to setting ``Gvu.pageMedia: A5''.
+
+       -b4       Equivalent to setting ``Gvu.pageMedia: B4''.
+
+       -b5       Equivalent to setting ``Gvu.pageMedia: B5''.
+
+       -folio    Equivalent  to setting ``Gvu.pageMedia: Folio''.
+
+       -quarto   Equivalent to setting ``Gvu.pageMedia: Quarto''.
+
+       -10x14    Equivalent  to setting ``Gvu.pageMedia: 10x14''.
+
+       -force    Equivalent to setting ``Gvu.Force: True''.
+
+       -forceorientation
+                 Equivalent  to  setting  ``Gvu.forceOrientation:
+                 True''.
+
+       -forcemedia
+                 Equivalent   to   setting  ``Gvu.forcePageMedia:
+                 True''.
+
+       -openwindows
+                 Equivalent to setting ``Gvu.openWindows: True''.
+
+       -noopenwindows
+                 Equivalent    to    setting   ``Gvu.openWindows:
+                 False''.
+
+       -ncdwm    Equivalent to setting ``Gvu.ncdwm: True''.
+
+       -noncdwm  Equivalent to setting ``Gvu.ncdwm: False''.
+
+       -page label
+                 Equivalent to setting ``Gvu.page: label''.
+
+WIDGET HIERARCHY
+       The hierarchy of the Gvu application:
+
+       Gvu  ghostview
+            Form  form
+                 MenuButton  titleButton
+                      SimpleMenu  menu
+                           SmeBSB  title
+                 MenuButton  dateButton
+                      SimpleMenu  menu
+                           SmeBSB  date
+                 Label  locator
+                 Box  box
+                      MenuButton  fileButton
+                           SimpleMenu  menu
+                                SmeBSB  open
+                                SmeBSB  reopen
+                                SmeBSB  printwhole
+                                SmeBSB  printmarked
+                                SmeBSB  save
+                                SmeLine  line
+                                SmeBSB  copyright
+                                SmeBSB  quit
+                      MenuButton  pageButton
+                           SimpleMenu  menu
+                                SmeBSB  next
+                                SmeBSB  show
+                                SmeBSB  prev
+                                SmeLine  line
+                                SmeBSB  center
+                                SmeLine  line
+                                SmeBSB  mark
+                                SmeBSB  unmark
+                      MenuButton  magstepButton
+                           SimpleMenu  menu
+                                SmeBSB  -5
+                                SmeBSB  -4
+                                SmeBSB  -3
+                                SmeBSB  -2
+                                SmeBSB  -1
+                                SmeBSB  0
+                                SmeBSB  1
+                                SmeBSB  2
+                                SmeBSB  3
+                                SmeBSB  4
+                                SmeBSB  5
+                      MenuButton  orientationButton
+                           SimpleMenu  menu
+                                SmeBSB  portrait
+                                SmeBSB  landscape
+                                SmeBSB  upsidedown
+                                SmeBSB  seascape
+                                SmeLine  line
+                                SmeBSB  swap
+                      MenuButton  pagemediaButton
+                           SimpleMenu  menu
+                                SmeBSB  Letter
+                                SmeBSB  Tabloid
+                                SmeBSB  Ledger
+                                SmeBSB  Legal
+                                SmeBSB  Statement
+                                SmeBSB  Executive
+                                SmeBSB  A3
+                                SmeBSB  A4
+                                SmeBSB  A5
+                                SmeBSB  B4
+                                SmeBSB  B5
+                                SmeBSB  Folio
+                                SmeBSB  Quarto
+                                SmeBSB  10x14
+                 Text  toc
+                 Viewport  pageview
+                      Core  clip
+                      Gvu  page
+                      Scrollbar  horizontal
+                      Scrollbar  vertical
+            TopLevelShell  information
+                 Form  form
+                      Text  text
+                      Command  dismiss
+            TopLevelShell  copyright
+                 Form  form
+                      Text  text
+                      Command  dismiss
+            TransientShell  popup
+                 Form  dialog
+                      Label  prompt
+                      Text  response
+                      Command  okay
+                      Command  cancel
+            TopLevelShell  zoom
+                 Form  form
+                      Gvu  page
+                      Command  dismiss
+
+       The hierarchy of the Select File dialog box:
+
+       TransientShell  selFile
+            Form  selFileForm
+                 Label  selFilePrompt
+                 Text  selFileField
+                 Scrollbar  selFileHScroll
+                 Composite  selFileList1
+                      Scrollbar  selFileVScroll
+                      Scrollbar  selFileHScroll
+                 Composite  selFileList2
+                      Scrollbar  selFileVScroll
+                      Scrollbar  selFileHScroll
+                 Composite  selFileList3
+                      Scrollbar  selFileVScroll
+                      Scrollbar  selFileHScroll
+                 Command  selFileOK
+                 Command  selFileCancel
+
+ENVIRONMENT
+       LPDEST    The  LPDEST  environment  variable   gives   the
+                 default printer destination on System V.
+
+       PRINTER   The   PRINTER  environment  variable  gives  the
+                 default printer destination on BSD.
+
+LIMITATIONS
+       If the document does not begin  with  ``%!PS-Adobe-'',  it
+       does  not  claim  conformance  to the document structuring
+       convention.  When these  documents  are  encountered,  the
+       functionality  of gvu is limited to giving you scroll bars
+       and a next page capability.  Because there is no table  of
+       contents,  skipping  around the document and marking pages
+       is impossible.
+
+       If there is no table of contents  for  the  document,  the
+       popup zoom window will always show the first page.
+
+BUGS
+       If   you   find  a  bug,  please  send  a  bug  report  to
+       ulric@siag.nu.
+
+AUTHOR
+       Copyright (C) 1992  Timothy O. Theisen
+
+       This program is free software;  you  can  redistribute  it
+       and/or modify it under the terms of the GNU General Public
+       License as published  by  the  Free  Software  Foundation;
+       either  version  2 of the License, or (at your option) any
+       later version.
+
+       This program is distributed in the hope that  it  will  be
+       useful, but WITHOUT ANY WARRANTY; without even the implied
+       warranty of MERCHANTABILITY or FITNESS  FOR  A  PARTICULAR
+       PURPOSE.   See  the  GNU  General  Public License for more
+       details.
+
+       You should have received a copy of the GNU General  Public
+       License along with this program; if not, write to the Free
+       Software Foundation, Inc., 675  Mass  Ave,  Cambridge,  MA
+       02139, USA.
+
+
+ACKNOWLEDGEMENTS
+       Author:   Tim Theisen         Systems Programmer
+       Internet: tim@cs.wisc.edu     Department of Computer Sciences
+       UUCP:     uwvax!tim           University of Wisconsin-Madison
+       Phone:    (608)262-0438       1210 West Dayton Street
+       FAX:      (608)262-9777       Madison, WI   53706
+       Author:   Erik M. van der Poel
+                 Software Research Associates, Inc., Tokyo, Japan
+                 erik@sra.co.jp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                               20
+
+

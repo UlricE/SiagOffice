@@ -1,0 +1,1000 @@
+Siag (Scheme In A Grid) 3.1.3. No Warranty.	Siag (Scheme In A Grid) 3.1.3. Sans garantie.
+Pathetic Writer 3.1.3. No Warranty.	Pathetic Writer 3.1.3. Sans garantie.
+Egon Animator 3.1.3. No Warranty.	Egon Animator 3.1.3. Sans garantie.
+
+
+
+################################################################################
+############################                      ##############################
+############################   Scheme In A Grid   ##############################
+############################                      ##############################
+################################################################################
+
+######################### SIAG: Menu principal #################################
+
+File					Fichier
+Edit					Édition
+Block					Bloc
+Format					Format
+Data					Données
+Plugin					Plugin
+Window					Fenêtre
+Plot					Diagramme
+Tools					Outils
+Help					Aide
+
+
+
+######################### SIAG: Barre d'outils #################################
+
+Start another instance of Siag		Démarrer une nouvelle session de Siag
+Open a Siag document			Ouvrir un document Siag
+Save the contents of the current buffer	Enregister le contenu du document courant
+Preview the contents of the current buffer	Aperçu avant impression
+Print the contents of the current buffer	Imprimer le document courant
+Cut					Couper
+Copy					Copier
+Paste					Coller
+Undo					Annuler l'opération
+Sort ascending				Tri croissant
+Sort descending				Tri décroissant
+Plot the contents of the block using lines	Tracer le contenu du bloc avec des lignes
+Add the contents of the block		Faire la somme du bloc
+Display the Siag online documentation	Afficher l'aide en ligne de Siag
+Display the Gnu general public license	Afficher la licence GNU General Public License
+Draw borders around the block		Dessiner une bordure autour du bloc
+Draw grid lines in the block		Dessiner une grille dans le bloc
+Underline the block			Souligner le bloc
+Remove grid lines from the block	Effacer la grille du bloc
+
+
+
+######################### SIAG: Barre d'attributs ##############################
+
+Change the font family			Changer de police
+Change the font size			Changer la taille de la police
+Change the display style		Changer le style d'affichage
+Change the color			Changer la couleur
+Bold text				Texte en gras
+Italic text				Texte en italique
+Left adjusted text			Aligner à gauche
+Centered text				Centrer
+Right adjusted text			Aligner à droite
+
+
+
+######################### SIAG: Styles d'affichage #############################
+
+Currency				Montant
+Date					Date
+Default					Défaut
+Fixed					Virgule fixe
+Hex					Hexadécimal
+Integer					Entier
+Invisible				Invisible
+Percent					Pourcent
+Scientific				Scientifique
+Time					Heure
+Time Difference				Durée
+Ulric Testar				Test d'Ulric
+User 1					Perso 1
+User 2					Perso 2
+User 3					Perso 3
+User 4					Perso 4
+User 5					Perso 5
+
+
+
+############################ SIAG: Couleurs ####################################
+
+Black					Noir
+Red					Rouge
+Green					Vert
+Blue					Bleu
+Yellow					Jaune
+Magenta					Magenta
+Cyan					Cyan
+White					Blanc
+
+
+
+######################### SIAG: Modification d'une cellule #####################
+
+Label:					Texte:
+SIOD expression:			Expression SIOD:
+C expression:				Expression C:
+Guile expression:			Expression Guile:
+Tcl expression:				Expression Tcl:
+
+
+
+######################### SIAG: Écran principal ################################
+
+Sheet %d				Feuille %d
+done.					Terminé.
+EMPTY					VIDE
+LABEL					TEXTE
+ERROR					ERREUR
+
+
+
+######################### SIAG: Menu Fichiers ##################################
+
+New					Nouveau
+Open					Ouvrir
+Save					Enregistrer
+Save As					Enregistrer sous
+Preview					Aperçu
+Print					Imprimer
+Print Format				Format d'impression
+Orientation				Orientation
+Portrait				Portrait
+Landscape				Paysage
+Cell Protection				Cellules protégées
+Respect					Respecter
+Ignore					Ignorer
+Load External				Importer
+Save External				Exporter
+Exit					Quitter
+
+
+
+######################### SIAG: Menu Édition ###################################
+
+(Undo)
+Delete					Supprimer
+Insert Line				Insérer une ligne
+Remove Line				Effacer une ligne
+Insert Column				Insérer une colonne
+Remove Column				Effacer une colonne
+Select All				Tout sélectionner
+(Cut)
+(Copy)
+(Paste)
+Find					Chercher
+Find Backward				Chercher dans l'autre sens
+Label					Texte
+Expression				Expression  
+Change Default Interpreter		Changer l'interpréteur par défaut  
+Other					Autre
+Function A-F				Fonctions A-F
+Function G-L				Fonctions G-L
+Function M-S				Fonctions M-S
+Function T-Z				Fonctions T-Z
+Add Property				Ajouter une propriété
+
+
+
+########################### SIAG: Menu Bloc ####################################
+
+Set Mark				Début de bloc
+Set Block				Fin de bloc
+Unset Block				Désélectionner le bloc
+Copy Block				Copier le bloc
+Delete Block				Effacer le bloc
+Fill Block				Remplir le bloc
+Smart Fill Block			Remplir intelligemment le bloc 
+Sort					Trier
+Rows Ascending as Text			Lignes par ordre alphabétique
+Rows Ascending as Numbers		Lignes par ordre numérique
+Rows Descending as Text			Lignes par ordre alphabétique inverse
+Rows Descending as Numbers		Lignes par ordre numérique inverse
+Columns Ascending as Text		Colonnes par ordre alphabétique
+Columns Ascending as Numbers		Colonnes par ordre numérique
+Columns Descending as Text		Colonnes par ordre alphabétique inverse
+Columns Descending as Numbers		Colonnes par ordre numérique inverse
+Block Sum				Somme du bloc
+Block Minimum				Minimum du bloc
+Block Maximum				Maximum du bloc
+Block Average				Moyenne du bloc
+Borders					Bordure
+Grid					Grille
+Underline				Soulignement
+None					Rien
+
+
+
+######################### SIAG: Menu Format ####################################
+
+Column Width				Largeur de colonne  
+Set					Fixer
+Fit Block				Ajuster le bloc
+Set Default				Nouvelle valeur par défaut
+Row Height				Hauteur de ligne
+Set Default Format			Format par défaut
+Font					Police
+Style					Style
+Define Style				Définir un style
+Foreground Color			Couleur de texte
+Background Color			Couleur de fond
+
+
+
+######################### SIAG: Menu Données ###################################
+
+Edit Record				Modifier l'enregistrement
+Data Entry				Entrée de données
+Siag-net				Siag-net
+Identify Cell				Identifier une cellule
+Recalculate				Recalculer
+
+
+
+######################### SIAG: Menu Plugin ####################################
+
+Import					Importer
+Export					Exporter
+Link					Lier à
+(Delete)
+Move					Déplacer
+App					App
+
+
+
+######################### SIAG: Menu Fenêtre ###################################
+
+Change Buffer				Changer de document
+Delete Buffer				Éliminer un document
+Split Window				Diviser la vue courante
+Remove Window				Fermer la vue courante
+One Window				Afficher une seule vue
+Change Window				Vue suivante
+Add Sheet				Ajouter une feuille
+Remove Sheet				Détruire la feuille courante
+Rename Sheet				Renommer la feuille courante
+Protect Cells				Protéger la cellule
+Remove Protection			Enlever la protection
+Go To					Aller vers
+Beginning of buffer			Début du document
+End of buffer				Fin du document
+Top of buffer				Première ligne
+Bottom of buffer			Dernière ligne
+Cell					Cellule...
+Grid Lines				Grille
+Show					Montrer
+Hide					Cacher
+Reference Style				Format des références
+Helptexts				Textes d'aide
+Disable					Aucun
+(Label)
+Popup					Info-bulle
+Both					Les deux
+Save Preferences			Enregistrer les préférences
+
+
+
+######################### SIAG: Menu Diagramme #################################
+
+Lines					Lignes
+Points					Marques
+Linespoints				Lignes et marques
+Impulses				Pics
+Dots					Points
+Steps					En escalier
+Boxes					Rectangles
+Surface					Surface
+Advanced				Avancé
+
+
+
+######################### SIAG: Menu Outils ####################################
+
+Command					Commande
+Terminal				Terminal
+Webserver				Serveur web
+Mail					Courrier électronique
+File Manager				Gestionnaire de fichiers
+Form Test				Test d'un formulaire
+Test 1					Test 1
+Test 2					Test 2
+Test 3					Test 3
+
+
+
+########################### SIAG: Menu Aide ####################################
+
+Contents				Table des matières
+Search					Chercher
+Copying					Reproduction
+Help for Help				Aide sur l'aide
+About Siag				À propos de Siag
+
+
+
+############################## SIAG: Pop-up ####################################
+
+(Open)
+(Save)
+(Undo)
+(Delete)
+(Label)
+(Expression)
+(Command)
+Sum					Somme
+(Plugin)
+(Help)
+Quit					Quitter
+
+
+
+
+
+
+################################################################################
+############################                     ###############################
+############################   Pathetic Writer   ###############################
+############################                     ###############################
+################################################################################
+
+######################### PW: Menu principal ###################################
+
+(File)
+(Edit)
+(Block)
+(Format)
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+
+
+######################### PW: Barre d'outils ###################################
+
+Start another instance of Pathetic Writer	Démarrer une nouvelle session de Pathetic Writer
+Open a Pathetic Writer document		Ouvrir un document Pathetic Writer
+(Save the contents of the current buffer)
+(Preview the contents of the current buffer)
+(Print the contents of the current buffer)
+Spelling checker			Vérification orthographique
+Display the PW online documentation	Afficher l'aide en ligne de PW
+(Display the Gnu general public license)
+(Left adjusted text)
+(Centered text)
+(Right adjusted text)
+
+
+
+######################### PW: Barre d'attributs ################################
+
+(Change the font family)
+(Change the font size)
+(Change the display style)
+(Change the color)
+(Bold text)
+(Italic text)
+Underlined text				Text souligné
+Superscript				Exposant
+Subscript				Indice
+
+
+
+######################### PW: Styles d'affichage ###############################
+
+(Default)
+Header 1				En-tête 1
+Header 2				En-tête 2
+Header 3				En-tête 3
+Header 4				En-tête 4
+Header 5				En-tête 5
+Header 6				En-tête 6
+(Address)
+Title					Titre
+Abstract				Résumé
+Preformatted				Préformaté
+(User 1)
+(User 2)
+(User 3)
+(User 4)
+(User 5)
+
+
+
+######################### PW: Menu Fichiers ####################################
+
+(New)
+(Open)
+(Save)
+(Save As)
+(Preview)
+(Print)
+(Print Format)
+(Load External)
+(Save External)
+(Exit)
+
+
+
+######################### PW: Menu Édition #####################################
+
+(Delete)
+(Insert Line)
+(Remove Line)
+(Select All)
+(Find)
+(Find Backward)
+Replace					Remplacer
+Spell					Orthographe
+
+
+
+######################### PW: Menu Bloc ########################################
+
+(Set Mark)
+(Set Block)
+(Copy Block)
+(Delete Block)
+(Fill Block)
+
+
+
+######################### PW: Menu Format ######################################
+
+Line Height				Hauteur de ligne
+(Copy)
+Use					Utiliser
+Cleanup					Vider
+
+
+
+######################### PW: Menu Plugin ######################################
+
+(Import)
+(Export)
+(Link)
+(Delete)
+(Move)
+(App)
+
+
+
+######################### PW: Menu Fenêtre #####################################
+
+(Change Buffer)
+(Delete Buffer)
+(Split Window)
+(Remove Window)
+(One Window)
+(Change Window)
+(Add Sheet)
+(Remove Sheet)
+(Rename Sheet)
+(Go To)
+(Beginning of buffer)
+(End of buffer)
+(Helptexts)
+(Disable)
+(Label)
+(Popup)
+(Both)
+(Save Preferences)
+
+
+
+######################### PW: Menu Outils ######################################
+
+(Command)
+(Terminal)
+Spell Test				Tester l'orthographe d'un mot
+Dump Words				Extraire les mots de la ligne
+(Form Test)
+(Test 1)
+(Test 2)
+(Test 3)
+
+
+
+######################### PW: Menu Aide ########################################
+
+(Contents)
+(Search)
+(Copying)
+(Help for Help)
+About Pathetic Writer			À propos de Pathetic Writer
+
+
+
+############################## PW: Pop-up ######################################
+
+(Open)
+(Save)
+(Undo)
+(Spell)
+(Command)
+(Plugin)
+(Help)
+(Quit)
+
+
+
+
+
+
+################################################################################
+#############################                   ################################
+#############################   Egon Animator   ################################
+#############################                   ################################
+################################################################################
+
+Egon Editor				Éditeur d'Egon Animator
+
+######################### EGON: Menu principal #################################
+
+(File)
+(Edit)
+(Plugin)
+(Window)
+(Tools)
+(Help)
+
+
+
+######################### EGON: Barre d'outils #################################
+
+Start another instance of Egon Animator	Démarrer une nouvelle session d'Egon Animator
+Open an Egon Animator document		Ouvrir un document Egon Animator
+(Save the contents of the current buffer)
+(Preview the contents of the current buffer)
+(Print the contents of the current buffer)
+Pause the animation			Pause
+Previous animation frame			Image précedente
+Play the animation			Démarrer l'animation
+Next animation frame			Image suivante
+Display the Egon online documentation	Afficher la documentation en ligne d'Egon
+
+
+
+######################### EGON: Barre d'attributs ##############################
+
+(Change the font family)
+(Change the font size)
+(Change the display style)
+(Change the color)
+(Bold text)
+(Italic text)
+
+
+
+######################### EGON: Styles d'affichage #############################
+
+(None)
+Line					Ligne
+Rectangle				Rectangle
+Arc					Arc
+Ellipse					Ellipse
+Pixmap					Pixmap
+String					Texte
+Point					Point
+Filled Rectangle			Rectangle plein
+Filled Arc				Arc plein
+Filled Ellipse				Ellipse pleine
+
+
+
+######################### EGON: Menu Fichiers ##################################
+
+(New)
+(Open)
+(Save)
+(Save As)
+(Preview)
+(Print)
+(Print Format)
+(Load External)
+(Save External)
+(Exit)
+
+
+
+######################### EGON: Menu Édition ###################################
+
+Show Editor				Montrer l'éditeur
+Hide Editor				Cacher l'éditeur
+Begin Empty Animation			Commencer une animation
+Add Object				Ajouter un objet
+(Line)
+(Rectangle)
+(Arc)
+(Ellipse)
+Image					Image
+(String)
+(Point)
+(Filled Rectangle)
+(Filled Arc)
+(Filled Ellipse)
+(Other)
+Delete Object				Supprimer l'objet
+Add Tick				Ajouter un repère temporel
+Delete Tick				Effacer le repère temporel
+Edit Properties				Modifier les propriétés
+Set Background				Charger un fond
+Timing					Rythme
+Set Geometry				Taille
+
+
+
+######################### EGON: Menu Plugin ####################################
+
+(Import)
+(Export)
+(Link)
+(Delete)
+(Move)
+
+
+
+######################### EGON: Menu Fenêtre ###################################
+
+(Change Buffer)
+(Delete Buffer)
+(Split Window)
+(Remove Window)
+(One Window)
+(Change Window)
+(Helptexts)
+(Disable)
+(Label)
+(Popup)
+(Both)
+(Save Preferences)
+
+
+
+######################### EGON: Menu Outils ####################################
+
+(Command)
+(Terminal)
+Demo					Démo
+Box					Rectangle
+Circle					Cercle
+(Line)
+Combo					Combiné
+
+
+
+######################### EGON: Menu Aide ####################################
+
+(Contents)
+(Search)
+(Copying)
+(Help for Help)
+About Egon Animator			À propos d'Egon Animator
+
+
+
+############################## EGON: Pop-up ####################################
+
+(Show Editor)
+(Hide Editor)
+Open file				Ouvrir un fichier
+Save file				Enregistrer le fichier
+Stop animation				Stopper l'animation
+Previous frame				Image précedente
+Next frame				Image suivante
+Play animation				Démarrer l'animation
+Quit Egon				Quitter Egon
+
+
+
+
+
+
+################################################################################
+##########################                      ################################
+##########################  Boîtes de dialogue  ################################
+##########################                      ################################
+################################################################################
+
+Alert					Alerte
+Dialog					Dialogue
+List					Liste
+Form					Formulaire
+Select File				Sélectionnez un fichier
+
+Change %s:				Changer de %s:
+
+Parameters:				Paramètres:
+
+Select Plugin:				Sélectionnez le plugin:
+
+Previewer				Visualisation PS
+Print Command				Impression
+
+Search:					Chercher:
+
+Change Buffer:				Changer de document:
+Kill Buffer:				Éliminer le document:
+
+External Program:			Programme externe:
+
+Go to:					Aller en:
+
+%s command:				Commande %s:
+%s expression:				Expression %s:
+
+
+
+
+######################### Confirmation #########################################
+
+Yes					Oui
+No					Non
+Cancel					Annuler
+
+yes					oui
+on					on
+
+
+
+######################### Sélection de fichiers ################################
+
+File Name:				Nom du fichier:
+Directory:				Répertoire:
+Format:					Format:
+OK					OK
+(Cancel)
+(Find)
+(Help)
+Home					Chez vous
+Examples				Exemples
+
+Find pattern:				Critère de recherche:
+Pick one:				Choisissez-en un:
+No files found				Aucun fichier trouvé
+
+Save %s?				Enregistrer %s?
+Overwrite existing %s?			Écraser le fichier %s?
+
+Couldn't save				Impossible d'enregistrer
+
+Load auto startup code?			Charger le code de lancement automatique?
+
+
+
+######################### Formulaires de test ##################################
+
+Enter user data				Entrez les données
+First name				Prénom
+Last name				Nom
+Address					Adresse
+Förnamn					Prénom
+Efternamn				Nom
+Gatuadress				Adresse
+Nummer					Numéro
+Postnummer				Code postal
+Postadress				Adresse postale
+Land					Pays
+
+
+
+######################### SIAG: Boîtes de dialogue #############################
+
+Width:					Largeur:
+Height:					Hauteur:
+
+Key					Touche
+Value					Valeur
+
+SIOD command:				Commande SIOD:
+C command:				Commande C:
+Guile command:				Commande Guile:
+Tcl command:				Commande Tcl:
+
+Expression style:			Style de l'expression:
+
+New expression interpreter:		Nouvel interpréteur d'expressions:
+
+
+
+######################### EGON: Boîtes de dialogue #############################
+
+Object type:				Type d'objet:
+
+Time:					Moment:
+
+Duration				Durée
+Delta					Intervalle
+
+Width					Largeur
+Height					Hauteur
+
+Text					Texte
+
+
+
+
+
+
+################################################################################
+##################                                      ########################
+##################  Messages d'erreur ou d'information  ########################
+##################                                      ########################
+################################################################################
+
+Loading					Chargement en cours
+Saving					Sauvegarde en cours
+File saved				Fichier enregistré
+New file				Nouveau fichier
+Can't open header file			Impossible d'ouvrir le fichier d'en-tête
+Can't open loader file			Impossible d'ouvrir le gestionnaire de fichiers
+Can't open saver file			Impossible d'ouvrir le gestionnaire de fichiers
+
+
+
+Can't exec GV				Impossible d'exécuter la commande gv
+Can't exec lpr				Impossible d'exécuter la commande lpr
+External program failed			Erreur lors de l'import ou de l'export
+
+
+
+No such buffer				Aucun document de ce type
+Couldn't kill last buffer		Impossible de détruire le dernier document
+Attempt to delete sole ordinary window	Tentative de fermeture de la dernière vue
+This window is too small to split	La fenêtre est trop petite pour être divisée
+
+
+
+Already defining kbd macro!		Vous êtes déjà en train de définir un raccourci clavier !
+Defining kbd macro...			Définition d'un raccourci clavier...
+Not defining kbd macro			Vous n'êtes pas en train de définir un raccourci clavier
+Keyboard macro defined			Raccourci clavier défini
+Can't execute anonymous macro while defining one	Impossible d'executer un raccourci clavier pendant la définition d'un autre
+Input buffer overflow; macro execution terminated	Tampon d'entrée plein; l'exécution du raccourci est terminée
+
+
+
+This command does nothing		Cette commande est inopérante
+No object selected			Aucun objet sélectionné
+Can't overwrite embedded object		Impossible d'écrire par dessus un objet encapsulé
+
+
+
+Style Default changed			Le style "Défaut" a changé
+Style Header 1 changed			Le style "En-tête 1" a changé
+# etc...
+Style Header 6 changed			Le style "En-tête 6" a changé
+Style User 1 changed			Le style "Perso 1" a changé
+# etc...
+Style User 6 changed			Le style "Perso 6" a changé
+# etc...
+
+
+
+
+
+
+################################################################################
+##############################                  ################################
+##############################   SANS EFFET ?   ################################
+##############################                  ################################
+################################################################################
+
+Style %s changed			Le style %s a été changé
+Can't make postscript			Impossible de générer du Postscript
+<none>					<rien>
+[%s at %d] [size = %dx%d] [duration=%d delta=%d]	[%s en %d] [taille = %dx%d] [dure=%d intervalle=%d]
+
+GIF image				Image GIF
+Jpeg image				Image JPEG
+BMP image				Image BMP
+All files (*)				Tout fichier (*)
+
+Local File				Fichier local
+Compressed File				Fichier compressé
+Archive					Archive
+Compressed Archive			Archive compressée
+Generic					Générique
+
+
+
+################################################################################
+##############################                  ################################
+##############################   OBSOLETE ???   ################################
+##############################                  ################################
+################################################################################
+
+Select everything			Tout sélectionner
+Change default interpreter		Changer l'interpréteur par défaut
+SIOD Expression				Expression SIOD
+C Expression				Expression C
+Guile Expression			Expression Guile
+Tcl Expression				Expression Tcl
+Embed Object				Encapsuler l'objet
+Remove Object				Supprimer l'objet
+Open Object				Ouvrir un objet
+Save Object				Enregister l'objet
+
+Object file:				Fichier d'objet:
+
+Fit Block Width				Ajuster la largeur du bloc
+Fit Block Height			Ajuster la hauteur du bloc
+Cell Format				Format de cellule
+Block Format				Format de bloc
+Cell Style				Style de cellule
+Block Style				Style de bloc
+Cell Color				Couleur de cellule
+Block Color				Couleur de bloc
+
+Import Plugin				Importer un plugin
+Move Plugin				Déplacer plugin
+
+SIOD Command				Commande SIOD
+C Command				Commande C
+Guile Command				Commande Guile
+Tcl Command				Commande Tcl
+Web Server				Serveur web
+Another Form Test			Tester le formulaire (2)
+Yet Another Form Test			Tester le formulaire (3)
+Another Form Test Still			Et encore un
+
+Disable Helptexts			Aucun texte d'aide
+
+Change Object Type			Changer le type de l'objet
+Play Animation				Démarrer l'animation
+
+Quit animation				Quitter l'animation
+
+Comma					Virgule
+
+Embed					Encapsulé
+
+Show editor				Montrer l'éditeur
+Hide editor				Cacher l'éditeur
+Add tick				Ajouter un repère temporel
+
+Add Line				Ajouter une ligne
+Add Rectangle				Ajouter un rectangle
+Add Arc					Ajouter un arc
+Add Ellipse				Ajouter une ellipse
+Add Image				Ajouter une image
+Add String				Ajouter un texte
+Add Point				Ajouter un point
+Add Filled Rectangle			Ajouter un rectangle plein
+Add Filled Ellipse			Ajouter une ellipse pleine
+Add Filled Arc				Ajouter un arc plein
+
+No warranty				Aucune garantie
+
+Box Animation Demo			Démo rectangle
+Circle Animation Demo			Démo cercle
+Line Animation Demo			Démo ligne
+Combo Animation Demo			Démo combiné
+
+Segment Format				Format de paragraphe
+Line Format				Format de ligne
+Segment Style				Style de paragraphe
+Line Style				Style de ligne
+Segment Color				Couleur de paragraphe
+Line Color				Couleur de ligne
+
+black					noir
+red					rouge
+green					vert
+blue					bleu
+yellow					jaune
+magenta					magenta
+cyan					cyan
+white					blanc
+
+Extra					Extra
+Family Name				Nom
+Size					Taille
+Attributes				Attributs
+Adjustment				Alignement
+Misc					Divers
+List Selection				Sélection de liste
+
+Bold					Gras
+Italic					Italique
+Top					Haut
+Bottom					Bas
+Left					Gauche
+Right					Droite
+Center					Centrer
+color					couleur
+Color:					Couleur:
+
+Save %s ?				Enregistrer %s ?
+To:					Vers:
+
+Pop down animation			Stäng animationen???

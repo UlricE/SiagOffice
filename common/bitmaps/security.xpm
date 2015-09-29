@@ -1,0 +1,37 @@
+/* XPM */
+static char *security[] = {
+/* width height num_colors chars_per_pixel */
+"    18    18       12            1",
+/* colors */
+". c #000000",
+"# c #222222",
+"a c #333366",
+"b c #444444",
+"c c #6666cc",
+"d c #800000",
+"e c #808000",
+"f c #990066",
+"g c #9999ff",
+"h c None",
+"i c #f5f5f5",
+"j c #ffffff",
+/* pixels */
+"hhhhhhhhhhhhhhhhhh",
+"hhhhhhhhhhhhhhhhhh",
+"hhhhhhhhhhhhhhhhhh",
+"hhhhhhhhhhcccaaahh",
+"hhhhhhhhhchjjhhcah",
+"hhhhhhhhhcjh.dcgah",
+"hhhhhhhhhahchh#gah",
+"hhhccccccahcchc..h",
+"hhcj.eeeeccc.hhhhh",
+"hhajjjjjjjgd.hhhhh",
+"hhajgfffffdc.hhhhh",
+"hhajjeeeeeed.hhhhh",
+"hhajgfffffdc.hhhhh",
+"hhajjeeeeeec.hhhhh",
+"hhca######..chhhhh",
+"hhhhhhhhhhhhhhhhhh",
+"hhhhhhhhhhhhhhhhhh",
+"hhhhhhhhhhhhhhhhhh"
+};

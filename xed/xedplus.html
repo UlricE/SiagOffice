@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>XedPlus</title>
+</head>
+<body>
+<h1>XedPlus</h1>
+This text editor is based on Xed 1.3 by Randolf Werner.
+It is part of Siag Office.
+<p>
+
+<h2>MENUS:</h2>
+
+<ul>
+<li> File:
+<ul>
+<li>	Open			Load a textfile
+<li>	Insert			Insert a textfile at current cursor position
+<li>	Save			Save actual textfile
+<li>	Save as			Save actual textfile with different name
+<li>	Save Selection		Save actual selected text
+<li>	Print			Print actual textfile
+<li>	Print Selection		Print actual selected text
+<li>	Exit			Exit xed
+</ul>
+
+<li> Edit:
+<ul>
+<li>	Cut			Cut current selection in Cut_Buffer0
+<li>	Paste			Paste Cut_Buffer0 at current cursor position
+<li>	Shift Selection right	Indent current selection 1 Tab
+<li>	Shift Selection left	UnIndent current selection 1 Tab
+</ul>
+
+<li> Jump:
+<ul>
+<li>	Line			Goto linenumber
+<li>	Begin			Goto textbeginning
+<li>	End			Goto textending
+<li>	Selection Start		Goto startposition of current selection
+<li>	Selection End		Goto endposition of current selection
+</ul>
+    	     
+<li> Search:  
+<ul>
+<li>	Find bracket		Select a textblock containing currently selected
+       				bracket an coresponding bracket.
+       				(Valid brackets are {,},[,],(,),/*,*/)
+<li>	Check brackets		Check hierachy of brackets
+</ul>
+    	     
+<li> Special:
+<ul>
+<li>	Options			Set Wrapmode, Tabsize, Autoindent and Autofill	
+<li>	Call sed		Execute an sed command
+<li>	Help			Show this page
+<li>	About			Info about xed
+</ul>
+
+
+<li> Commands:
+<ul>
+<li>	Command			Execute a Unix command 
+<li>	User Commands		Execute a predefined Unix command
+</ul>
+    	      
+<li> Pipe:
+<ul>
+<li>	Pipe			Execute a Unix pipe command
+<li>	User Pipes		Execute a predefined Unix pipe command
+</ul>
+</ul>
+  	     
+<h2>SELECTIONS:</h2>
+
+    Standard Textwidget selection style is used:
+    
+<ul>
+<li>	Click left button 1 times          : Set cursor position
+<li>	Click left button 2 times          : Select word
+<li>	Click left button 3 times          : Select line
+<li>	Click left button 4 times          : Select paragraph
+<li>	Click left button 5 times          : Select all
+<li>	Press left button and drag pointer : Select area
+<li>	Click right button                 : Expand current selection
+<li>	Click middle button                : Insert Cut_Buffer0 at current cursor position
+</ul>
+        
+<h2>KEYBOARD:</h2>
+
+Standard Textwidget key bindings are used. These are patterned after those in the 
+EMACS text editor:
+
+<ul>
+<li> Ctrl-a  Beginning Of Line
+<li> Ctrl-b  Backward Character
+<li> Ctrl-d  Delete Next Character
+<li> Ctrl-e  End Of Line
+<li> Ctrl-f  Forward Character
+<li> Ctrl-g  Multiply Reset
+<li> Ctrl-h  Delete Previous Character
+<li> Ctrl-j  Newline And Indent
+<li> Ctrl-k  Kill To End Of Line
+<li> Ctrl-l  Redraw Display
+<li> Ctrl-m  Newline
+<li> Ctrl-n  Next Line
+<li> Ctrl-o  Newline And Backup
+<li> Ctrl-p  Previous Line
+<li> Ctrl-r  Search/Replace Backward
+<li> Ctrl-s  Search/Replace Forward
+<li> Ctrl-t  Transpose Characters
+<li> Ctrl-u  Multiply by 4
+<li> Ctrl-v  Next Page
+<li> Ctrl-w  Kill Selection
+<li> Ctrl-y  Unkill
+<li> Ctrl-z  Scroll One Line Up
+<li> Meta-b  Backward Word
+<li> Meta-f  Forward Word
+<li> Meta-i  InsertFile
+<li> Meta-k  Kill To End Of Paragraph
+<li> Meta-q  Form Paragraph
+<li> Meta-v  Previous Page
+<li> Meta-y  Insert Current Selection
+<li> Meta-z  Scroll One Line Down
+<li> Meta-d  Delete Next Word
+<li> Meta-D  Kill Word
+<li> Meta-h  Delete Previous Word
+<li> Meta-H  Backward Kill Word
+<li> Meta-&lt;  Beginning Of File
+<li> Meta-&gt;  End Of File
+<li> Meta-]  Forward Paragraph
+<li> Meta-[  Backward Paragraph
+<li> Meta-Delete            Delete Previous Word
+<li> Meta-Shift Delete      Kill Previous Word
+<li> Meta-Backspace         Delete Previous Word
+<li> Meta-Shift Backspace   Kill Previous Word
+</ul>
+
+   In addition some special keybindings are used: 
+    
+<ul>
+<li> Shift Cursor up      : Page up
+<li> Shift Cursor down    : Page down
+<li> Shift Cursor left    : Previous word
+<li> Shift Cursor right   : Next word
+<li> Ctrl Cursor up       : Textbeginning
+<li> Ctrl Cursor down     : Textending
+<li> Ctrl Cursor left     : Begin of line
+<li> Ctrl Cursor right    : End of line
+</ul>
+     
+   There are some default keybindings for calling menus, which overwrite some of the
+   above defaults in the textwindow. These may be changed by changing Resources in 
+   your "~/.Xdefaults":
+ 
+<ul>  
+<li> Meta-o		  : Open file
+<li> Meta-i		  : Insert file
+<li> Meta-s		  : Save file
+<li> Meta-e		  : Exit
+<li> Meta-f		  : Find Panel
+<li> Meta-l		  : Goto line
+<li> Meta-m		  : Toggle between Insert and Overwrite mode   
+</ul>
+
+Esc erases the text in a popup text field like Line, Search, Sed, ...
+   
+<h2>USER COMMANDS AND PIPES</h2>
+
+    UNIX commands can be execute using a user pipe or command. If there is some
+    output of a user command it is displayed in another xed. Results of a pipe 
+    command replace the current text selection. Before a command is executed, the 
+    current selection and the current text are saved in temporary files. The 
+    following variables are set and may be used in a command:
+ 
+<pre>   
+    $selection: Filename of the temporary file containing the current selection
+    $tempfile : Filename of the temporary saved text file
+    $filename : Filename of the edited file
+    $stripped : Stripped Filename (without postfix and path) of the edited file
+</pre>
+    
+The user may specify his own commands by specifying RESOURCES:
+ 
+<pre>   
+	XedPlus*commands
+	XedPlus*pipes
+</pre>
+    
+    Each command has the format "&lt;Menu entry&gt;&lt;Tab&gt;&lt;Command string&gt;". Here
+    are some short examples. These examples are setup in the default resource file. You
+    may change them for your own purpose in your ".Xdefaults" file:
+
+<pre>
+	XedPlus*commands: LatexPS	latex $stripped; dvips $stripped.dvi -o $stripped.ps; ghostview $stripped.ps &\n\
+	LatexDVI	latex $stripped; xdvi $stripped.dvi &\n\
+	Make	make\n\
+	CC	cc $stripped.c -o $stripped\n\
+	NewXed	1&gt;/dev/null 2&gt;/dev/null xed &\n\
+	Manual	mantitle=`head $selection`;man $mantitle | sed "s/.//g"
+	XedPlus*pipes: Date	date
+</pre>
+
+</h2>KEYBINDINGS FOR CALLING MENUS</h2>
+
+    You may define keybings for calling menus by changing the XedPlus.insertranslations and
+    XedPlus.overwritetranslations resources. For calling a menu entry you can use the Action 
+    "xedCallMenu". In oder to call a specific menu entry, you have to know the widget
+    name of the menu entry. A complete list of the widget names can be found in the
+    default resourse file (see below). For example the default keybinding for calling
+    the menus are setup in the default resource file in the following manner:
+    
+<pre>
+	Meta&lt;Key&gt;i: xedCallMenu(filemenu.insert) \n \
+	Meta&lt;Key&gt;o: xedCallMenu(filemenu.load) \n \
+	Meta&lt;Key&gt;s: xedCallMenu(filemenu.save) \n \
+	Meta&lt;Key&gt;e: xedCallMenu(filemenu.quit) \n \
+	Meta&lt;Key&gt;l: xedCallMenu(jumpmenu.line) \n \
+	Meta&lt;Key&gt;f: xedCallMenu(searchmenu.search) \n \
+</pre>
+    
+   If you like to see the hotkey for calling a menu entry in the menu entry name, you
+   can define you own menu entry names. This is the default setting in the default
+   resource file:
+
+<pre>   
+   	XedPlus.filemenu.load.label:	Open          o
+	XedPlus.filemenu.insert.label:	Insert        i
+	XedPlus.filemenu.save.label:	Save          s
+	XedPlus.filemenu.quit.label:	Exit          e
+	XedPlus.jumpmenu.line.label:	Line          l
+	XedPlus.searchmenu.search.label:	Search          f 
+</pre>
+	
+   The widget name of a user command or pipe is defined by the menu entry name.
+   For example the widget names of the above examples for user commands and pipes
+   are:
+
+<pre>
+   	XedPlus.commandsmenu.LatexPS
+   	XedPlus.commandsmenu.LatexDVI
+   	XedPlus.commandsmenu.Make
+   	XedPlus.commandsmenu.CC
+   	XedPlus.commandsmenu.NewXed
+   	XedPlus.commandsmenu.Manual
+   	XedPlus.pipesmenu.Date
+</pre>
+   	
+   So these menu entries may be bind to some hotkeys by calling:
+
+<pre>   
+   	xedCallMenu(commandsmenu.LatexPS)
+   	...
+   	xedCallMenu(pipesmenu.Date)
+</pre>
+
+   Be carefull when choosing the name of a menu entry for user commands or pipes.
+   You may run into troubles if you use special characters or the same name for
+   different menu entries.
+    	
+<h2>RESOURCES:</h2>
+
+<pre>
+    XedPlus.EnableBackups	      : Make backupfile before saving (Boolean)
+    XedPlus.BackupNameSuffix      : Suffix for backupfilename (String)
+    XedPlus.PrintCommand	      : Command for printing file (String) 
+    XedPlus.AutoIndent            : AutoIndent (Boolean)
+    XedPlus.Tabsize               : Tabsize (Int)
+    XedPlus*editWindow.autoFill   : Autofill (Boolean)
+    XedPlus*editWindow.wrap       : Wrapmode (String) (never, word, line)
+    XedPlus.textwidth             : Width of the textwindow in number of characters (Int)
+    XedPlus.textheight	      : Height of the textwindow in number of characters (Int)
+    XedPlus.MaxScrollbreak        : Specifies how many cursor events with the
+                                same serial number will be ignored (Int)
+    XedPlus.commands	      : User command strings (String)
+    XedPlus.pipes		      : Users pipe strings (String)
+    XedPlus.insertranslations     : Keybindings in Insert mode
+    XedPlus.overwritetranslations : Keybindings in Overwrite mode
+</pre>
+
+    The default resource file is not installed, but compiled into the
+executable file. Global resource files are evil.
+    You may copy it into your "~/.Xdefaults" and modify it for your own purpose.
+
+<hr>
+<address>Ulric Eriksson - April 1999 - ulric@siag.nu</address>
+
+</body>
+</html>
+

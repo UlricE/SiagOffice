@@ -1,0 +1,122 @@
+.TH EGON 1 LOCAL
+
+.SH NAME
+egon \- Egon Animator
+
+.SH SYNOPSIS
+.B egon
+[X-options] [siod-options] [filename...]
+
+.SH DESCRIPTION
+.I Egon
+is an X-based animation package for Unix.
+It uses Scheme both for expressions and as a macro language,
+which makes it easy to create new functions. The Scheme interpreter
+is 
+.I SIOD
+written by George Carrette.
+
+.SH COMMAND LINE OPTIONS
+.TP
+.BI X-options
+See on-line documentation.
+.TP
+.BI SIOD-options
+See on-line documentation.
+
+.SH ENVIRONMENT
+.TP
+.BI HOME
+is the name of the user's home directory.
+.TP
+.BI PRINTER
+is the name of the default printer destination.
+.TP
+.BI SIAGHELP
+is the name of Egon's online help browser, normally Netscape although
+any HTML browser can be used.
+.TP
+.BI SIAGHOME
+is the name of Egon's "home" directory, normally /usr/local/lib/siag.
+.TP
+.BI SIAGDOCS
+is the name of the directory where the online documentation is installed.
+
+.SH FILES
+.TP
+.BI $SIAGHOME/egon/egon.scm
+is automatically read on startup and contains a runtime library
+including many of the functions that are necessary for normal
+operation. PW will not work properly without this file.
+.TP
+.BI $SIAGHOME/egon/menu.scm
+is also read on startup and contains the code to set up menus.
+Failure to load this file will result in all the menus being empty.
+.TP
+.BI $HOME/.siag/egon.scm
+contains optional Scheme code which should be loaded after
+siag.scm but before any documents.
+
+.PD
+.SH SEE ALSO
+On-line documentation, which contains more complete information about the
+invocation and usage of Egon.
+
+.SH DIAGNOSTICS
+Most error messages come from SIOD and are printed on the bottom line.
+See SIOD source and documentation for interpretation.
+
+.SH LIMITATIONS
+Egon can read and write several file formats
+(see on-line documentation for details).
+
+.SH BUGS
+Handles out of memory conditions ungracefully.
+
+And more.
+
+.SH VERSION
+Current version (21 March 2000) is Egon 3.3.0 by Ulric Eriksson, 
+ulric\@siag.nu. 
+
+The online documentation is probably
+more recent than this manpage and is likely to contain more
+accurate information.
+
+.SH AUTHOR
+Copyright (C) 1996-2000 Ulric Eriksson
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+MA 02111-1307, USA.
+
+.SH ACKNOWLEDGEMENTS
+Major parts of this program are written by people other than myself.
+There is no reason to re-implement stuff that is already freely available.
+
+For copyright information and installation instructions, see the
+various packages. The sources are hacked by Yours Truly to give the
+programs a uniform look. If you don't approve of that and/or already
+have the programs installed, there is no need to install my versions.
+
+These are not the original versions. If my modifications break
+anything, complain to me about it, not the original authors.
+If the original versions work and mine don't, then don't use mine.
+.TP
+.BI SIOD
+The embedded Scheme interpreter is an extremely small interpreter
+called Siod, which can be used stand-alone or easily integrated
+into a program as an extension language.
+
+Author: George J. Carrette, gjc\@delphi.com

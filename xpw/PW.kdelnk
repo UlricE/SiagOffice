@@ -1,0 +1,13 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowExec=
+SwallowTitle=
+BinaryPattern=
+Name[C]=Pathetic Writer
+MimeType=application/x-pw;
+Exec=pw %f
+Icon=pw.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

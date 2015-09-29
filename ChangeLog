@@ -1,0 +1,2632 @@
+
+061110	Buildability fixes for Egon.
+	Unbundled Antiword.
+	Corrected formatting errors in dictionary.it.
+	Bundled o3read.
+
+030916	Siag, PW: Ctrl-T adds sheet, Ctrl-W removes sheet.
+
+030820	Got newest source from CVS. xsiag/window.c had to be
+	reformatted using indent.
+
+030309	Replaced applicationShellWidgetClass with
+	mwApplicationShellWidgetClass. Instant drag and drop
+	support, just like that. This means that Mowitz >= 0.3.0
+	is now required.
+	Siag, PW, Egon: remove drop.[ch] and use drop functionality
+	in Mowitz instead. Added cb_drag and cb_drop callbacks.
+
+030304	Replaced XtAppInitialize with XtOpenApplication everywhere.
+
+030303	Changed .cvs to .csv in common/siag.dfmext.
+
+030228	PW, Siag: Got rid of selection size limit.
+	Removed siag/selection.c.
+
+030226	Xedplus: PRIMARY and CLIPBOARD fixed here as well, however
+	neXtaw is required as no other Xaw cousins recognize
+	CLIPBOARD at all!
+	Xedplus: xedCallMenu unbroken. Cut, Copy, Paste work from
+	menu, toolbar and using keybindings ^X, ^C, ^V.
+
+030225	Siag, PW: PRIMARY and CLIPBOARD selections work according to the
+	current interpretation of the ICCCM.
+	PW: Moved xpw/selection.c into window.c.
+
+030224	Added local copy of libstocks, updated for stocks outside
+	the US. Removed --with-stocks configuration option.
+	Siag: removed xsiag/selection.c and moved the code into
+	window.c
+
+030221	Added Dutch translation by Bram Schoenmakers <bram@schnmkrs.myweb.nl>
+	Released 3.5.6.
+
+030128	PW: replaced Emacsy keybindings with modern ones.
+	Siag: Added lots of translations in Siag.ad to override
+	Emacsy bindings in keytable.scm.
+
+030127	Added the function get_utf8_char in common/o3read.c to
+	get rid of utf8tolatin1 dependency.
+	Made sxc reader grok repeated columns.
+	Released 3.5.5.
+
+030122	PW: Native OpenOffice.org reader in fileio_sxw.c.
+	Siag: Native OpenOffice.org reader in fileio_sxc.c.
+
+030118	Added o3read.[ch] from o3read.
+
+030116	Use guile-config to figure out where Guile's headers are
+	hidden, as suggested by Masao Uebayashi <uebayasi@pultek.co.jp>.
+	Released 3.5.4.
+
+030115	Patches from Matej Vela <vela@debian.org>:
+	- want_init.diff fixes a bug which prevents `siag -i' from
+	  loading the specified file.
+
+	- docdir.diff adds support for a configurable documentation
+	  directory.  E.g. Debian uses /usr/share/doc/siagoffice-common,
+	  and BSD-ish systems generally prefer /usr/local/share/doc.
+	  Patching all the Makefiles can be cumbersome.
+
+	- disable_kdeinst.diff makes it easier to disable installation
+	  of KDE application and MIME entries.
+
+021125	Siag: Use o3tohtml, if available, to read files from
+	Open Office scalc.
+
+021118	PW: Use o3tohtml, if available, to read files from
+	Open Office swriter.
+
+021110	Added antiword.
+	Updated autoconf to 2.54 and automake to 1.7.1.
+
+021014	Siag: Unbroke the href and vref functions.
+	SIOD: Increased heap size to 30000 cons cells.
+
+021010	Siag: New function get_number works like get-cell, except
+	that it *always* returns a number. If the cell is empty
+	or contains a non-number, 0 is returned. The old-style
+	',' operator was changed to use get_number.
+
+020506	Patches from Petr Mladek <pmladek@suse.cz>:
+	1. siag is able to create graph only from expressions
+	   and not from constans. The patch siag-3.5.1-graph.patch
+	   fixes this problem.
+	2. siag and pw uses always iso8859-1 fonts for menus.
+	   The patch siag-3.5.1-font.patch fixes this problem.
+	   With this patch iso8859-1 or iso8859-2 font is used
+	   acroding to locales.
+	3. It is problem to compile siag with python support.
+	   The patch siag-3.5.1-trace.patch fixes this problem.
+	Bugfix from Larry Kollar <kollar@alltel.net>:
+	don't include types.h in egon/tcli.c.
+	Released 3.5.2.
+
+020315	Check in acinclude.m4 to see that XAWLIB is installed.
+	Another check to define NARROWPROTO only if needed.
+
+020308	Siag: More convenient references between sheets using the
+	syntax sheet!cell, e.g. "Sheet 1"!"A5".
+	Released 3.5.1.
+
+020201	PW: Load Word Perfect 5.1 files using wp2x.
+	PW: Set background colour (still won't display right due to
+	limitations in Mowitz).
+	Siag: Underlined text.
+
+020128	Siag: Load much more formatting from Excel, including colours.
+	Siag, Egon, PW: Arbitrary colours using #rrggbb notation.
+
+020123	Egon: set the stage size in draw_buffer.
+	Scale ppt text to fit window. Split lines longer than 60 chars.
+	Snarfed from xlhtml: libcole, xlhtml, ppthtml.
+
+020122	Siag: use xlhtml rather than xlHtml.
+	Egon: use ppthtml rather than pptHtml.
+	(the names of the programs were changed upstream)
+
+020120	Moved Animator, Richtext and Table to Mowitz.
+
+020119	Patched tsiag so it compiles.
+
+020115	Removed extra line in IsoLatin[12].enc and added check to
+	load_encoding.
+
+020114	Moved all the format handling code into Mowitz.
+	Temporarily removed tsiag.
+
+020112	Moved Tabbing widget to Mowitz.
+	Siag, Egon, PW: when new buffer is loaded, set w_list->sht = 0;
+
+020107	Siag, Egon, PW: Bindings for the Ruby programming language.
+	Updated documentation with information about the Ruby
+	interpreter, plus the Clipart plugin's ability to display
+	LaTeX and DVI.
+	Removed the fsel_input function, since it is only a
+	wrapper around MwFileselInput.
+	Use kde2 as default theme.
+
+020105	Fixed compiler warning in siag/db.c (2nd arg to connect).
+
+011230	Updated libstocks information in INSTALL.
+
+011229	Use the file selector in Mowitz. Removed filesel.c. Added a
+	little wrapper function to xcommon.c.
+	Gsiag is apparently broken again. Removed it.
+	Updated Guile support to version 1.5.
+	Updated Python support to version 2.2.
+
+011227	Added support for alternative directories in PIXPATH. Removed
+	the old default directory.
+
+011226	Removed xcommon/icon.c (replaced with MwSetIcon from Mowitz).
+	Removed xcommon/tooltip.c (replaced with MwHighlightInit).
+	Moved OffiX DND code to Mowitz.
+	Moved Ruler widget to Mowitz (new name MwTabstop).
+
+011225	Moved more dialogs and stuff to Mowitz.
+
+011221	Added autoconf test for Xpm.
+
+011220	Updated automake and autoconf.
+
+011218	Use the Mowitz.h header.
+
+011217	Moved Check, Tabs and Notebook widget to Mowitz.
+
+011216	Fixed all the Combos to use the new callbacks.
+	Fixed all Handles to use the new callbacks.
+
+011215	Moved the Nws menu code to Mowitz.
+
+011213	Broke out lots of widgets and stuff from xcommon.
+	Siag, Pw, Egon: removed the unnecessary frames around the
+	combo widgets (the combos have their own frames now).
+
+011211	XawM was unbundled.
+	Handle is now subclassed from Frame rather than Label, so Siag can be
+	built with any Xaw compatible library.
+	Configuration option --with-xawm=XXX slightly changed: XXX should
+	now be the name of the library without -l or lib, e.g.
+	--with-xawm=neXtaw or --with-xawm=XawM (still default).
+	Image, diary and xlinks were removed again.
+	Test built with Xaw, XawM, Xaw3d, neXtaw, Xaw95 and XawXpm.
+
+011203	Siag: save *current* sheet in fileio_latex.c, not sheet 0.
+
+011014	New program xsiod creates widget bindings for SIOD.
+
+011012	Command.c: DEFAULT_HIGHLIGHT_THICKNESS changed to 0 (2) and
+	shadowWidth to 1 (2).
+
+011011	All new applications were fixed up so they work with autoconf.
+
+011010	The BadValue error in ThreeD.c was finally tracked down and fixed.
+	Xpaint was added under the name image and xdiary under the name diary.
+	Links and xlinks were also added.
+	Gvu was replaced with gv (under the name gvu).
+
+010923	Stderr is no longer redirected, it causes more trouble than it's worth.
+
+010920	Cmalloc and friends are used more consistently.
+
+010917	Updated Russian dictionary (Sergey Korepanov <skoff@chat.ru>).
+	NEW Hungarian dictionary (Sólya Zoltán <solya.zoltan@ln.matav.hu>).
+	Released 3.4.10.
+
+010810	Xfiler: Handle filenames with spaces in makeicons. Don't
+	recreate icons if they already exist.
+	Any2xpm: Handle filenames with spaces.
+
+010610	Siag: Added support for sdbd in sdb.c.
+
+010530	Fixed misspellings in kdelnk files that prevented Mime bindings
+	from working.
+
+010523	Pw: Check in pack_area that block is set.
+	Siag, Pw: Keybindings like ^C^C for copy, ^C^X for cut, ^C^V for
+	paste and so on.
+	Siagrun: redirect stderr to /dev/null.
+	Released 3.4.9.
+
+010522	Image: new option -fit scales the initial window to fit within
+	the root window.
+	Xfiler: Use the new -fit option when displaying images.
+	Xfiler: New keyboard command ^U updates image preview icons,
+	^W closes one window, ^Q quits completely, ^N opens a window.
+
+010521	Gvu: Readded the "theme" support.
+
+010520	Xfiler: Added commands Tab and Shift-Tab to move around in
+	the icon window. Pressing Return invokes the default action
+	on the currently selected file when the command line is empty.
+
+010519	Gvu: Antialiasing by Jean-Pierre.Demailly@ujf-grenoble.fr.
+
+010518	Xfiler: Create preview icons in $HOME/.siag/.xfiler.
+
+010517	Siag: Updated for libstocks 0.5.0.
+	Siag: updated database documentation.
+	PW: Partial support for Mac charset in RTF reader.
+	XtNactivate replaced with XtNcallback everywhere in Nws.
+	Fixed compiler warnings in XawM.
+	Updated installation instructions in INSTALL.
+	New Spinner widget.
+
+010516	Replaced all the database drivers with one for libsdb.
+	New module db.c contains the new function db_query(url,query).
+	The url is a string of the form "driver:key=value:key=value...",
+	e.g. "oracle:uid=admin:pwd=admin". This gives access to all
+	databases supported by libsdb, currently Lago, Mysql, Sqlite,
+	Mimer, Postgres, Oracle, Gdbm and UnixODBC.
+	Italian dictionary updated by Giorgio.Carra@gcarra.com.
+
+010515	Added KDE2 icons.
+
+010514	Backed out lots of half-implemented changes made this year.
+
+001224	Siag: support for Oracle.
+
+001220	Siag: support for the PostgreSQL database.
+
+001215	Updated check in acinclude.m4 so new XawM will be built.
+
+001214	Siag: cleaned up the Mimer SQL code.
+	Siag, PW: new commands to select, edit and delete themes.
+	PW: When changing adjustment for a block, do it for all lines.
+
+001213	Modifications to Nws and XawM to draw softer bevels in the style
+	of MS Windows and Gtk.
+
+001211	PW, Siag: Reduced cmalloc paranoia level to 0 to speed it up.
+
+001205	Released 3.4.7.
+
+001204	PW: Fixed tab printing code in fileio_ps.c.
+	Made block-adjusted text align better in the Richtext widget.
+
+001129	Released 3.4.6.
+
+001128	Support for the Mimer SQL database.
+
+001124	Support for the Sqlite database.
+	Fixed bug in ps_set_font.
+
+001120	Released 3.4.5.
+
+001114	Siag, PW: Use Psionio 3.71 or newer to read and write Data,
+	Sheet, Agenda and Word files.
+	Siag: Fixed buffer overflow in HTML reader. Load HTML files
+	containing multiple tables into multiple sheets. Exploit
+	knowledge of xlHtml generated files to get sheet names and
+	formatting information. Updated HTML writer: save documents
+	containing multiple sheets into multiple tables. Mimic
+	xlHtml's way of saving sheet names and formatting.
+
+001113	Released 3.4.4.
+
+001110	Siag: equally experimental support for Mysql.
+	PW: It seems like Abi files can be read directly by the html
+	reader, so added it to the menu.
+
+001107	Siag: experimental support for the Lago database.
+
+001106	PW: Use psiconv to load Psion Word files. Also added workaround
+	for files with <head> but no </head> tag, as produced by psiconv.
+	Added csnprintf in common.c as a wrapper around vsnprintf if that
+	function exists and vsprintf otherwise.
+
+001106	Catch WM_DELETE in listsel dialog.
+	New words in Swedish translation.
+	Released 3.4.3.
+
+001105	Operators ! and ~ (logical and binary not) unbroken.
+	New postfix operator % calculates percent. Example:
+	roman("X")% => 10% => 0.1.
+	Minor syntax change: expressions such as 10%-3 now mean (10%)-(3)
+	rather than (10)%(-3).
+
+001029	In slib.c, function gen_intern: changed cname to unsigned char
+	to avoid negative hash values.
+
+001028	Added prototypes to the rest of Nws.
+
+001026	Added the function pfb2ps which removes the requirement to have
+	t1utils to use fonts in pfb format. Removed readpfa.
+	Commented out Nimbus Sans and Nimbus Roman in fonts.txt:
+	the pfb files aren't supplied, so there's no way they could work.
+	Unbroke Egon (ani_shell wasn't initialized).
+
+001025	Added Latin2 Times font (called it Times2) and code to deal
+	with it. New PFB= directive in fonts.txt.
+	Fixed add_pseudo_menu in siag.scm.
+	Started adding prototypes in Nws.
+
+001024	Ruler.c: Added check if w is None in next_tab.
+
+001020	Always zero out allocated memory in cmalloc. Suggested
+	by Youki Kadobayashi.
+	Changed pw.scm to use new syntax of wvHtml >= 0.6.0.
+
+001019	Released 3.4.1.
+
+001012	Tsiag unbroken.
+
+001008	Added support for the ccmath library.
+
+001004	Added roman numeral conversion: roman(10) => X and
+	roman("X") => 10.
+	Updated Brazilian translation.
+
+000916	Reintroduced the gsiag code! Cleaned up enough to compile.
+	Converted menu code to use item factory and translations.
+	Load button pixmaps at run time rather than compiling them in.
+
+000906	Double buffering for Ruler.
+	Cleaned up code and documentation, released 3.4.0.
+
+000905	PW: Changed richtext highlighting from xor to grey.
+
+000902	Siag: unimplemented a bunch of half-working functions.
+
+000828	PW: Use lyx2html to load files created by LyX. Currently this
+	does not work because of a bug in lyx2html: it does not accept
+	the syntax "lyx2html infile.lyx outfile.html".
+	All: Added --with-XawM=-lfoo to configure.
+
+000821	Updated Swedish translation. Removed bogus menu entries.
+	PW: reimplemented scroll-up and scroll-down.
+	Verified that aspell can be used as an ispell substitute.
+
+000820	Removed a bunch of directories from the AFM anf TYPE1 search paths.
+
+000816	Siag: Made label3 display CONSTANT rather than ERROR for cells
+	containing constant numbers.
+
+000815	Added the Bitstream Charter font and made a simplified T1lib
+	configuration with only this font.
+
+000815	PW: fileio_ps.c largely rewritten using the new afm info with
+	support for "full"-adjusted text. Prerelease 2.
+
+000814	Nothing used rc_geom: removed. Changed rc_width and rc_strwidth
+	to return float. Implemented an afm file parser and made rc_width
+	use it. Moved several functions and structures from xcommon/fonts.c
+	to common/fonts.c. New directive AFM= in fonts.txt specifies the
+	name of the afm file for a font. Added afm files for all fonts in
+	fonts.txt in the new directory common/fonts.
+	Siag: Removed a number of functions from tsiag/fonts.c.
+	A weird hack: if character 45 is listed as hyphen in
+	IsoLatin1.enc, we get a tiny little line which is nothing like
+	what Ghostprint prints! Changing the name to minus fixes the
+	problem, but hey?!
+
+000813	PW: Scrollbars unbroken. Unselect block on button 1 click or
+	self-insert-char.
+
+000810	Egon: Removed the siag_matrix variable from guilei.c (Mark Williams).
+
+000808	Siag: Reintroduced the CONSTANT type.
+
+000806	PW: Add tabs to ruler using button 1 for left, button 2 for center
+	and button 3 for right adjusted tabs. Shift-click to remove tabs.
+	All: Everything that used to go into libexecdir now goes into libdir.
+
+000805	PW: Align plugins left, center or right. Plugins are now left
+	aligned by default; an Incompatible Change (tm).
+
+000804	PW: Removed top from sheet structure. Changed top in Richtext
+	to use pixels rather than lines.
+
+000802	PW: "Full" adjustment makes left and right edges straight.
+
+000729	Siag: References of the form $A$1 are accepted. The difference
+	from A1 is that they are not automatically updated when cells
+	are moved.
+
+000721	Siag: New example allfunctions.siag. Many functions such as pow2
+	renamed to avoid being interpreted as A1 references (pow_2).
+
+000719	Siag: get-cell incorrectly returned the number 0 for empty cells
+	and cells containing errors. Changed so that empty cells and
+	errors return nil. Don't know what else this will break.
+
+000717	Siag: Arbitrary precision arithmetic using libgmp. Bindings
+	for 67 functions in gmp.c. New example gmp.siag.
+
+000716	Siag: Rudimentary loading of ABS files in new file fileio_abs.c.
+	New operators ** and \ (same as functions power and quotient).
+
+000715	Siag: Complex numbers. New example complex.siag.
+
+000714	Siag: Matrix functions transpose and mmult.
+
+000712	Siag: added atanh to mathwrap.c. Moved the new functions written
+	in Scheme to the new file functions.scm.
+
+000711	Siag: Documentation for hundreds of functions in siag.scm,
+	most needed for Excel compatibility. Actual functions not written yet.
+
+000710	Siag: Completely rewrote ci.c. It now "compiles" strings containing
+	expressions into strings containing Scheme expressions.
+	No values are calculated in ci.c. This also fixed several bugs:
+	function calls without arguments, e.g. getpid(), didn't work,
+	and functions such as define evaluated their arguments to early.
+	Also added the capability to work with strings, e.g. length("foo").
+	Finally, expressions such as car(cons(1, nil)) are now acceptable:
+	anything goes as long as the end result is a number or a string.
+
+000708	Siag: New function currency_rate returns currency exchange rates,
+	e.g. currency_rate("FRF","SEK") converts 1 French Franc to Swedish
+	Kronor. Requires a patch to libstocks, which I hope will be
+	included in future releases.
+	Siag: Added function reference in the new file siag-functions.html.
+	Also created tools to update it automatically. Wrote docs for
+	all functions accessable from "C".
+
+000707	Removed xcommon/docs/TODO, which described features added years ago.
+
+000706	PW: fixed annoying off-by-one error in block handling code.
+
+000705	PW: Print raised, lowered and underlined text properly.
+	Implemented strikethrough (screen and print). This affects
+	register-style and the file styles.scm. New icon strike.xpm.
+
+000704	Added #include <stdio.h> to the part of stocks.h where
+	libstocks is not used.
+	Added height_interest to buffer structure, mostly to speed up
+	html (and doc) loader.  Used in ins_text.
+
+000702	Removed common/docs/embedding.html.
+
+000627	Siag: New example portfolj.siag demonstrates the stock features.
+	The clipart plugin now handles LaTeX and DVI files.
+	Clipart plugin reads BoundingBox from PS file.
+
+000626	Siag: Added support for the immensely cool libstocks library,
+	which fetches stock quotes from Yahoo. New module stocks.c.
+	New SIOD functions stock_test, stock_price, stock_yesterday,
+	stock_open, stock_min, stock_max, stock_var, stock_volume.
+	Implemented a simple stock quote cache to prevent that the
+	same quote is fetched over and over again. Not only would that
+	be an antisocial thing to do, but it would also be terribly slow
+	for the user. Now the same quote is never fetched more than once
+	every five minutes.
+	Egon: XSynchronize seems to eliminate the X errors.
+	New translation: Brazilian Portuguese by arfreitas@ig.com.br.
+	Released 3.3.11.
+
+000623	Egon, Siag: Save as PDF.
+	Egon: Plaintext loader created object names containing spaces.
+	Egon, PW, Siag: Remove plugin directory on exit. Moved plugin_basedir
+	to common/common.c.
+
+000622	PW: Load and save PDF using pdftohtml and ps2pdf.
+
+000619	Egon: Plaintext loader scales the text to fit the window.
+
+000618	Egon: Load and save HTML and load MS Powerpoint using pptHtml.
+	Load Magicpoint as plaintext using the new converter mgptotxt.
+	Keyboard control. Docs for keybindings and file formats slightly
+	unbroken.
+	Siag: Moved only_space to common/common.c.
+	Released 3.3.10.
+
+000616	Egon: Load and save plain text.
+
+000615	Fixed a bunch of compiler warnings in Xfiler.
+	Released 3.3.9.
+
+000613	Egon: margins and paper sizes for printing. Removed print.c.
+
+000607	Egon: format stubs for HTML, MagicPoint and plain text.
+	Powerpoint support through pptHtml (added register-converters
+	in egon.scm).
+	Moved fileio_ps.c to xegon and implemented printing!
+
+000606	Egon: background gradients.
+
+000601	Changed grab mode in dialog_input to XtGrabExclusive.
+
+000531	Egon: added the necessary code for multiple buffers and sheets.
+
+000530	Egon: reversed the user interface, so that it is the stage that
+	is popped up from the editing interface.
+	Egon: make a full-screen stage if the size is specified as 0x0.
+
+000526	Egon's default size changed from 600x400 to the same size
+	as the root window.
+
+000525	common/common.c/spawn: close the child's stderr to avoid
+	popping up its error messages.
+	xcommon/fonts.c: new function ps_set_color to set the color
+	of postscript output. Fixes a bug which sometimes caused Siag to
+	display coloured cells in black.
+	PW, Siag: explicitly set header/footer colour to black.
+	Siag: explicitly set border colour to black.
+
+000520	Let wv convert Word documents into HTML using iso8859-15
+	character set, which is almost identical to Latin1.
+
+000518	Made Richtext update the Ruler immediately when the timeout
+	is set, in addition to after redrawing itself.
+
+000518	Added siagrun which was missing from the distribution.
+	Siag: grey grid lines.
+	Released 3.3.7.
+
+000516	Replaced ~/.siag/applications.scm with ~/.siag/applications.sh,
+	which is used also by XedPlus, XFiler et al. This way all
+	applications use the same terminal, same help browser and so on.
+	German translation updated by Theodor Willax.
+	Released 3.3.6.
+
+000515	Siag, PW, Egon: Added setlocale(LC_NUMERIC, "C") at the top
+	of realmain(). Takes care of colour printing problems.
+
+000511	Tsiag: #include <termios.h> in window.c.
+	Danish translation updated by Birger Lankjer.
+
+000509	Updated Ruler drawing.
+	Let Richtext widget update Ruler resources.
+	New script siagrun is a "master-helper" for viewer, lpr,
+	editor, help, filer, terminal and calculator.
+
+000508	Rewrote Nws' copy of Vendor.c so everything is called NwsVendor
+	et al instead. Discovered by Gabor Z Papp <gzp@papp.hu>.
+	Added a note in INSTALL for Linux users to run /sbin/ldconfig.
+
+000507	PW: tab stops were off when the Richtext widget was scrolled
+	sideways.
+	PW: resized to 640x420.
+
+000506	Tsiag: removed tsiag/selection.c and tsiag/forminput.c.
+	Rewrote Image widget to redisplay more efficiently, including
+	the timeout hack used in Richtext and Table.
+	Released 3.3.5.
+
+000505	PW: Made GridButtonAction take top_col into account.
+	Added optional ruler resource to Richtext, so that Richtext can
+	automatically adjust the top_col resource of the Ruler widget.
+
+000504	Richtext scrolls sideways.
+	Siag: replaced text1 with Richtext.
+
+000503	New features by Werner Frieder:
+	Siag, PW: Colour printing!
+	Siag: New modes for making grid lines.
+	Siag: When editing cell width/height, use old size as default.
+	Bug fix in siag/cmds.c: Make sure that borders are drawn on the right
+	sheet when selection is not on the current sheet.
+
+000502	Siag: Bug in ci.c caused crash for expressions containing long symbols.
+	Siag: Resized to 700x420.
+
+000501	Rewrote Richtext widget so it can be used as a replacement for
+	TextField.
+	Siag: use Richtext for in-place editing instead of TextField.
+
+000428	Siag: Zoom.
+	XawM: Define NeedFunctionPrototypes in Xaw/Makefile.am to make sure
+	that prototypes are used.
+	German translation updated by Theodor Willax.
+	Spanish translation updated by criptos@criptos.com.mx.
+	Richtext and Table widgets make clever use of a short timeout
+	(50 ms) to avoid sluggishness when events are coming in rapidly.
+	Released (the somewhat half-finished) 3.3.4.
+
+000427	PW: Moved label1 to the status bar.
+
+000425	PW: Zoom.
+
+000412	Check in kdeinst that installation directories are writable.
+	Fixed a bug that caused a crash when inserting or removing
+	columns in empty documents. Found by Rob Lahaye <lahaye@postech.ac.kr>
+	Released 3.3.3.
+
+000411	Removed installation instructions for Xaw3d and GV, since they
+	are no longer used. Updated Guile version number.
+
+000409	German translation updated by Theodor Willax
+	<willax@tarantel.rz.fh-muenchen.de>.
+
+000407	Czech translation updated.
+
+000406	Moved cchar from pw/fileio_html.c to common/common.c
+	and added the functions from_cchar and to_cchar which
+	convert between HTML entities and character codes.
+	Modified siag/fileio_html.c to use those functions.
+
+000405	Czech translation by Petr Klíma and Martin Klozik,
+	klima.petr@post.cz.
+	Updated Danish translation by Birger Langkjer.
+	Read Excel files using xlHtml and Powerpoint files
+	using pptHtml.
+
+000404	Removed colors.scm and rgb.c. New function init_colors in
+	fonts.c reads colors directly from rgb.txt, using the code
+	from rgb.c.
+	Replaced fonts.scm with fonts.txt, which is read by init_fonts
+	in fonts.c.
+
+000402	Updated fileio_csv.c to load files correctly when using xls2csv
+	as external converter.
+
+000330	Removed highlight and unhighlight args from tooltip_init.
+
+000327	PW: New Ruler widget. Removed rulerframe.
+	Combo pops down if mouse button is clicked outside list.
+	Russian translation by Sergey Korepanov <korep@softhome.net>.
+	Released 3.3.2.
+
+000326	Removed unused resources from Table.
+
+000324	Made terminal depend on environment setting (see Tools menu).
+	Added Calculator to Tools menu.
+	Pedantically renamed everything called MenuButton in Nws
+	to NwsMenuButton.
+
+000323	Removed references to Xaw3d from the documentation.
+	Include sys/types.h in common/common.h. Created the patch
+	diff-3.3.0-3.3.1.gz and released 3.3.1.
+
+000322	Released 3.3.0.
+
+000321	Siag, PW, Egon, plugins, common, xcommon: fixed several
+	missing or broken prototypes.
+
+000320	The function edit-unknown in siag.scm was crashing. Replaced by
+	one written in C in cmds.c.
+	Added acinclude.in to XawM. Does a single thing: adds -Wall
+	to CFLAGS if GCC is used.
+
+000318	All: Added tear-off handles to the menu bars. Slightly changed
+	the layout so the handles don't stand out so much. Added
+	make_handle to xcommon/Handle.c and removed it everywhere else.
+	Made siaghelp redirect stderr to stdout, so error messages don't
+	generate pop-ups.
+
+000314	Updated do-help and do-link in common/common.scm so that they
+	use SIAGHELP and applications.scm properly.
+
+000221	Added new target bzdist to toplevel Makefile.am. Creates
+	two tarballs compressed with gzip and bzip2 (smaller).
+	Updated office.html.
+	Siag, PW, Egon: broke out a common spawn and put it in common.c.
+
+000220	Stripped out everything in Nws that wasn't necessary to get
+	the menus going.
+	Added all of XawM and adapted it for autoconf and libtool.
+
+000219	Checked out Ed Falk's XawM. Looks good. Added highlightThickness:0
+	in xcommon-ad.h to avoid black rectangles in clicked buttons.
+	Siag, PW: Make sure b is blanked at the top of each loop in
+	load_flat. Discovered by Werner Frieder.
+
+000218	PW: Augmented register-converters in pw.scm to use wvHtml if it
+	is available. Fixed fileio_html so it recognizes tags even if
+	they are written as <tag foo="bar baz">.
+
+000216	Since load_dictionary now sorts the dictionary, there is
+	no reason to precompile it. Removed makedict and all
+	dictionary.?? files. All dictionary.??.in renamed
+	dictionary.??.
+	New function cstrcmp in common.c.
+
+000215	Galician translation by Ramon Flores <fa2ramon@usc.es>
+	In load_dictionary: sort the dictionary even though it is
+	supposed to be sorted already. Something appears to make
+	makedict sort differently for different people, so we want
+	to make sure we get the right order.
+	New function in common.c: quotecpy copies a string,
+	quoting blacklisted characters. This is used in save_ext
+	and load_ext to handle filenames containing shell metachars.
+	Bug discovered by Nerijus <nerijus@sat.lt>.
+	Changed all obsolete ulric@edu.stockholm.se addresses.
+
+000213	Released 3.2.0.
+
+000210	PW: Display row/column rather than row/page in label3.
+
+000205	PW: Added converter for man pages, loading only (uses groff).
+	Siag, PW, Egon: Removed Help - Search from menu. Added links
+	from commands.html to the relevant places in scheme.html.
+	Siag: Added links in keys.html as well.
+
+000204	Siag, PW, Egon: Removed "Tools - Edit Applications" from the
+	menu and replaced it with the submenu "Tools - Environment"
+	with several entries for KDE, CDE et al. Only "Custom" pops
+	up the old dialog, with the Integration selector removed.
+
+000203	Siag: Finally (?) got the formats right. At least Werner Frieder's
+	wine list can now be saved and loaded without errors.
+	
+	All: when saving a file, changing the format pattern in the
+	file selector also changes the filename extension.
+
+000202	Any2xpm: redirect stderr from ppmtoxpm to /dev/null.
+	Resource tweaking in xcommon-ad.h: removed explicit font
+	setting for file selector, to allow KDE to override.
+	Added general setting for *font, to keep X from using
+	the ugly "default" font. KDE will still override this.
+
+000201	Moved Siaghelp to $(bindir) and made it smarter: make sure
+	that $SIAGHELP exists. If SIAGHELP is unset, set it to
+	something that will work. Start netscape so it works even
+	if an instance is already running. Run kedit for non-html
+	files is SIAGHELP is kdehelp.
+
+	Siag, PW, Egon, XedPlus, Gvu: redirect stderr to errorbox(),
+	using the new stderr_redir() in xcommon/dialogs.c.
+
+000130	Siag: Fixed three long-lived bugs in the handling of default
+	formats.
+	1. Empty, allocated cells were not changed when the
+	   default format changed, only empty, unallocated ones.
+	   Fixed in functions std_fmt_get and std_fmt_set in matrix.c.
+	2. Changing the format of allocated empty cells did not change
+	   the default format, only changing unallocated ones did.
+	   Fixed in ins_format in matrix.c.
+	3. Changing the format of a block containing empty cells
+	   did not change the default format unless at least one of
+	   them was allocated. Fixed in area-format and line-format
+	   in siag.scm.
+
+	Siag, PW: Do not translate the style names displayed in Combo
+	widgets by show_format.
+
+	XedPlus: Menu entry Jump - Begin incorrectly called
+	DoJumpLine instead of DoJumpBegin.
+	
+	All: strings in dictionary can contain newlines using \n.
+
+000129	Siag: ins_format tried to use the old bitmapped method to figure out
+	if the cell has borders.
+
+000127	All: New function aboutbox in xcommon/dialogs.c
+	displays a 32x32 logo, a short message and an OK button.
+	New function aboutsiag, also in dialogs.c, uses aboutbox
+	to display the foot from ms.egon and a message about
+	Siag Office. Added to Help menus.
+
+	All: Updated form interface for new menu widgets from Nws.
+
+	XedPlus: New pixmaps insert.xpm and overwrite.xpm indicate edit mode.
+	New statusbox widget, similar to the one in Siag et al.
+	Dirty has been moved there and uses ** to show that the buffer
+	needs saving. The bitmap is no longer used.
+	Help menu. "About XedPlus" and "About Siag Office" on menu.
+
+	All: Distribute COPYING in the root directory, and only there.
+	Install in /usr/local/docs/siag, together with FILES, NLS and README.
+	
+	All: KDE pixmaps are default for icons.
+
+	Form plugin can no longer make menus. It never could anyway,
+	and this way I don't have to update the code for Nws.
+
+	Prerelease 3.2.0pre3.
+
+000126	Siag: do_cmd() does not strip eighth bit, and calls new function
+	(edit-unknown) rather than (edit-expression) and (edit-label).
+	The new function edits as expression and converts to label
+	if that fails. Makes it easier to enter labels that start
+	with a digit, for example.
+
+	XedPlus: Moved dirty and editmode widgets to toolbar. Added
+	make_vsep().
+
+
+000124	Siag, PW, Egon: Bug fix in load_all and save_all: use format
+	string in {loader,saver}_patterns[n], not fileformats[n].pattern.
+	In save_all and load_all: try to guess file format before asking.
+
+	All: Hack in file selector: if the pattern typed in the file finder
+	starts with a '!', everything after the first character is used
+	as argument to find. This means that it is possible to search
+	files based on modification time, file permissions and so on.
+
+000117	All: Labels displayed in menus must be copied, otherwise they stop
+	working when GC kicks in.
+	Keep MenuButton from highlighting on entry.
+	Tweaked file selector layout.
+	Prerelease 3.2.0pre2.
+
+991201	Siag: Changed default width to 640 pixels.
+	Unofficial prerelease 3.2.0pre1.
+
+991130	Xfiler: Find file.
+
+991127	All: Replaced menu widgets from Xaw3d with the ones from Nws.
+
+991123	Siag: Changed Find so it disregards case and finds substrings.
+	Unofficial 3.1.23.
+
+991120	All: Removed most background colour settings, to allow them to be
+	overridden by KDE.
+
+991116	Siag: Updated online documentation with the new syntax for C
+	expressions and A1 references.
+
+991113	Siag: Expressions as function arguments in ci.c.
+
+990923	Siag: Moved all temporary files into $HOME/.siag/tmp.
+
+990922	Unified change log (this file) for everything. Original
+	CHANGES files below.
+
+
+[Egon Animator CHANGES]
+
+
+990709	Install kdelnk files if KDE is present on the system.
+
+990705	Ported to new Tooltip and Handle widgets.
+
+990629	Resized all 16x16 pixmaps to 24x24.
+
+990622	Use load_pixmap in xcommon for the icons.
+
+990516	Auto-generate commands.html from menu.scm.
+
+990427	Replaced all Form widgets in window.c with Rudegrid.
+
+990426	Moved app resources to xcommon/xcommon-ad.h
+
+990408	Replaced tryuntar in fileio_egon.c with the one in common.c.
+
+990404	Redesigned file selector + grooved frame around editor lists.
+
+990402	URL on Help menu updated to point at new site.
+
+990401	Replaced Layout and Egon with the new Rudegrid widget.
+
+990330	Replaced my Frame widget with Edward A Falk's.
+
+990324	Replaced Application widget with Layout from Xaw3d.
+
+990225	Abolished egon_plugin_blah functions.
+	Moved plugin commands from xegon/xegon.c to egon/cmds.c
+	New plugin-select, plugin-write and plugin-read functions.
+
+990202	Rudimentary Python bindings.
+
+990130	Dummy args to SIOD to make it allocate more memory.
+	Function readline in siod/slibu.c renamed lreadline.
+	Links to Siag home page added to Help menu.
+
+990115	Frame and Application added (see siag).
+
+981223	In fileio.c: separate loading formats from saving formats, so that
+	the file selector box doesn't display formats it can't handle,
+	such as Postscript when loading a file.
+
+981117	Fixed remaining issues wrt the combo widgets and formats.
+
+981106	Pop up the editor when the program starts. Should reduce confusion.
+
+981106	Hah, the bugger compiles and runs again. Gtk, here we come.
+
+981106	Split code into egon and xegon directories.
+
+981106	Moved all of input.c to window.c and removed input.c.
+
+981104	Same change to Command and Toggle as in siag. Also removed Hsep.
+
+980908	Multilevel menus.
+
+980810	Released 3.0.
+
+980809	Use structured file format to save images.
+
+980807	Use any2xpm to load "any" image format.
+
+980807	Reversed the user interface so that the editing window is the
+	popup.
+
+980807	Killed the "docdir" concept completely; it was never a good idea
+	anyway. Entirely new file format; old format does not work at all,
+	but can possibly be loaded in the new Scheme (.scm) format.
+	Fonts, colours and strings are no long tied to the script, but
+	to the object.
+
+980724	Added man page.
+
+980718	Replaced Form widget with Egon widget for main window layout.
+
+980716	Changed "About Pathetic Writer" to "About Egon Animator" under Help.
+
+980701	Moved icon.[ch] to xcommon.
+
+980307	Changed everything. Version 2.70.
+
+971110	Added recent cosmetics from Siag. Version 2.55.
+
+970809	Made an Animator widget instead of drawing on a Core widget.
+	Allows for better code encapsulation.
+
+970731	Ah, bingo. xa.valuemask was bogus.
+
+970729	Updated documentation and broke out common parts into common/docs.
+
+970728	Broke out common code into subdir common
+
+970720	Started converting Pathetic Writer to Egon Animator.
+
+
+[Gvu CHANGES]
+
+
+990709	Install kdelnk file is KDE is present on the system.
+
+990629	Resized all 16x16 pixmaps to 24x24.
+
+990622	Started on internationalization.
+	Use load_pixmap in xcommon for the icons.
+
+990502	Changed arrow key bindings to scroll the viewport. Amount
+	scrolled at a time reduced to 80% of shown area.
+
+990427	Removed the unused xstat.h. Moved ps.[ch] to common.
+
+990426	Display location (coordinates) and date on status bar.
+	Use my standard resources, highlighting et al.
+	Use Rudegrid for application layout.
+	Replaced #include <X11/Xos.h> in ps.c with string.h,
+	to make the module device independent.
+	Merged actions.c and dialogs.c into callbacks.c to reduce
+	the number of exports.
+
+990425	Initial port. Removed dependencies on XawPlus without really
+	replacing it with anything. Renamed the program.
+
+
+[Plugins CHANGES]
+
+
+990505	Changed the way plugins send their printed output to the main
+	application: each line of postscript is preceded by a single
+	space, terminate with END.
+
+990504	Clipart plugin prints the original Postscript code rather than
+	letting the plugin framework print a bitmapped image. Scaling
+	works, but the translation and clipping are way off.
+
+990430	Clipart plugin works! At least to the extent that it can
+	display the tiger and golfer examples from Ghostscript.
+	The handwritten examples do not work, but at least it
+	doesn't crash.
+
+990430	Disabled the broken printing support in Image. It works fine
+	with the printing that comes for free for all plugins anyway.
+
+990427	Started on clipart plugin based on the Ghostview widget.
+
+
+[Pathetic Writer CHANGES]
+
+
+990709	Install kdelnk files if KDE is present on the system.
+
+990705	Added ez as supported format (using 2rtf for the conversion).
+
+990704	Ported to new Tooltip and Handle widgets.
+
+990630	Moved pack_selection, pack_string_selection, unpack_selection,
+	unpack_string_selection to pw/matrix.c.
+
+990629	Resized all 16x16 pixmaps to 24x24.
+
+990622	Use load_pixmap in xcommon for the icons.
+	Updated file format documentation in fileformats.html.
+
+990621	Generalized interface to external converters: register-converter
+	(see fileio.c) allows PW to convert files it can't handle directly
+	into another format which it can handle. register-converter is
+	called by the wrapper function register-converters, or manually
+	after PW has started. The default register-converters in pw.scm
+	adds catdoc and mswordview as converters for different versions
+	of MS Word. As a result, fileio_doc.c is no longer needed.
+	Fixed buffer overrun in fileio_html.c.
+
+990611	Changed horizontal scrollbar thumb size to 1.0 to reflect the
+	fact that it doesn't do anything.
+
+990606	New function (goto-line) as Window - Go To - Line in buffer.
+
+990604	New function (ins-special-char) as Edit - Special Char.
+
+990601	Type until automatic line break. New line gets the same
+	justification (left, center, right) as the previous.
+
+990526	Updated Swedish messages in dictionary.sv.in.
+
+990523	Fixed the format handling in the RTF writer.
+
+990522	Use bops to load and save HTML with better accuracy. Keep more
+	formatting when loading, such as italic and bold fonts.
+	Similar changes to RTF reader/writer code to preserve structure.
+	Made bop markers optional. (display-bops 1) to enable.
+
+990521	Rewrote next-line and previous-line so they work going from
+	a long line to a short one.
+	When splitting a line, don't change the style on the second line
+	unless it is wrong (because it also replaces formats).
+
+990520	Fixed line and paragraph rebreaking, style changes and so on using
+	the new bop code.
+
+990518	Added the bop field to each line record. New tag .bop in
+	fileio_pw.c to set bop on next line. For backward compatibility,
+	every line gets a bop for old files. The RTF reader is currently
+	broken since it does not set bops, but the problem won't show up
+	until we reimplement the line breaking algorithm.
+
+990516	Auto-generate commands.html from menu.scm.
+
+990509	Use XmbLookupString rather than XLookupString in Richtext.c
+	and TextField.c to get reliable support for dead keys.
+
+990506	Removed unused pw_plugin_* functions from xpw.c.
+
+990430	Reduced PostScript bloat from 9:1 to 5:1 per character by
+	defining A as {show} and using that instead. Still pretty bad.
+
+990427  Fixed the DSC comments in fileio_ps.c so the previewer can
+	automatically set the right paper and rotation.
+	Replaced all the Form widgets in window.c with Rudegrid.
+
+990426	Moved lots of app resources to xcommon.
+
+990424	Landscape orientation. Select paper using names from a menu
+	rather than typing in point sizes.
+	(delete-block) would crash when no block was selected.
+
+990423	Added all strftime functionality to header/footers. Changed
+	escape character to '&' for other directives.
+
+990422	Paper type and size. Orientation can be set to portrait or
+	landscape (doesn't yet change anything).
+	Margins: top, bottom, left, right, header, footer.
+	Header and footer.
+	Set first page number.
+	Set tab distance.
+	Added check boxes to form input.
+
+990418	Moved all the app-defaults for the file selector and dialog
+	boxes into xcommon/filesel-ad.h and xcommon/dialogs-ad.h.
+
+990408	Replaced tryuntar in fileio_pw.c with the one in common.c.
+	Made Richtext widget not handle VADJ_MASK (already done by rc_draw).
+
+990404	Redesigned file selector.
+
+990402	URL on Help menu updated to point at new site.
+
+990401	Replaced the Layout and Pw widgets with the new Rudegrid.
+
+990330	Replaced my Frame widget with Ed Falk's.
+
+990324	Replaced Application widget with Layout from Xaw3d.
+
+990225	Make llpr copy the string so chomp doesn't modify string literals.
+	Abolished all pw_plugin_blah functions.
+	Moved plugin commands from xpw/xpw.c to pw/cmds.c.
+	New plugin-select, plugin-write and plugin-read functions.
+
+990214	Plugins talk back. See Siag.
+
+990213	New global flag plugin. In plugin mode, always save in PW format
+	if nothing else is specified. Reset the "changed" flag in
+	save_plugin. New function plugin-resize.
+
+990212	Move sheet up, down, top, bottom. New functions: get-sheet
+	and move-sheet.
+
+990211	Image widget scales images when it is resized. Image plugin
+	uses Image widget. Automatically select the first plugin when
+	there is only one; don't display a list.
+
+990208	Croatian messages, thanks to Matej Vela <vela@zagreb.mioc.hr>.
+
+990206	Norwegian messages, thanks to Bjørn-Ove Heimsund
+	<s811@drone.ii.uib.no>
+
+990202	Rudimentary Python bindings.
+
+990130  Dummy args to SIOD to make it allocate more memory.
+        Function readline in siod/slibu.c renamed lreadline.
+        Links to Siag home page added to Help menu.
+
+990115	Frame and Application added (see siag).
+
+981223	New module fileio_doc.c uses catdoc to load Microsoft Word
+	documents. Doesn't preserve formatting or handle fast save,
+	but still... Catdoc must be installed separately.
+
+981223	In fileio.c: separate loading formats from saving formats, so that
+	the file selector box doesn't display formats it can't handle,
+	such as Postscript when loading a file.
+
+981130	Made show_format display the horizontal adjustment correctly.
+
+981129	Fixed the same problem with loading files with bogus styles as
+	in Siag. Also, fixed the same plugin display bug as in Siag.
+	Removed the useless test.pw example.
+
+981125	Moved pw.man from xpw to pw/docs.
+
+981120	Moved all position fields into the sheet structure so they will
+	stay put when tabbing between sheets.
+
+981118	Off-by-one error in set_format prevented block format changes.
+	Set XtNcomboTop so keyboard focus can be restored.
+
+981117	All the style, format, adjustment controls on the toolbars work
+	as expected setting the current format. They do not work for setting
+	block format.
+
+981116	Typo in pw.scm: plugins.scm should be plugin.scm.
+	Changed format code to use encode-format and decode-format
+	like in Siag.
+
+981114	Multiple sheets work.
+
+981111	Added support for multiple definable styles, like in Siag.
+	Updated or added GPL comments in every source file.
+	Started to add multiple sheet support in PW as well. I'm dead
+	set on keeping this from ever compiling, let alone ship.
+
+981105	Moved main.c from xpw to pw. This means that the UI separation
+	should be complete (?)
+
+981104	The same anti-reversing for Command and Toggle as in Siag.
+	Replaced Hsep with Label.
+
+981027	Their reader couldn't read hex. Fixed. Also added some formatting.
+	Added keywords pard, plain, sectd, f, fs, fonttbl, deff, row, cell.
+	Added font table and properties for default font, font number, size.
+
+981027	Font alias table to deal with fonts that we don't have but that
+	have close replacements. E.g. Arial => Helvetica.
+
+981026	Replaced my RTF reader with Microsoft's from the RTF 1.5 spec.
+
+981022	Appears to be stable with the new formats now.
+
+980908	Multilevel menus.
+
+980810	Released 3.0.
+
+980802	Fixed the selection code and made the RichText widget highlight
+	*all* the selected text.
+
+980724	Added man page.
+
+980723	Right mouse button pops up shortcut menu.
+
+980723	New plugin command WIN prints toplevel window id on stdout. No
+	longer is it necessary to depend on unreliable and ambiguous
+	window names to find the plugin.
+
+980722	Personal config file moved from $HOME/.pwrc to $HOME/.siag/pw.scm.
+
+980721	New option -plugin makes PW behave like a plugin: implements
+	communication over stdin/out + does not set window name.
+
+980720	Added structured file format and plugins just like in Siag.
+
+980718	Replaced Form widget with custom Pw widget for main window layout.
+
+980717	Speling cheker.
+
+980709	New commands copy-current-format, use-copied-format,
+	define-style and cleanup-style make style and format handling
+	more flexible.
+
+980704	Moved tooltips to xcommon, changed all references from
+	"helptext" to "tooltip".
+
+980702	Use new RichText widget for output, instead of Canvas.
+
+980701	Removed types.h. Moved icon.c to xcommon. XPM no longer optional.
+	Rewrote print and preview in Scheme. Split into pw and xpw, just
+	like Siag; this is a big change.
+
+980629	Made PW part of Siag Office 2.80.
+
+980629	Removed a bug that made the last line disappear.
+
+980616	Made the format menus not flicker when typing.
+
+980415	Revamped RTF: saves almost all formatting, loads properly.
+
+980412	Added check to line_height in case it isn't allocated.
+	(Humberto Ortiz-Zuazaga <zuazaga@cncac68.cnnet.clu.edu>)
+
+980410	Load HTML properly including formatting and styles.
+
+980307	Changed everything. Version 2.70.
+
+971110	Added recent cosmetics from Siag. Version 2.55.
+
+970824	Add another Canvas widget for a ruler. No drawing code yet.
+
+970824	Draw on a brand new Canvas widget instead of a Core widget.
+
+970805	Made show_format() update adjustment buttons properly.
+
+970729	Updated documentation and broke out common parts into common/docs.
+
+970728	Broke out common code into subdir common.
+
+970718	Automatically break lines when they get too long. V 2.23.
+
+970713	Started experimenting with a simple "object" embedding system.
+
+970711	Save as RTF.
+
+970710	Colours. Selection using custom target PW_BLOCK. Reduced flicker
+	in screen update by using new pr_line_flag when only current line
+	needs redrawing.
+
+970709	Lots of changes to make the program more useful. Block, styles,
+	fileformat. And synchronize the version numbers with Siag.
+	New version 2.22.
+
+970702	Updated user interface to look like Siag. Still not useful in any
+	reasonable sense.
+
+970309	Change most pwline ** args to buffer*.
+
+970309	Printing.
+
+970306	Delete characters, split and join lines.
+
+970302	Insert characters at point. [Is it just me, or is this f*cking
+	boring compared to spreadsheets?]
+
+970301	Cursor movement OK.
+
+970226	Displays text in different fonts in a window.
+
+970226	Started converting Siag to Pathetic Writer. Empty window works,
+	nothing else.
+
+
+[Siag CHANGES]
+
+
+990921	Release 3.1.22.
+
+990920	Backed out a lot of half-implemented stuff from this summer.
+	Made t1lib opt-in.
+
+990712	Release 3.1.21.
+
+990709	Install kdelnk files if KDE is present on the system.
+	Updated application icons.
+	New kdeinst script in common for installing kdelnk files.
+
+990707	Fixed XtFree bug in Rudegrid.c.
+	Added icon directories for KDE and Gnome toolbar icons, which
+	can be accessed by setting the PIXPATH environment variable.
+
+990706	Missing keysyms for Solaris 2.5 contributed by Andrew Gilmore
+	<gilmorea@fluvial.Colorado.EDU>. Release 3.1.20.
+
+990703	Ported to new Tooltip and Handle widgets.
+
+990629	Resized all 16x16 pixmaps to 24x24.
+
+990628	Release 3.1.19.
+
+990626	Duh. Got the logic reversed in label_set, so it *always*
+	set the label, causing heavy flicker when editing a cell
+	in Siag. The bug affects the other programs as well, but
+	the effects are less obvious there. Seems like another
+	release is due when I get home tomorrow.
+
+990624	Release 3.1.18.
+
+990622	Added opt-in autoconf test for ndbm, so users with broken Linux
+	distributions (recent Debian and Red Hat, at least) can build
+	without hassle. This means that a serious error in the system
+	is masked; I'm not convinced that it's the best thing to do,
+	but it's not my fault and hopefully the products will be fixed
+	eventually.
+	Made Guile and Tcl opt-in as well, to be consistent with
+	Python and ndbm.
+	Use load_pixmap in xcommon for the icons.
+	Implemented the same interface to external converters as in
+	PW. The default register-converters in siag.scm probes for
+	xls2csv, which is no longer included with Siag but distributed
+	separately. Of course, this means that fileio_txt.c no longer
+	includes XLS support.
+	Updated file format documentation in fileformats.html.
+
+990621	Release 3.1.17.
+
+990606	Made A1 references the default.
+	WK1 reader makes A1 references if that is the user's preference.
+	New function @LOG10 is defined as log10 to avoid being interpreted
+	as an A1 reference.
+
+990605	Plugged memory leak in xsiag.c/fit_block_width.
+	Double click in colnum calls (fit-block-width).
+	Double click in rownum calls (fit-block-height).
+	Autofill by clicking and dragging in grid.
+	In fileio_siag.c/load_flat: make sure that the resulting
+	standard format does not include borders.
+	Updated docs/mouse.html to describe the new functionality,
+	including the autofilling.
+	A few fixes in the Danish, French and Croatian message keys
+	Added more strings to Swedish message file.
+	New "newdict" script in common looks for missing keys by
+	comparing message files for different languages.
+
+990604	Resize cell size using mouse inside the grid.
+	cmds.c/block_border: automatically insert label with a single
+	space into empty cells.
+
+990603	Implemented keypad keybindings in xsiag/windows.c and in
+	the TextField widget.
+
+990602	Change format of unallocated cells.
+	Redesigned list selector box.
+	Release 3.1.16.
+
+990601	Added a1_refs field to buffer structure and added it to the
+	file format. This means that different buffers can contain
+	different reference styles without conflict. WK1 loader
+	automatically sets loaded buffer to r1c1 references.
+
+990527	Fixed a nasty bug in siodi.c and guilei.c: under certain
+	circumstances when expanding references, too little memory would
+	be allocated causing a crash. Pierre Abbat <phma@oltronics.net>
+
+990526	Updated Swedish messages in dictionary.sv.in.
+	The sequence (set-block) (unset-block) (set-block) would
+	crash because w->bsht wasn't handled. Discovered by
+	Pascal.Cuoq@inria.fr.
+
+990525	Fix to fileio_wk1.c by Marcus Harnisch
+	<marcus@harnisch.isdn.cs.tu-berlin.de>: A year contains 86400
+	seconds, not 84600.
+	Release 3.1.15.
+
+990523	Fixed enter-date and enter-time. They are still not as flexible
+	as I would like them to be, but at least they work now.
+	Added commands edit-applications and save-applications to the
+	Tools menu, so they can be used to customize the environment.
+
+990516	Release 3.1.14.
+
+990515	Interface to Gnuplot rewritten. Use form to get more
+	flexibility. Updated documentation somewhat.
+
+990513	Auto-generate commands.html and keys.html. Thanks to
+	Pascal.Cuoq@inria.fr for the idea.
+
+990509	Use XmbLookupString rather than XLookupString in Richtext.c
+        and TextField.c to get reliable support for dead keys.
+
+990503	Release 3.1.13.
+
+990502	In col_last_used: check if any columns at all are allocated,
+	and return 0 if not.
+
+990427	Fixed the DSC comments in fileio_ps.c so the previewer can
+	automatically set the right paper and rotation.
+
+990425	Moved all the resources for all widgets of a common
+	class from Siag.ad to xcommon-ad.h.
+
+990424	Changed the paper selection, margin, header, footer et al code
+	to the code used by PW. No more properties for this purpose.
+	Fixed the backup-on-save code so it actually works.
+	Changed default header to &n and footer to &p.
+	Orientation and protection moved from the File menu to the
+	paper selection dialog.
+
+990423	Released 3.1.12.
+
+990421	COPYING was missing from the installed documentation.
+
+990420	Danish message file by Birger Langkjer <birger.langkjer@image.dk>
+
+990416	Moved all file selector and dialog box app-defaults into separate
+	headers xcommon/filesel-ad.h and xcommon/dialogs-ad.h so they
+	can be included separately into the application. Removed the
+	corresponding lines from Siag.ad. The same change to all other
+	programs in the suite so identical resources only need to be
+	updated in one place.
+
+990408	Free removed lines so that > to move to end of buffer works.
+
+990408	Replaced tryuntar in fileio_siag.c with the one in common/common.c.
+	That version looks for the string "ustar" at offset 257 in the file
+	*before* trying to untar it, so it is sure to be a tar archive.
+
+990407	Incorporated Victor Wagner's xls2csv utility. XLS format added
+	in module fileio_txt.c.
+	Portability patches from Harold Toms fixed a couple of
+	broken casts.
+
+990406	Incorporated the Xed text editor by Randolf Werner
+	(evol@infko.uni-koblenz.de). See xed subdirectory for details.
+	Removed xcommon/input.c which didn't do anything useful (duplicated
+	existing stuff).
+
+990404	Redesigned file selector. Modified plotting plugin so it doesn't
+	barf on cells containing labels or strings (bug in plot.scm).
+
+990402	Released 3.1.9.
+
+990402	URL on Help menu updated to point at new site.
+
+990401	Another patch from S Lockwood:
+	1. the File menu has "Close" option to kill buffers
+	2. the default for killing buffers is now to have a save
+	   dialog for buffers that have been changed
+
+990331	Rewrote the Gridbox widget into a much simpler constraint
+	widget called Rudegrid. Replaced the Siag widget with this one
+	and lo! it was a success. Even worked first try. Removed Gridbox.
+
+990331	Updated web pages.
+
+990331	After considerable tweaking, I concluded that the Gridbox simply
+	cannot be made to do what the Siag widget does. In particular, Label
+	widgets become too high and the rowcol widget too narrow.
+	The Layout widget has the same problem; in fact it produces a very
+	similar result. I'll stick with the custom Siag widget for now.
+	I would like to eventually write another Gridbox which doesn't
+	ask so nicely but simply assigns sizes to its children.
+
+990330	Added Ed Falk's Frame, Tabs and Gridbox widgets. Removed my Frame
+	widget, and the Notebook, Siag, Pw and Egon widgets will follow.
+	Some changes necessary to the new widgets to make them compile,
+	for example Frame and Tabs used incompatible versions of Gcs.c.
+
+990329	Released 3.1.8.
+
+990329	Patch from Stephen Eglen <stephen@anc.ed.ac.uk>: when a file
+	is saved, show its name in the status bar.
+
+990328	Made printing work with Type 1 fonts. Pfb files require t1ascii
+	from t1utils. New "magic" script common/readpfa.
+
+990326	Default number of recalculations increased from 0 to 1.
+
+990324	Replaced Application widget with the Layout widget from Xaw3d.
+	This means that Siag is no longer compatible at all with Xaw.
+	It also means that xcommon/Application* can be removed.
+
+990324	One-line fix in buffer.c to avoid accessing previously freed
+	pointer. Thanks to S. Lockwood <sjl@chaucer.ece.ucsb.edu>
+
+990324	TextField widget incorrectly discarded Tab characters, which
+	made it impossible to load tab separated files. Discovered by
+	Stephen Eglen <stephen@cogsci.ed.ac.uk>
+
+990322	T1lib support. xcommon/fonts.c modified to work with
+	X fonts in combination with Type 1. Richchar, Table and Animator
+	widgets changed to leverage the new functionality.
+
+990314	New Check widget displays radio or check button together with
+	a label.
+	Verified that Gnuplot 3.7 works with Siag.
+
+990313	New Notebook widget, similar to Tabbing. Started working on a
+	form plugin which builds a dialog from description in a text file.
+
+990303	Plotting plugin: (plot-plugin style). Available on menu as
+	Plot - Plugin. Requires Gnuplot and PBMplus/NetPBM.
+	Uses my Image widget; removed the Sciplot widget.
+
+990225	Reduced plugin read timeout to 30 seconds.
+	Abolished all siag_plugin_blah functions and instead created new
+	common/plugin.h for all non-UI dependent plugin functions.
+	Moved plugin commands from xsiag/xsiag.c to siag/cmds.c.
+	New plugin-select, plugin-write and plugin-read functions.
+	Demo function text-plugin-test in siag.scm runs shell command
+	in text plugin and reads output.
+
+990222	Added configure checks for libtermcap, libncurses, libcurses,
+	resizeterm, beep, immedok and keypad. Tsiag compiles on
+	Linux (Sparc, Intel, PPC), NetBSD (Intel), Solaris (Sparc, Intel).
+	Modified makefiles to allow building outside source tree
+	(suggested by "Marcus G. Daniels" <mgd@santafe.edu>)
+
+990221	Plotting plugin based on Rob McMullen's SciPlot widget.
+
+990214	Plugins talk back! New EWIN command tells plugins where to send
+	X ClientMessage events. The first long of the data field is a
+	version code, which is always 0. The second is the plugin
+	handle. The third is a ticket used to identify the message.
+	See xcommon/plugin.c for detailed documentation.
+	init_plugin now takes another argument: a pointer to a function
+	which can execute a command passed as a string.
+	Use gmatch where fnmatch is unavailable.
+
+990213	Global flags plugin and grid_only. In plugin mode, always save
+	in Siag format if nothing else is specified. Reset the "changed"
+	flag in save_plugin. New function plugin-resize.
+	Workaround in filesel.c for systems without fnmatch: list
+	all files regardless of name.
+	Command to set plugin size in a form.
+
+990212	Move sheet up, down, top, bottom. New functions: get-sheet
+	and move-sheet.
+	In edit_cell: edit in place even in -gridonly mode.
+
+990211	Image widget scales images when it is resized. Image plugin
+	uses Image widget. Automatically select the first plugin when
+	there is only one; don't display a list.
+
+990208	Croatian messages, thanks to Matej Vela <vela@zagreb.mioc.hr>.
+
+990206	Norwegian messages, thanks to Bjørn-Ove Heimsund
+	<s811@drone.ii.uib.no>
+
+990205	In set_block: set w_list->bsht to w_list->sht. Bug found by
+	Rodrigo Alfonso Guzmán (raguzman@impsat1.com.ar).
+
+990205	Changed exit to _exit in quit_siag so plugins will actually
+	exit.
+
+990205	Replaced most longs with int. Don't know what it will do for
+	the Alpha, but it won't hurt.
+
+990204	Resize plugins using the mouse.
+
+990202	Rudimentary Python bindings.
+
+990125	Agh! Left a debugging message in 3.1.4. Removed the message
+	and released 3.1.5.
+
+990124	Removed topdir.mk completely. Plugins moved to arch-specific
+	part of the file system. See FILES for detailed map of the
+	file system layout. Released 3.1.4.
+
+990121	w->ui->tab wasn't initialized to None when running with -gridonly.
+	Resulted in a crash in activate_window.
+	Allow ditcionary names in the form dictionary.xx_YY.
+
+990119	Unbroke Siag running as a plugin with -gridonly. It still doesn't
+	edit in place, but at least it doesn't crash.
+
+990118	Message catalogs are now distributed unsorted as dictionary.*.in
+	files, which are then sorted into dictionary.* files before
+	installing. Comments, empty lines and duplicates are
+	filtered out. This work is done by the makedict script, which
+	is also distributed. Also: siag.dfmext for inclusion in .dfmext
+	makes DFM recognise a few file formats, and siag.magic for
+	inclusion in /etc/magic makes file recognise formats used by
+	Siag Office.
+
+990115	New widgets: Frame draws a beveled frame around a single child
+	widget. Based on ThreeD from Xaw3d. Application widget manages
+	menubar, toolbar, format bar, text bar, main and status widgets.
+	Replaced the "topbox" Form widget with Application widget. Moved
+	menubar, toolbar and format bar into their own Box widgets, wrapped
+	in Frames. Moved Combo widgets into Frames. Moved text1 into frame.
+	Replaced icon with ksiag.xpm from Daniel Duley's ksiag.
+
+990113	Replaced the linear dictionary search with a binary one. This means
+	that the dictionary must be sorted.
+
+990109	Removed --with-static. Static binaries can just as well be made
+	by running "LDFLAGS=-static ./configure"
+
+990107	Use guile-config in autoconf script to detect Guile. This means
+	that Guile versions before 1.3 are no longer supported.
+
+990101	Replaced Textfield widget with the one from Chimera 2.
+
+981228	Made generating binaries a little easier:
+	./configure --with-static --without-tcl --without-guile
+	make
+	make strip
+	make binaries
+
+981223	In fileio.c: separate loading formats from saving formats, so that
+	the file selector box doesn't display formats it can't handle,
+	such as Postscript when loading a file.
+
+981214	Printing in landscape mode. Print protected cells on all pages.
+
+981209	Compatibility with NetBSD. Released 3.1.1.
+
+981129	Made fileio_siag less vulnerable to wacky documents produced by
+	alpha versions of 3.1.
+
+981129	In activate_window, hide plugins from sheets that are not visible.
+
+981127	Removed the .sf tag from the file format. Old documents used
+	it for the old bitmapped attributes, so it blows up when we
+	try to use it as an index into the format table. Replaced it
+	with a new .nsf tag.
+
+981127	Scrollbar thumb sizes reflect visible part of the grid.
+
+981126	Plugins were installed into the wrong directory.
+
+981126	Redecorated the Format menu so that all items work and do
+	something useful. Added item to change background colour.
+
+981125	Weird! -DNARROWPROTO is necessary to make the scrollbars decide
+	whether to take floats or doubles as arguments. How many more
+	surprises of this kind will there be?
+
+981125	Moved siag.man from xsiag to siag/docs.
+
+981120	Moved configuration from imake to autoconf. Macro VERSION
+	renamed to SIAG_VERSION.
+
+981116	New functions encode-format and decode-format do about the same
+	as their C counterparts. Reimplemented change-format in Scheme
+	using the above functions. Removed lchange_format from xsiag.c.
+	Removed begin_y and max_y from the window structure: nothing
+	was using them.
+
+981111	Changed file format for styles, see save/load_styles in matrix.c.
+	Added or updated GPL notices in all source files.
+
+981109	Oops, the function to copy the block and the function to put the
+	block on the clipboard were both called copy-block. The latter
+	was renamed copy-block-to-string.
+
+981108	Multiple, redefinable styles in siag/styles.scm. Style support
+	added to fileio_siag.
+
+981105	New utility rgb (in common) reads rgb.txt and writes colors.scm,
+	which can then be loaded to define oodles of colours.
+	Load $SIAGHOME/siag/siag.scm before windows are initialized.
+	fonts.scm is now loaded from siag.scm, and loads colors.scm.
+	$HOME/.siag/siag.scm is still loaded after initialization, so
+	that definitions can take place that will affect the UI.
+	New function (init-windows) is called after initialization to
+	do UI dependent stuff. Menus are now set up by the function
+	(create-menus), which is also loaded after window init.
+	In fileio.c: keep backup copy when saving.
+
+981105	Moved all Combo widget functionality to the Combo widget (makes
+	sense, doesn't it).
+
+981104	Made command and toggle widgets not draw themselves in reverse
+	(rather: made background and foreground colours the same).
+
+981103	Text can be typed into the combo controls, in addition to selecting
+	them from the drop-down list. This allows among other things sizes
+	that are not on the list.
+
+981103	The Vsep and Hsep separator bar widgets are redundant, so I
+	removed them.  The same job can be done with thin labels.
+
+981102	Replaced menus for font, size, style and colour with combo
+	controls.
+
+981030	Used fmt_old2new and fmt_new2old to allow wk1 to work again.
+	Pretend that screen resolution is 72x72 to make screen and
+	Postscript line up better.
+	Changed multi-sheet semantics and added function
+	find_sheet_by_name (see buffer.c). Add, remove and rename
+	sheets in documents. Native file format saves sheet names.
+	New function @XVALUE(sheet, row, col) for cross-references.
+	Create tabs for the hidden buffers as well. Put a ':' at
+	the end of the name to show that they are buffers.
+	Renamed the ret_* functions in Table.c to return_* to tell them
+	apart from the ones in matrix.c. Renamed the cell_* functions
+	in window.c to tcell_* for the same reason.
+
+981029	Yee haw, multiple sheets. The implementation still sucks, but
+	all the important parts are there: loading and saving files,
+	cross-sheet references, tabbing between sheets.
+	Change to the Table widget: XtNtableData is now a (window *),
+	not a (buffer *).
+
+981026	Getting values from the Textfield widgets with XtVaGetValues
+	was flaky. Changed to TextFieldGetString in forminput.c.
+
+981026	Don't let make clean delete app-defaults.h. Also, dirty hack to
+	let make install ignore the CVS directories.
+
+981019	When editing in place, use same font as the cell. Also expand
+	the text widget as needed if there is room.
+
+981018	Saner scrolling: only scroll the used lines and columns + 50.
+
+981005	Bug in text entry widget made forms display the wrong strings.
+
+981005	The postscript viewer GV was incorrectly called XV in README.install.
+
+981002	Cut, Copy and Paste on the Edit menu. They use the new functions
+	pack-area and unpack-area.
+
+981001	Fixed SEGV when plugin was hidden and then redisplayed.
+
+980930	Optional A1 references. Set print command and postscript viewer
+	from the menu (File - Print Format).
+
+980927	Sorting in sort.scm. Main functions are sort-block and sort-range.
+
+980924	Removed all (?) GNU/Linuxisms from the Imakefiles.
+
+980921	Changed default location of binaries to /usr/local/bin. Changed
+	"mkdir -p" to MKDIRHIER in the Imakefiles. Released 3.0.5.
+
+980917	Better loading of 1-2-3 files.
+
+980917	In siodi.c: allow get_cell to return label as string.
+
+980916	Workaround for some weirdness in SUSE .Xdefaults.
+
+980913	In free_window: don't hide plugins after the buffers are freed.
+
+980912	Removed most of the XBM files in common/bitmaps. New Imakefile
+	gives better control over what is installed where.
+
+980911	Use XPM pixmaps for the toolbar icons.
+
+980910	In slibu.c: don't reinvent usleep for Solaris.
+	New standout action for the menus and buttons: change shadow
+	width rather than background colour. Doesn't work with plain
+	Athena widgets, but I don't want to be restricted to features
+	supported by that widget set unless absolutely necessary.
+	The standout code is just cosmetics so it doesn't matter much.
+	New hsep widget separates the groups on the main form.
+
+980908	Rearranged the menus to take advantage of submenus. Also added
+	lots of new stuff that wouldn't fit before.
+
+980906	Removed arbitrary limit to the number of menus. Added submenus.
+	New SIOD functions add-submenu and add-submenuentry.
+
+980831	Don't link with Xaw3d and Xaw at the same time (makes Solaris
+	linker spew warnings).
+
+980829	Set default cell width, height and format from the menu.
+
+980827	Autoscroll the grid when selecting outside the window.
+
+980820	Removed most SIOD configuration items from topdir.mk.
+
+980817	New keybindings: all digits that are not assigned to something
+	else in keytable.scm invoke edit-expression, using itself
+	as the first character in the new expression. All alphabetic
+	characters that are not assigned in keytable.scm invoke
+	edit-label in a similar fashion. Long on the wishlist.
+
+980816	New TextentryWidget replaces all AsciiTextWidgets. Automatic
+	scrolling is included in the features.
+
+980815	In place editing by using a text widget as a child inside the
+	grid.
+
+980810	Released 3.0.
+
+980731	More toys in the file selector, including online help. Improved
+	1-2-3 format so it understands formats and saves properly.
+
+980729	New features in the file selector: type directory name in the
+	filename widget. Dirname widget is now a menu for parent dirs.
+
+980728	Image plugin displays most image formats.
+
+980724	Updated man page.
+
+980723	Right mouse button in the grid pops up a shortcut menu.
+
+980723	Change to the plugin protocol: new command WIN tells the plugin
+	to print its toplevel window id on stdout. This is *much* better
+	then using the name for identification, because it is certain
+	to be unique. It is also faster, because there is no need to
+	search the window tree.
+
+980722	New option -gridonly makes Siag run with only the grid widget,
+	to make it more useful as a plugin.
+	Personal config file moved from $HOME/.siagrc to $HOME/.siag/siag.scm.
+
+980721	New option -plugin makes Siag behave as a plugin: takes commands
+	from stdin and does not set window name.
+
+980719	Structured file format: a document with plugins is saved as a
+	single file. I use tar for this, so the result can be untarred.
+	The main document is INDEX.siag, which is of the old flat format.
+	Documents without plugins is always saved in the flat format.
+
+980719	Plugins, i.e. other X applictions that are captured live and
+	reparented to the grid! Works great for many of those I have tried.
+	Example of a plugin is in the new "plugins" directory.
+
+980716	New composite Siag widget replaces the Form widget.
+
+980715	Added another configuration item SIAGDOCS to topdir.mk. This is
+	to make life easier for people making binary packages.
+	All docs and examples moved to SIAGDOCS. Installation script
+	updated to reflect the change.
+
+980711	Changed default expression interpreter from SIOD to C.
+
+980706	Moved signal handling to common.c, where it can be used by all
+	three programs.
+
+980705	Moved the siaghelp script to common/docs and made it
+	(i.e. Netscape) the default help browser.
+
+980701	Moved icon.[ch] to xcommon. XPM no longer optional.
+
+980629	Bundle Siag, PW and Egon as a package called Siag Office with
+	version number 2.80. I'm mainly doing this to adjust to
+	reality; they have already been bundled for months.
+
+980514	More bugfixing. Removed the requirement to use MD5 in SIOD.
+	Install support files in /usr/local/lib/siag. Updated manpage!
+	Version 2.73.
+
+980513	Fixed a few places where functions returned 0 instead of cval.
+	Found by Grzegorz Mucha. Version 2.72.
+
+980318	Save in wk1 format. Increased max number of formats to 20.
+
+980317	Load Lotus 1-2-3 (*.wk1) format. Cleverly rewrites the postfix
+	formulas into Scheme prefix notation.
+
+980307	Added toplevel Imakefile, which should simplify installation.
+	SIAG, PW and Egon are now distributed together, also to simplify.
+	Installation can now be done to a separate directory.
+	Version 2.70.
+
+980124	Increased SIOD heap size made plotting work again. Removed a bug
+	which made gridline changes hang after the block had been unset.
+
+980123	Added the (smart-fill-block) function contributed by
+	John Jones. Release 2.64.
+
+980122	Moved all keybindings from app-defaults to the file keytable.scm.
+	This way the same set of keybindings can be used by siag, gsiag
+	and tsiag. New function (add-keybinding "key" "command") added
+	to set up the keybinding table.
+
+980122	(scroll-up) and (scroll-down) had mysteriously reversed their
+	meaning, compared to Emacs. Reversed them back again along with
+	the keybindings, so that the user interface is unchanged.
+
+980108	Gsiag: list selector, better focus control, XPM toolbar button
+	icons, eliminated compile warnings, arrow keys, changed paned
+	widget to vbox.
+
+980107	File selector and string input work for gsiag, making that version
+	usable. Still ugly, though.
+
+980105	Alpha version of Siag for Gtk. Release 2.62.
+
+971225	Use strftime for date and time, as suggested by Dag Nygren.
+	New file formats: tbl and LaTeX tables.
+	Removed incorrect termination condition in pr_scr.
+	Proper select_from_list in tsiag. Release 2.61.
+
+971221	Curses version of siag finally operational, if not bug free.
+	Call it tsiag ("Text Siag") and release 2.60.
+
+971119	Broke out X dependent code into its own "xsiag" directory,
+	in the hope that this will make writing alternative user
+	interfaces easier.
+
+971110	Code cleanup and updates to PW and Egon. Version 2.55.
+
+971102	Property with key "startup" is automatically run as startup code
+	when a document is loaded. Form interface to properties.
+
+971102	Use properties to customize Postscript output:
+	ps_paper_width, ps_paper_height, ps_top_margin, ps_left_margin,
+	ps_right_margin, ps_bottom_margin, ps_page_header, ps_page_footer
+
+971101	Messed up Chimera again to make the new version look
+	more like Siag.
+	Added property list to the buffer structure. That way
+	arbitrary (text) data can be associated with a document
+	and loaded and saved together with it.
+
+971030	Try to guess file format when loading and saving.
+	Handle XA_STRING selection target type.
+	Adjust cell size using the pointer by dragging borders in
+	the colnum and rownum widgets.
+	Upgraded Chimera to version 1.70p1.
+	Release Siag 2.53.
+
+971029	Made sure that when the grid widget changes top, the changes
+	are propagated to the window structure and also to the
+	colnum and rownum widgets.
+	New siag-highlight and siag-unhighlight actions replace
+	the standard highlight and unhighlight actions for command,
+	menu and toggle buttons. Highlights the background instead
+	of drawing a black border around the widget.
+	Wait half a second before popping up the help box.
+
+971027	Removed div by zero hazard from [vh]scroll_scroll in main.c
+	Release 2.52.
+
+971026	cmds.c tried to fit the width of a nonexisting block.
+	Redraw immediately when losing the selection.
+	Improved coordinate calculation functions in Table widgets.
+
+971025	Updated the docs somewhat, then ship 2.51!
+
+971024	Try to apply a little common sense to huge selections:
+	ins_format refuses to change the format of unallocated
+	cells other than changing the borders.
+
+971024	New function (unset-block) disowns the selection. Bound to
+	Shift-space and also on menu Block - Unset Block.
+
+971024	Optionally ask for confirmation when overwriting an
+	existing file. This annoying behaviour can be turned on
+	with the new command (confirm-overwrite 1) and back off
+	with the command (confirm-overwrite 0).
+
+971021	Single-level undo. Added functions to matrix.c:
+	undo_save(buffer *b, int r1, int c1, int r2, int c2)
+		Called before any destructive command.
+	undo_restore(buffer *b)
+		Puts back whatever was stored by undo_save.
+	Not quite finished, but better than nothing.
+
+971020	Made selection work for all interpreters, not just C and SIOD.
+
+971019	New siag-net function starts up a TCP-based server which
+	understands the following commands:
+	GET r1 c1 r2 c2
+		Reads one label per line and inserts them into r1c1..r2c2
+	PUT r1 c1 r2 c2
+		Prints contents of r1c1..r2c2 with one label per line
+	QUIT
+		Exit the server and return to Siag
+	Source in examples/siag-net.scm.
+
+971016	Write ranges of cells as R1C2..R3C4. This is translated into
+	"'RANGE 1 2 3 4" before being passed to the interpreter. The
+	RANGE is used to show that this is a reference, not a value.
+	It is then up to the called function to handle it, if it can.
+	New functions r_sum, r_min, r_max and r_avg handle ranges.
+
+971012	Visicalc style (R1C1) references added to all interpreters
+	except Tcl, after a suggestion by Daniel Risacher.
+	Accept leading 0 in decimal numbers in ci.c.
+	Evaluate unknown identifiers using SIOD in ci.c.
+	Hack in ci.c to evaluate functions using SIOD.
+	Update references when cells are moved. Version 2.50
+
+971010	Improved error handling in the C interpreter. Credit goes to
+	Daniel Risacher for noticing it wasn't done properly.
+
+970915	Improved memory mamagement. Removed arbitrary limits on strings
+	and added checking to avoid surprises. Siag now handles strings
+	containing millions of characters.
+
+970915	Save the whole document, rather than just the first column.
+	Version 2.42.
+
+970913	Yipes! String expressions interfered with GC to make the result
+	completely unpredictable. Fixed. Version 2.41.
+
+970912	Got rid of the stringpool. Improved memory handling by not
+	allocating space for cells until they are actually used.
+	Increased the maximum grid size to a whopping 100000x100000.
+	Look out for bugs, because this required major recoding!
+	Version 2.40.
+
+970910	Display images correctly in the Table widget. FILENAME_MAX changed
+	to 1024 everywhere. Made images work even for ancient X versions.
+	Made asinh, acosh, log1p optional. Scrapped makemathwrap.
+	Imakefile for SIOD.
+	Compiles out of the box on Linux, SparcLinux, Solaris and HP/UX.
+	Version 2.30.
+
+970909	HP port, courtesy of Emmanuel Bigler.
+
+970908	Don't display caret in fsel_dirtext.
+
+970908	Initialize name before calling fsel_input in main.c
+
+970907	New function (data-entry) to edit a record, move to the next
+	and edit that until Cancel. Bound to 'e' in Siag.ad.
+
+970907	Use XawSetScrollbarThumb rather than XtSetValues.
+	Eliminates flicker and voodoo.
+
+970906	Added the R and C variables to the SIOD interpreter as well.
+
+970906	Removed redundant functions from makemathwrap: acos, asin,
+	atan, cos, exp, log, sin, sqrt, tan, atan2, fmod, pow.
+	SIOD handles them itself.
+
+970906	Don't set the point out of bounds when clicking in the table
+	widget.
+
+970906	Added functions to the Tcl interpreter: row(), col(),
+	get_cell() and sum(). Also variables $R and $C for row and col.
+
+970815	Use the Table widget for the grid as well.
+
+970813	New Table widget for column numbers, row numbers and grid.
+	Moved the widget to ../common/Table*.[ch]
+
+970807	Allowed range for cell width and height changed to [5..500].
+
+970729	Updated documentation and broke out common parts into common/docs.
+
+970728	Broke out common code into subdir common.
+
+970718	Added embedding. V 2.23.
+
+970709	Synchronize version numbers with pw. New version 2.22.
+
+970702	Improved integration between interpreters by adding cross-calling
+	capabilities. (exec-expr intp cmd) can be called in SIOD, Guile
+	or Tcl, where intp is the name of the interpreter and cmd is a
+	command to execute.
+
+970701	Threw in Tcl for good measure. This is great fun! Version 2.2,
+	the first available number greater than 2.01 (Guile alpha) and
+	2.10 (second Guile alpha, not released).
+
+970701	Added Guile as interpreter, so that it is now an official part
+	of the main development branch.
+
+970630	The index to stringpool in the matrix structure was short!!!
+	No wonder text handling was flaky. Changed to unsigned long.
+	Also matrix.c was virtually void of range checks on row and col.
+
+970630	Broke out C expression evaluator into its own module ci.c and
+	created a framework for having many independent interpreters.
+	Breaking out the SIOD stuff will take some time, it's scattered
+	throughout the C code. Extended the file format in a way that is
+	backward compatible for SIOD and C (anything more is impossible).
+
+970630	Having both kinds of help texts at the same time as default
+	was kinda obnoxious so I changed it to 2. Also added menu entry
+	to turn it off.
+
+970629	Use yellow popups for the help text instead of using label1.
+	Because this is annoying in the long run, I also made a function
+	to select how to display the help. (helptext-mode mode) where
+	mode is 0 for none, 1 for label, 2 for popup and 3 for both.
+	Version 1.63.
+
+970627	Use unhighlight() instead of reset() for the buttons. This is
+	important for the toggle buttons, because reset() unpresses them.
+
+970627	Buttons, buttons everywhere! A new format bar with menus for
+	font family, size, style and colour, and buttons for bold, italic,
+	left adjusted, centered and right adjusted text. The new controls
+	affect the block if point is inside it, otherwise only the
+	cell under point. Version 1.62.
+
+970626	New mode 3 for block-borders makes the block underlined.
+	Toolbar buttons to call block-borders with the four modes.
+
+970626	A new text input widget is used for ask-for-str, rather than
+	a popup. Much nicer; this was the way it worked in the
+	Xlib version.
+
+970624	Fixed a couple of null pointers in forminput.c.
+
+970624	Linked with Xaw95; looks very nice. Changes in main.c:
+	Removed the "box" form and put menu and toolbar buttons directly
+	under the "topbox" form. Changed fonts and removed unused lines
+	in Siag.ad.
+
+970618	Fixed the case when the siag directory is a symbolic link (main.c)
+	Upgraded GPL to version 2. Added documentation for the form stuff.
+
+970614	Moved action initializations for ask-for-str and fsel_input
+	away from main.c and made them static.
+
+970614	Set keyboard focus in activate_window() and in all the
+	dialog boxes, including forminput. Made keyboard traversal
+	with Tab, ^N and ^P work.
+
+970614	Moved fonts.[ch] into the main directory and got rid of "xstuff".
+
+970524	Form input (forminput.c and form.scm) is now useful. Wrote a
+	simple data entry module (data.scm) to make use of it.
+
+970519	Changed the Makefiles to use SIAG_HELP and SIAG_HOME to avoid
+	confusing them with the environment variables SIAGHELP and
+	SIAGHOME during compilation. Also added a hack to main.c
+	to locate siag.scm manually if all else fails. Version 1.57.
+
+970519	Set SIAGHELP and SIAGHOME from main.c using a simple (define ...)
+	instead of using (getenv ...) from siag.scm. This removes the
+	requirement to define SLIBU if SIAGHOME is not /usr/local/siag.
+
+970508	Implemented a simple form which can be called from C or Scheme
+	and return entered data in string or list form. This will allow
+	easy user interfacing (or so I hope). forminput.c, unfinished.
+
+970506	(search-forward) and (search-backward).
+
+970505	Optionally warp pointer to the input window when ask-for-str
+	is called. This can be disabled by (input-warp-pointer 0).
+
+970505	Long strings caused crashes when previewing or printing.
+	Fixed by making the buffer larger. Version 1.56.
+
+970505	Simple hyperlinking through the (hyperlink) function. See
+	examples/hyperhelp.siag for an example.
+
+970504	Embedded histograms by abusing the USER5 style in window.c.
+	Decided it was a lousy idea, but left the code. Enable with
+	-DEXPERIMENTAL
+
+970504	Siag does colours! Eight predefined colours: black, red, green,
+	blue, yellow, magenta, cyan, white. Functions get-color and
+	set-color.
+
+970504	Set fallback resources in main.c in case Siag.ad is not
+	installed.
+
+970504	Removed C++ and dndtest from DND. Anyone who wants it can
+	install it anyway.
+
+970430	Some more tweaking of topdir.mk to make Siag compile under
+	Solaris brings us 1.52.
+
+970430	Try to get database support right, along with a number of
+	changes to topdir.mk to allow for various environments.
+	Call this 1.51.
+
+970430	Try harder to figure out SIAGHOME and SIAGHELP. New file
+	siaghome.h automatically sets SIAGHOME to where Siag is
+	installed. main() sets environment variables SIAGHOME
+	and SIAGHELP if they are not set already. It is thus no
+	longer necessary to set those in topdir.mk
+
+970427	Renamed C and Scheme functions: point-position, move-point,
+	mark-position, move-mark to get-point, set-point,
+	get-mark, set-mark.
+
+970427	Removed unused C functions: find_beginning_of_buffer,
+	find_end_of_buffer, at_beginning_of_line, find_beginning_of_line,
+	find_end_of_line, line_forward, line_backward, at_end_of_buffer,
+	cell_forward, cell_backward, at_end_of_line. Moved position
+	handling functions from cmds.c to position.c.
+
+970427	get-prot and set-prot to manipulate protection of a few
+	lines/cols at the edge of a doc. Many changes in window.c
+	to make use of this. Neat feature!
+
+970426	Rudimentary surface plot in splot.scm
+
+970425	Don't load plot.scm until plot is called.
+
+970424	Bugfixes: Changed libndbm to libgdbm in the Imakefile.
+	Commented out dlfcn.h in slibu.c. Added setsockopt(SO_REUSEADDR)
+	before bind in ss.c. Version 1.41.
+
+970423	Plot, preview and print reimplemented in Scheme, thus removing
+	print.c. Version 1.4.
+
+970422	Reimplemented in Scheme: new-siag, do-help, help-contents,
+	help-copyright, help-for-help, help-search, keyboard-quit,
+	no-op, get-cell-coords, fix-point, scroll-up, scroll-cell-up,
+	scroll-down, scroll-cell-down, scroll-left, scroll-cell-left,
+	scroll-right, scroll-cell-right, what-cursor-position,
+	insert-line, remove-line, insert-col, remove-col and more.
+
+970420	The parts of siag.scm that came from siod.scm were replaced
+	with "require siod.scm".
+
+970420	Moved most of the menu initialization from main.c to siag.scm.
+
+970416	Example Scheme script serves the document as HTML over http.
+
+970412	Fixed the bug that made format changes overwrite the style.
+
+970412	Added file type Scheme (*.scm)
+
+970411	Upgraded Siod to 3.4. Included md5, slibu, ss, ndbm, regex
+	and tar, which adds a large number of functions. Version 1.3.
+
+970404	Added an icon.
+
+970401	Make the educated guess on startup that filenames ending in
+	".siag" are probably Siag files. Version 1.2.
+
+970401	Display the buffer name on the title bar.
+
+970331	Included support for OffiX drag-and-drop. For example, drag
+	a file from the file manager into Siag to start another
+	instance of Siag with the document loaded.
+
+970331	Did nasty things to Chimera to make it look more like Siag,
+	including pull-down menu and icon toolbar. No lisp yet. ;-)
+
+970224	Adjust cell size automatically with (fit-block-width) and
+	(fit-block-height). Version 1.13.
+
+970224	Horizontal and vertical adjustment on screen and on paper,
+	along with modifications to the format dialog. Version 1.12.
+
+970223	Prettier formatting: number of decimals, currency and so on.
+	16 different "styles" and commands to choose and redefine them.
+	Extended file format to cope with this (backward compatible).
+	New function time.
+
+970223	Load and save using external programs, for example from
+	a webserver using httpget or compressed files using gzip.
+
+970222	Made colnum less wide to preserve real estate. Made selectall
+	do the obvious thing via new function select-all (also on menu).
+
+970222	Functions to allow access between buffers:
+	(x-get-cell row col "buffer") and (x-get-string row col "buffer")
+	Version 1.11.
+
+970222	Ask for file format if none is given (i.e. "All files")
+
+970220	Load well-behaved HTML tables.
+
+970218	Yet another format Text, where every line is loaded as a label
+	and placed in column 1 of successive rows.
+
+970217	Load and save files as comma separated values (the field
+	separator is selectable). Save files as HTML and Postscript.
+	New version 1.1.
+
+970216	Broke out the code for saving and loading Siag files and added
+	a framework for other fileformats. Added version comment to Siag
+	files to help identification.
+
+970209	More bugfixing. Moved code from oldmain() into main() and
+	broke out menu and toolbar initializations in main.c. Load
+	the runtime library earlier so that functions do not cause
+	errors when files are specified from the command line.
+
+970207	Bugfix version 1.01. New type ERROR added, old types CONSTANT
+	and UNCONSTANT obsoleted. Function edit-string removed.
+	Removed return statement from calc_matrix preventing everything
+	after the first error from being calculated.
+
+970206	String expressions! Numerous changes everywhere. Calls for
+	new version; it's time for 1.0 even though there are
+	remaining bugs and missing features.
+
+970204	edit_expression() inserts as label if there are errors. That way
+	it won't be necessary to retype the expression to fix an error.
+
+970204	New command fill-block allows filling an entire area. This
+	capability was already in the old overlapping copy, but copying
+	the selection uses a buffer.
+
+970204	Implemented selection properly. The old per-buffer "block" is
+	replaced by a selection that is global across windows.
+
+970201	Implemented WM_DELETE_WINDOW.
+
+970130	Changed to ISO-Latin1 encoding in the postscript.
+
+970124	Improved postscript generation in print.c.
+
+970117	Cleanup of code, removed a few annoying warts. Updated
+	documentation. Version 0.99 and gone public.
+
+960816	Multiple documents can now be displayed in separate windows.
+	New commands (split-window-vertically), (delete-window),
+	(delete-other-windows) and (other-windows) give Emacs-style
+	handling. Also of course added to main menu.
+
+960815	Multiple windows work, sort of, but the sizes are screwed up.
+
+960814	Added a paned widget to allow multiple document windows. Put
+	the document form in this widget instead of directly under
+	topLevel. Added the necessary widgets to the "window" structure.
+	Cleaned up all the places where the X code was written with
+	the assumption that there would never be more than one window.
+
+960814	New commands (switch-to-buffer) and (kill-buffer). Give the
+	buffers shorter, unique names.
+
+960813	New command (auto-recalc N) sets the number of times the sheet
+	is recalculated when a cell is changed. Defaults to 1.
+
+960813	Alertbox.
+
+960811	Added manpage. Version 0.96
+
+960811	Load $HOME/.siagrc on startup.
+
+960809	Compiles under Solaris (gcc, vanilla Athena, no Chimera or
+	Ghostview) without any changes.
+
+960808	Reimplemented the following commands in Scheme: backward-cell,
+	forward-cell, set-mark-command, exchange-point-and-mark,
+	beginning-of-buffer, end-of-buffer, top-of-buffer, bottom-of-buffer,
+	beginning-of-line, end-of-line, next-line, previous-line
+
+960808	Added quick help texts and context sensitive help for the
+	menu and toolbar buttons.
+
+960808	Environment variables SIAGHOME and SIAGHELP
+
+960808	Changed some keybindings back to Emacs style.
+
+960805	Automatically load $SIAGHOME/siag/siag.scm on startup.
+
+960801	Improved postscript generation. Now prints multiple pages and
+	inserts DSC comments so it can be post-processed. Version 0.95.
+
+960727	Changed the block setting again. Nothing is changed in the
+	program, but app-defaults now does the following:
+	Button 2 in the grid sets top left block boundary
+	Button 3 in the grid sets bottom right block boundary
+	Nothing else was changed. I think this is more logical.
+
+960727	Reap zombies in calc_matrix.
+
+960726	Better plotting with optional titles, tics on the x axis and
+	choice between all the simple 2D styles. Version 0.94.
+
+960726	In savematrix: save empty cells with nonstandard format (e.g. borders).
+
+960725	Format selection dialog ported to Xt.
+
+960720	Stopped drawing cells and coordinates out of bounds.
+
+960720	Fixed the scrollbars.
+
+960720	Simplified the block setting et al. New behaviour:
+	Button 1 in the grid moves point
+	Button 2 in the grid moves mark
+	Button 3 in the grid sets block to between mark and clicked cell
+	Button 1 in colnum sets block to clicked column
+	Button 2 in colnum sets left block boundary
+	Button 3 in colnum sets right block boundary
+	Button 1 in rownum sets block to clicked row
+	Button 2 in rownum moves top block boundary
+	Button 3 in rownum moves bottom block boundary
+	All of this is in the app-defaults so it can be changed by people
+	with a shortage of buttons.
+
+960720	Added toolbar button for plotting.
+
+960719	Made the cursor and grid look and act like the old Xlib Siag,
+	including displaying the correct fonts and colours.
+
+960719	Toolbar buttons.
+
+960718	File selection dialog.
+
+960716	Reintroduced the old C-style expression syntax.
+
+960716	Replaced varargs.h with stdarg.h.
+
+960715	Simple plotting using Gnuplot. Only plots a single row or
+	column using points.
+
+960713	Previewing using Ghostscript.
+
+960710	Started moving Siag from Xlib-only to Xt with Athena (or Xaw3d)
+	widgets. Version increased to 0.91 to distinguish from Xlib Siag.
+
+960705	Use Chimera as help browser and get rid of the ridiculous
+	Siaghelp. Also split siag.html into several smaller files.
+
+960212	Cleanups. Moved menu code to a separate module. Removed buttons
+	that aren't implemented from the cell format dialog.
+
+960211	Prints multiple fonts.
+
+960209	New file format with support for cell size and format.
+
+960207	Fixed the worst memory leaks, having to do with font handling.
+
+960201	Font selection dialog, rather than typing in a number.
+
+960130	Fonts (screen only, not paper).
+
+960128	Prints! Single font, single page, only Postscript, but still...
+
+960125	Adjustable cell width & height; can't save yet.
+
+960125	Command line arguments are now passed correctly to Siod. This means
+	that there is no need to hard-code the filename .siagrc as the
+	init file can be selected with -ifilename.
+
+960125	Minor cleanups. Now compiles quietly with -Wall.
+
+960125	At last, error checking! Also redirected Siod output to llpr().
+
+960124	Prettified alertbox with light gray background and a frame. Big deal...
+
+960123	Print version in alert box instead of status bar.
+
+960123	Resizing didn't work when a menu was active.
+
+960122	Added animation to scrollbar arrow buttons.
+
+960120	New execute() uses Siod rather than looking up the function
+	itself. This calls for a new version: 0.9.
+
+960120	Added hooks for siod in cmds.c.
+
+960119	Added bindings for a number of functions in the standard FP lib:
+	acos, acosh, asin, asinh, atan, ceil, cos, cosh, exp, fabs,
+	floor, log, log10, pow2, pow10, sin, sinh, sqrt, tan, tanh,
+	erf, erfc, j0, j1, lgamma, y0, y1, expm1, log1p, cbrt
+
+960118	Added a rudimentary help browser. Also changed everything to
+	English.
+
+960117	Standard number of decimals changed to 2.
+
+960116	Now that text input and menues work, the user interface is
+	pretty much finished. There are of course plenty of bugs and
+	missing goodies, but I'll still bump the version to 0.8.
+
+960112	Introduced Siod as formula language. This change is significant
+	enough that I increase the version number to 0.7.
+
+960109	New commands to scroll the sheet one row/column without moving
+	point (unless it would end up outside the visible part of the sheet).
+
+960108	Uses keysyms so I can use the proper keys instead of the horrible
+	Ctrl-combinations. I.e. arrow keys, Home, End, PageUp, PageDown
+	et al work now.
+
+960108	Changed version numbering. Since the program is not even
+	remotely finished, I have devaluated the version number by
+	90 %. Thus we now have version 0.6 instead of 6.0.
+	Calc can keep its version numbers, but I don't intend to
+	do anything about that program in the future.
+
+960108	Scrollbars, status window now work.
+
+960107	Prototype compiles and runs. All input comes from stdin and
+	the menus, scrollbars and the status window don't work. The cursor
+	disappears from time to time.
+
+960106	Main window design finished. Dummy application.
+
+
+[Xcommon CHANGES]
+
+
+990707	Rudegrid widget: make sure that the x/y_layout resources
+	are allocated before XtFreeing them.
+
+990703	Rudegrid widget: do not try to layout children whose
+	core.managed resource is False.
+
+990702	Another widget: Tooltip, which displays tooltips. The code is
+	essentially the same as the one previously in tooltip.c,
+	which has been removed.
+	Yet another: Handle, which can be used to detach a widget from its
+	parent by reparenting its window. The widget can then be moved
+	around using the handle. Double-click to reconnect.
+
+990701	New SiagMenuButton widget, which is identical to the one in Xaw3d
+	but uses XTranslateCoordinates rather than XtTranslateCoords.
+	This is to get coordinates right when menus are undocked.
+	Changed Combo widget and tooltips in the same way. Should really
+	try to figure out what is wrong in the first place...
+
+981130	Sanity tests for family, fg and bg in encode_format and
+	decode_format.
+
+981126	Press any key to pop down combo boxes without selecting.
+
+981126	Background colours in Table widget.
+
+981120	PS font selection was broken for fonts that should have Latin1
+	encoding.
+
+981104	Hsep and Vsep widgets removed. The same job can be done by
+	a thin Label (height or width = 2) with no text.
+
+981102	New Combo widget. Currently the widget only handles geometry
+	management for a Textfield widget and a Command widget.
+
+981016	Replaced my Textentry widget with Rob McMullen's TextField widget.
+
+
+[XedPlus CHANGES]
+
+
+990709	Install kdelnk file is KDE is present on the system.
+
+990629	Resized all 16x16 pixmaps to 24x24.
+
+990622	Use load_pixmap in xcommon for the icons.
+
+990621	Started on internationalization by wrapping all text in
+	calls to translate.
+	Reformatted all the code with "indent -kr -i8"
+	(it was just too unreadable).
+
+990426	Moved lots of app resources to xcommon/xcommon-ad.h
+
+990418	Made the scrollbar grey (ooh...)
+
+990410	Added drag and drop functionality (snarfed from the OffiX editor,
+	which is another hacked version of Xedit). Drop a file on the status
+	bar to load it into the editor.
+
+990407	Write HTML docs
+	Display file name on window decoration
+	Toolbar buttons
+	Attach to help infrastructure et al
+	Tooltips
+	Make it work with file names on command line
+	Insert/Overwrite label was wrong width
+	Started i18n (not all messages translated)
+	Replaced the icon
+
+990406	Use the Rudegrid widget for all layout
+	Use the Frame widget to get that beveled look
+	App-default tweaking to make it look like other Siag cousins
+	Replaced file selector
+	General bugfixing, added missing headers et al
+	Name changed to xedplus to avoid bogus app-defaults
+	Employ ad2c to compile app-defaults into executable
+	Switch from imake to autoconf
+
+
+[Xfiler CHANGES]
+
+
+990710	New script makeicons generates custom icons for image files
+	instead of the generic image icon.
+
+990709	Install kdelnk file if KDE is present on the system.
+
+990707	Wrote manpage for Runcmd.
+
+990629	Resized all 16x16 pixmaps to 24x24.
+
+990622	Started on internationalization.
+	Use load_pixmap in xcommon for the icons.
+
+990601	More nonstandard C fixed in the regex code. Discovered by
+	Henk Coetzee <henk@zircon.geoscience.org.za>.
+
+990503	Include ../config.h in Files.h. Do not include malloc.h.
+
+990426	Moved lots of app resources to xcommon/xcommon-ad.h.
+	Force vertical scrollbar on viewpane (was disappearing again).
+
+990418	Snarfed Execute from OffiX and renamed it Runcmd. Updated
+	Filesrc to reflect the change.
+	Made runcmd display a more interesting title when it is
+	invoked as runcmd /bin/sh -c "command with options"
+
+990417	Added a command line including command line history.
+
+990416	Rewrote more in Popup.c.
+
+990414	Use the common dialogs in xcommon instead of the kludgy stuff
+	in Popup.c. New dialog in xcommon/dialogs.c: dialog_input_icon.
+
+990413	Replaced viewmode.xpm and sortmode.xpm. Implemented
+	fileViewModeCb() and fileSortModeCb().
+
+990412	Toolbar buttons, ballon help.
+	Install config into $(datadir)/siag/xfiler.
+	Look for pixmaps in $(datadir)/siag/common/bitmaps.
+	New Help menu with HTML help. Converted manpage to HTML.
+	Put Siag, PW and Egon bindings into Filesrc.
+	Merged into CVS.
+	Updated file types, icons and actions. New built-in actions
+	SIAGHELP and IMAGE (call siaghelp and the image plugin).
+
+990411	Moved lots of resources from static hardcoded argument lists
+	to Xfiler.ad. Updated Makefile.am to put config in
+	$datadir/siag/xfiler.
+
+990410	Initial port of Files from OffiX. Replaced toplevel Form with
+	Rudegrid, added a few Frames. Lots of resource tweaking to get
+	the user interface the same as other parts of Siag Office.
+

@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>Siag - Expressions</title>
+</head>
+
+<body>
+<h1>C Expressions</h1>
+
+Expressions can be entered using a C-like syntax.
+The interpreter understands the following operators:
+
+<dl>
+<dt><b>N ; M</b>
+	<dd>Add all numbers in the current column from row N to row M.
+<dt><b>N : M</b>
+	<dd>Add all numbers in the current row from column N
+		to column M.
+<dt><b>N , M</b>
+	<dd>Get the value from the cell in row N, column M.
+<dt><b>N || M</b>
+	<dd>Logical OR of N and M.
+<dt><b>N && M</b>
+	<dd>Logical AND of N and M.
+<dt><b>N | M</b>
+	<dd>Bitwise OR of N and M.
+<dt><b>N ^ M</b>
+	<dd>Bitwise XOR of N and M.
+<dt><b>N & M</b>
+	<dd>Bitwise AND of N and M.
+<dt><b>N == M</b>
+	<dd>1 if N equals M, 0 otherwise.
+<dt><b>N != M</b>
+	<dd>1 if N is not equal to M, 0 otherwise.
+<dt><b>N &lt; M</b>
+	<dd>1 if N is less than M, 0 otherwise.
+<dt><b>N &lt;= M</b>
+	<dd>1 if N is less than or equal to M, 0 otherwise.
+<dt><b>N > M</b>
+	<dd>1 if N is greater than M, 0 otherwise.
+<dt><b>N >= M</b>
+	<dd>1 if N is greater than or equal to M, 0 otherwise.
+<dt><b>N >> M</b>
+	<dd>N shifted right M steps.
+<dt><b>N &lt;&lt; M</b>
+	<dd>N shifted left M steps.
+<dt><b>N + M</b>
+	<dd>Addition.
+<dt><b>N - M</b>
+	<dd>Subtraction.
+<dt><b>N * M</b>
+	<dd>Multiplication.
+<dt><b>N / M</b>
+	<dd>Division.
+<dt><b>N \ M</b>
+	<dd>Integer division, i.e. the remainder is thrown away.
+<dt><b>N % M</b>
+	<dd>Modulus.
+<dt><b>N ** M</b>
+	<dd>Exponentiation.
+<dt><b>!N</b>
+	<dd>Logical NOT of N.
+<dt><b>~N</b>
+	<dd>Bitwise NOT of N.
+<dt><b>-N</b>
+<dt><b>+N</b>
+</dl>
+
+In the above, N and M are either sub-expressions or constants.
+<p>
+Constants
+can be hexadecimal numbers starting with 0x, octal numbers starting with
+0 or floating-point numbers with or without decimal point and exponent.
+<p>
+Numbers starting with a single 0 immediately followed by a decimal
+point are interpreted as floating point numbers.
+<p>
+Operators are evaluated in the following order:
+<ol>
+<li>Unary + - ! ~
+<li>** \
+<li>* / %
+<li>+ -
+<li>== !=
+<li>&
+<li>^
+<li>|
+<li>&&
+<li>||
+<li>; : ,
+</ol>
+Parentheses can be used to group sub-expressions and to override the
+standard evaluation order.
+<p>
+The characters R and C can be used to denote the current row and
+column, respectively.
+<p>
+The expressions can contain white space and /* C-style comments */.
+
+<h2>Cell References</h2>
+In addition to the comma notation above, cells can be referred to
+using R1C1 or A1 notation. The reference style is changed using
+the Window - Reference Style menu entry.
+<p>
+References are automatically updated when lines and columns are
+inserted or removed.
+
+<h3>Ranges</h3>
+
+Certain functions can handle not only numbers and references, but whole
+ranges of cells. Such ranges are written as, for example, a1..c2.
+In this case,
+the range consists of all cells from row 1, column 1 to row 2, column 3
+(6 cells altogether). Not all functions can handle ranges.
+<p>
+Ranges update when lines and columns are inserted or deleted, just
+like the references described above.
+
+<h2>Numeric variables</h2>
+Variables can be assigned from the interpreter in the following way:
+<pre>
+define(name, value)
+</pre>
+where name is the name of the variable and value is a numeric constant,
+another variable, a cell reference or an expression.
+<p>
+Variables assigned in the interpreter can also be used from SIOD,
+and any variable known by the SIOD interpreter is also available here.
+
+<h2>Functions</h2>
+All functions known by the SIOD interpreter can also be called from the
+C interpreter by writing the call as:
+<pre>
+function(argument, argument...)
+</pre>
+The arguments can be constants, cell references or numeric variables
+known by the SIOD interpreter. The arguments can also themselves be
+expressions.
+<p>
+<a href="siag-functions.html">Reference list of available functions</a>
+<p>
+<a href="scheme.html">More information on the Scheme interpreter</a>
+
+
+<h2>Examples</h2>
+<dl>
+<dt><b>123.4</b>
+	<dd>The constant 123.4
+<dt><b>1+2-3</b>
+	<dd>This evaluates to 0
+<dt><b>2^3</b>
+	<dd>Exclusive or of 2 and 3, i.e. 1.
+<dt><b>2**3</b>
+	<dd>2 raised to the power of 3, i.e. 8.
+<dt><b>18/5</b>
+	<dd>Evaluates to 3.6.
+<dt><b>18\5</b>
+	<dd>Evaluates to 3.
+<dt><b>3,4</b>
+	<dd>The contents of the cell in row 3, column 4
+<dt><b>R3C4</b>
+	<dd>The same in r1c1 notation
+<dt><b>D3</b>
+	<dd>The same in a1 notation
+<dt><b>r, c-1</b>
+	<dd>The contents of the cell immediately to the left of the current
+		cell
+<dt><b>2;r-1</b>
+	<dd>The sum of the cells in the current column from row 2 to the
+		row immediately above the current cell
+<dt><b>(r-1,c)+(r,c-1)</b>
+	<dd>The sum of the cells to the left and above the current cell.
+		The parentheses are necessary because '+' would otherwise
+		be evaluated before ','
+<dt><b>r2c3+r2c4</b>
+	<dd>The sum of the value in row 2, column 3 and the value in
+		row 2, column 4
+<dt><b>c2+d2</b>
+	<dd>Same as above in A1 reference style
+<dt><b>acos(r3c1)</b>
+	<dd>Arc cosine of the value in row 3, column 1
+<dt><b>tan(r2c2)</b>
+	<dd>Tangent of r2c2.
+<dt><b>sin(r2c2)/cos(r2c2)</b>
+	<dd>Also tangent of r2c2. Function calls can be part of expressions
+<dt><b>pow(temp, 0.25)</b>
+	<dd>The variable temp raised to the power of 1/4
+<dt><b>pow(temp, 1/4)</b>
+	<dd>Ditto
+<dt><b>asin(sin(1.59))</b>
+	<dd>In this example, sin(1.59) is an expression
+<dt><b>define(pi, 3.14)</b>
+	<dd>Define a useful variable
+<dt><b>r_sum(r2c2..r5c6, r1c1, 12)</b>
+	<dd>The sum of all numbers between row 2, column 2 and row 5,
+	column 6; the number in row 1, column 1; and the number 12.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - July 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

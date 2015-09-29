@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Egon Animator - File Formats</title>
+</head>
+
+<body>
+<center>
+<h1>File Formats</h1>
+</center>
+Egon Animator has support for the following file formats:
+
+<dl>
+<dt><b>Egon Animator</b>
+	<dd>The native Egon Animator format is simply a Scheme script
+		which can be loaded to recreate the animation.
+		As such, it is eminently human-readable and editable.
+<dt><b>C source</b>
+	<dd>The animation can also be saved as C source code. Only the
+		data structures are saved, the code to display the
+		animation resides in the files animator.h and
+		animator.c. This makes it pretty easy to add animation
+		capabilities to any X program. Egon Animator cannot
+		load animations stored as C source.
+<dt><b>Animated GIF</b>
+	<dd>The animation can be saved as a multi-image GIF file, which
+		when displayed in a WWW browser like Netscape performs
+		the animation without using Egon Animator. Egon cannot
+		load animated GIF files. Saving animated GIFs requires
+		the netpbm package and the gifmerge program, neither
+		of which is part of Siag Office but must be installed
+		separately.
+<dt><b>Postscript</b>
+	<dd>Egon Animator can
+		save Postscript images of the animation scene.
+		Normally, this code goes straight
+		to the printer or to Ghostview for previewing, but
+		it can also be saved in a file.
+<dt><b>Text</b>
+	<dd>Plaintext files can be read and written.
+<dt><b>HTML</b>
+	<dd>Hypertext Markup Language can be read and written.
+<dt><b>Magic Point</b>
+	<dd>Presentations created for the Magic Point program
+	can be read.
+<dt><b>MS Powerpoint</b>
+	<dd>Presentations created for MS Powerpoint can be read
+	if the pptHtml program is available. pptHtml is part of
+	xlHtml by Steve Grubb, linux_4ever@yahoo.com.
+<dt><b>PDF</b>
+	<dd>Egon can save in Adobe's "Portable Document Format".
+	Requires the program ps2pdf.
+</dl>
+
+<hr>
+<address>Ulric Eriksson - June 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

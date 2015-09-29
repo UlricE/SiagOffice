@@ -1,0 +1,72 @@
+# Creator: Pathetic Writer 2.71. No Warranty.
+.sh 20
+.sf 98
+.sty0 Default,98,20,0
+.sty1 Header 1,53,30,0
+.sty2 Header 2,52,20,0
+.sty3 Header 3,51,20,0
+.sty4 Header 4,50,20,0
+.sty5 Header 5,49,20,0
+.sty6 Header 6,48,20,0
+.sty7 Address,106,20,7
+.sty8 Title,116,20,8
+.sty9 Abstract,115,20,9
+.sty10 Preformatted,2,20,10
+.sty11 User 1,98,20,11
+.sty12 User 2,98,20,12
+.sty13 User 3,98,20,13
+.sty14 User 4,98,20,14
+.sty15 Embed,98,20,0
+# /usr/local/siag/pw/examples/chead.pw
+# 24 lines
+#
+.rh 1 30
+.st 1 1
+.ad 1 8192
+.st 12 2
+.ad 12 8192
+.st 16 10
+.st 17 10
+.st 18 10
+.st 19 10
+.st 20 10
+.st 21 10
+.st 22 4
+# Line 1
+1 1 21	"This is a Header
+# Line 3
+3 1 98	"	The 
+3 2 114	"proper
+3 3 98	" procedure when installing empty wumpuses is to first remove the
+# Line 4
+4 1 98	"empty frame, so as to not leave room for another batch to develop. This can easiest be
+# Line 5
+5 1 98	"accomplished by rephrasing every question, then directing them to a forum where they
+# Line 6
+6 1 98	"can more appropriately be answered. 
+6 2 106	"Here is an example:
+# Line 8
+8 1 98	"	"How many roads must a man walk down?"
+# Line 10
+10 1 98	"	"Approximately five, depending on the time of the year."
+# Line 12
+12 1 20	"Courier rules
+# Line 14
+14 1 98	"I must admit that I have a crush on 
+14 2 18	"Courier Bold
+14 3 98	" for headers. 
+# Line 16
+16 1 2	"int main(int argc, char **argv)
+# Line 17
+17 1 2	"{
+# Line 18
+18 1 2	"	while (*(++argv))
+# Line 19
+19 1 2	"		puts(*argv);
+# Line 20
+20 1 2	"}
+# Line 22
+22 1 50	"Slut på historien!
+# Line 24
+24 1 98	"That's all, Folks!
+# End of file /usr/local/siag/pw/examples/chead.pw

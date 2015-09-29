@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Pathetic Writer - File Formats</title>
+</head>
+
+<body>
+<center>
+<h1>File Formats</h1>
+</center>
+Pathetic Writer has support for several file formats:
+
+<dl>
+<dt><b>Pathetic Writer</b>
+	<dd>Native Pathetic Writer format, with support for
+		formatting attributes (fonts,
+		widths and so on). Very nice for Pathetic Writer documents, but
+		totally incompatible with anything else.
+<dt><b>Plain Text</b>
+	<dd>Text without formatting information.
+<dt><b>Postscript</b>
+	<dd>Pathetic Writer can output pretty decent Postscript code, with
+		DSC comments and all to make the resulting files
+		post-processable. Normally, this code goes straight
+		to the printer or to Ghostview for previewing, but
+		it can also be saved in a file. Pathetic Writer cannot load
+		Postscript files.
+<dt><b>Hypertext Markup Language</b>
+	<dd>HTML as featured on the World Wide Web.
+		Pathetic Writer can save and load documents
+		in this format. Some effort is made to preserve the
+		formatting so that the documents will look nice when
+		they are viewed in a browser like Netscape or Chimera.
+		Some formatting may be lost when loading HTML files.
+<dt><b>Rich Text Format</b>
+	<dd>Documents can be saved in RTF format so that they can be
+		opened in legacy Windows (TM) applications. PW can load
+		RTF files, but some formatting information may be lost.
+<dt><b>PDF</b>
+	<dd>Adobe's "Portable Document Format". Loading requires the
+	program pdftohtml, saving requires ps2pdf.
+<dt><b>Microsoft Word</b>
+	<dd>If the <i>wvHtml</i> utility is available on the system,
+		PW can use it to import text from MS Word documents.
+		Some formatting may be lost. A better solution is to save
+		the file as RTF in Word and then load it in Siag.<br>
+		If wvHtml is not installed, <i>mswordview</i> and/or
+		<i>catdoc</i> can be used instead.
+<dt><b>AUIS ez</b>
+	<dd>Reads documents created by the <i>ez</i> word processor
+		from the Andrew system, using <i>2rtf</i> to first
+		convert to RTF. 2rtf is distributed with ez.
+<dt><b>Psion Word</b>
+	<dd>Uses <i>psiconv</i> to convert Psion Word files to HTML which
+	can be loaded by PW.
+</dl>
+
+<h2>Adding Format Handlers</h2>
+PW can use external converters to convert files from formats it
+can't handle directly to ones it does handle. The converters are registered
+by the function register-converters; see pw.scm for the default
+implementation of that function.
+
+<hr>
+<address>Ulric Eriksson - November 2000 - ulric@siag.nu</address>
+</body>
+</html>
+

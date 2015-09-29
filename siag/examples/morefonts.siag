@@ -1,0 +1,57 @@
+# Creator: Siag (Scheme In A Grid) 3.1.0. No Warranty.
+.sw 80
+.sh 20
+.sf 0
+.sheet 0 Sheet 1
+# /home/ulric/siag/siag/examples/morefonts.siag
+# 6 lines
+#
+.rh 1 30
+.rh 2 34
+.rh 3 33
+.rh 4 37
+.rh 5 33
+.rh 6 30
+.cw 1 166
+# Line 1
+.style 0
+name Default
+fmt %d
+type 0
+end
+.ft 8
+font Avant Garde
+size 200
+end
+1 1 8	"Avant Garde
+# Line 2
+.ft 9
+font Bookman
+size 200
+end
+2 1 9	"Bookman
+# Line 3
+.ft 10
+font Palatino
+size 200
+end
+3 1 10	"Palatino
+# Line 4
+.ft 11
+font Symbol
+size 200
+end
+4 1 11	"Symbol
+# Line 5
+.ft 12
+font Zapf Chancery
+size 200
+end
+5 1 12	"Zapf Chancery
+# Line 6
+.ft 13
+font Zapf Dingbats
+size 200
+end
+6 1 13	"Zapf Dingbats
+# End of file /home/ulric/siag/siag/examples/morefonts.siag

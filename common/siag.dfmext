@@ -1,0 +1,9 @@
+# DFM extension file, suitable for ~/.dfmext
+*.siag;/usr/local/lib/siag/common/bitmaps/ksiag.xpm;siag !0!
+*.wk1;/usr/local/lib/siag/common/bitmaps/ksiag.xpm;siag !0!
+*.csv;/usr/local/lib/siag/common/bitmaps/ksiag.xpm;siag !0!
+*.pw;/usr/local/lib/siag/common/bitmaps/pw_fg.xpm;pw !0!
+*.rtf;/usr/local/lib/siag/common/bitmaps/pw_fg.xpm;pw !0!
+*.doc;/usr/local/lib/siag/common/bitmaps/pw_fg.xpm;pw !0!
+*.egon;/usr/local/lib/siag/common/bitmaps/egon_fg.xpm;egon !0!
+

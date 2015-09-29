@@ -1,0 +1,84 @@
+# Creator: Siag (Scheme In A Grid) 1.56. No Warranty.
+.sw 80
+.sh 20
+.sf 33
+.fmt131072 %d
+.fmt196608 %g
+.fmt262144 %.2f
+.fmt327680 %d/%d/%d
+.fmt393216 %d:%d:%d
+.fmt458752 %.2f
+.fmt524288 %.2f %%
+.fmt589824 %lX
+.fmt655360 $%.2f
+.fmt720896 %.2f
+.fmt786432 %.2f
+.fmt851968 %.2f
+.fmt917504 %.2f
+.fmt983040 %.2f
+# /usr/local/siag/siag/examples/heaven.siag
+# 27 lines
+#
+.cw 1 150
+# Line 1
+1 1 33	"Light from the Moon
+1 2 274465	=(set! mlight 1)
+# Line 2
+2 1 33	"Light from the Sun
+2 2 274465	=(set! slight (* 7 7))
+# Line 3
+3 1 33	"Total light on Heaven
+3 2 274465	=(set! hlight (+ mlight slight))
+# Line 4
+4 2 274465	#
+# Line 5
+5 1 33	"Absolute temperature of Earth
+5 2 274465	=(set! etemp 300)
+5 3 33	"K
+# Line 6
+6 1 33	"Temperature of Heaven
+6 2 274465	=(set! htemp (* (sqrt (sqrt hlight)) (abs etemp)))
+6 3 33	"K
+# Line 7
+7 2 12321	=(- htemp 273)
+7 3 33	"C
+# Line 8
+# Line 9
+9 1 3145730	"The temperature of Heaven can be rather accurately computed.  Our
+# Line 10
+10 1 3145730	"authority is Isaiah 30:26, "Moreover, the light of the Moon shall be as
+# Line 11
+11 1 3145730	"the light of the Sun and the light of the Sun shall be sevenfold, as
+# Line 12
+12 1 3145730	"the light of seven days."  Thus Heaven receives from the Moon as much
+# Line 13
+13 1 3145730	"radiation as we do from the Sun, and in addition 7*7 (49) times as much
+# Line 14
+14 1 3145730	"as the Earth does from the Sun, or 50 times in all.  The light we
+# Line 15
+15 1 3145730	"receive from the Moon is one 1/10,000 of the light we receive from the
+# Line 16
+16 1 3145730	"Sun, so we can ignore that ... The radiation falling on Heaven will
+# Line 17
+17 1 3145730	"heat it to the point where the heat lost by radiation is just equal to
+# Line 18
+18 1 3145730	"the heat received by radiation, i.e., Heaven loses 50 times as much
+# Line 19
+19 1 3145730	"heat as the Earth by radiation.  Using the Stefan-Boltzmann law for
+# Line 20
+20 1 3145730	"radiation, (H/E)^4 = 50, where E is the absolute temperature of the
+# Line 21
+21 1 3145730	"earth (-300K), gives H as 798K (525C).  The exact temperature of Hell
+# Line 22
+22 1 3145730	"cannot be computed ... [However] Revelations 21:8 says "But the
+# Line 23
+23 1 3145730	"fearful, and unbelieving ... shall have their part in the lake which
+# Line 24
+24 1 3145730	"burneth with fire and brimstone."  A lake of molten brimstone means
+# Line 25
+25 1 3145730	"that its temperature must be at or below the boiling point, 444.6C.  We
+# Line 26
+26 1 3145730	"have, then, that Heaven, at 525C is hotter than Hell at 445C.
+# Line 27
+27 1 3145730	"                -- From "Applied Optics" vol. 11, A14, 1972
+# End of file /usr/local/siag/siag/examples/heaven.siag

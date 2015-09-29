@@ -1,0 +1,7 @@
+Local File:cat
+Compressed File:gzip -d
+Archive:tar xf -
+Compressed Archive:tar zxf -
+FTP:ftpget
+HTTP:httpget
+Generic: 
