@@ -18,7 +18,7 @@ gvu_LDADD = -lxcommon -lcommon \
 	-lXpm $(LIBT1) $(LIBT1X) $(X_LIBS) $(MY_X_LIBS) \
 	-lXt -lX11 $(X_PRE_LIBS) $(X_EXTRA_LIBS)
 
-INCLUDES = $(DEBUG) $(X_CFLAGS)
+AM_CPPFLAGS = $(DEBUG) $(X_CFLAGS)
 
 EXTRA_DIST = Gvu.ad Gvu.kdelnk blank.xpm dot.xpm $(gvudoc_DATA) $(man_MANS)
 

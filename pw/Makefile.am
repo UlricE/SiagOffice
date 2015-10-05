@@ -11,7 +11,7 @@ libpw_a_SOURCES = railway.c matrix.c fileio.c cmds.c position.c \
 
 noinst_HEADERS = pw.h user_interface.h
 
-INCLUDES = $(DEBUG) $(NDBM)
+AM_CPPFLAGS = $(DEBUG) $(NDBM)
 
 scmdir = $(datadir)/siag/pw
 

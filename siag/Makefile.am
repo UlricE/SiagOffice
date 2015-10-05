@@ -14,7 +14,7 @@ libsiag_a_SOURCES = railway.c matrix.c fileio.c cmds.c buffer.c mathwrap.c \
 noinst_HEADERS = calc.h fileio.h user_interface.h \
 	mathfunc.h
 
-INCLUDES = $(DEBUG) $(NDBM) $(CCMATH) -DSIAG
+AM_CPPFLAGS = $(DEBUG) $(NDBM) $(CCMATH) -DSIAG
 
 scmdir = $(datadir)/siag/siag
 

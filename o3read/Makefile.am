@@ -11,5 +11,5 @@ utf8tolatin1_SOURCES = utf8tolatin1.c
 
 noinst_HEADERS = o3read.h
 
-INCLUDES = -DNDEBUG $(DEBUG)
+AM_CPPFLAGS = -DNDEBUG $(DEBUG)
 

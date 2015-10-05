@@ -13,7 +13,7 @@ libegon_a_SOURCES = main.c railway.c matrix.c fileio.c cmds.c \
 
 noinst_HEADERS = egon.h user_interface.h
 
-INCLUDES = $(DEBUG) $(NDBM)
+AM_CPPFLAGS = $(DEBUG) $(NDBM)
 
 scmdir = $(datadir)/siag/egon
 scm_DATA = animator.scm egon.scm menu.scm external.load external.save

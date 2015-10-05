@@ -13,7 +13,7 @@ siag_LDADD = @LIBCCMATH@ -lsiag -lxcommon -lcommon -lcole -lstocks -lsiod \
 	@X_LIBS@ $(MY_X_LIBS) -lXt -lX11 \
 	@X_PRE_LIBS@ @X_EXTRA_LIBS@
 
-INCLUDES = $(DEBUG) $(NDBM) $(CCMATH) @X_CFLAGS@
+AM_CPPFLAGS = $(DEBUG) $(NDBM) $(CCMATH) @X_CFLAGS@
 
 EXTRA_DIST = Siag.ad Siag.kdelnk x-siag.kdelnk
 

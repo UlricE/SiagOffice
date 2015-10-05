@@ -13,7 +13,7 @@ egon_LDADD = -legon -lxcommon -lcommon -lcole -lsiod \
 	@X_LIBS@ $(MY_X_LIBS) -lXt -lX11 \
 	@X_PRE_LIBS@ @X_EXTRA_LIBS@
 
-INCLUDES = $(DEBUG) $(NDBM) @X_CFLAGS@
+AM_CPPFLAGS = $(DEBUG) $(NDBM) @X_CFLAGS@
 
 EXTRA_DIST = Egon.ad Egon.kdelnk x-egon.kdelnk
 

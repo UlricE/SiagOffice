@@ -25,7 +25,7 @@ scm_DATA = dummy.scm plugin.scm
 
 EXTRA_DIST = $(scm_DATA) $(pluginsdoc_DATA) $(man_MANS) Form.ad
 
-INCLUDES = $(DEBUG) @X_CFLAGS@
+AM_CPPFLAGS = $(DEBUG) @X_CFLAGS@
 
 dummy_LDFLAGS = -L../siod -L../xcommon -L../common -L../XawM/.libs
 image_LDFLAGS = -L../siod -L../xcommon -L../common -L../XawM/.libs

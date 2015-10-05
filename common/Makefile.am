@@ -9,7 +9,7 @@ libcommon_a_SOURCES = common.c ps.c o3read.c
 
 noinst_HEADERS = common.h plugin.h ps.h o3read.h
 
-INCLUDES = -DLIBDIR=\"$(libdir)/siag\" \
+AM_CPPFLAGS = -DLIBDIR=\"$(libdir)/siag\" \
 	-DDATADIR=\"$(datadir)/siag\" \
 	-DDOCDIR=\"$(docdir)\" \
 	-DVERSION_NO=\"@VERSION@\" \

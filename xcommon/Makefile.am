@@ -7,7 +7,7 @@ noinst_HEADERS = Ghostview.h GhostviewP.h \
 	embed.h plugin.h xcommon.h \
 	filesel-ad.h dialogs-ad.h xcommon-ad.h nws-ad.h
 
-INCLUDES = $(DEBUG) @X_CFLAGS@
+AM_CPPFLAGS = $(DEBUG) @X_CFLAGS@
 
 scmdir = $(datadir)/siag/xcommon
 scm_DATA = StringDefs.scm form.scm

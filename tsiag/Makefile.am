@@ -12,5 +12,5 @@ tsiag_LDADD = @LIBCCMATH@ -lsiag -lcommon -lsiod -lcole -lstocks \
 	@LIBSYSDEP@ @INTERPRETERS@ \
 	@LIBCCMATH@ @LIBT1@
 
-INCLUDES = $(DEBUG) $(NDBM) $(CCMATH)
+AM_CPPFLAGS = $(DEBUG) $(NDBM) $(CCMATH)
 

@@ -8,7 +8,7 @@ libsiod_a_SOURCES = md5.c regex.c sliba.c ss.c tar.c \
 
 noinst_HEADERS = md5.h siod.h siodp.h ss.h silence.i
 
-INCLUDES = -Dunix -DSIAG $(DEBUG) $(NDBM)
+AM_CPPFLAGS = -Dunix -DSIAG $(DEBUG) $(NDBM)
 
 CLEANFILES = siod
 

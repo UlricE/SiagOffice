@@ -37,7 +37,7 @@ runcmd_LDADD = -lxcommon -lcommon -lxcommon -lcommon \
 	-lXpm $(LIBT1) $(LIBT1X) $(X_LIBS) $(MY_X_LIBS) \
 	-lXt -lX11  $(X_PRE_LIBS) $(X_EXTRA_LIBS)
 
-INCLUDES = -I$(top_srcdir) -DXPM=1 $(X_CFLAGS) \
+AM_CPPFLAGS = -I$(top_srcdir) -DXPM=1 $(X_CFLAGS) \
 	-DROOTDROP_DEFAULT_ICON=\"linux_make.xpm\" \
 	-DRCFILE=\"$(xfilerdir)/Filesrc\" \
 	-DMAGICFILE=\"$(xfilerdir)/FilesMagic\" \
