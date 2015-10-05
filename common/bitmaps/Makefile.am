@@ -17,7 +17,7 @@ xpm_DATA = blank.xpm bold.xpm borders.xpm copy.xpm copyright.xpm cut.xpm \
 	fonts.xpm data.xpm unknown.xpm \
 	center.xpm larger.xpm smaller.xpm portrait.xpm landscape.xpm \
 	editor.xpm SO3.xpm book-closed.xpm book-open.xpm handlebg.xpm \
-	xfiler.xpm gvu.xpm xedplus.xpm \
+	xfiler.xpm gvu.xpm \
 	security.xpm \
 	navigator.xpm mail.xpm news.xpm addressbook.xpm composer.xpm
 
